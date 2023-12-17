@@ -1,0 +1,14 @@
+projects
+elastic-net-model
+survival-analysis
+references
+time-to-event-analysis
+survival-rate
+the-basics
+creating-survival-objects-and-curves
+kaplan-meier-plotscurves
+prosper-loan-data
+customer-churn
+re-framing-the-problem-to-know-when
+the-risk-of-churn
+data-splitting-and-preprocessing

@@ -1,0 +1,33 @@
+--- 
+title: "Projects Repository"
+author: "Davut Ayan"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: davutemrah/davutemrah.github.io
+description: "This is a collection of notes to my self"
+---
+
+# Preface {-}
+
+Hello there! 👋 As a devoted explorer navigating the expansive realm of machine learning, I am delighted to present my personal repository—a virtual haven that houses my notes, musings, and sample projects sourced from a diverse array of blogs, books, and practical encounters.
+
+This curated collection serves as a mosaic of insights, with some of the codes and notes thoughtfully extracted from publicly available machine learning blogs. Each project within this repository is a testament to my ongoing quest for understanding, meticulously pieced together from the rich tapestry of the digital knowledge landscape.
+
+Whether you are a fellow enthusiast, a curious mind, or a seasoned practitioner, I extend an invitation to explore the codebase, delve into the concepts, and perhaps find inspiration for your own machine learning journey. This repository is not merely a repository of algorithms and snippets; it is a reflection of my commitment, curiosity, and enthusiasm for the ever-evolving field of machine learning.
+
+I encourage you to engage, share your thoughts, or even collaborate on this journey. Let's celebrate the collaborative spirit of the machine learning community and together, embrace the boundless opportunities that arise from the fusion of code, data, and the collective wisdom of publicly available resources.
+
+Happy exploration!
+
+# Projects
+
+
+[DataTab Statistics Tutorials](https://datatab.net/tutorial/get-started)
+
+
+
