@@ -123,6 +123,11 @@ Specifically these are examples of right censoring.
 
 Left censoring and interval censoring are also possible, and methods exist to analyze this type of data.
 
+### Kaplan-Meier
+
+[Source](https://datatab.net/tutorial/kaplan-meier-curve#:~:text=The%20Kaplan-Meier%20curve%20shows,therefore%20a%20better%20survival%20prognosis.)
+
+The Kaplan-Meier curve is commonly used to analyze time-to-event data, such as the time until death or the time until a specific event occurs. For this, the Kaplan Meier curve graphically represent the survival rate or survival function. Time is plotted on the x-axis and the survival rate is plotted on the y-axis.
 
 #### Survival rate
 
@@ -130,7 +135,105 @@ Suppose you're a dental technician and you want to study the "survival time" of 
 
 So your start time is the moment when a person goes to the dentist for a filling, and your end time, the event, is the moment when the filling breaks. The time between these two events is the focus of your study.
 
-For example, you may be interested in the probability that your filling will last longer than 5 years. To do this, you read off the value at 5 years on the graph, which is the survival rate. At 5 years, the Kaplan-Meier curve gives you a value of 0.7. So there is a 70% chance that your filling will last longer than 5 years.
-
 ![](figs/survival2.png)
+
+For example, you may be interested in the probability that your filling will last longer than 5 years. 
+
+To do this, you read off the value at 5 years on the graph, which is the survival rate. 
+
+At 5 years, the Kaplan-Meier curve gives you a value of 0.7. 
+      
+      So there is a 70% chance that your filling will last longer than 5 years.
+
+#### Interpreting the Kaplan-Meier curve
+
+The Kaplan-Meier curve shows the cumulative survival probabilities.
+
+A steeper slope indicates a higher event rate (death rate) and therefore a worse survival prognosis. A flatter slope indicates a lower event rate and therefore a better survival prognosis. The curve may have plateaus or flat areas, indicating periods of relatively stable survival.
+
+If there are multiple curves representing different groups, you can compare their shapes and patterns. If the curves are parallel, it suggests that the groups have similar survival experiences. If the curves diverge or cross, it indicates differences in survival between the groups.
+
+At specific time points, you can estimate the survival probability by locating the time point on the horizontal axis and dropping a vertical line to the curve. Then, read the corresponding survival probability from the vertical axis.
+
+#### Calculating the Kaplan-Meier curve
+
+Let's say the filling lasted 3 years for the first subject, 4 years for the second subject, 4 years for the third subject, and so on.
+
+![](figs/km0.png)
+
+Let's assume that none of the cases are "censored". The data are already arranged so that the shortest survival time is at the top and the longest at the bottom.
+
+Now we create a second table that we can use to draw the Kaplan-Meier curve. To do this, we look at the time points in the left table and add the time zero. So we have the time points 0, then 3, 4, 6, 7, 8 11 and 13. In total we have 10 subjects.
+
+Now we look at how many fills break out at each time. We enter this in the column m. So at time 0, no fillings were broken out. After 3 years, there were one broken fillings, after 4 years there were two, after 6 years there was one. We now do the same for all the other times.
+
+Next, we look at the number of cases that have survived to the time plus the number of cases where the event occurs at the exact time. We enter this in column n.
+
+So n is the number of cases that survived to that point, plus the people who dropped out at that exact point.
+
+After zero years we still have all 10 people. After 3 years, we get 10 for n, 9 people still have their fill intact, and one person's fill broke out exactly after 3 years.
+
+The easiest way to get n is to take the previous n value and subtract the previous m value. So we get 10 - 1 equals 9. Then 9 minus 2 equals 7, 7 - 1 equals 6... and so on and so forth.
+
+From column n we can now calculate the survival rates. To do this, we simply divide n by the total number, i.e. 10.
+
+So 10 divided by 10 is equal to 1, 9 divided by 10 is equal to 0.9, 7 divided by 10 is equal to 0.7. Now we do the same for all the others.
+
+
+#### Draw Kaplan Meier curve
+
+We can now plot the Kaplan-Meier curve. At time 0 we have a value of 1, after 3 years we have a value of 0.9 or 90%. After 4 years we get 0.7, after 6 years 0.6 and so on and so forth.
+
+![](figs/km1.png)
+
+From the Kaplan-Meier curve, we can now see what percentage of the filling has not broken out after a certain time.
+
+
+#### Censored data
+
+Censored data has been added to the example in these three places. 
+
+
+![](figs/km2.png)
+
+We now need to enter this data into our Kaplan-Meier curve table. We do this as follows: We create our m exactly as we did before, looking at how many cases failed at each time point.
+
+Now we add a column q, in which we enter how many cases were censored at each time.
+
+Note that the time at which each censored case occurred does not get its own row, but is assigned to the previous time.
+
+
+![](figs/km3.png)
+
+
+Let's look at this case. The censoring took place at time 9. In this table, however, there is no event with nine years and we also don't add it. The person is added at time 8.
+
+We can now re-calculate the values for the survival curve. If we have censored data, this is a little more complex.
+
+For this, we write down the values in the first step. We get these values by calculating n-m/n. In the third row, for example, we get the value 10/12 with 12-2 by 12.
+
+The calculation of the real value is iterative. To do this, we multiply the result from the previous row by the value we have just calculated.
+
+So, in the first row we get 1, now we calculate 12/13 times 1, which is equal to 0.923. In the next row we calculate 10/12 times 0.923 and get a value of 0.769. We take this value again for the next row.
+
+We do this for all the rows. We can then plot the Kaplan-Meier curve with this data in the same way as before.
+
+#### Comparing different groups
+
+If you are comparing several groups or categories (e.g. treatment groups), the Kaplan-Meier curve consists of several lines, each representing a different group. Each line shows the estimated survival rate for that particular group. To test whether there is a statistically significant difference between the groups, the log-rank test can be used.
+
+If you have several factors and you want to see if they have an effect on the curve, you can calculate a Log Rank Test or calculate a Cox Regression here on DATAtab.
+
+
+#### Kaplan-Meier curve assumptions
+
+Random or Non-informative censoring: This assumption states that the occurrence of censoring is unrelated to the likelihood of experiencing the event of interest. In other words, censoring should be random and not influenced by factors that affect the event outcome. If censoring is not non-informative, the estimated survival probabilities may be biased.
+
+Independence of censoring: This assumption assumes that the censoring times of different individuals are independent of each other. This means that the occurrence or timing of censoring for one participant should not provide any information about the censoring times for other participants.
+
+Survival probabilities do not change over time: The Kaplan-Meier curve assumes that the survival probabilities estimated at each time point remain constant over time. This assumption may not be valid if there are time-varying factors or treatments that can influence survival probabilities.
+
+No competing risks: The Kaplan-Meier curve assumes that the event of interest is the only possible outcome and there are no other competing events that could prevent the occurrence of the event being studied. Competing events can include other causes of death or events that render the occurrence of the event of interest impossible.
+
+
 

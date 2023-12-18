@@ -17,7 +17,10 @@ for(i in 1:length(pckg)) {
 if (!is.installed("ezfun")){ devtools::install_github("zabore/ezfun") }
 ```
 
-```{r}
+### The basics of Survival Analysis
+
+
+```{r, message = FALSE, warning = FALSE}
 library(knitr)
 library(dplyr)
 library(survival)
@@ -28,7 +31,6 @@ library(tibble)
 ezfun::set_ccf_palette("contrast")
 ```
 
-#### The basics
 
 [Original article](https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html)
 
@@ -201,10 +203,18 @@ s1 <- survfit(Surv(time, status) ~ 1, data = lung)
 str(s1)
 ```
 
+**n:** There are 228 subjects in the data.
+
+**time:** Distinct time points.
+
+**n.risk:** Number of cases that have survived to the time plus the number of cases where the event occurs at the exact time. 
+
+**n.event:** Number of event happened at the time.
+
 
 #### Kaplan-Meier plots/Curves
 
-The Kaplan Meier curve graphically represent the survival rate or survival function. Time is plotted on the x-axis and the survival rate is plotted on the y-axis.
+The Kaplan Meier curve graphically represent the survival rate or survival function. 
 
 We will use the {`ggsurvfit`} package to generate Kaplan-Meier plots. 
 
@@ -257,7 +267,40 @@ survfit2(Surv(time, status) ~ 1, data = lung) %>%
 ```
 
 
+Plots can be customized using many standard {ggplot2} options.
 
+#### Estimating x-year survival
 
+One quantity often of interest in a survival analysis is the probability of surviving beyond a certain number of years, x.
 
+For example, to estimate the probability of surviving to 1 year, use summary with the times argument 
+(Note: the time variable in the lung data is actually in days, so we need to use `times = 365.25`)
+
+```{r}
+summary(survfit(Surv(time, status) ~ 1, data = lung), times = 365.25)
+```
+
+    We find that the 1-year probability of survival in this study is 41%.
+
+The associated lower and upper bounds of the 95% confidence interval are also displayed.
+
+The 1-year survival probability is the point on the y-axis that corresponds to 1
+ year on the x-axis for the survival curve.
+
+![](figs/survival3.png)
+
+What happens if you use a “naive” estimate? Here “naive” means that the patients who were censored prior to 1-year are considered event-free and included in the denominator.
+
+121 of the 228 patients in the lung data died by 1
+ year so the “naive” estimate is calculated as:
+
+(1−121228)×100=47%
+You get an incorrect estimate of the 1
+-year probability of survival when you ignore the fact that 42 patients were censored before 1
+ year.
+
+Recall the correct estimate of the 1
+-year probability of survival, accounting for censoring using the Kaplan-Meier method, was 41%.
+
+Ignoring censoring leads to an overestimate of the overall survival probability. Imagine two studies, each with 228 subjects. There are 165 deaths in each study. Censoring is ignored in one (blue line), censoring is accounted for in the other (yellow line). The censored subjects only contribute information for a portion of the follow-up time, and then fall out of the risk set, thus pulling down the cumulative probability of survival. Ignoring censoring erroneously treats patients who are censored as part of the risk set for the entire follow-up period.
 
