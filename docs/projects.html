@@ -23,7 +23,7 @@
 <meta name="author" content="Davut Ayan" />
 
 
-<meta name="date" content="2023-12-17" />
+<meta name="date" content="2024-01-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -143,6 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="projects.html"><a href="projects.html"><i class="fa fa-check"></i><b>1</b> Projects</a>
 <ul>
+<li class="chapter" data-level="1.0.1" data-path="projects.html"><a href="projects.html#notes-on-visuals"><i class="fa fa-check"></i><b>1.0.1</b> NOTES ON VISUALS</a></li>
 <li class="chapter" data-level="1.1" data-path="projects.html"><a href="projects.html#elastic-net-model"><i class="fa fa-check"></i><b>1.1</b> Elastic Net Model</a></li>
 <li class="chapter" data-level="1.2" data-path="projects.html"><a href="projects.html#survival-analysis"><i class="fa fa-check"></i><b>1.2</b> Survival Analysis</a>
 <ul>
@@ -178,6 +179,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 1</span> Projects<a href="projects.html#projects" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><a href="https://datatab.net/tutorial/get-started">DataTab Statistics Tutorials</a></p>
 
+<div id="notes-on-visuals" class="section level3 hasAnchor" number="1.0.1">
+<h3><span class="header-section-number">1.0.1</span> NOTES ON VISUALS<a href="projects.html#notes-on-visuals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>pre attentive principles, colurs, shape, size etc.</p></li>
+<li><p>GESTALT principles</p></li>
+<li><p>why data visualization is needed with summary statistics. Data patterns may be different although means may be different</p></li>
+<li><p>exploratory graphs: may be good for people with some background. filtering and some control may be given to audience</p></li>
+<li><p>explanatory graphs: may be good for people with no backgroung. made simple</p></li>
+</ul>
+
+</div>
 <div id="elastic-net-model" class="section level2 hasAnchor" number="1.1">
 <h2><span class="header-section-number">1.1</span> Elastic Net Model<a href="projects.html#elastic-net-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Elastic Net is a regularization technique that combines both L1 (Lasso) and L2 (Ridge) regularization penalties in a linear regression model. This technique is commonly used in machine learning, especially when dealing with high-dimensional datasets or situations where some of the features are highly correlated.</p>
@@ -425,31 +437,27 @@ When an observation is right censored it means that the information is incomplet
 <p>Survival analysis techniques provide a way to appropriately account for censored patients in the analysis.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="projects.html#cb5-1" tabindex="-1"></a><span class="co"># install.packages(c(&quot;lubridate&quot;, &quot;ggsurvfit&quot;, &quot;gtsummary&quot;, &quot;tidycmprsk&quot;))</span></span>
 <span id="cb5-2"><a href="projects.html#cb5-2" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code></pre></div>
-<pre><code>## Warning: package &#39;lubridate&#39; was built under R version 4.3.1</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;lubridate&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     date, intersect, setdiff, union</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="projects.html#cb9-1" tabindex="-1"></a><span class="fu">library</span>(ggsurvfit)</span></code></pre></div>
-<pre><code>## Warning: package &#39;ggsurvfit&#39; was built under R version 4.3.1</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="projects.html#cb11-1" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span></code></pre></div>
-<pre><code>## #BlackLivesMatter</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="projects.html#cb13-1" tabindex="-1"></a><span class="fu">library</span>(tidycmprsk)</span></code></pre></div>
-<pre><code>## Warning: package &#39;tidycmprsk&#39; was built under R version 4.3.1</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="projects.html#cb8-1" tabindex="-1"></a><span class="fu">library</span>(ggsurvfit)</span>
+<span id="cb8-2"><a href="projects.html#cb8-2" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb8-3"><a href="projects.html#cb8-3" tabindex="-1"></a><span class="fu">library</span>(tidycmprsk)</span></code></pre></div>
 <pre><code>## 
 ## Attaching package: &#39;tidycmprsk&#39;</code></pre>
 <pre><code>## The following object is masked from &#39;package:gtsummary&#39;:
 ## 
 ##     trial</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="projects.html#cb17-1" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;zabore/condsurv&quot;)</span></span>
-<span id="cb17-2"><a href="projects.html#cb17-2" tabindex="-1"></a><span class="fu">library</span>(condsurv)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="projects.html#cb11-1" tabindex="-1"></a><span class="co"># devtools::install_github(&quot;zabore/condsurv&quot;)</span></span>
+<span id="cb11-2"><a href="projects.html#cb11-2" tabindex="-1"></a><span class="fu">library</span>(condsurv)</span></code></pre></div>
 <p><strong>The lung dataset</strong></p>
 <p>Throughout this section, we will use the <code>lung</code> dataset from the <code>survival</code> package as example data. The data contain subjects with advanced lung cancer from the North Central Cancer Treatment Group. We will focus on the following variables throughout this tutorial:</p>
 <pre><code> **time:** Observed survival time in days
  **status:** censoring status 1=censored, 2=dead
  **sex:** 1=Male, 2=Female</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="projects.html#cb19-1" tabindex="-1"></a><span class="fu">head</span>(lung[, <span class="fu">c</span>(<span class="st">&quot;time&quot;</span>, <span class="st">&quot;status&quot;</span>, <span class="st">&quot;sex&quot;</span>)])</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="projects.html#cb13-1" tabindex="-1"></a><span class="fu">head</span>(lung[, <span class="fu">c</span>(<span class="st">&quot;time&quot;</span>, <span class="st">&quot;status&quot;</span>, <span class="st">&quot;sex&quot;</span>)])</span></code></pre></div>
 <pre><code>##   time status sex
 ## 1  306      2   1
 ## 2  455      2   1
@@ -458,13 +466,13 @@ When an observation is right censored it means that the information is incomplet
 ## 5  883      2   1
 ## 6 1022      1   1</code></pre>
 <p>Note that the status is coded in a non-standard way in this dataset. Typically you will see 1=event, 0=censored. Let’s recode it to avoid confusion:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="projects.html#cb21-1" tabindex="-1"></a>lung1 <span class="ot">&lt;-</span> </span>
-<span id="cb21-2"><a href="projects.html#cb21-2" tabindex="-1"></a>  lung <span class="sc">%&gt;%</span> </span>
-<span id="cb21-3"><a href="projects.html#cb21-3" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb21-4"><a href="projects.html#cb21-4" tabindex="-1"></a>    <span class="at">status =</span> <span class="fu">recode</span>(status, <span class="st">&#39;1&#39;</span> <span class="ot">=</span> <span class="dv">0</span>, <span class="st">&#39;2&#39;</span> <span class="ot">=</span> <span class="dv">1</span>)</span>
-<span id="cb21-5"><a href="projects.html#cb21-5" tabindex="-1"></a>  )</span>
-<span id="cb21-6"><a href="projects.html#cb21-6" tabindex="-1"></a></span>
-<span id="cb21-7"><a href="projects.html#cb21-7" tabindex="-1"></a><span class="fu">head</span>(lung[, <span class="fu">c</span>(<span class="st">&quot;time&quot;</span>, <span class="st">&quot;status&quot;</span>, <span class="st">&quot;sex&quot;</span>)])</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="projects.html#cb15-1" tabindex="-1"></a>lung1 <span class="ot">&lt;-</span> </span>
+<span id="cb15-2"><a href="projects.html#cb15-2" tabindex="-1"></a>  lung <span class="sc">%&gt;%</span> </span>
+<span id="cb15-3"><a href="projects.html#cb15-3" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb15-4"><a href="projects.html#cb15-4" tabindex="-1"></a>    <span class="at">status =</span> <span class="fu">recode</span>(status, <span class="st">&#39;1&#39;</span> <span class="ot">=</span> <span class="dv">0</span>, <span class="st">&#39;2&#39;</span> <span class="ot">=</span> <span class="dv">1</span>)</span>
+<span id="cb15-5"><a href="projects.html#cb15-5" tabindex="-1"></a>  )</span>
+<span id="cb15-6"><a href="projects.html#cb15-6" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="projects.html#cb15-7" tabindex="-1"></a><span class="fu">head</span>(lung[, <span class="fu">c</span>(<span class="st">&quot;time&quot;</span>, <span class="st">&quot;status&quot;</span>, <span class="st">&quot;sex&quot;</span>)])</span></code></pre></div>
 <pre><code>##   time status sex
 ## 1  306      2   1
 ## 2  455      2   1
@@ -480,13 +488,13 @@ sex: 1=Male, 2=Female</code></pre>
 <p><strong>Calculating survival times</strong></p>
 <p>Data will often come with start and end dates rather than pre-calculated survival times. The first step is to make sure these are formatted as dates in R.</p>
 <p>Let’s create a small example dataset with variables <code>sx_date</code> for surgery date and <code>last_fup_date</code> for the last follow-up date:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="projects.html#cb24-1" tabindex="-1"></a>date_ex <span class="ot">&lt;-</span> </span>
-<span id="cb24-2"><a href="projects.html#cb24-2" tabindex="-1"></a>  <span class="fu">tibble</span>(</span>
-<span id="cb24-3"><a href="projects.html#cb24-3" tabindex="-1"></a>    <span class="at">sx_date =</span> <span class="fu">c</span>(<span class="st">&quot;2007-06-22&quot;</span>, <span class="st">&quot;2004-02-13&quot;</span>, <span class="st">&quot;2010-10-27&quot;</span>), </span>
-<span id="cb24-4"><a href="projects.html#cb24-4" tabindex="-1"></a>    <span class="at">last_fup_date =</span> <span class="fu">c</span>(<span class="st">&quot;2017-04-15&quot;</span>, <span class="st">&quot;2018-07-04&quot;</span>, <span class="st">&quot;2016-10-31&quot;</span>)</span>
-<span id="cb24-5"><a href="projects.html#cb24-5" tabindex="-1"></a>    )</span>
-<span id="cb24-6"><a href="projects.html#cb24-6" tabindex="-1"></a></span>
-<span id="cb24-7"><a href="projects.html#cb24-7" tabindex="-1"></a>date_ex</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="projects.html#cb18-1" tabindex="-1"></a>date_ex <span class="ot">&lt;-</span> </span>
+<span id="cb18-2"><a href="projects.html#cb18-2" tabindex="-1"></a>  <span class="fu">tibble</span>(</span>
+<span id="cb18-3"><a href="projects.html#cb18-3" tabindex="-1"></a>    <span class="at">sx_date =</span> <span class="fu">c</span>(<span class="st">&quot;2007-06-22&quot;</span>, <span class="st">&quot;2004-02-13&quot;</span>, <span class="st">&quot;2010-10-27&quot;</span>), </span>
+<span id="cb18-4"><a href="projects.html#cb18-4" tabindex="-1"></a>    <span class="at">last_fup_date =</span> <span class="fu">c</span>(<span class="st">&quot;2017-04-15&quot;</span>, <span class="st">&quot;2018-07-04&quot;</span>, <span class="st">&quot;2016-10-31&quot;</span>)</span>
+<span id="cb18-5"><a href="projects.html#cb18-5" tabindex="-1"></a>    )</span>
+<span id="cb18-6"><a href="projects.html#cb18-6" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="projects.html#cb18-7" tabindex="-1"></a>date_ex</span></code></pre></div>
 <pre><code>## # A tibble: 3 × 2
 ##   sx_date    last_fup_date
 ##   &lt;chr&gt;      &lt;chr&gt;        
@@ -495,14 +503,14 @@ sex: 1=Male, 2=Female</code></pre>
 ## 3 2010-10-27 2016-10-31</code></pre>
 <p>We see these are both <code>character</code> variables, but we need them to be formatted as <code>dates.</code></p>
 <p>We will use the {<code>lubridate</code>} package to work with dates. In this case, we need to use the <code>ymd()</code> function to change the format, since the dates are currently in the character format where the year comes first, followed by the month, and followed by the day.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="projects.html#cb26-1" tabindex="-1"></a>date_ex1 <span class="ot">&lt;-</span></span>
-<span id="cb26-2"><a href="projects.html#cb26-2" tabindex="-1"></a>  date_ex <span class="sc">%&gt;%</span> </span>
-<span id="cb26-3"><a href="projects.html#cb26-3" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb26-4"><a href="projects.html#cb26-4" tabindex="-1"></a>    <span class="at">sx_date =</span> <span class="fu">ymd</span>(sx_date), </span>
-<span id="cb26-5"><a href="projects.html#cb26-5" tabindex="-1"></a>    <span class="at">last_fup_date =</span> <span class="fu">ymd</span>(last_fup_date)</span>
-<span id="cb26-6"><a href="projects.html#cb26-6" tabindex="-1"></a>    )</span>
-<span id="cb26-7"><a href="projects.html#cb26-7" tabindex="-1"></a></span>
-<span id="cb26-8"><a href="projects.html#cb26-8" tabindex="-1"></a>date_ex1</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="projects.html#cb20-1" tabindex="-1"></a>date_ex1 <span class="ot">&lt;-</span></span>
+<span id="cb20-2"><a href="projects.html#cb20-2" tabindex="-1"></a>  date_ex <span class="sc">%&gt;%</span> </span>
+<span id="cb20-3"><a href="projects.html#cb20-3" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb20-4"><a href="projects.html#cb20-4" tabindex="-1"></a>    <span class="at">sx_date =</span> <span class="fu">ymd</span>(sx_date), </span>
+<span id="cb20-5"><a href="projects.html#cb20-5" tabindex="-1"></a>    <span class="at">last_fup_date =</span> <span class="fu">ymd</span>(last_fup_date)</span>
+<span id="cb20-6"><a href="projects.html#cb20-6" tabindex="-1"></a>    )</span>
+<span id="cb20-7"><a href="projects.html#cb20-7" tabindex="-1"></a></span>
+<span id="cb20-8"><a href="projects.html#cb20-8" tabindex="-1"></a>date_ex1</span></code></pre></div>
 <pre><code>## # A tibble: 3 × 2
 ##   sx_date    last_fup_date
 ##   &lt;date&gt;     &lt;date&gt;       
@@ -510,13 +518,13 @@ sex: 1=Male, 2=Female</code></pre>
 ## 2 2004-02-13 2018-07-04   
 ## 3 2010-10-27 2016-10-31</code></pre>
 <p>Now that the dates are formatted, we need to calculate the difference between start and end dates in some units, usually months or years. Using the {<code>lubridate</code>} package, the operator <code>%--%</code> designates a time interval, which is then converted to the number of elapsed seconds using <code>as.duration()</code> and finally converted to years by dividing by <code>dyears(1)</code>, which gives the number of seconds in a year.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="projects.html#cb28-1" tabindex="-1"></a>date_ex2 <span class="ot">&lt;-</span></span>
-<span id="cb28-2"><a href="projects.html#cb28-2" tabindex="-1"></a>  date_ex1 <span class="sc">%&gt;%</span> </span>
-<span id="cb28-3"><a href="projects.html#cb28-3" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb28-4"><a href="projects.html#cb28-4" tabindex="-1"></a>    <span class="at">observed_yrs =</span> <span class="fu">as.duration</span>(sx_date <span class="sc">%--%</span> last_fup_date) <span class="sc">/</span> <span class="fu">dyears</span>(<span class="dv">1</span>)</span>
-<span id="cb28-5"><a href="projects.html#cb28-5" tabindex="-1"></a>    )</span>
-<span id="cb28-6"><a href="projects.html#cb28-6" tabindex="-1"></a></span>
-<span id="cb28-7"><a href="projects.html#cb28-7" tabindex="-1"></a>date_ex2</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="projects.html#cb22-1" tabindex="-1"></a>date_ex2 <span class="ot">&lt;-</span></span>
+<span id="cb22-2"><a href="projects.html#cb22-2" tabindex="-1"></a>  date_ex1 <span class="sc">%&gt;%</span> </span>
+<span id="cb22-3"><a href="projects.html#cb22-3" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb22-4"><a href="projects.html#cb22-4" tabindex="-1"></a>    <span class="at">observed_yrs =</span> <span class="fu">as.duration</span>(sx_date <span class="sc">%--%</span> last_fup_date) <span class="sc">/</span> <span class="fu">dyears</span>(<span class="dv">1</span>)</span>
+<span id="cb22-5"><a href="projects.html#cb22-5" tabindex="-1"></a>    )</span>
+<span id="cb22-6"><a href="projects.html#cb22-6" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="projects.html#cb22-7" tabindex="-1"></a>date_ex2</span></code></pre></div>
 <pre><code>## # A tibble: 3 × 3
 ##   sx_date    last_fup_date observed_yrs
 ##   &lt;date&gt;     &lt;date&gt;               &lt;dbl&gt;
@@ -527,7 +535,7 @@ sex: 1=Male, 2=Female</code></pre>
 <h4><span class="header-section-number">1.2.4.1</span> Creating survival objects and curves<a href="projects.html#creating-survival-objects-and-curves" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The Kaplan-Meier method is the most common way to estimate survival times and probabilities. It is a <code>non-parametric</code> approach that results in a step function, where there is a step down each time an event occurs.</p>
 <p>Lets see the data again:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="projects.html#cb30-1" tabindex="-1"></a>lung[, <span class="fu">c</span>(<span class="st">&quot;time&quot;</span>, <span class="st">&quot;status&quot;</span>)][<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, ]</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="projects.html#cb24-1" tabindex="-1"></a>lung[, <span class="fu">c</span>(<span class="st">&quot;time&quot;</span>, <span class="st">&quot;status&quot;</span>)][<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, ]</span></code></pre></div>
 <pre><code>##   time status
 ## 1  306      2
 ## 2  455      2
@@ -536,12 +544,12 @@ sex: 1=Male, 2=Female</code></pre>
 ## 5  883      2</code></pre>
 <p>The <code>Surv()</code> function from the {<code>survival</code>} package creates a survival object for use as the response in a model formula. There will be one entry for each subject that is the survival time, which is followed by a + if the subject was censored.</p>
 <p>Let’s look at the first 10 observations:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="projects.html#cb32-1" tabindex="-1"></a><span class="fu">Surv</span>(lung<span class="sc">$</span>time, lung<span class="sc">$</span>status)[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="projects.html#cb26-1" tabindex="-1"></a><span class="fu">Surv</span>(lung<span class="sc">$</span>time, lung<span class="sc">$</span>status)[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span></code></pre></div>
 <pre><code>##  [1]  306   455  1010+  210   883  1022+  310   361   218   166</code></pre>
 <p>We see that subject 1 had an event at time 306 days, subject 2 had an event at time 455 days, subject 3 was censored at time 1010 days, etc.</p>
 <p>The <code>survfit()</code> function creates survival curves using the Kaplan-Meier method based on a formula. Let’s generate the overall survival curve for the entire cohort, assign it to object s1, and look at the structure using <code>str()</code>:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="projects.html#cb34-1" tabindex="-1"></a>s1 <span class="ot">&lt;-</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung)</span>
-<span id="cb34-2"><a href="projects.html#cb34-2" tabindex="-1"></a><span class="fu">str</span>(s1)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="projects.html#cb28-1" tabindex="-1"></a>s1 <span class="ot">&lt;-</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung)</span>
+<span id="cb28-2"><a href="projects.html#cb28-2" tabindex="-1"></a><span class="fu">str</span>(s1)</span></code></pre></div>
 <pre><code>## List of 16
 ##  $ n        : int 228
 ##  $ time     : num [1:186] 5 11 12 13 15 26 30 31 53 54 ...
@@ -560,6 +568,10 @@ sex: 1=Male, 2=Female</code></pre>
 ##  $ upper    : num [1:186] 1 1 0.997 0.992 0.989 ...
 ##  $ call     : language survfit(formula = Surv(time, status) ~ 1, data = lung)
 ##  - attr(*, &quot;class&quot;)= chr &quot;survfit&quot;</code></pre>
+<p><strong>n:</strong> There are 228 subjects in the data.</p>
+<p><strong>time:</strong> Distinct time points.</p>
+<p><strong>n.risk:</strong> Number of cases that have survived to the time plus the number of cases where the event occurs at the exact time.</p>
+<p><strong>n.event:</strong> Number of event happened at the time.</p>
 </div>
 <div id="kaplan-meier-plotscurves" class="section level4 hasAnchor" number="1.2.4.2">
 <h4><span class="header-section-number">1.2.4.2</span> Kaplan-Meier plots/Curves<a href="projects.html#kaplan-meier-plotscurves" class="anchor-section" aria-label="Anchor link to header"></a></h4>
@@ -569,33 +581,33 @@ sex: 1=Male, 2=Female</code></pre>
 <p>Note: alternatively, survival plots can be created using base R or the {<code>survminer</code>} package.</p>
 <p>The {<code>ggsurvfit</code>} package works best if you create the <code>survfit</code> object using the included <code>ggsurvfit::survfit2()</code> function, which uses the same syntax to what we saw previously with <code>survival::survfit()</code>.</p>
 <p>The <code>ggsurvfit::survfit2()</code> tracks the environment from the function call, which allows the plot to have better default values for labeling and p-value reporting.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="projects.html#cb36-1" tabindex="-1"></a><span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung) <span class="sc">%&gt;%</span> </span>
-<span id="cb36-2"><a href="projects.html#cb36-2" tabindex="-1"></a>  <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
-<span id="cb36-3"><a href="projects.html#cb36-3" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb36-4"><a href="projects.html#cb36-4" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Days&quot;</span>,</span>
-<span id="cb36-5"><a href="projects.html#cb36-5" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Overall survival probability&quot;</span></span>
-<span id="cb36-6"><a href="projects.html#cb36-6" tabindex="-1"></a>  )</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="projects.html#cb30-1" tabindex="-1"></a><span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung) <span class="sc">%&gt;%</span> </span>
+<span id="cb30-2"><a href="projects.html#cb30-2" tabindex="-1"></a>  <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
+<span id="cb30-3"><a href="projects.html#cb30-3" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb30-4"><a href="projects.html#cb30-4" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Days&quot;</span>,</span>
+<span id="cb30-5"><a href="projects.html#cb30-5" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Overall survival probability&quot;</span></span>
+<span id="cb30-6"><a href="projects.html#cb30-6" tabindex="-1"></a>  )</span></code></pre></div>
 <p><img src="Project_Archive_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <p>The default plot in <code>ggsurvfit()</code> shows the step function only.</p>
 <p>We can add the confidence interval using <code>add_confidence_interval()</code>:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="projects.html#cb37-1" tabindex="-1"></a><span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung) <span class="sc">%&gt;%</span> </span>
-<span id="cb37-2"><a href="projects.html#cb37-2" tabindex="-1"></a>  <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
-<span id="cb37-3"><a href="projects.html#cb37-3" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb37-4"><a href="projects.html#cb37-4" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Days&quot;</span>,</span>
-<span id="cb37-5"><a href="projects.html#cb37-5" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Overall survival probability&quot;</span></span>
-<span id="cb37-6"><a href="projects.html#cb37-6" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
-<span id="cb37-7"><a href="projects.html#cb37-7" tabindex="-1"></a>  <span class="fu">add_confidence_interval</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="projects.html#cb31-1" tabindex="-1"></a><span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung) <span class="sc">%&gt;%</span> </span>
+<span id="cb31-2"><a href="projects.html#cb31-2" tabindex="-1"></a>  <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
+<span id="cb31-3"><a href="projects.html#cb31-3" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb31-4"><a href="projects.html#cb31-4" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Days&quot;</span>,</span>
+<span id="cb31-5"><a href="projects.html#cb31-5" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Overall survival probability&quot;</span></span>
+<span id="cb31-6"><a href="projects.html#cb31-6" tabindex="-1"></a>  ) <span class="sc">+</span> </span>
+<span id="cb31-7"><a href="projects.html#cb31-7" tabindex="-1"></a>  <span class="fu">add_confidence_interval</span>()</span></code></pre></div>
 <p><img src="Project_Archive_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <p>Typically we will also want to see the numbers at risk in a table below the x-axis.</p>
 <p>We can add this using <code>add_risktable()</code>:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="projects.html#cb38-1" tabindex="-1"></a><span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung) <span class="sc">%&gt;%</span> </span>
-<span id="cb38-2"><a href="projects.html#cb38-2" tabindex="-1"></a>  <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
-<span id="cb38-3"><a href="projects.html#cb38-3" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb38-4"><a href="projects.html#cb38-4" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Days&quot;</span>,</span>
-<span id="cb38-5"><a href="projects.html#cb38-5" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Overall survival probability&quot;</span></span>
-<span id="cb38-6"><a href="projects.html#cb38-6" tabindex="-1"></a>    ) <span class="sc">+</span> </span>
-<span id="cb38-7"><a href="projects.html#cb38-7" tabindex="-1"></a>  <span class="fu">add_confidence_interval</span>() <span class="sc">+</span></span>
-<span id="cb38-8"><a href="projects.html#cb38-8" tabindex="-1"></a>  <span class="fu">add_risktable</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="projects.html#cb32-1" tabindex="-1"></a><span class="fu">survfit2</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung) <span class="sc">%&gt;%</span> </span>
+<span id="cb32-2"><a href="projects.html#cb32-2" tabindex="-1"></a>  <span class="fu">ggsurvfit</span>() <span class="sc">+</span></span>
+<span id="cb32-3"><a href="projects.html#cb32-3" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb32-4"><a href="projects.html#cb32-4" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">&quot;Days&quot;</span>,</span>
+<span id="cb32-5"><a href="projects.html#cb32-5" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">&quot;Overall survival probability&quot;</span></span>
+<span id="cb32-6"><a href="projects.html#cb32-6" tabindex="-1"></a>    ) <span class="sc">+</span> </span>
+<span id="cb32-7"><a href="projects.html#cb32-7" tabindex="-1"></a>  <span class="fu">add_confidence_interval</span>() <span class="sc">+</span></span>
+<span id="cb32-8"><a href="projects.html#cb32-8" tabindex="-1"></a>  <span class="fu">add_risktable</span>()</span></code></pre></div>
 <p><img src="Project_Archive_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>Plots can be customized using many standard {ggplot2} options.</p>
 </div>
@@ -604,7 +616,7 @@ sex: 1=Male, 2=Female</code></pre>
 <p>One quantity often of interest in a survival analysis is the probability of surviving beyond a certain number of years, x.</p>
 <p>For example, to estimate the probability of surviving to 1 year, use summary with the times argument
 (Note: the time variable in the lung data is actually in days, so we need to use <code>times = 365.25</code>)</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="projects.html#cb39-1" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung), <span class="at">times =</span> <span class="fl">365.25</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="projects.html#cb33-1" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung), <span class="at">times =</span> <span class="fl">365.25</span>)</span></code></pre></div>
 <pre><code>## Call: survfit(formula = Surv(time, status) ~ 1, data = lung)
 ## 
 ##  time n.risk n.event survival std.err lower 95% CI upper 95% CI
@@ -615,21 +627,1507 @@ sex: 1=Male, 2=Female</code></pre>
 year on the x-axis for the survival curve.</p>
 <p><img src="figs/survival3.png" /></p>
 <p>What happens if you use a “naive” estimate? Here “naive” means that the patients who were censored prior to 1-year are considered event-free and included in the denominator.</p>
-<p>121 of the 228 patients in the lung data died by 1
-year so the “naive” estimate is calculated as:</p>
-<p>(1−121228)×100=47%
-You get an incorrect estimate of the 1
--year probability of survival when you ignore the fact that 42 patients were censored before 1
-year.</p>
-<p>Recall the correct estimate of the 1
--year probability of survival, accounting for censoring using the Kaplan-Meier method, was 41%.</p>
-<p>Ignoring censoring leads to an overestimate of the overall survival probability. Imagine two studies, each with 228 subjects. There are 165 deaths in each study. Censoring is ignored in one (blue line), censoring is accounted for in the other (yellow line). The censored subjects only contribute information for a portion of the follow-up time, and then fall out of the risk set, thus pulling down the cumulative probability of survival. Ignoring censoring erroneously treats patients who are censored as part of the risk set for the entire follow-up period.</p>
+<p>121 of the 228 patients in the lung data died by 1 year so the “naive” estimate is calculated as:</p>
+<p><span class="math display">\[(1−\frac{121}{228})×100=47\%\]</span></p>
+<p>You get an incorrect estimate of the 1-year probability of survival when you ignore the fact that 42 patients were censored before 1-year.</p>
+<p>Recall the correct estimate of the 1-year probability of survival, accounting for censoring using the Kaplan-Meier method, was 41%.</p>
+<p>Ignoring censoring leads to an overestimate of the overall survival probability.</p>
+<p>Imagine two studies, each with 228 subjects. There are 165 deaths in each study. Censoring is ignored in one (blue line), censoring is accounted for in the other (yellow line).</p>
+<p>The censored subjects only contribute information for a portion of the follow-up time, and then fall out of the risk set, thus pulling down the cumulative probability of survival. Ignoring censoring erroneously treats patients who are censored as part of the risk set for the entire follow-up period.</p>
+<p><img src="figs/survival4.png" /></p>
+<p>We can produce nice tables of x-time survival probability estimates using the <code>tbl_survfit()</code> function from the {<code>gtsummary</code>} package:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="projects.html#cb36-1" tabindex="-1"></a><span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung) <span class="sc">%&gt;%</span> </span>
+<span id="cb36-2"><a href="projects.html#cb36-2" tabindex="-1"></a>  <span class="fu">tbl_survfit</span>(</span>
+<span id="cb36-3"><a href="projects.html#cb36-3" tabindex="-1"></a>    <span class="at">times =</span> <span class="fl">365.25</span>,</span>
+<span id="cb36-4"><a href="projects.html#cb36-4" tabindex="-1"></a>    <span class="at">label_header =</span> <span class="st">&quot;**1-year survival (95% CI)**&quot;</span></span>
+<span id="cb36-5"><a href="projects.html#cb36-5" tabindex="-1"></a>  )</span></code></pre></div>
+<div id="shdidzklpp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#shdidzklpp table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#shdidzklpp thead, #shdidzklpp tbody, #shdidzklpp tfoot, #shdidzklpp tr, #shdidzklpp td, #shdidzklpp th {
+  border-style: none;
+}
+
+#shdidzklpp p {
+  margin: 0;
+  padding: 0;
+}
+
+#shdidzklpp .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#shdidzklpp .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#shdidzklpp .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#shdidzklpp .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#shdidzklpp .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#shdidzklpp .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#shdidzklpp .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#shdidzklpp .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#shdidzklpp .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#shdidzklpp .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#shdidzklpp .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#shdidzklpp .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#shdidzklpp .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#shdidzklpp .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#shdidzklpp .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#shdidzklpp .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#shdidzklpp .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#shdidzklpp .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#shdidzklpp .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#shdidzklpp .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#shdidzklpp .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#shdidzklpp .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#shdidzklpp .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#shdidzklpp .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#shdidzklpp .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#shdidzklpp .gt_left {
+  text-align: left;
+}
+
+#shdidzklpp .gt_center {
+  text-align: center;
+}
+
+#shdidzklpp .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#shdidzklpp .gt_font_normal {
+  font-weight: normal;
+}
+
+#shdidzklpp .gt_font_bold {
+  font-weight: bold;
+}
+
+#shdidzklpp .gt_font_italic {
+  font-style: italic;
+}
+
+#shdidzklpp .gt_super {
+  font-size: 65%;
+}
+
+#shdidzklpp .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#shdidzklpp .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#shdidzklpp .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#shdidzklpp .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#shdidzklpp .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#shdidzklpp .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#shdidzklpp .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Characteristic&lt;/strong&gt;"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;1-year survival (95% CI)&lt;/strong&gt;"><strong>1-year survival (95% CI)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="label" class="gt_row gt_left">Overall</td>
+<td headers="stat_1" class="gt_row gt_center">41% (34%, 49%)</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+<div id="estimating-median-survival-time" class="section level4 hasAnchor" number="1.2.4.4">
+<h4><span class="header-section-number">1.2.4.4</span> Estimating median survival time<a href="projects.html#estimating-median-survival-time" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Another quantity often of interest in a survival analysis is the average survival time, which we quantify using the median. Survival times are not expected to be normally distributed so the mean is not an appropriate summary.</p>
+<p>We can obtain the median survival directly from the <code>survfit</code> object:</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="projects.html#cb37-1" tabindex="-1"></a><span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung)</span></code></pre></div>
+<pre><code>## Call: survfit(formula = Surv(time, status) ~ 1, data = lung)
+## 
+##        n events median 0.95LCL 0.95UCL
+## [1,] 228    165    310     285     363</code></pre>
+<p>We see the median survival time is 310 days The lower and upper bounds of the 95% confidence interval are also displayed.</p>
+<p>Median survival is the time corresponding to a survival probability of 0.5:</p>
+<p><img src="figs/survival5.png" /></p>
+<p>What happens if you use a “naive” estimate? Here “naive” means that you exclude the censored patients from the calculation entirely to estimate median survival time among the patients who have had the event.</p>
+<p>Summarize the median survival time among the 165 patients who died:</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="projects.html#cb39-1" tabindex="-1"></a>lung <span class="sc">%&gt;%</span> </span>
+<span id="cb39-2"><a href="projects.html#cb39-2" tabindex="-1"></a>  <span class="fu">filter</span>(status <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb39-3"><a href="projects.html#cb39-3" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">median_surv =</span> <span class="fu">median</span>(time))</span></code></pre></div>
+<pre><code>##   median_surv
+## 1         284</code></pre>
+<p>You get an incorrect estimate of median survival time of 284 days when you ignore the fact that censored patients also contribute follow-up time.</p>
+<p>Recall the correct estimate of median survival time is 310 days.</p>
+<p>Ignoring censoring will lead to an underestimate of median survival time because the follow-up time that censored patients contribute is excluded (blue line). The true survival curve accounting for censoring in the lung data is shown in yellow for comparison.</p>
+<p><img src="figs/survival6.png" /></p>
+<p>We can produce nice tables of median survival time estimates using the <code>tbl_survfit()</code> function from the {<code>gtsummary</code>} package:</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="projects.html#cb41-1" tabindex="-1"></a><span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> lung) <span class="sc">%&gt;%</span> </span>
+<span id="cb41-2"><a href="projects.html#cb41-2" tabindex="-1"></a>  <span class="fu">tbl_survfit</span>(</span>
+<span id="cb41-3"><a href="projects.html#cb41-3" tabindex="-1"></a>    <span class="at">probs =</span> <span class="fl">0.5</span>,</span>
+<span id="cb41-4"><a href="projects.html#cb41-4" tabindex="-1"></a>    <span class="at">label_header =</span> <span class="st">&quot;**Median survival (95% CI)**&quot;</span></span>
+<span id="cb41-5"><a href="projects.html#cb41-5" tabindex="-1"></a>  )</span></code></pre></div>
+<div id="xgdzttuaph" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xgdzttuaph table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#xgdzttuaph thead, #xgdzttuaph tbody, #xgdzttuaph tfoot, #xgdzttuaph tr, #xgdzttuaph td, #xgdzttuaph th {
+  border-style: none;
+}
+
+#xgdzttuaph p {
+  margin: 0;
+  padding: 0;
+}
+
+#xgdzttuaph .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xgdzttuaph .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xgdzttuaph .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xgdzttuaph .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xgdzttuaph .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xgdzttuaph .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xgdzttuaph .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xgdzttuaph .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xgdzttuaph .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xgdzttuaph .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#xgdzttuaph .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xgdzttuaph .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xgdzttuaph .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xgdzttuaph .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xgdzttuaph .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xgdzttuaph .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xgdzttuaph .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xgdzttuaph .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xgdzttuaph .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xgdzttuaph .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xgdzttuaph .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xgdzttuaph .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xgdzttuaph .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xgdzttuaph .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xgdzttuaph .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xgdzttuaph .gt_left {
+  text-align: left;
+}
+
+#xgdzttuaph .gt_center {
+  text-align: center;
+}
+
+#xgdzttuaph .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xgdzttuaph .gt_font_normal {
+  font-weight: normal;
+}
+
+#xgdzttuaph .gt_font_bold {
+  font-weight: bold;
+}
+
+#xgdzttuaph .gt_font_italic {
+  font-style: italic;
+}
+
+#xgdzttuaph .gt_super {
+  font-size: 65%;
+}
+
+#xgdzttuaph .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xgdzttuaph .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xgdzttuaph .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xgdzttuaph .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xgdzttuaph .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xgdzttuaph .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xgdzttuaph .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Characteristic&lt;/strong&gt;"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Median survival (95% CI)&lt;/strong&gt;"><strong>Median survival (95% CI)</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="label" class="gt_row gt_left">Overall</td>
+<td headers="stat_1" class="gt_row gt_center">310 (285, 363)</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+<div id="comparing-survival-times-between-groups" class="section level4 hasAnchor" number="1.2.4.5">
+<h4><span class="header-section-number">1.2.4.5</span> Comparing survival times between groups<a href="projects.html#comparing-survival-times-between-groups" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We can conduct between-group significance tests using a <code>log-rank test</code>.</p>
+<p>The log-rank test equally weights observations over the entire follow-up time and is the most common way to compare survival times between groups. There are versions that more heavily weight the early or late follow-up that could be more appropriate depending on the research question (see <code>?survdiff</code> for different test options).</p>
+<p>We get the log-rank p-value using the <code>survdiff</code> function. For example, we can test whether there was a difference in survival time according to sex in the lung data:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="projects.html#cb42-1" tabindex="-1"></a><span class="fu">survdiff</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> sex, <span class="at">data =</span> lung)</span></code></pre></div>
+<pre><code>## Call:
+## survdiff(formula = Surv(time, status) ~ sex, data = lung)
+## 
+##         N Observed Expected (O-E)^2/E (O-E)^2/V
+## sex=1 138      112     91.6      4.55      10.3
+## sex=2  90       53     73.4      5.68      10.3
+## 
+##  Chisq= 10.3  on 1 degrees of freedom, p= 0.001</code></pre>
+<p>We see that there was a significant difference in overall survival according to sex in the lung data, with a p-value of <code>p = 0.001</code>.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="projects.html#cb44-1" tabindex="-1"></a><span class="fu">require</span>(<span class="st">&quot;survival&quot;</span>)</span>
+<span id="cb44-2"><a href="projects.html#cb44-2" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;survminer&quot;</span>)</span>
+<span id="cb44-3"><a href="projects.html#cb44-3" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="projects.html#cb44-4" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">survfit</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> sex, <span class="at">data =</span> lung)</span>
+<span id="cb44-5"><a href="projects.html#cb44-5" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="projects.html#cb44-6" tabindex="-1"></a><span class="fu">ggsurvplot</span>(fit, <span class="at">data =</span> lung)</span></code></pre></div>
+<p><img src="Project_Archive_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="projects.html#cb45-1" tabindex="-1"></a><span class="fu">ggsurvplot</span>(</span>
+<span id="cb45-2"><a href="projects.html#cb45-2" tabindex="-1"></a>  fit,</span>
+<span id="cb45-3"><a href="projects.html#cb45-3" tabindex="-1"></a>  <span class="at">data =</span> lung,</span>
+<span id="cb45-4"><a href="projects.html#cb45-4" tabindex="-1"></a>  <span class="at">size =</span> <span class="dv">1</span>,                 <span class="co"># change line size</span></span>
+<span id="cb45-5"><a href="projects.html#cb45-5" tabindex="-1"></a>  <span class="at">palette =</span></span>
+<span id="cb45-6"><a href="projects.html#cb45-6" tabindex="-1"></a>    <span class="fu">c</span>(<span class="st">&quot;#E7B800&quot;</span>, <span class="st">&quot;#2E9FDF&quot;</span>),<span class="co"># custom color palettes</span></span>
+<span id="cb45-7"><a href="projects.html#cb45-7" tabindex="-1"></a>  <span class="at">conf.int =</span> <span class="cn">TRUE</span>,          <span class="co"># Add confidence interval</span></span>
+<span id="cb45-8"><a href="projects.html#cb45-8" tabindex="-1"></a>  <span class="at">pval =</span> <span class="cn">TRUE</span>,              <span class="co"># Add p-value</span></span>
+<span id="cb45-9"><a href="projects.html#cb45-9" tabindex="-1"></a>  <span class="at">risk.table =</span> <span class="cn">TRUE</span>,        <span class="co"># Add risk table</span></span>
+<span id="cb45-10"><a href="projects.html#cb45-10" tabindex="-1"></a>  <span class="at">risk.table.col =</span> <span class="st">&quot;strata&quot;</span>,<span class="co"># Risk table color by groups</span></span>
+<span id="cb45-11"><a href="projects.html#cb45-11" tabindex="-1"></a>  <span class="at">legend.labs =</span></span>
+<span id="cb45-12"><a href="projects.html#cb45-12" tabindex="-1"></a>    <span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>),    <span class="co"># Change legend labels</span></span>
+<span id="cb45-13"><a href="projects.html#cb45-13" tabindex="-1"></a>  <span class="at">risk.table.height =</span> <span class="fl">0.25</span>, <span class="co"># Useful to change when you have multiple groups</span></span>
+<span id="cb45-14"><a href="projects.html#cb45-14" tabindex="-1"></a>  <span class="at">ggtheme =</span> <span class="fu">theme_bw</span>()      <span class="co"># Change ggplot2 theme</span></span>
+<span id="cb45-15"><a href="projects.html#cb45-15" tabindex="-1"></a>)</span></code></pre></div>
+<p><img src="Project_Archive_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="the-cox-regression-model" class="section level4 hasAnchor" number="1.2.4.6">
+<h4><span class="header-section-number">1.2.4.6</span> The Cox regression model<a href="projects.html#the-cox-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We may want to quantify an effect size for a single variable, or include more than one variable into a regression model to account for the effects of multiple variables.</p>
+<p>The Cox regression model is a semi-parametric model that can be used to fit univariable and multivariable regression models that have survival outcomes.</p>
+<p><span class="math display">\[h(t|Xi)=h0(t)exp(β1Xi1+⋯+βpXip)\]</span></p>
+<dl>
+<dt><span class="math inline">\(h(t)\)</span></dt>
+<dd>
+hazard, or the instantaneous rate at which events occur h0(t)
+</dd>
+<dd>
+underlying baseline hazard
+</dd>
+</dl>
+<p>Some key assumptions of the model:</p>
+<p>non-informative censoring
+proportional hazards</p>
+<p><strong>Note:</strong> parametric regression models for survival outcomes are also available, but they won’t be addressed here.</p>
+<p>We can fit regression models for survival data using the <code>coxph()</code> function from the {<code>survival</code>} package, which takes a <code>Surv()</code> object on the left hand side and has standard syntax for regression formulas in R on the right hand side.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="projects.html#cb46-1" tabindex="-1"></a><span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> sex, <span class="at">data =</span> lung)</span></code></pre></div>
+<pre><code>## Call:
+## coxph(formula = Surv(time, status) ~ sex, data = lung)
+## 
+##        coef exp(coef) se(coef)      z       p
+## sex -0.5310    0.5880   0.1672 -3.176 0.00149
+## 
+## Likelihood ratio test=10.63  on 1 df, p=0.001111
+## n= 228, number of events= 165</code></pre>
+<p>We can obtain tables of results using the <code>tbl_regression()</code> function from the {<code>gtsummary</code>} package, with the option to <code>exponentiate</code> set to <code>TRUE</code> to return the hazard ratio rather than the log hazard ratio:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="projects.html#cb48-1" tabindex="-1"></a><span class="fu">coxph</span>(<span class="fu">Surv</span>(time, status) <span class="sc">~</span> sex, <span class="at">data =</span> lung) <span class="sc">%&gt;%</span> </span>
+<span id="cb48-2"><a href="projects.html#cb48-2" tabindex="-1"></a>  <span class="fu">tbl_regression</span>(<span class="at">exp =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div id="hucnmvxhyr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hucnmvxhyr table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hucnmvxhyr thead, #hucnmvxhyr tbody, #hucnmvxhyr tfoot, #hucnmvxhyr tr, #hucnmvxhyr td, #hucnmvxhyr th {
+  border-style: none;
+}
+
+#hucnmvxhyr p {
+  margin: 0;
+  padding: 0;
+}
+
+#hucnmvxhyr .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hucnmvxhyr .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hucnmvxhyr .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hucnmvxhyr .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hucnmvxhyr .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hucnmvxhyr .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hucnmvxhyr .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hucnmvxhyr .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hucnmvxhyr .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hucnmvxhyr .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hucnmvxhyr .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hucnmvxhyr .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hucnmvxhyr .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hucnmvxhyr .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hucnmvxhyr .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hucnmvxhyr .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hucnmvxhyr .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hucnmvxhyr .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hucnmvxhyr .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hucnmvxhyr .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hucnmvxhyr .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hucnmvxhyr .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#hucnmvxhyr .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hucnmvxhyr .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hucnmvxhyr .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hucnmvxhyr .gt_left {
+  text-align: left;
+}
+
+#hucnmvxhyr .gt_center {
+  text-align: center;
+}
+
+#hucnmvxhyr .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hucnmvxhyr .gt_font_normal {
+  font-weight: normal;
+}
+
+#hucnmvxhyr .gt_font_bold {
+  font-weight: bold;
+}
+
+#hucnmvxhyr .gt_font_italic {
+  font-style: italic;
+}
+
+#hucnmvxhyr .gt_super {
+  font-size: 65%;
+}
+
+#hucnmvxhyr .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hucnmvxhyr .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hucnmvxhyr .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hucnmvxhyr .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hucnmvxhyr .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hucnmvxhyr .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hucnmvxhyr .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;Characteristic&lt;/strong&gt;"><strong>Characteristic</strong></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;HR&lt;/strong&gt;&lt;span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/span&gt;"><strong>HR</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;95% CI&lt;/strong&gt;&lt;span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/span&gt;"><strong>95% CI</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="&lt;strong&gt;p-value&lt;/strong&gt;"><strong>p-value</strong></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="label" class="gt_row gt_left">sex</td>
+<td headers="estimate" class="gt_row gt_center">0.59</td>
+<td headers="ci" class="gt_row gt_center">0.42, 0.82</td>
+<td headers="p.value" class="gt_row gt_center">0.001</td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="4"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> HR = Hazard Ratio, CI = Confidence Interval</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+<p>The quantity of interest from a Cox regression model is a hazard ratio (HR). The HR represents the ratio of hazards between two groups at any particular point in time.</p>
+<p>The HR is interpreted as the instantaneous rate of occurrence of the event of interest in those who are still at risk for the event. It is not a risk, though it is commonly mis-interpreted as such. If you have a regression parameter β, then <span class="math inline">\(HR = exp(β)\)</span></p>
+<p>A HR &lt; 1 indicates reduced hazard of death whereas a HR &gt; 1 indicates an increased hazard of death.</p>
+<p>So the HR = 0.59 implies that 0.59 times as many females are dying as males, at any given time. Stated differently, females have a significantly lower hazard of death than males in these data.</p>
 
 </div>
 </div>
 <div id="prosper-loan-data" class="section level3 hasAnchor" number="1.2.5">
 <h3><span class="header-section-number">1.2.5</span> Prosper Loan data<a href="projects.html#prosper-loan-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="projects.html#cb42-1" tabindex="-1"></a><span class="fu">library</span>(data.table)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="projects.html#cb49-1" tabindex="-1"></a><span class="fu">library</span>(data.table)</span></code></pre></div>
 <pre><code>## 
 ## Attaching package: &#39;data.table&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:lubridate&#39;:
@@ -639,10 +2137,10 @@ year.</p>
 <pre><code>## The following objects are masked from &#39;package:dplyr&#39;:
 ## 
 ##     between, first, last</code></pre>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="projects.html#cb46-1" tabindex="-1"></a><span class="co"># web &lt;- &quot;https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv&quot;</span></span>
-<span id="cb46-2"><a href="projects.html#cb46-2" tabindex="-1"></a><span class="co"># loan &lt;- fread(web)</span></span>
-<span id="cb46-3"><a href="projects.html#cb46-3" tabindex="-1"></a></span>
-<span id="cb46-4"><a href="projects.html#cb46-4" tabindex="-1"></a><span class="co"># head(loan)[, c(51, 65, 6, 7, 19, 18, 50)]</span></span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="projects.html#cb53-1" tabindex="-1"></a><span class="co"># web &lt;- &quot;https://s3.amazonaws.com/udacity-hosted-downloads/ud651/prosperLoanData.csv&quot;</span></span>
+<span id="cb53-2"><a href="projects.html#cb53-2" tabindex="-1"></a><span class="co"># loan &lt;- fread(web)</span></span>
+<span id="cb53-3"><a href="projects.html#cb53-3" tabindex="-1"></a></span>
+<span id="cb53-4"><a href="projects.html#cb53-4" tabindex="-1"></a><span class="co"># head(loan)[, c(51, 65, 6, 7, 19, 18, 50)]</span></span></code></pre></div>
 
 </div>
 <div id="customer-churn" class="section level3 hasAnchor" number="1.2.6">
@@ -662,55 +2160,55 @@ year.</p>
 <p><img src="figs/churn2.png" /></p>
 <p>No longer is time held constant, we now track risk over time to determine when a marketing intervention is needed to retain the customer.</p>
 <p>If we model for both the time and event, the right moment to intervene and prevent attrition is apparent. A modeling technique called <code>Survival Analysis</code> allows for us to do this and with the advent of modern Machine Learning, it’s now a trivial task.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="projects.html#cb47-1" tabindex="-1"></a><span class="op">%</span>reload_ext autoreload</span>
-<span id="cb47-2"><a href="projects.html#cb47-2" tabindex="-1"></a><span class="op">%</span>autoreload <span class="dv">2</span></span>
-<span id="cb47-3"><a href="projects.html#cb47-3" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
-<span id="cb47-4"><a href="projects.html#cb47-4" tabindex="-1"></a></span>
-<span id="cb47-5"><a href="projects.html#cb47-5" tabindex="-1"></a><span class="im">import</span> xgboost <span class="im">as</span> xgb</span>
-<span id="cb47-6"><a href="projects.html#cb47-6" tabindex="-1"></a><span class="im">import</span> shap</span>
-<span id="cb47-7"><a href="projects.html#cb47-7" tabindex="-1"></a><span class="im">import</span> sksurv.metrics <span class="im">as</span> surv_metrics</span>
-<span id="cb47-8"><a href="projects.html#cb47-8" tabindex="-1"></a><span class="im">from</span> sksurv.datasets <span class="im">import</span> get_x_y</span>
-<span id="cb47-9"><a href="projects.html#cb47-9" tabindex="-1"></a><span class="im">from</span> lifelines <span class="im">import</span> KaplanMeierFitter</span>
-<span id="cb47-10"><a href="projects.html#cb47-10" tabindex="-1"></a><span class="im">from</span> lifelines.plotting <span class="im">import</span> plot_lifetimes</span>
-<span id="cb47-11"><a href="projects.html#cb47-11" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb47-12"><a href="projects.html#cb47-12" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb47-13"><a href="projects.html#cb47-13" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb47-14"><a href="projects.html#cb47-14" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
-<span id="cb47-15"><a href="projects.html#cb47-15" tabindex="-1"></a><span class="im">from</span> sklearn.compose <span class="im">import</span> ColumnTransformer</span>
-<span id="cb47-16"><a href="projects.html#cb47-16" tabindex="-1"></a><span class="im">from</span> sklearn.exceptions <span class="im">import</span> DataConversionWarning</span>
-<span id="cb47-17"><a href="projects.html#cb47-17" tabindex="-1"></a><span class="im">from</span> sklearn.impute <span class="im">import</span> SimpleImputer</span>
-<span id="cb47-18"><a href="projects.html#cb47-18" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb47-19"><a href="projects.html#cb47-19" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
-<span id="cb47-20"><a href="projects.html#cb47-20" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> OneHotEncoder, StandardScaler</span>
-<span id="cb47-21"><a href="projects.html#cb47-21" tabindex="-1"></a></span>
-<span id="cb47-22"><a href="projects.html#cb47-22" tabindex="-1"></a></span>
-<span id="cb47-23"><a href="projects.html#cb47-23" tabindex="-1"></a></span>
-<span id="cb47-24"><a href="projects.html#cb47-24" tabindex="-1"></a>plt.rcParams[<span class="st">&#39;figure.figsize&#39;</span>] <span class="op">=</span> [<span class="fl">7.2</span>, <span class="fl">4.8</span>]</span>
-<span id="cb47-25"><a href="projects.html#cb47-25" tabindex="-1"></a>pd.set_option(<span class="st">&quot;display.float_format&quot;</span>, <span class="kw">lambda</span> x: <span class="st">&quot;</span><span class="sc">%.4f</span><span class="st">&quot;</span> <span class="op">%</span> x)</span>
-<span id="cb47-26"><a href="projects.html#cb47-26" tabindex="-1"></a></span>
-<span id="cb47-27"><a href="projects.html#cb47-27" tabindex="-1"></a>sns.set_style(<span class="st">&#39;darkgrid&#39;</span>)</span>
-<span id="cb47-28"><a href="projects.html#cb47-28" tabindex="-1"></a></span>
-<span id="cb47-29"><a href="projects.html#cb47-29" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">123</span></span></code></pre></div>
-<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="projects.html#cb48-1" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;../../data/churn.txt&quot;</span>)</span>
-<span id="cb48-2"><a href="projects.html#cb48-2" tabindex="-1"></a><span class="co"># denoting churn and duration</span></span>
-<span id="cb48-3"><a href="projects.html#cb48-3" tabindex="-1"></a>df[<span class="st">&quot;event&quot;</span>] <span class="op">=</span> np.where(df[<span class="st">&quot;churn?&quot;</span>] <span class="op">==</span> <span class="st">&quot;False.&quot;</span>, <span class="dv">0</span>, <span class="dv">1</span>) df <span class="op">=</span> df.rename(columns<span class="op">=</span>{<span class="st">&quot;account_length&quot;</span>: <span class="st">&quot;duration&quot;</span>})</span>
-<span id="cb48-4"><a href="projects.html#cb48-4" tabindex="-1"></a><span class="kw">del</span> df[<span class="st">&#39;churn?&#39;</span>]</span>
-<span id="cb48-5"><a href="projects.html#cb48-5" tabindex="-1"></a>df <span class="op">=</span> df.dropna()</span>
-<span id="cb48-6"><a href="projects.html#cb48-6" tabindex="-1"></a>df <span class="op">=</span> df.drop_duplicates()</span>
-<span id="cb48-7"><a href="projects.html#cb48-7" tabindex="-1"></a>df.head()</span></code></pre></div>
-<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="projects.html#cb49-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Total Records:&quot;</span>,df.shape[<span class="dv">0</span>],<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
-<span id="cb49-2"><a href="projects.html#cb49-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Percent Churn Rate:&quot;</span>,df.event.mean())</span>
-<span id="cb49-3"><a href="projects.html#cb49-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
-<span id="cb49-4"><a href="projects.html#cb49-4" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Duration Intervals&quot;</span>)</span>
-<span id="cb49-5"><a href="projects.html#cb49-5" tabindex="-1"></a><span class="bu">print</span>(df[<span class="st">&#39;duration&#39;</span>].describe())</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="projects.html#cb54-1" tabindex="-1"></a><span class="op">%</span>reload_ext autoreload</span>
+<span id="cb54-2"><a href="projects.html#cb54-2" tabindex="-1"></a><span class="op">%</span>autoreload <span class="dv">2</span></span>
+<span id="cb54-3"><a href="projects.html#cb54-3" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
+<span id="cb54-4"><a href="projects.html#cb54-4" tabindex="-1"></a></span>
+<span id="cb54-5"><a href="projects.html#cb54-5" tabindex="-1"></a><span class="im">import</span> xgboost <span class="im">as</span> xgb</span>
+<span id="cb54-6"><a href="projects.html#cb54-6" tabindex="-1"></a><span class="im">import</span> shap</span>
+<span id="cb54-7"><a href="projects.html#cb54-7" tabindex="-1"></a><span class="im">import</span> sksurv.metrics <span class="im">as</span> surv_metrics</span>
+<span id="cb54-8"><a href="projects.html#cb54-8" tabindex="-1"></a><span class="im">from</span> sksurv.datasets <span class="im">import</span> get_x_y</span>
+<span id="cb54-9"><a href="projects.html#cb54-9" tabindex="-1"></a><span class="im">from</span> lifelines <span class="im">import</span> KaplanMeierFitter</span>
+<span id="cb54-10"><a href="projects.html#cb54-10" tabindex="-1"></a><span class="im">from</span> lifelines.plotting <span class="im">import</span> plot_lifetimes</span>
+<span id="cb54-11"><a href="projects.html#cb54-11" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb54-12"><a href="projects.html#cb54-12" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb54-13"><a href="projects.html#cb54-13" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb54-14"><a href="projects.html#cb54-14" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb54-15"><a href="projects.html#cb54-15" tabindex="-1"></a><span class="im">from</span> sklearn.compose <span class="im">import</span> ColumnTransformer</span>
+<span id="cb54-16"><a href="projects.html#cb54-16" tabindex="-1"></a><span class="im">from</span> sklearn.exceptions <span class="im">import</span> DataConversionWarning</span>
+<span id="cb54-17"><a href="projects.html#cb54-17" tabindex="-1"></a><span class="im">from</span> sklearn.impute <span class="im">import</span> SimpleImputer</span>
+<span id="cb54-18"><a href="projects.html#cb54-18" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb54-19"><a href="projects.html#cb54-19" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb54-20"><a href="projects.html#cb54-20" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> OneHotEncoder, StandardScaler</span>
+<span id="cb54-21"><a href="projects.html#cb54-21" tabindex="-1"></a></span>
+<span id="cb54-22"><a href="projects.html#cb54-22" tabindex="-1"></a></span>
+<span id="cb54-23"><a href="projects.html#cb54-23" tabindex="-1"></a></span>
+<span id="cb54-24"><a href="projects.html#cb54-24" tabindex="-1"></a>plt.rcParams[<span class="st">&#39;figure.figsize&#39;</span>] <span class="op">=</span> [<span class="fl">7.2</span>, <span class="fl">4.8</span>]</span>
+<span id="cb54-25"><a href="projects.html#cb54-25" tabindex="-1"></a>pd.set_option(<span class="st">&quot;display.float_format&quot;</span>, <span class="kw">lambda</span> x: <span class="st">&quot;</span><span class="sc">%.4f</span><span class="st">&quot;</span> <span class="op">%</span> x)</span>
+<span id="cb54-26"><a href="projects.html#cb54-26" tabindex="-1"></a></span>
+<span id="cb54-27"><a href="projects.html#cb54-27" tabindex="-1"></a>sns.set_style(<span class="st">&#39;darkgrid&#39;</span>)</span>
+<span id="cb54-28"><a href="projects.html#cb54-28" tabindex="-1"></a></span>
+<span id="cb54-29"><a href="projects.html#cb54-29" tabindex="-1"></a>SEED <span class="op">=</span> <span class="dv">123</span></span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="projects.html#cb55-1" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&quot;../../data/churn.txt&quot;</span>)</span>
+<span id="cb55-2"><a href="projects.html#cb55-2" tabindex="-1"></a><span class="co"># denoting churn and duration</span></span>
+<span id="cb55-3"><a href="projects.html#cb55-3" tabindex="-1"></a>df[<span class="st">&quot;event&quot;</span>] <span class="op">=</span> np.where(df[<span class="st">&quot;churn?&quot;</span>] <span class="op">==</span> <span class="st">&quot;False.&quot;</span>, <span class="dv">0</span>, <span class="dv">1</span>) df <span class="op">=</span> df.rename(columns<span class="op">=</span>{<span class="st">&quot;account_length&quot;</span>: <span class="st">&quot;duration&quot;</span>})</span>
+<span id="cb55-4"><a href="projects.html#cb55-4" tabindex="-1"></a><span class="kw">del</span> df[<span class="st">&#39;churn?&#39;</span>]</span>
+<span id="cb55-5"><a href="projects.html#cb55-5" tabindex="-1"></a>df <span class="op">=</span> df.dropna()</span>
+<span id="cb55-6"><a href="projects.html#cb55-6" tabindex="-1"></a>df <span class="op">=</span> df.drop_duplicates()</span>
+<span id="cb55-7"><a href="projects.html#cb55-7" tabindex="-1"></a>df.head()</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="projects.html#cb56-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Total Records:&quot;</span>,df.shape[<span class="dv">0</span>],<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb56-2"><a href="projects.html#cb56-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Percent Churn Rate:&quot;</span>,df.event.mean())</span>
+<span id="cb56-3"><a href="projects.html#cb56-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb56-4"><a href="projects.html#cb56-4" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Duration Intervals&quot;</span>)</span>
+<span id="cb56-5"><a href="projects.html#cb56-5" tabindex="-1"></a><span class="bu">print</span>(df[<span class="st">&#39;duration&#39;</span>].describe())</span></code></pre></div>
 <p>For Survival models data is different from a traditional classification problem and requires:
 - A Censor — For our purposes these are customers who’ve yet to churn. Read about right censoring here.</p>
 <ul>
 <li><p>Duration — The duration or time t of the customer’s activity. In this case, it’s Account Length in days.</p></li>
 <li><p>Event — The binary target, in this case if they terminated their phone plan marked by Churn? .</p></li>
 </ul>
-<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="projects.html#cb50-1" tabindex="-1"></a>ax <span class="op">=</span> plot_lifetimes(df.head(<span class="dv">10</span>)[<span class="st">&#39;duration&#39;</span>], df.head(<span class="dv">10</span>)[<span class="st">&#39;event&#39;</span>])</span>
-<span id="cb50-2"><a href="projects.html#cb50-2" tabindex="-1"></a>_<span class="op">=</span>ax.set_xlabel(<span class="st">&quot;Duration: Account Length (days)&quot;</span>) _<span class="op">=</span>ax.set_ylabel(<span class="st">&quot;Customer Number&quot;</span>) _<span class="op">=</span>ax.set_title(<span class="st">&quot;Observed Customer Attrition&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="projects.html#cb57-1" tabindex="-1"></a>ax <span class="op">=</span> plot_lifetimes(df.head(<span class="dv">10</span>)[<span class="st">&#39;duration&#39;</span>], df.head(<span class="dv">10</span>)[<span class="st">&#39;event&#39;</span>])</span>
+<span id="cb57-2"><a href="projects.html#cb57-2" tabindex="-1"></a>_<span class="op">=</span>ax.set_xlabel(<span class="st">&quot;Duration: Account Length (days)&quot;</span>) _<span class="op">=</span>ax.set_ylabel(<span class="st">&quot;Customer Number&quot;</span>) _<span class="op">=</span>ax.set_title(<span class="st">&quot;Observed Customer Attrition&quot;</span>)</span></code></pre></div>
 <p><img src="figs/churn3.png" /></p>
 <p>In the above plot, the red lines indicates when a customer has left with the dots indicating the specific point in time.</p>
 <p>Blue lines are customers that are still active up to the time measured on the x-axis in Duration.</p>
@@ -724,13 +2222,13 @@ year.</p>
 <p><img src="figs/churn4.png" /></p>
 <p>Where <span class="math inline">\(𝑑_𝑖\)</span> are the number of churn events at time <span class="math inline">\(𝑡\)</span> and <span class="math inline">\(𝑛_𝑖\)</span> is the number of customers at risk of churn just prior to time <span class="math inline">\(𝑡\)</span>.</p>
 <p>We will use the great python package <code>lifelines</code> to plot the Survival Function as the function is a component of the final churn model.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="projects.html#cb51-1" tabindex="-1"></a>kmf <span class="op">=</span> KaplanMeierFitter()</span>
-<span id="cb51-2"><a href="projects.html#cb51-2" tabindex="-1"></a>kmf.fit(df[<span class="st">&#39;duration&#39;</span>], event_observed<span class="op">=</span>df[<span class="st">&#39;event&#39;</span>])</span>
-<span id="cb51-3"><a href="projects.html#cb51-3" tabindex="-1"></a>kmf.plot_survival_function()</span>
-<span id="cb51-4"><a href="projects.html#cb51-4" tabindex="-1"></a></span>
-<span id="cb51-5"><a href="projects.html#cb51-5" tabindex="-1"></a>_<span class="op">=</span>plt.title(<span class="st">&#39;Survival Function for Telco Churn&#39;</span>)<span class="op">;</span> _<span class="op">=</span>plt.xlabel(<span class="st">&quot;Duration: Account Length (days)&quot;</span>)</span>
-<span id="cb51-6"><a href="projects.html#cb51-6" tabindex="-1"></a>_<span class="op">=</span>plt.ylabel(<span class="st">&quot;Churn Risk (Percent Churned)&quot;</span>) </span>
-<span id="cb51-7"><a href="projects.html#cb51-7" tabindex="-1"></a>_<span class="op">=</span>plt.axvline(x<span class="op">=</span>kmf.median_survival_time_, color<span class="op">=</span><span class="st">&#39;r&#39;</span>,linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="projects.html#cb58-1" tabindex="-1"></a>kmf <span class="op">=</span> KaplanMeierFitter()</span>
+<span id="cb58-2"><a href="projects.html#cb58-2" tabindex="-1"></a>kmf.fit(df[<span class="st">&#39;duration&#39;</span>], event_observed<span class="op">=</span>df[<span class="st">&#39;event&#39;</span>])</span>
+<span id="cb58-3"><a href="projects.html#cb58-3" tabindex="-1"></a>kmf.plot_survival_function()</span>
+<span id="cb58-4"><a href="projects.html#cb58-4" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="projects.html#cb58-5" tabindex="-1"></a>_<span class="op">=</span>plt.title(<span class="st">&#39;Survival Function for Telco Churn&#39;</span>)<span class="op">;</span> _<span class="op">=</span>plt.xlabel(<span class="st">&quot;Duration: Account Length (days)&quot;</span>)</span>
+<span id="cb58-6"><a href="projects.html#cb58-6" tabindex="-1"></a>_<span class="op">=</span>plt.ylabel(<span class="st">&quot;Churn Risk (Percent Churned)&quot;</span>) </span>
+<span id="cb58-7"><a href="projects.html#cb58-7" tabindex="-1"></a>_<span class="op">=</span>plt.axvline(x<span class="op">=</span>kmf.median_survival_time_, color<span class="op">=</span><span class="st">&#39;r&#39;</span>,linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>)</span></code></pre></div>
 <p><img src="figs/churn5.png" /></p>
 <p>Let’s look at the <code>median</code> survival time. This is the point by which half of customers have churned out. According to this graph, where it’s marked by the red dotted line, by about 152 days half of customers churn.</p>
 <p>This is helpful because it gives overall baseline when intervention is needed. However, for each individual customer this is uninformative.

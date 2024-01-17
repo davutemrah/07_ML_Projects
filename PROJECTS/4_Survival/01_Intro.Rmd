@@ -291,16 +291,175 @@ The 1-year survival probability is the point on the y-axis that corresponds to 1
 
 What happens if you use a “naive” estimate? Here “naive” means that the patients who were censored prior to 1-year are considered event-free and included in the denominator.
 
-121 of the 228 patients in the lung data died by 1
- year so the “naive” estimate is calculated as:
+121 of the 228 patients in the lung data died by 1 year so the “naive” estimate is calculated as:
 
-(1−121228)×100=47%
-You get an incorrect estimate of the 1
--year probability of survival when you ignore the fact that 42 patients were censored before 1
- year.
+$$(1−\frac{121}{228})×100=47\%$$
 
-Recall the correct estimate of the 1
--year probability of survival, accounting for censoring using the Kaplan-Meier method, was 41%.
+You get an incorrect estimate of the 1-year probability of survival when you ignore the fact that 42 patients were censored before 1-year.
 
-Ignoring censoring leads to an overestimate of the overall survival probability. Imagine two studies, each with 228 subjects. There are 165 deaths in each study. Censoring is ignored in one (blue line), censoring is accounted for in the other (yellow line). The censored subjects only contribute information for a portion of the follow-up time, and then fall out of the risk set, thus pulling down the cumulative probability of survival. Ignoring censoring erroneously treats patients who are censored as part of the risk set for the entire follow-up period.
+Recall the correct estimate of the 1-year probability of survival, accounting for censoring using the Kaplan-Meier method, was 41%.
+
+Ignoring censoring leads to an overestimate of the overall survival probability.
+
+Imagine two studies, each with 228 subjects. There are 165 deaths in each study. Censoring is ignored in one (blue line), censoring is accounted for in the other (yellow line). 
+
+The censored subjects only contribute information for a portion of the follow-up time, and then fall out of the risk set, thus pulling down the cumulative probability of survival. Ignoring censoring erroneously treats patients who are censored as part of the risk set for the entire follow-up period.
+
+
+![](figs/survival4.png)
+
+We can produce nice tables of x-time survival probability estimates using the `tbl_survfit()` function from the {`gtsummary`} package:
+
+```{r}
+survfit(Surv(time, status) ~ 1, data = lung) %>% 
+  tbl_survfit(
+    times = 365.25,
+    label_header = "**1-year survival (95% CI)**"
+  )
+```
+
+
+
+#### Estimating median survival time
+
+Another quantity often of interest in a survival analysis is the average survival time, which we quantify using the median. Survival times are not expected to be normally distributed so the mean is not an appropriate summary.
+
+We can obtain the median survival directly from the `survfit` object:
+
+```{r}
+survfit(Surv(time, status) ~ 1, data = lung)
+```
+
+
+We see the median survival time is 310 days The lower and upper bounds of the 95% confidence interval are also displayed.
+
+Median survival is the time corresponding to a survival probability of 0.5:
+
+![](figs/survival5.png)
+
+What happens if you use a “naive” estimate? Here “naive” means that you exclude the censored patients from the calculation entirely to estimate median survival time among the patients who have had the event.
+
+Summarize the median survival time among the 165 patients who died:
+
+```{r}
+lung %>% 
+  filter(status == 1) %>% 
+  summarize(median_surv = median(time))
+```
+
+
+You get an incorrect estimate of median survival time of 284 days when you ignore the fact that censored patients also contribute follow-up time.
+
+Recall the correct estimate of median survival time is 310 days.
+
+Ignoring censoring will lead to an underestimate of median survival time because the follow-up time that censored patients contribute is excluded (blue line). The true survival curve accounting for censoring in the lung data is shown in yellow for comparison.
+
+
+![](figs/survival6.png)
+
+We can produce nice tables of median survival time estimates using the `tbl_survfit()` function from the {`gtsummary`} package:
+
+```{r}
+survfit(Surv(time, status) ~ 1, data = lung) %>% 
+  tbl_survfit(
+    probs = 0.5,
+    label_header = "**Median survival (95% CI)**"
+  )
+```
+
+
+#### Comparing survival times between groups
+
+We can conduct between-group significance tests using a `log-rank test`. 
+
+The log-rank test equally weights observations over the entire follow-up time and is the most common way to compare survival times between groups. There are versions that more heavily weight the early or late follow-up that could be more appropriate depending on the research question (see `?survdiff` for different test options).
+
+We get the log-rank p-value using the `survdiff` function. For example, we can test whether there was a difference in survival time according to sex in the lung data:
+
+```{r}
+survdiff(Surv(time, status) ~ sex, data = lung)
+```
+
+We see that there was a significant difference in overall survival according to sex in the lung data, with a p-value of `p = 0.001`.
+
+```{r, message=FALSE, warning=FALSE}
+require("survival")
+library("survminer")
+
+fit <- survfit(Surv(time, status) ~ sex, data = lung)
+
+ggsurvplot(fit, data = lung)
+```
+
+
+```{r}
+ggsurvplot(
+  fit,
+  data = lung,
+  size = 1,                 # change line size
+  palette =
+    c("#E7B800", "#2E9FDF"),# custom color palettes
+  conf.int = TRUE,          # Add confidence interval
+  pval = TRUE,              # Add p-value
+  risk.table = TRUE,        # Add risk table
+  risk.table.col = "strata",# Risk table color by groups
+  legend.labs =
+    c("Male", "Female"),    # Change legend labels
+  risk.table.height = 0.25, # Useful to change when you have multiple groups
+  ggtheme = theme_bw()      # Change ggplot2 theme
+)
+```
+
+
+
+#### The Cox regression model
+
+We may want to quantify an effect size for a single variable, or include more than one variable into a regression model to account for the effects of multiple variables.
+
+The Cox regression model is a semi-parametric model that can be used to fit univariable and multivariable regression models that have survival outcomes.
+
+$$h(t|Xi)=h0(t)exp(β1Xi1+⋯+βpXip)$$
+
+$h(t)$
+: hazard, or the instantaneous rate at which events occur h0(t)
+: underlying baseline hazard
+
+Some key assumptions of the model:
+
+non-informative censoring
+proportional hazards
+
+**Note:** parametric regression models for survival outcomes are also available, but they won’t be addressed here.
+
+We can fit regression models for survival data using the `coxph()` function from the {`survival`} package, which takes a `Surv()` object on the left hand side and has standard syntax for regression formulas in R on the right hand side.
+
+```{r}
+coxph(Surv(time, status) ~ sex, data = lung)
+```
+
+
+We can obtain tables of results using the `tbl_regression()` function from the {`gtsummary`} package, with the option to `exponentiate` set to `TRUE` to return the hazard ratio rather than the log hazard ratio:
+
+```{r}
+coxph(Surv(time, status) ~ sex, data = lung) %>% 
+  tbl_regression(exp = TRUE)
+```
+
+
+The quantity of interest from a Cox regression model is a hazard ratio (HR). The HR represents the ratio of hazards between two groups at any particular point in time. 
+
+The HR is interpreted as the instantaneous rate of occurrence of the event of interest in those who are still at risk for the event. It is not a risk, though it is commonly mis-interpreted as such. If you have a regression parameter β, then $HR = exp(β)$
+
+A HR < 1 indicates reduced hazard of death whereas a HR > 1 indicates an increased hazard of death.
+
+So the HR = 0.59 implies that 0.59 times as many females are dying as males, at any given time. Stated differently, females have a significantly lower hazard of death than males in these data.
+
+
+
+
+
+
+
+
+
 

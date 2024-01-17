@@ -1,4 +1,5 @@
 projects
+notes-on-visuals
 elastic-net-model
 survival-analysis
 references
@@ -15,6 +16,9 @@ the-basics-of-survival-analysis
 creating-survival-objects-and-curves
 kaplan-meier-plotscurves
 estimating-x-year-survival
+estimating-median-survival-time
+comparing-survival-times-between-groups
+the-cox-regression-model
 prosper-loan-data
 customer-churn
 re-framing-the-problem-to-know-when

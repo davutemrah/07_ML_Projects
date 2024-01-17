@@ -7,7 +7,7 @@ Focusing on customer retention enables companies to maximize customer revenue ov
 
 These models are seldom done optimally as they rely on binary classification flags (churn yes or no). Churn classification models do not tell WHEN a customer is likely to leave but only indicate that it’s going to happen within a certain number of days or months.
 
-In the churn classification model, we dont usually account for the differences in time.
+In the churn classification model, we don't usually account for the differences in time.
 
 It is probably a mistake to treat a customer that is at risk of leaving in 40 days the same as a customer that remains for over a 100 days. Traditional churn modeling does not make this differentiation.
 
@@ -30,9 +30,9 @@ No longer is time held constant, we now track risk over time to determine when a
 If we model for both the time and event, the right moment to intervene and prevent attrition is apparent. A modeling technique called `Survival Analysis` allows for us to do this and with the advent of modern Machine Learning, it’s now a trivial task. 
 
 ```{python, eval=F}
-%reload_ext autoreload
-%autoreload 2
-%matplotlib inline
+# %reload_ext autoreload
+# %autoreload 2
+# %matplotlib inline
 
 import xgboost as xgb
 import shap
@@ -65,7 +65,8 @@ SEED = 123
 ```{python, eval=F}
 df = pd.read_csv("../../data/churn.txt")
 # denoting churn and duration
-df["event"] = np.where(df["churn?"] == "False.", 0, 1) df = df.rename(columns={"account_length": "duration"})
+df["event"] = np.where(df["churn?"] == "False.", 0, 1) 
+df = df.rename(columns={"account_length": "duration"})
 del df['churn?']
 df = df.dropna()
 df = df.drop_duplicates()

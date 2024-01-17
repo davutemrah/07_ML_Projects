@@ -1,0 +1,9 @@
+### Deploying a Scalable End to End Customer Churn Prediction Solution with AWS
+
+
+[Source](https://towardsdatascience.com/deploying-a-scalable-end-to-end-customer-churn-prediction-solution-with-aws-cbf3536be996)
+
+Wouldn’t it be great if you could hold onto customers longer, maximizing their lifetime revenue? 
+
+In this blog post, you will deploy an End to End Customer Churn Prediction solution using AWS services. 
+
