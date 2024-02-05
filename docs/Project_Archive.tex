@@ -1,0 +1,1533 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Projects Repository},
+  pdfauthor={Davut Ayan},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Projects Repository}
+\author{Davut Ayan}
+\date{2024-01-23}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{preface}{%
+\chapter*{Preface}\label{preface}}
+\addcontentsline{toc}{chapter}{Preface}
+
+Hello there! 👋 As a devoted explorer navigating the expansive realm of machine learning, I am delighted to present my personal repository---a virtual haven that houses my notes, musings, and sample projects sourced from a diverse array of blogs, books, and practical encounters.
+
+This curated collection serves as a mosaic of insights, with some of the codes and notes thoughtfully extracted from publicly available machine learning blogs. Each project within this repository is a testament to my ongoing quest for understanding, meticulously pieced together from the rich tapestry of the digital knowledge landscape.
+
+Whether you are a fellow enthusiast, a curious mind, or a seasoned practitioner, I extend an invitation to explore the codebase, delve into the concepts, and perhaps find inspiration for your own machine learning journey. This repository is not merely a repository of algorithms and snippets; it is a reflection of my commitment, curiosity, and enthusiasm for the ever-evolving field of machine learning.
+
+I encourage you to engage, share your thoughts, or even collaborate on this journey. Let's celebrate the collaborative spirit of the machine learning community and together, embrace the boundless opportunities that arise from the fusion of code, data, and the collective wisdom of publicly available resources.
+
+Happy exploration!
+
+\hypertarget{projects}{%
+\chapter{Projects}\label{projects}}
+
+\href{https://datatab.net/tutorial/get-started}{DataTab Statistics Tutorials}
+
+\hypertarget{notes-on-visuals}{%
+\subsection{NOTES ON VISUALS}\label{notes-on-visuals}}
+
+\begin{itemize}
+\item
+  pre attentive principles, colurs, shape, size etc.
+\item
+  GESTALT principles
+\item
+  why data visualization is needed with summary statistics. Data patterns may be different although means may be different
+\item
+  exploratory graphs: may be good for people with some background. filtering and some control may be given to audience
+\item
+  explanatory graphs: may be good for people with no backgroung. made simple
+\end{itemize}
+
+\hypertarget{elastic-net-model}{%
+\section{Elastic Net Model}\label{elastic-net-model}}
+
+Elastic Net is a regularization technique that combines both L1 (Lasso) and L2 (Ridge) regularization penalties in a linear regression model. This technique is commonly used in machine learning, especially when dealing with high-dimensional datasets or situations where some of the features are highly correlated.
+
+In elastic net regularization, the objective function is a combination of the L1 and L2 regularization terms along with the linear regression loss. The regularization strength is controlled by two hyperparameters, often denoted as
+α
+α (alpha) and
+λ
+λ (lambda):
+
+α
+α controls the mixing between L1 and L2 regularization. When
+α
+=
+0
+α=0, it is equivalent to Ridge regression, and when
+α
+=
+1
+α=1, it is equivalent to Lasso regression. Any value in between (0 and 1) allows for a mixture of both.
+λ
+λ controls the overall strength of the regularization.
+
+In R, you can fit an elastic net model using the glmnet package. Here's a brief example:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Install and load the glmnet package if not already installed}
+\CommentTok{\# install.packages("glmnet")}
+\FunctionTok{library}\NormalTok{(glmnet)}
+
+\CommentTok{\# Generate some example data}
+\FunctionTok{set.seed}\NormalTok{(}\DecValTok{42}\NormalTok{)}
+\NormalTok{n }\OtherTok{\textless{}{-}} \DecValTok{100}
+\NormalTok{p }\OtherTok{\textless{}{-}} \DecValTok{10}
+\NormalTok{X }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(n }\SpecialCharTok{*}\NormalTok{ p), }\AttributeTok{nrow =}\NormalTok{ n, }\AttributeTok{ncol =}\NormalTok{ p)}
+\NormalTok{beta\_true }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{, }\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{0}\NormalTok{)}
+\NormalTok{y }\OtherTok{\textless{}{-}}\NormalTok{ X }\SpecialCharTok{\%*\%}\NormalTok{ beta\_true }\SpecialCharTok{+} \FunctionTok{rnorm}\NormalTok{(n)}
+
+\CommentTok{\# Fit an elastic net model}
+\NormalTok{alpha }\OtherTok{\textless{}{-}} \FloatTok{0.5}  \CommentTok{\# You can adjust alpha to control the mixture of L1 and L2 regularization}
+\NormalTok{lambda }\OtherTok{\textless{}{-}} \FloatTok{0.1}  \CommentTok{\# You can adjust lambda to control the overall strength of regularization}
+
+\NormalTok{enet\_model }\OtherTok{\textless{}{-}} \FunctionTok{cv.glmnet}\NormalTok{(X, y, }\AttributeTok{alpha =}\NormalTok{ alpha, }\AttributeTok{lambda =}\NormalTok{ lambda)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{survival-analysis}{%
+\section{Survival Analysis}\label{survival-analysis}}
+
+\hypertarget{references}{%
+\subsection{References}\label{references}}
+
+\textbf{Web Sources}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \href{https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html}{Emily C. Zabor: Survival Aanalysis in R}
+\item
+  \href{https://bookdown.org/sestelo/sa_financial/}{A short course on Survival Analysis applied to the Financial Industry}
+\item
+  \href{https://www.datacamp.com/tutorial/survival-analysis-R}{Survival Analysis in R For Beginners}
+\item
+  \href{https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/}{Survival Analysis with R}
+\item
+  \href{http://www.sthda.com/english/wiki/survival-analysis-basics}{Survival Analysis Basics}
+\item
+  \href{https://www.r-bloggers.com/2018/03/steps-to-perform-survival-analysis-in-r/}{Steps to perform Survival Analysis in R}
+\item
+  \href{http://tagteam.harvard.edu/hub_feeds/1981/feed_items/2286128}{Survival Analysis with R, Harvard}
+\item
+  \href{https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Survival/BS704_Survival_print.html}{Survival Analysis: Lisa Sullivan, PhD}
+\item
+  \href{https://www.nature.com/articles/6601118.pdf}{Survival Analysis Part I: Basic concepts and first analyses}
+\item
+  \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3932959/pdf/nihms549224.pdf}{Practical Guide Paper}
+\item
+  \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5045282/}{An Introduction to Survival Statistics: Kaplan-Meier Analysis}
+\item
+  \href{https://towardsdatascience.com/kaplan-meier-curves-c5768e349479}{Kaplan Meier curves: an introduction}
+\item
+  \href{https://stat.ethz.ch/R-manual/R-devel/library/survival/html/lung.html}{NCCTG Lung Cancer Data}
+\end{enumerate}
+
+\textbf{pdf references}
+
+\href{survival_pdf/survival_data_setup_alternative.pdf}{1. Data Setup Alternative}
+
+\href{survival_pdf/survival_Intro_Survival_Analysis_Practice.pdf}{2. Introduction to Survival Analysis in Practice}
+
+\href{survival_pdf/survival_lecture_note.pdf}{3. Chapter 7 - Survival Models}
+
+\href{survival_pdf/survival_notes_pat.pdf}{4. Notes from Pat}
+
+\href{survival_pdf/Survival_parametric.pdf}{5. Parametric Survival Models}
+
+\href{survival_pdf/survival_retain_customers.pdf}{6. Retain Customers by Churn model}
+
+\href{survival_pdf/survival_intro.pdf}{7. Intro to Survival Analysis}
+
+\hypertarget{time-to-event-analysis}{%
+\subsection{Time to event analysis}\label{time-to-event-analysis}}
+
+Time to event analysis has also been used widely in the social sciences where interest is on analyzing time to events such as job changes, marriage, birth of children and so forth.
+
+There are certain aspects of survival analysis data, such as censoring and non-normality, that generate great difficulty when trying to analyze the data using traditional statistical models such as multiple linear regression.
+
+The non-normality aspect of the data violates the normality assumption of most commonly used statistical model such as regression or ANOVA, etc.
+
+A censored observation is defined as an observation with incomplete information.
+When an observation is right censored it means that the information is incomplete because the subject did not have an event during the time that the subject was part of the study.
+
+The point of survival analysis is to follow subjects over time and observe at which point in time they experience the event of interest.
+
+It often happens that the study does not span enough time in order to observe the event for all the subjects in the study. This could be due to a number of reasons. Perhaps subjects drop out of the study for reasons unrelated to the study (i.e.~patients moving to another area and leaving no forwarding address).
+
+The common feature of all of these examples is that if the subject had been able to stay in the study then it would have been possible to observe the time of the event eventually.
+
+Type of censoring
+- Right truncation
+- Right censoring
+- Left truncation
+- Left censoring
+
+In survival analysis, censoring refers to situations where the event of interest (e.g., death, failure, or another outcome) is not observed for some subjects during the study period. There are two main types of censoring: right truncation and right censoring.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Right Truncation:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Definition:} Right truncation occurs when individuals enter the study at different times, and some individuals have already experienced the event of interest before the study begins.
+  \item
+    \textbf{Example:} Consider a study on the time until a machine fails. If the study starts at a certain date, and some machines have already failed before that date, those machines are considered right-truncated because their failure times are not observed in the study.
+  \end{itemize}
+\item
+  \textbf{Right Censoring:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Definition:} Right censoring occurs when individuals are followed for a certain period, but the event of interest does not occur for some of them by the end of the study.
+  \item
+    \textbf{Example:} In a clinical trial studying the time until disease recurrence, if a patient has not experienced recurrence by the end of the study period or is lost to follow-up, their survival time is right-censored. The exact time of recurrence is not known for these patients.
+  \end{itemize}
+\end{enumerate}
+
+In summary, right truncation involves incomplete observation due to some subjects entering the study late, whereas right censoring occurs when the event of interest has not occurred for some subjects by the end of the study. Both types of censoring are common in survival analysis and need to be appropriately accounted for in statistical models to obtain unbiased estimates of survival probabilities and hazard rates.
+
+\textbf{What is survival data?}
+
+Time-to-event data that consist of a distinct start time and end time.
+
+Examples from cancer
+• Time from surgery to death
+• Time from start of treatment to progression
+• Time from response to recurrence
+
+Examples from other fields
+
+Time-to-event data are common in many fields including, but not limited to
+• Time from HIV infection to development of AIDS
+• Time to heart attack
+• Time to onset of substance abuse
+• Time to initiation of sexual activity
+• Time to machine malfunction
+
+Types of censoring
+
+A subject may be censored due to:
+• Loss to follow-up
+• Withdrawal from study
+• No event by end of fixed study period
+
+Specifically these are examples of right censoring.
+
+Left censoring and interval censoring are also possible, and methods exist to analyze this type of data.
+
+\hypertarget{kaplan-meier}{%
+\subsection{Kaplan-Meier}\label{kaplan-meier}}
+
+\href{https://datatab.net/tutorial/kaplan-meier-curve\#:~:text=The\%20Kaplan-Meier\%20curve\%20shows,therefore\%20a\%20better\%20survival\%20prognosis.}{Source}
+
+The Kaplan-Meier curve is commonly used to analyze time-to-event data, such as the time until death or the time until a specific event occurs. For this, the Kaplan Meier curve graphically represent the survival rate or survival function. Time is plotted on the x-axis and the survival rate is plotted on the y-axis.
+
+\hypertarget{survival-rate}{%
+\subsubsection{Survival rate}\label{survival-rate}}
+
+Suppose you're a dental technician and you want to study the ``survival time'' of a filling in a tooth.
+
+So your start time is the moment when a person goes to the dentist for a filling, and your end time, the event, is the moment when the filling breaks. The time between these two events is the focus of your study.
+
+\includegraphics{figs/survival2.png}
+
+For example, you may be interested in the probability that your filling will last longer than 5 years.
+
+To do this, you read off the value at 5 years on the graph, which is the survival rate.
+
+At 5 years, the Kaplan-Meier curve gives you a value of 0.7.
+
+\begin{verbatim}
+  So there is a 70% chance that your filling will last longer than 5 years.
+\end{verbatim}
+
+\hypertarget{interpreting-the-kaplan-meier-curve}{%
+\subsubsection{Interpreting the Kaplan-Meier curve}\label{interpreting-the-kaplan-meier-curve}}
+
+The Kaplan-Meier curve shows the cumulative survival probabilities.
+
+A steeper slope indicates a higher event rate (death rate) and therefore a worse survival prognosis. A flatter slope indicates a lower event rate and therefore a better survival prognosis. The curve may have plateaus or flat areas, indicating periods of relatively stable survival.
+
+If there are multiple curves representing different groups, you can compare their shapes and patterns. If the curves are parallel, it suggests that the groups have similar survival experiences. If the curves diverge or cross, it indicates differences in survival between the groups.
+
+At specific time points, you can estimate the survival probability by locating the time point on the horizontal axis and dropping a vertical line to the curve. Then, read the corresponding survival probability from the vertical axis.
+
+\hypertarget{calculating-the-kaplan-meier-curve}{%
+\subsubsection{Calculating the Kaplan-Meier curve}\label{calculating-the-kaplan-meier-curve}}
+
+Let's say the filling lasted 3 years for the first subject, 4 years for the second subject, 4 years for the third subject, and so on.
+
+\includegraphics{figs/km0.png}
+
+Let's assume that none of the cases are ``censored''. The data are already arranged so that the shortest survival time is at the top and the longest at the bottom.
+
+Now we create a second table that we can use to draw the Kaplan-Meier curve. To do this, we look at the time points in the left table and add the time zero. So we have the time points 0, then 3, 4, 6, 7, 8 11 and 13. In total we have 10 subjects.
+
+Now we look at how many fills break out at each time. We enter this in the column m. So at time 0, no fillings were broken out. After 3 years, there were one broken fillings, after 4 years there were two, after 6 years there was one. We now do the same for all the other times.
+
+Next, we look at the number of cases that have survived to the time plus the number of cases where the event occurs at the exact time. We enter this in column n.
+
+So n is the number of cases that survived to that point, plus the people who dropped out at that exact point.
+
+After zero years we still have all 10 people. After 3 years, we get 10 for n, 9 people still have their fill intact, and one person's fill broke out exactly after 3 years.
+
+The easiest way to get n is to take the previous n value and subtract the previous m value. So we get 10 - 1 equals 9. Then 9 minus 2 equals 7, 7 - 1 equals 6\ldots{} and so on and so forth.
+
+From column n we can now calculate the survival rates. To do this, we simply divide n by the total number, i.e.~10.
+
+So 10 divided by 10 is equal to 1, 9 divided by 10 is equal to 0.9, 7 divided by 10 is equal to 0.7. Now we do the same for all the others.
+
+\hypertarget{draw-kaplan-meier-curve}{%
+\subsubsection{Draw Kaplan Meier curve}\label{draw-kaplan-meier-curve}}
+
+We can now plot the Kaplan-Meier curve. At time 0 we have a value of 1, after 3 years we have a value of 0.9 or 90\%. After 4 years we get 0.7, after 6 years 0.6 and so on and so forth.
+
+\includegraphics{figs/km1.png}
+
+From the Kaplan-Meier curve, we can now see what percentage of the filling has not broken out after a certain time.
+
+\hypertarget{censored-data}{%
+\subsubsection{Censored data}\label{censored-data}}
+
+Censored data has been added to the example in these three places.
+
+\includegraphics{figs/km2.png}
+
+We now need to enter this data into our Kaplan-Meier curve table. We do this as follows: We create our m exactly as we did before, looking at how many cases failed at each time point.
+
+Now we add a column q, in which we enter how many cases were censored at each time.
+
+Note that the time at which each censored case occurred does not get its own row, but is assigned to the previous time.
+
+\includegraphics{figs/km3.png}
+
+Let's look at this case. The censoring took place at time 9. In this table, however, there is no event with nine years and we also don't add it. The person is added at time 8.
+
+We can now re-calculate the values for the survival curve. If we have censored data, this is a little more complex.
+
+For this, we write down the values in the first step. We get these values by calculating n-m/n.~In the third row, for example, we get the value 10/12 with 12-2 by 12.
+
+The calculation of the real value is iterative. To do this, we multiply the result from the previous row by the value we have just calculated.
+
+So, in the first row we get 1, now we calculate 12/13 times 1, which is equal to 0.923. In the next row we calculate 10/12 times 0.923 and get a value of 0.769. We take this value again for the next row.
+
+We do this for all the rows. We can then plot the Kaplan-Meier curve with this data in the same way as before.
+
+\hypertarget{comparing-different-groups}{%
+\subsubsection{Comparing different groups}\label{comparing-different-groups}}
+
+If you are comparing several groups or categories (e.g.~treatment groups), the Kaplan-Meier curve consists of several lines, each representing a different group. Each line shows the estimated survival rate for that particular group. To test whether there is a statistically significant difference between the groups, the log-rank test can be used.
+
+If you have several factors and you want to see if they have an effect on the curve, you can calculate a Log Rank Test or calculate a Cox Regression here on DATAtab.
+
+\hypertarget{kaplan-meier-curve-assumptions}{%
+\subsubsection{Kaplan-Meier curve assumptions}\label{kaplan-meier-curve-assumptions}}
+
+Random or Non-informative censoring: This assumption states that the occurrence of censoring is unrelated to the likelihood of experiencing the event of interest. In other words, censoring should be random and not influenced by factors that affect the event outcome. If censoring is not non-informative, the estimated survival probabilities may be biased.
+
+Independence of censoring: This assumption assumes that the censoring times of different individuals are independent of each other. This means that the occurrence or timing of censoring for one participant should not provide any information about the censoring times for other participants.
+
+Survival probabilities do not change over time: The Kaplan-Meier curve assumes that the survival probabilities estimated at each time point remain constant over time. This assumption may not be valid if there are time-varying factors or treatments that can influence survival probabilities.
+
+No competing risks: The Kaplan-Meier curve assumes that the event of interest is the only possible outcome and there are no other competing events that could prevent the occurrence of the event being studied. Competing events can include other causes of death or events that render the occurrence of the event of interest impossible.
+
+\hypertarget{the-basics-of-survival-analysis}{%
+\subsection{The basics of Survival Analysis}\label{the-basics-of-survival-analysis}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(knitr)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(survival)}
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(tibble)}
+
+\CommentTok{\# devtools::install\_github("zabore/ezfun")}
+\NormalTok{ezfun}\SpecialCharTok{::}\FunctionTok{set\_ccf\_palette}\NormalTok{(}\StringTok{"contrast"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## <environment: R_GlobalEnv>
+\end{verbatim}
+
+\href{https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html}{Original article}
+
+Survival data are time-to-event data that consist of a distinct start time and end time.
+
+Examples from cancer:
+
+\begin{itemize}
+\tightlist
+\item
+  Time from surgery to death
+\item
+  Time from start of treatment to progression
+\item
+  Time from response to recurrence
+\item
+  Time-to-event data are common in many other fields.
+\end{itemize}
+
+Some other examples include:
+
+\begin{itemize}
+\tightlist
+\item
+  Time from HIV infection to development of AIDS
+\item
+  Time to heart attack
+\item
+  Time to onset of substance abuse
+\item
+  Time to initiation of sexual activity
+\item
+  Time to machine malfunction
+\end{itemize}
+
+Because time-to-event data are common in many fields, it also goes by names besides survival analysis including:
+
+\begin{itemize}
+\tightlist
+\item
+  Reliability analysis
+\item
+  Duration analysis
+\item
+  Event history analysis
+\item
+  Time-to-event analysis
+\end{itemize}
+
+A key feature of survival data is censoring.
+
+Censoring occurs if a subject has not experienced the event of interest by the end of data collection.
+
+A subject may be censored due to:
+
+\begin{itemize}
+\tightlist
+\item
+  Loss to follow-up
+\item
+  Withdrawal from study
+\item
+  No event by end of fixed study period
+\end{itemize}
+
+Specifically these are examples of \textbf{right censoring.}
+
+\textbf{Left censoring} and \textbf{interval censoring} are also possible, and methods exist to analyze these types of data, but this tutorial will be focus on right censoring.
+
+To illustrate the impact of censoring, suppose we have the following data:
+
+\includegraphics{figs/survival1.png}
+
+How would we compute the proportion who are event-free at 10 years?
+
+\begin{itemize}
+\tightlist
+\item
+  Subjects 6 and 7 were event-free at 10 years.
+\item
+  Subjects 2, 9, and 10 had the event before 10 years.
+\item
+  Subjects 1, 3, 4, 5, and 8 were censored before 10 years, so we don't know whether they had the event or not at 10 years. But we know something about them - that they were each followed for a certain amount of time without the event of interest prior to being censored.
+\end{itemize}
+
+Survival analysis techniques provide a way to appropriately account for censored patients in the analysis.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# install.packages(c("lubridate", "ggsurvfit", "gtsummary", "tidycmprsk"))}
+\FunctionTok{library}\NormalTok{(lubridate)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'lubridate'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     date, intersect, setdiff, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggsurvfit)}
+\FunctionTok{library}\NormalTok{(gtsummary)}
+\FunctionTok{library}\NormalTok{(tidycmprsk)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'tidycmprsk'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:gtsummary':
+## 
+##     trial
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# devtools::install\_github("zabore/condsurv")}
+\FunctionTok{library}\NormalTok{(condsurv)}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{The lung dataset}
+
+Throughout this section, we will use the \texttt{lung} dataset from the \texttt{survival} package as example data. The data contain subjects with advanced lung cancer from the North Central Cancer Treatment Group. We will focus on the following variables throughout this tutorial:
+
+\begin{verbatim}
+ **time:** Observed survival time in days
+ **status:** censoring status 1=censored, 2=dead
+ **sex:** 1=Male, 2=Female
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{head}\NormalTok{(lung[, }\FunctionTok{c}\NormalTok{(}\StringTok{"time"}\NormalTok{, }\StringTok{"status"}\NormalTok{, }\StringTok{"sex"}\NormalTok{)])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   time status sex
+## 1  306      2   1
+## 2  455      2   1
+## 3 1010      1   1
+## 4  210      2   1
+## 5  883      2   1
+## 6 1022      1   1
+\end{verbatim}
+
+Note that the status is coded in a non-standard way in this dataset. Typically you will see 1=event, 0=censored. Let's recode it to avoid confusion:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{lung1 }\OtherTok{\textless{}{-}} 
+\NormalTok{  lung }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{status =} \FunctionTok{recode}\NormalTok{(status, }\StringTok{\textquotesingle{}1\textquotesingle{}} \OtherTok{=} \DecValTok{0}\NormalTok{, }\StringTok{\textquotesingle{}2\textquotesingle{}} \OtherTok{=} \DecValTok{1}\NormalTok{)}
+\NormalTok{  )}
+
+\FunctionTok{head}\NormalTok{(lung[, }\FunctionTok{c}\NormalTok{(}\StringTok{"time"}\NormalTok{, }\StringTok{"status"}\NormalTok{, }\StringTok{"sex"}\NormalTok{)])}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   time status sex
+## 1  306      2   1
+## 2  455      2   1
+## 3 1010      1   1
+## 4  210      2   1
+## 5  883      2   1
+## 6 1022      1   1
+\end{verbatim}
+
+Now we have:
+
+\begin{verbatim}
+time: Observed survival time in days
+status: censoring status 0=censored, 1=dead
+sex: 1=Male, 2=Female
+\end{verbatim}
+
+Note: the \texttt{Surv()} function in the \{\texttt{survival}\} package accepts by default TRUE/FALSE, where TRUE is event and FALSE is censored; 1/0 where 1 is event and 0 is censored; or 2/1 where 2 is event and 1 is censored. Please take care to ensure the event indicator is properly formatted.
+
+\textbf{Calculating survival times}
+
+Data will often come with start and end dates rather than pre-calculated survival times. The first step is to make sure these are formatted as dates in R.
+
+Let's create a small example dataset with variables \texttt{sx\_date} for surgery date and \texttt{last\_fup\_date} for the last follow-up date:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{date\_ex }\OtherTok{\textless{}{-}} 
+  \FunctionTok{tibble}\NormalTok{(}
+    \AttributeTok{sx\_date =} \FunctionTok{c}\NormalTok{(}\StringTok{"2007{-}06{-}22"}\NormalTok{, }\StringTok{"2004{-}02{-}13"}\NormalTok{, }\StringTok{"2010{-}10{-}27"}\NormalTok{), }
+    \AttributeTok{last\_fup\_date =} \FunctionTok{c}\NormalTok{(}\StringTok{"2017{-}04{-}15"}\NormalTok{, }\StringTok{"2018{-}07{-}04"}\NormalTok{, }\StringTok{"2016{-}10{-}31"}\NormalTok{)}
+\NormalTok{    )}
+
+\NormalTok{date\_ex}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 2
+##   sx_date    last_fup_date
+##   <chr>      <chr>        
+## 1 2007-06-22 2017-04-15   
+## 2 2004-02-13 2018-07-04   
+## 3 2010-10-27 2016-10-31
+\end{verbatim}
+
+We see these are both \texttt{character} variables, but we need them to be formatted as \texttt{dates.}
+
+We will use the \{\texttt{lubridate}\} package to work with dates. In this case, we need to use the \texttt{ymd()} function to change the format, since the dates are currently in the character format where the year comes first, followed by the month, and followed by the day.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{date\_ex1 }\OtherTok{\textless{}{-}}
+\NormalTok{  date\_ex }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{sx\_date =} \FunctionTok{ymd}\NormalTok{(sx\_date), }
+    \AttributeTok{last\_fup\_date =} \FunctionTok{ymd}\NormalTok{(last\_fup\_date)}
+\NormalTok{    )}
+
+\NormalTok{date\_ex1}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 2
+##   sx_date    last_fup_date
+##   <date>     <date>       
+## 1 2007-06-22 2017-04-15   
+## 2 2004-02-13 2018-07-04   
+## 3 2010-10-27 2016-10-31
+\end{verbatim}
+
+Now that the dates are formatted, we need to calculate the difference between start and end dates in some units, usually months or years. Using the \{\texttt{lubridate}\} package, the operator \texttt{\%-\/-\%} designates a time interval, which is then converted to the number of elapsed seconds using \texttt{as.duration()} and finally converted to years by dividing by \texttt{dyears(1)}, which gives the number of seconds in a year.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{date\_ex2 }\OtherTok{\textless{}{-}}
+\NormalTok{  date\_ex1 }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}
+    \AttributeTok{observed\_yrs =} \FunctionTok{as.duration}\NormalTok{(sx\_date }\SpecialCharTok{\%{-}{-}\%}\NormalTok{ last\_fup\_date) }\SpecialCharTok{/} \FunctionTok{dyears}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{    )}
+
+\NormalTok{date\_ex2}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 3 x 3
+##   sx_date    last_fup_date observed_yrs
+##   <date>     <date>               <dbl>
+## 1 2007-06-22 2017-04-15            9.82
+## 2 2004-02-13 2018-07-04           14.4 
+## 3 2010-10-27 2016-10-31            6.01
+\end{verbatim}
+
+\hypertarget{creating-survival-objects-and-curves}{%
+\subsubsection{Creating survival objects and curves}\label{creating-survival-objects-and-curves}}
+
+The Kaplan-Meier method is the most common way to estimate survival times and probabilities. It is a \texttt{non-parametric} approach that results in a step function, where there is a step down each time an event occurs.
+
+Lets see the data again:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{lung[, }\FunctionTok{c}\NormalTok{(}\StringTok{"time"}\NormalTok{, }\StringTok{"status"}\NormalTok{)][}\DecValTok{1}\SpecialCharTok{:}\DecValTok{5}\NormalTok{, ]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   time status
+## 1  306      2
+## 2  455      2
+## 3 1010      1
+## 4  210      2
+## 5  883      2
+\end{verbatim}
+
+The \texttt{Surv()} function from the \{\texttt{survival}\} package creates a survival object for use as the response in a model formula. There will be one entry for each subject that is the survival time, which is followed by a + if the subject was censored.
+
+Let's look at the first 10 observations:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{Surv}\NormalTok{(lung}\SpecialCharTok{$}\NormalTok{time, lung}\SpecialCharTok{$}\NormalTok{status)[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{10}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##  [1]  306   455  1010+  210   883  1022+  310   361   218   166
+\end{verbatim}
+
+We see that subject 1 had an event at time 306 days, subject 2 had an event at time 455 days, subject 3 was censored at time 1010 days, etc.
+
+The \texttt{survfit()} function creates survival curves using the Kaplan-Meier method based on a formula. Let's generate the overall survival curve for the entire cohort, assign it to object s1, and look at the structure using \texttt{str()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{s1 }\OtherTok{\textless{}{-}} \FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung)}
+\FunctionTok{str}\NormalTok{(s1)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## List of 16
+##  $ n        : int 228
+##  $ time     : num [1:186] 5 11 12 13 15 26 30 31 53 54 ...
+##  $ n.risk   : num [1:186] 228 227 224 223 221 220 219 218 217 215 ...
+##  $ n.event  : num [1:186] 1 3 1 2 1 1 1 1 2 1 ...
+##  $ n.censor : num [1:186] 0 0 0 0 0 0 0 0 0 0 ...
+##  $ surv     : num [1:186] 0.996 0.982 0.978 0.969 0.965 ...
+##  $ std.err  : num [1:186] 0.0044 0.00885 0.00992 0.01179 0.01263 ...
+##  $ cumhaz   : num [1:186] 0.00439 0.0176 0.02207 0.03103 0.03556 ...
+##  $ std.chaz : num [1:186] 0.00439 0.0088 0.00987 0.01173 0.01257 ...
+##  $ type     : chr "right"
+##  $ logse    : logi TRUE
+##  $ conf.int : num 0.95
+##  $ conf.type: chr "log"
+##  $ lower    : num [1:186] 0.987 0.966 0.959 0.947 0.941 ...
+##  $ upper    : num [1:186] 1 1 0.997 0.992 0.989 ...
+##  $ call     : language survfit(formula = Surv(time, status) ~ 1, data = lung)
+##  - attr(*, "class")= chr "survfit"
+\end{verbatim}
+
+\textbf{n:} There are 228 subjects in the data.
+
+\textbf{time:} Distinct time points.
+
+\textbf{n.risk:} Number of cases that have survived to the time plus the number of cases where the event occurs at the exact time.
+
+\textbf{n.event:} Number of event happened at the time.
+
+\hypertarget{kaplan-meier-plotscurves}{%
+\subsubsection{Kaplan-Meier plots/Curves}\label{kaplan-meier-plotscurves}}
+
+The Kaplan Meier curve graphically represent the survival rate or survival function.
+
+We will use the \{\texttt{ggsurvfit}\} package to generate Kaplan-Meier plots.
+
+This package aims to ease plotting of time-to-event endpoints using the power of the \{\texttt{ggplot2}\} package. See \url{http://www.danieldsjoberg.com/ggsurvfit/index.html} for details.
+
+Note: alternatively, survival plots can be created using base R or the \{\texttt{survminer}\} package.
+
+The \{\texttt{ggsurvfit}\} package works best if you create the \texttt{survfit} object using the included \texttt{ggsurvfit::survfit2()} function, which uses the same syntax to what we saw previously with \texttt{survival::survfit()}.
+
+The \texttt{ggsurvfit::survfit2()} tracks the environment from the function call, which allows the plot to have better default values for labeling and p-value reporting.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{survfit2}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggsurvfit}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{x =} \StringTok{"Days"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Overall survival probability"}
+\NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Project_Archive_files/figure-latex/unnamed-chunk-13-1.pdf}
+
+The default plot in \texttt{ggsurvfit()} shows the step function only.
+
+We can add the confidence interval using \texttt{add\_confidence\_interval()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{survfit2}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggsurvfit}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{x =} \StringTok{"Days"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Overall survival probability"}
+\NormalTok{  ) }\SpecialCharTok{+} 
+  \FunctionTok{add\_confidence\_interval}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Project_Archive_files/figure-latex/unnamed-chunk-14-1.pdf}
+
+Typically we will also want to see the numbers at risk in a table below the x-axis.
+
+We can add this using \texttt{add\_risktable()}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{survfit2}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{ggsurvfit}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}
+    \AttributeTok{x =} \StringTok{"Days"}\NormalTok{,}
+    \AttributeTok{y =} \StringTok{"Overall survival probability"}
+\NormalTok{    ) }\SpecialCharTok{+} 
+  \FunctionTok{add\_confidence\_interval}\NormalTok{() }\SpecialCharTok{+}
+  \FunctionTok{add\_risktable}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Project_Archive_files/figure-latex/unnamed-chunk-15-1.pdf}
+
+Plots can be customized using many standard \{ggplot2\} options.
+
+\hypertarget{estimating-x-year-survival}{%
+\subsubsection{Estimating x-year survival}\label{estimating-x-year-survival}}
+
+One quantity often of interest in a survival analysis is the probability of surviving beyond a certain number of years, x.
+
+For example, to estimate the probability of surviving to 1 year, use summary with the times argument
+(Note: the time variable in the lung data is actually in days, so we need to use \texttt{times\ =\ 365.25})
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{summary}\NormalTok{(}\FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung), }\AttributeTok{times =} \FloatTok{365.25}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Call: survfit(formula = Surv(time, status) ~ 1, data = lung)
+## 
+##  time n.risk n.event survival std.err lower 95% CI upper 95% CI
+##   365     65     121    0.409  0.0358        0.345        0.486
+\end{verbatim}
+
+\begin{verbatim}
+We find that the 1-year probability of survival in this study is 41%.
+\end{verbatim}
+
+The associated lower and upper bounds of the 95\% confidence interval are also displayed.
+
+The 1-year survival probability is the point on the y-axis that corresponds to 1
+year on the x-axis for the survival curve.
+
+\includegraphics{figs/survival3.png}
+
+What happens if you use a ``naive'' estimate? Here ``naive'' means that the patients who were censored prior to 1-year are considered event-free and included in the denominator.
+
+121 of the 228 patients in the lung data died by 1 year so the ``naive'' estimate is calculated as:
+
+\[(1−\frac{121}{228})×100=47\%\]
+
+You get an incorrect estimate of the 1-year probability of survival when you ignore the fact that 42 patients were censored before 1-year.
+
+Recall the correct estimate of the 1-year probability of survival, accounting for censoring using the Kaplan-Meier method, was 41\%.
+
+Ignoring censoring leads to an overestimate of the overall survival probability.
+
+Imagine two studies, each with 228 subjects. There are 165 deaths in each study. Censoring is ignored in one (blue line), censoring is accounted for in the other (yellow line).
+
+The censored subjects only contribute information for a portion of the follow-up time, and then fall out of the risk set, thus pulling down the cumulative probability of survival. Ignoring censoring erroneously treats patients who are censored as part of the risk set for the entire follow-up period.
+
+\includegraphics{figs/survival4.png}
+
+We can produce nice tables of x-time survival probability estimates using the \texttt{tbl\_survfit()} function from the \{\texttt{gtsummary}\} package:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{tbl\_survfit}\NormalTok{(}
+    \AttributeTok{times =} \FloatTok{365.25}\NormalTok{,}
+    \AttributeTok{label\_header =} \StringTok{"**1{-}year survival (95\% CI)**"}
+\NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Table printed with `knitr::kable()`, not {gt}. Learn why at
+## https://www.danieldsjoberg.com/gtsummary/articles/rmarkdown.html
+## To suppress this message, include `message = FALSE` in code chunk header.
+\end{verbatim}
+
+\begin{tabular}{l|c}
+\hline
+**Characteristic** & **1-year survival (95\% CI)**\\
+\hline
+Overall & 41\% (34\%, 49\%)\\
+\hline
+\end{tabular}
+
+\hypertarget{estimating-median-survival-time}{%
+\subsubsection{Estimating median survival time}\label{estimating-median-survival-time}}
+
+Another quantity often of interest in a survival analysis is the average survival time, which we quantify using the median. Survival times are not expected to be normally distributed so the mean is not an appropriate summary.
+
+We can obtain the median survival directly from the \texttt{survfit} object:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Call: survfit(formula = Surv(time, status) ~ 1, data = lung)
+## 
+##        n events median 0.95LCL 0.95UCL
+## [1,] 228    165    310     285     363
+\end{verbatim}
+
+We see the median survival time is 310 days The lower and upper bounds of the 95\% confidence interval are also displayed.
+
+Median survival is the time corresponding to a survival probability of 0.5:
+
+\includegraphics{figs/survival5.png}
+
+What happens if you use a ``naive'' estimate? Here ``naive'' means that you exclude the censored patients from the calculation entirely to estimate median survival time among the patients who have had the event.
+
+Summarize the median survival time among the 165 patients who died:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{lung }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{filter}\NormalTok{(status }\SpecialCharTok{==} \DecValTok{1}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{median\_surv =} \FunctionTok{median}\NormalTok{(time))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##   median_surv
+## 1         284
+\end{verbatim}
+
+You get an incorrect estimate of median survival time of 284 days when you ignore the fact that censored patients also contribute follow-up time.
+
+Recall the correct estimate of median survival time is 310 days.
+
+Ignoring censoring will lead to an underestimate of median survival time because the follow-up time that censored patients contribute is excluded (blue line). The true survival curve accounting for censoring in the lung data is shown in yellow for comparison.
+
+\includegraphics{figs/survival6.png}
+
+We can produce nice tables of median survival time estimates using the \texttt{tbl\_survfit()} function from the \{\texttt{gtsummary}\} package:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{tbl\_survfit}\NormalTok{(}
+    \AttributeTok{probs =} \FloatTok{0.5}\NormalTok{,}
+    \AttributeTok{label\_header =} \StringTok{"**Median survival (95\% CI)**"}
+\NormalTok{  )}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Table printed with `knitr::kable()`, not {gt}. Learn why at
+## https://www.danieldsjoberg.com/gtsummary/articles/rmarkdown.html
+## To suppress this message, include `message = FALSE` in code chunk header.
+\end{verbatim}
+
+\begin{tabular}{l|c}
+\hline
+**Characteristic** & **Median survival (95\% CI)**\\
+\hline
+Overall & 310 (285, 363)\\
+\hline
+\end{tabular}
+
+\hypertarget{comparing-survival-times-between-groups}{%
+\subsubsection{Comparing survival times between groups}\label{comparing-survival-times-between-groups}}
+
+We can conduct between-group significance tests using a \texttt{log-rank\ test}.
+
+The log-rank test equally weights observations over the entire follow-up time and is the most common way to compare survival times between groups. There are versions that more heavily weight the early or late follow-up that could be more appropriate depending on the research question (see \texttt{?survdiff} for different test options).
+
+We get the log-rank p-value using the \texttt{survdiff} function. For example, we can test whether there was a difference in survival time according to sex in the lung data:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{survdiff}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}}\NormalTok{ sex, }\AttributeTok{data =}\NormalTok{ lung)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Call:
+## survdiff(formula = Surv(time, status) ~ sex, data = lung)
+## 
+##         N Observed Expected (O-E)^2/E (O-E)^2/V
+## sex=1 138      112     91.6      4.55      10.3
+## sex=2  90       53     73.4      5.68      10.3
+## 
+##  Chisq= 10.3  on 1 degrees of freedom, p= 0.001
+\end{verbatim}
+
+We see that there was a significant difference in overall survival according to sex in the lung data, with a p-value of \texttt{p\ =\ 0.001}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{require}\NormalTok{(}\StringTok{"survival"}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(}\StringTok{"survminer"}\NormalTok{)}
+
+\NormalTok{fit }\OtherTok{\textless{}{-}} \FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}}\NormalTok{ sex, }\AttributeTok{data =}\NormalTok{ lung)}
+
+\FunctionTok{ggsurvplot}\NormalTok{(fit, }\AttributeTok{data =}\NormalTok{ lung)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Project_Archive_files/figure-latex/unnamed-chunk-22-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{ggsurvplot}\NormalTok{(}
+\NormalTok{  fit,}
+  \AttributeTok{data =}\NormalTok{ lung,}
+  \AttributeTok{size =} \DecValTok{1}\NormalTok{,                 }\CommentTok{\# change line size}
+  \AttributeTok{palette =}
+    \FunctionTok{c}\NormalTok{(}\StringTok{"\#E7B800"}\NormalTok{, }\StringTok{"\#2E9FDF"}\NormalTok{),}\CommentTok{\# custom color palettes}
+  \AttributeTok{conf.int =} \ConstantTok{TRUE}\NormalTok{,          }\CommentTok{\# Add confidence interval}
+  \AttributeTok{pval =} \ConstantTok{TRUE}\NormalTok{,              }\CommentTok{\# Add p{-}value}
+  \AttributeTok{risk.table =} \ConstantTok{TRUE}\NormalTok{,        }\CommentTok{\# Add risk table}
+  \AttributeTok{risk.table.col =} \StringTok{"strata"}\NormalTok{,}\CommentTok{\# Risk table color by groups}
+  \AttributeTok{legend.labs =}
+    \FunctionTok{c}\NormalTok{(}\StringTok{"Male"}\NormalTok{, }\StringTok{"Female"}\NormalTok{),    }\CommentTok{\# Change legend labels}
+  \AttributeTok{risk.table.height =} \FloatTok{0.25}\NormalTok{, }\CommentTok{\# Useful to change when you have multiple groups}
+  \AttributeTok{ggtheme =} \FunctionTok{theme\_bw}\NormalTok{()      }\CommentTok{\# Change ggplot2 theme}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Project_Archive_files/figure-latex/unnamed-chunk-23-1.pdf}
+
+\hypertarget{the-cox-regression-model}{%
+\subsubsection{The Cox regression model}\label{the-cox-regression-model}}
+
+We may want to quantify an effect size for a single variable, or include more than one variable into a regression model to account for the effects of multiple variables.
+
+The Cox regression model is a semi-parametric model that can be used to fit univariable and multivariable regression models that have survival outcomes.
+
+\[h(t|Xi)=h0(t)exp(β1Xi1+⋯+βpXip)\]
+
+\begin{description}
+\tightlist
+\item[\(h(t)\)]
+hazard, or the instantaneous rate at which events occur h0(t)
+
+underlying baseline hazard
+\end{description}
+
+Some key assumptions of the model:
+
+non-informative censoring
+proportional hazards
+
+\textbf{Note:} parametric regression models for survival outcomes are also available, but they won't be addressed here.
+
+We can fit regression models for survival data using the \texttt{coxph()} function from the \{\texttt{survival}\} package, which takes a \texttt{Surv()} object on the left hand side and has standard syntax for regression formulas in R on the right hand side.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coxph}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}}\NormalTok{ sex, }\AttributeTok{data =}\NormalTok{ lung)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Call:
+## coxph(formula = Surv(time, status) ~ sex, data = lung)
+## 
+##        coef exp(coef) se(coef)      z       p
+## sex -0.5310    0.5880   0.1672 -3.176 0.00149
+## 
+## Likelihood ratio test=10.63  on 1 df, p=0.001111
+## n= 228, number of events= 165
+\end{verbatim}
+
+We can obtain tables of results using the \texttt{tbl\_regression()} function from the \{\texttt{gtsummary}\} package, with the option to \texttt{exponentiate} set to \texttt{TRUE} to return the hazard ratio rather than the log hazard ratio:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{coxph}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}}\NormalTok{ sex, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{tbl\_regression}\NormalTok{(}\AttributeTok{exp =} \ConstantTok{TRUE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Table printed with `knitr::kable()`, not {gt}. Learn why at
+## https://www.danieldsjoberg.com/gtsummary/articles/rmarkdown.html
+## To suppress this message, include `message = FALSE` in code chunk header.
+\end{verbatim}
+
+\begin{tabular}{l|c|c|c}
+\hline
+**Characteristic** & **HR** & **95\% CI** & **p-value**\\
+\hline
+sex & 0.59 & 0.42, 0.82 & 0.001\\
+\hline
+\end{tabular}
+
+The quantity of interest from a Cox regression model is a hazard ratio (HR). The HR represents the ratio of hazards between two groups at any particular point in time.
+
+The HR is interpreted as the instantaneous rate of occurrence of the event of interest in those who are still at risk for the event. It is not a risk, though it is commonly mis-interpreted as such. If you have a regression parameter β, then \(HR = exp(β)\)
+
+A HR \textless{} 1 indicates reduced hazard of death whereas a HR \textgreater{} 1 indicates an increased hazard of death.
+
+So the HR = 0.59 implies that 0.59 times as many females are dying as males, at any given time. Stated differently, females have a significantly lower hazard of death than males in these data.
+
+\hypertarget{prosper-loan-data}{%
+\subsection{Prosper Loan data}\label{prosper-loan-data}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(data.table)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'data.table'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:lubridate':
+## 
+##     hour, isoweek, mday, minute, month, quarter, second, wday, week,
+##     yday, year
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:dplyr':
+## 
+##     between, first, last
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# web \textless{}{-} "https://s3.amazonaws.com/udacity{-}hosted{-}downloads/ud651/prosperLoanData.csv"}
+\CommentTok{\# loan \textless{}{-} fread(web)}
+
+\CommentTok{\# head(loan)[, c(51, 65, 6, 7, 19, 18, 50)]}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{customer-churn}{%
+\subsection{Customer Churn}\label{customer-churn}}
+
+It usually costs more to acquire a customer than it does to retain a customer.
+
+Focusing on customer retention enables companies to maximize customer revenue over their lifetime.
+
+These models are seldom done optimally as they rely on binary classification flags (churn yes or no). Churn classification models do not tell WHEN a customer is likely to leave but only indicate that it's going to happen within a certain number of days or months.
+
+In the churn classification model, we don't usually account for the differences in time.
+
+It is probably a mistake to treat a customer that is at risk of leaving in 40 days the same as a customer that remains for over a 100 days. Traditional churn modeling does not make this differentiation.
+
+\includegraphics{figs/churn1.png}
+
+As it fails to account for time, we have no clear idea at what point a marketing intervention is needed and it causes preventable customer attrition.
+
+The only point in time here is the ``within 40 days'' threshold. As it fails to account for time, we have no clear idea at what point a marketing intervention is needed and it causes preventable customer attrition.
+
+\hypertarget{re-framing-the-problem-to-know-when}{%
+\subsubsection{Re-framing the Problem to Know When}\label{re-framing-the-problem-to-know-when}}
+
+Rather then use a binary classifier, we are going to re-frame the problem as time-dependent one. This enables us to intervene at the right time to stop customer attrition before it happens.
+
+No longer relying on thresholds, we now set churn as continuous time conditioned event. As the below graph shows, we now know the time that attrition risk is most likely to happen.
+
+\includegraphics{figs/churn2.png}
+
+No longer is time held constant, we now track risk over time to determine when a marketing intervention is needed to retain the customer.
+
+If we model for both the time and event, the right moment to intervene and prevent attrition is apparent. A modeling technique called \texttt{Survival\ Analysis} allows for us to do this and with the advent of modern Machine Learning, it's now a trivial task.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# \%reload\_ext autoreload}
+\CommentTok{\# \%autoreload 2}
+\CommentTok{\# \%matplotlib inline}
+
+\ImportTok{import}\NormalTok{ xgboost }\ImportTok{as}\NormalTok{ xgb}
+\ImportTok{import}\NormalTok{ shap}
+\ImportTok{import}\NormalTok{ sksurv.metrics }\ImportTok{as}\NormalTok{ surv\_metrics}
+\ImportTok{from}\NormalTok{ sksurv.datasets }\ImportTok{import}\NormalTok{ get\_x\_y}
+\ImportTok{from}\NormalTok{ lifelines }\ImportTok{import}\NormalTok{ KaplanMeierFitter}
+\ImportTok{from}\NormalTok{ lifelines.plotting }\ImportTok{import}\NormalTok{ plot\_lifetimes}
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
+\ImportTok{import}\NormalTok{ seaborn }\ImportTok{as}\NormalTok{ sns}
+\ImportTok{from}\NormalTok{ matplotlib }\ImportTok{import}\NormalTok{ pyplot }\ImportTok{as}\NormalTok{ plt}
+\ImportTok{from}\NormalTok{ sklearn.compose }\ImportTok{import}\NormalTok{ ColumnTransformer}
+\ImportTok{from}\NormalTok{ sklearn.exceptions }\ImportTok{import}\NormalTok{ DataConversionWarning}
+\ImportTok{from}\NormalTok{ sklearn.impute }\ImportTok{import}\NormalTok{ SimpleImputer}
+\ImportTok{from}\NormalTok{ sklearn.model\_selection }\ImportTok{import}\NormalTok{ train\_test\_split}
+\ImportTok{from}\NormalTok{ sklearn.pipeline }\ImportTok{import}\NormalTok{ Pipeline}
+\ImportTok{from}\NormalTok{ sklearn.preprocessing }\ImportTok{import}\NormalTok{ OneHotEncoder, StandardScaler}
+
+
+
+\NormalTok{plt.rcParams[}\StringTok{\textquotesingle{}figure.figsize\textquotesingle{}}\NormalTok{] }\OperatorTok{=}\NormalTok{ [}\FloatTok{7.2}\NormalTok{, }\FloatTok{4.8}\NormalTok{]}
+\NormalTok{pd.set\_option(}\StringTok{"display.float\_format"}\NormalTok{, }\KeywordTok{lambda}\NormalTok{ x: }\StringTok{"}\SpecialCharTok{\%.4f}\StringTok{"} \OperatorTok{\%}\NormalTok{ x)}
+
+\NormalTok{sns.set\_style(}\StringTok{\textquotesingle{}darkgrid\textquotesingle{}}\NormalTok{)}
+
+\NormalTok{SEED }\OperatorTok{=} \DecValTok{123}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{df }\OperatorTok{=}\NormalTok{ pd.read\_csv(}\StringTok{"../../data/churn.txt"}\NormalTok{)}
+\CommentTok{\# denoting churn and duration}
+\NormalTok{df[}\StringTok{"event"}\NormalTok{] }\OperatorTok{=}\NormalTok{ np.where(df[}\StringTok{"churn?"}\NormalTok{] }\OperatorTok{==} \StringTok{"False."}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{) }
+\NormalTok{df }\OperatorTok{=}\NormalTok{ df.rename(columns}\OperatorTok{=}\NormalTok{\{}\StringTok{"account\_length"}\NormalTok{: }\StringTok{"duration"}\NormalTok{\})}
+\KeywordTok{del}\NormalTok{ df[}\StringTok{\textquotesingle{}churn?\textquotesingle{}}\NormalTok{]}
+\NormalTok{df }\OperatorTok{=}\NormalTok{ df.dropna()}
+\NormalTok{df }\OperatorTok{=}\NormalTok{ df.drop\_duplicates()}
+\NormalTok{df.head()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\StringTok{"Total Records:"}\NormalTok{,df.shape[}\DecValTok{0}\NormalTok{],}\StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{"Percent Churn Rate:"}\NormalTok{,df.event.mean())}
+\BuiltInTok{print}\NormalTok{(}\StringTok{""}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(}\StringTok{"Duration Intervals"}\NormalTok{)}
+\BuiltInTok{print}\NormalTok{(df[}\StringTok{\textquotesingle{}duration\textquotesingle{}}\NormalTok{].describe())}
+\end{Highlighting}
+\end{Shaded}
+
+For Survival models data is different from a traditional classification problem and requires:
+- A Censor --- For our purposes these are customers who've yet to churn. Read about right censoring here.
+
+\begin{itemize}
+\item
+  Duration --- The duration or time t of the customer's activity. In this case, it's Account Length in days.
+\item
+  Event --- The binary target, in this case if they terminated their phone plan marked by Churn? .
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ax }\OperatorTok{=}\NormalTok{ plot\_lifetimes(df.head(}\DecValTok{10}\NormalTok{)[}\StringTok{\textquotesingle{}duration\textquotesingle{}}\NormalTok{], df.head(}\DecValTok{10}\NormalTok{)[}\StringTok{\textquotesingle{}event\textquotesingle{}}\NormalTok{])}
+\NormalTok{\_}\OperatorTok{=}\NormalTok{ax.set\_xlabel(}\StringTok{"Duration: Account Length (days)"}\NormalTok{) \_}\OperatorTok{=}\NormalTok{ax.set\_ylabel(}\StringTok{"Customer Number"}\NormalTok{) \_}\OperatorTok{=}\NormalTok{ax.set\_title(}\StringTok{"Observed Customer Attrition"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{figs/churn3.png}
+
+In the above plot, the red lines indicates when a customer has left with the dots indicating the specific point in time.
+
+Blue lines are customers that are still active up to the time measured on the x-axis in Duration.
+
+Here we see that customer number 8 did not attrit until up to 195 days, with customer numbers 0 and 4 leaving in 163 and 146 days respectively. All other customers are still active.
+
+Notice how all customers are set on the same time scale because the data is analytically aligned. Each customer might have come in at different times but we've set the days as the same.
+
+This is what allowed us to right-censor the data on the churn event. Real world data needs both censoring and aligning before modeling can begin.
+
+\hypertarget{the-risk-of-churn}{%
+\subsubsection{The Risk of Churn}\label{the-risk-of-churn}}
+
+A more informative approach might be to estimate the Survival Function or the time in days a customer has until they attrit. For this purpose, we will use a Kaplan Meier Estimator to calculate how long until attrition occurs. The estimator is defined as:
+
+\includegraphics{figs/churn4.png}
+
+Where \(𝑑_𝑖\) are the number of churn events at time \(𝑡\) and \(𝑛_𝑖\) is the number of customers at risk of churn just prior to time \(𝑡\).
+
+We will use the great python package \texttt{lifelines} to plot the Survival Function as the function is a component of the final churn model.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{kmf }\OperatorTok{=}\NormalTok{ KaplanMeierFitter()}
+\NormalTok{kmf.fit(df[}\StringTok{\textquotesingle{}duration\textquotesingle{}}\NormalTok{], event\_observed}\OperatorTok{=}\NormalTok{df[}\StringTok{\textquotesingle{}event\textquotesingle{}}\NormalTok{])}
+\NormalTok{kmf.plot\_survival\_function()}
+
+\NormalTok{\_}\OperatorTok{=}\NormalTok{plt.title(}\StringTok{\textquotesingle{}Survival Function for Telco Churn\textquotesingle{}}\NormalTok{)}\OperatorTok{;}\NormalTok{ \_}\OperatorTok{=}\NormalTok{plt.xlabel(}\StringTok{"Duration: Account Length (days)"}\NormalTok{)}
+\NormalTok{\_}\OperatorTok{=}\NormalTok{plt.ylabel(}\StringTok{"Churn Risk (Percent Churned)"}\NormalTok{) }
+\NormalTok{\_}\OperatorTok{=}\NormalTok{plt.axvline(x}\OperatorTok{=}\NormalTok{kmf.median\_survival\_time\_, color}\OperatorTok{=}\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{,linestyle}\OperatorTok{=}\StringTok{\textquotesingle{}{-}{-}\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{figs/churn5.png}
+
+Let's look at the \texttt{median} survival time. This is the point by which half of customers have churned out. According to this graph, where it's marked by the red dotted line, by about 152 days half of customers churn.
+
+This is helpful because it gives overall baseline when intervention is needed. However, for each individual customer this is uninformative.
+\textbf{What is missing is the point in time in which churn risk is highest for each customer.}
+
+For that we will create a model using \texttt{Cox’s\ Proportional\ Hazard} which uses a log-risk function \(h(x)\). The Hazard function is conditioned on rate of a customers remaining until time t or later, this allows to estimate the risk of churn overtime.
+
+This will enable us to score each customer and anticipate when a marketing intervention is needed. However, before we proceed to that, we need to preprocess the data.
+
+\hypertarget{data-splitting-and-preprocessing}{%
+\subsubsection{Data Splitting and Preprocessing}\label{data-splitting-and-preprocessing}}
+
+First we will split the data into training and testing. We'll use the testing set as the validation for the example.
+
+\begin{verbatim}
+In practice, you want all three of these splits so that you don’t tune to the validation set.
+\end{verbatim}
+
+Next, we take the numeric features and categorical features and then preprocess them for downstream modeling.
+
+In the case of categories, we will first impute with the constant and then simply one-hot encode them. In the case of numerics, we will fill with the median then standardize them between values of 0 and 1. This is all wrapped into Sklearn's Pipeline and ColumnTransformer for simplicity's sake.
+As part of the Churn Pipeline all these steps are included with the final preprocessor saved for use at inference time.
+
+\hypertarget{deploying-a-scalable-end-to-end-customer-churn-prediction-solution-with-aws}{%
+\subsection{Deploying a Scalable End to End Customer Churn Prediction Solution with AWS}\label{deploying-a-scalable-end-to-end-customer-churn-prediction-solution-with-aws}}
+
+\href{https://towardsdatascience.com/deploying-a-scalable-end-to-end-customer-churn-prediction-solution-with-aws-cbf3536be996}{Source}
+
+Wouldn't it be great if you could hold onto customers longer, maximizing their lifetime revenue?
+
+In this blog post, you will deploy an End to End Customer Churn Prediction solution using AWS services.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ findspark}
+\NormalTok{findspark.init()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ pyspark.sql }\ImportTok{import}\NormalTok{ SparkSession}
+\ImportTok{from}\NormalTok{ pyspark }\ImportTok{import}\NormalTok{ SparkFiles}
+\ImportTok{from}\NormalTok{ pyspark.ml.classification }\ImportTok{import}\NormalTok{ LogisticRegression}
+\ImportTok{from}\NormalTok{ pyspark.ml.evaluation }\ImportTok{import}\NormalTok{ BinaryClassificationEvaluator, MulticlassClassificationEvaluator}
+\ImportTok{from}\NormalTok{ pyspark.ml.tuning }\ImportTok{import}\NormalTok{ CrossValidator, ParamGridBuilder}
+\ImportTok{from}\NormalTok{ pyspark.ml.feature }\ImportTok{import}\NormalTok{ VectorAssembler}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my\_appname }\OperatorTok{=} \StringTok{"LogisticRegression with PySpark MLlib"}
+\NormalTok{spark }\OperatorTok{=}\NormalTok{ SparkSession.builder.appName(my\_appname).getOrCreate()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Load data}
+\NormalTok{url }\OperatorTok{=} \StringTok{"https://raw.githubusercontent.com/pkmklong/Breast{-}Cancer{-}Wisconsin{-}Diagnostic{-}DataSet/master/data.csv"}
+\NormalTok{spark.sparkContext.addFile(url)}
+
+\NormalTok{df }\OperatorTok{=}\NormalTok{ spark.read.csv(SparkFiles.get(}\StringTok{"data.csv"}\NormalTok{), header}\OperatorTok{=}\VariableTok{True}\NormalTok{, inferSchema}\OperatorTok{=}\VariableTok{True}\NormalTok{)}
+
+\CommentTok{\# df.show()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Rename columns and map diagnosis to label}
+\NormalTok{columns }\OperatorTok{=}\NormalTok{ [}\StringTok{\textquotesingle{}id\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}diagnosis\textquotesingle{}}\NormalTok{] }\OperatorTok{+}\NormalTok{ [}\SpecialStringTok{f\textquotesingle{}feature\_}\SpecialCharTok{\{}\NormalTok{i}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}} \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{32}\NormalTok{)]}
+\NormalTok{data }\OperatorTok{=}\NormalTok{ df.toDF(}\OperatorTok{*}\NormalTok{columns)}
+\NormalTok{data }\OperatorTok{=}\NormalTok{ data.withColumn(}\StringTok{"label"}\NormalTok{, (data[}\StringTok{"diagnosis"}\NormalTok{] }\OperatorTok{==} \StringTok{"M"}\NormalTok{).cast(}\StringTok{"integer"}\NormalTok{)).drop(}\StringTok{"diagnosis"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Assemble features into a single vector}
+\NormalTok{feature\_columns }\OperatorTok{=}\NormalTok{ [}\SpecialStringTok{f\textquotesingle{}feature\_}\SpecialCharTok{\{}\NormalTok{i}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}} \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{25}\NormalTok{)]}
+\NormalTok{assembler }\OperatorTok{=}\NormalTok{ VectorAssembler(inputCols}\OperatorTok{=}\NormalTok{feature\_columns, outputCol}\OperatorTok{=}\StringTok{"features"}\NormalTok{)}
+\NormalTok{data }\OperatorTok{=}\NormalTok{ assembler.transform(data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Split data into training and test sets}
+\NormalTok{train\_data, test\_data }\OperatorTok{=}\NormalTok{ data.randomSplit([}\FloatTok{0.8}\NormalTok{, }\FloatTok{0.2}\NormalTok{], seed}\OperatorTok{=}\DecValTok{42}\NormalTok{)}
+
+\CommentTok{\# Build the Logistic Regression model}
+\NormalTok{logistic\_regression }\OperatorTok{=}\NormalTok{ LogisticRegression(featuresCol}\OperatorTok{=}\StringTok{"features"}\NormalTok{, labelCol}\OperatorTok{=}\StringTok{"label"}\NormalTok{)}
+\NormalTok{model }\OperatorTok{=}\NormalTok{ logistic\_regression.fit(train\_data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Evaluate the model on test data}
+\NormalTok{predictions }\OperatorTok{=}\NormalTok{ model.transform(test\_data)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# AUC{-}ROC}
+\NormalTok{evaluator }\OperatorTok{=}\NormalTok{ BinaryClassificationEvaluator(rawPredictionCol}\OperatorTok{=}\StringTok{"rawPrediction"}\NormalTok{, labelCol}\OperatorTok{=}\StringTok{"label"}\NormalTok{)}
+\NormalTok{auc }\OperatorTok{=}\NormalTok{ evaluator.evaluate(predictions)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Accuracy, Precision, and Recall}
+\NormalTok{multi\_evaluator }\OperatorTok{=}\NormalTok{ MulticlassClassificationEvaluator(labelCol}\OperatorTok{=}\StringTok{"label"}\NormalTok{, predictionCol}\OperatorTok{=}\StringTok{"prediction"}\NormalTok{)}
+\NormalTok{accuracy }\OperatorTok{=}\NormalTok{ multi\_evaluator.evaluate(predictions, \{multi\_evaluator.metricName: }\StringTok{"accuracy"}\NormalTok{\})}
+\NormalTok{precision }\OperatorTok{=}\NormalTok{ multi\_evaluator.evaluate(predictions, \{multi\_evaluator.metricName: }\StringTok{"weightedPrecision"}\NormalTok{\})}
+\NormalTok{recall }\OperatorTok{=}\NormalTok{ multi\_evaluator.evaluate(predictions, \{multi\_evaluator.metricName: }\StringTok{"weightedRecall"}\NormalTok{\})}
+
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"AUC{-}ROC: }\SpecialCharTok{\{}\NormalTok{auc}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## AUC-ROC: 0.9989
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Accuracy: }\SpecialCharTok{\{}\NormalTok{accuracy}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Accuracy: 0.9651
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Precision: }\SpecialCharTok{\{}\NormalTok{precision}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Precision: 0.9653
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Recall: }\SpecialCharTok{\{}\NormalTok{recall}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Recall: 0.9651
+\end{verbatim}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}
