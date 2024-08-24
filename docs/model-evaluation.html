@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Machine Learning</title>
+  <title>Chapter 6 Model Evaluation | Machine Learning</title>
   <meta name="description" content="This is a collection of notes to my self" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Machine Learning" />
+  <meta property="og:title" content="Chapter 6 Model Evaluation | Machine Learning" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a collection of notes to my self" />
   <meta name="github-repo" content="davutemrah/davutemrah.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Machine Learning" />
+  <meta name="twitter:title" content="Chapter 6 Model Evaluation | Machine Learning" />
   
   <meta name="twitter:description" content="This is a collection of notes to my self" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
+<link rel="prev" href="ml-modeling.html"/>
 
-<link rel="next" href="projects.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -172,26 +172,127 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Machine Learning</h1>
-<p class="author"><em>Davut Ayan</em></p>
-<p class="date"><em>2024-08-24</em></p>
+<div id="model-evaluation" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Model Evaluation<a href="model-evaluation.html#model-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="classification-models-evaluation" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Classification Models: Evaluation<a href="model-evaluation.html#classification-models-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://medium.com/@demrahayan/evaluating-binary-classification-models-with-pyspark-2afc5ac7937f">My medium story</a></p>
+<p><a href="https://developers.google.com/machine-learning/crash-course/classification/">Google developers</a></p>
+<div id="thresholding" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Thresholding<a href="model-evaluation.html#thresholding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Logistic regression returns a probability. You can use the returned probability “as is” (for example, the probability that the user will click on this ad is 0.00023) or convert the returned probability to a binary value (for example, this email is spam).</p>
+<p>A logistic regression model that returns 0.9995 for a particular email message is predicting that it is very likely to be spam. Conversely, another email message with a prediction score of 0.0003 on that same logistic regression model is very likely not spam.</p>
+<p>However, what about an email message with a prediction score of 0.6? In order to map a logistic regression value to a binary category, you must define a <code>classification threshold</code> (also called the <code>decision threshold</code>).</p>
+<p>A value above that threshold indicates “spam”; a value below indicates “not spam.” It is tempting to assume that the classification threshold should always be 0.5, but thresholds are problem-dependent, and are therefore values that you must tune.</p>
+<p>Note: “Tuning” a threshold for logistic regression is different from tuning hyperparameters such as learning rate. Part of choosing a threshold is assessing how much you’ll suffer for making a mistake. For example, mistakenly labeling a non-spam message as spam is very bad. However, mistakenly labeling a spam message as non-spam is unpleasant, but hardly the end of your job.</p>
 </div>
-<div id="preface" class="section level1 unnumbered hasAnchor">
-<h1>Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Hello there! 👋 As a devoted explorer navigating the expansive realm of machine learning, I am delighted to present my personal repository—a virtual haven that houses my notes, musings, and sample projects sourced from a diverse array of blogs, books, and practical encounters.</p>
-<p>This curated collection serves as a mosaic of insights, with some of the codes and notes thoughtfully extracted from publicly available machine learning blogs. Each project within this repository is a testament to my ongoing quest for understanding, meticulously pieced together from the rich tapestry of the digital knowledge landscape.</p>
-<p>Whether you are a fellow enthusiast, a curious mind, or a seasoned practitioner, I extend an invitation to explore the codebase, delve into the concepts, and perhaps find inspiration for your own machine learning journey. This repository is not merely a repository of algorithms and snippets; it is a reflection of my commitment, curiosity, and enthusiasm for the ever-evolving field of machine learning.</p>
-<p>I encourage you to engage, share your thoughts, or even collaborate on this journey. Let’s celebrate the collaborative spirit of the machine learning community and together, embrace the boundless opportunities that arise from the fusion of code, data, and the collective wisdom of publicly available resources.</p>
-<p>Happy exploration!</p>
+<div id="confusion-matrix" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Confusion Matrix<a href="model-evaluation.html#confusion-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Predicted Positive</th>
+<th>Predicted Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Actual Positive</strong></td>
+<td>TP</td>
+<td>FN</td>
+</tr>
+<tr class="even">
+<td><strong>Actual Negative</strong></td>
+<td>FP</td>
+<td>TN</td>
+</tr>
+</tbody>
+</table>
+<p><strong>True Positive:</strong> Model predicted positive and it is true.</p>
+<p><strong>True negative:</strong> Model predicted negative and it is true.</p>
+<p><strong>False positive (Type 1 Error):</strong> Model predicted positive but it is false.</p>
+<p><strong>False negative (Type 2 Error):</strong> Model predicted negative and it is true.</p>
+<p><strong>False Positive Rate (FPR):</strong></p>
+<p>The False Positive Rate is the ratio of false positive predictions to the total number of actual negatives. It measures the rate at which the model incorrectly predicts the positive class among the instances that are actually negative.</p>
+<p><span class="math inline">\(FPR = \frac{FP}{TN + FP}\)</span></p>
+<p><strong>True Positive Rate (TPR), Sensitivity, or Recall:</strong></p>
+<p>The True Positive Rate is the ratio of true positive predictions to the total number of actual positives. It measures the ability of the model to correctly predict the positive class among instances that are actually positive.</p>
+<p><span class="math inline">\(Recall (TPR) = \frac{TP}{TP + FN}\)</span></p>
+<p><strong>Accuracy:</strong></p>
+<p>It represents the ratio of correctly predicted instances to the total number of instances. The accuracy metric is suitable for balanced datasets where the classes are evenly distributed. It is calculated using the following formula:</p>
+<p><span class="math inline">\(Accuracy = \frac{TP + TN}{TP + TN + FP + FN}\)</span></p>
+<p>Accuracy provides a general sense of how well a model is performing across all classes. It is easy to understand and interpret, making it a commonly used metric, especially when the classes are balanced.</p>
+<p>However, accuracy may not be an ideal metric in situations where the class distribution is imbalanced. In imbalanced datasets, where one class significantly outnumbers the other, a high accuracy might be achieved by simply predicting the majority class. In such cases, other metrics like precision, recall, F1 score, or area under the receiver operating characteristic (ROC-AUC) curve may be more informative.</p>
+<p><strong>Precision:</strong></p>
+<p>Precision is the ratio of true positive predictions to the total number of positive predictions made by the model. It represents the accuracy of the positive predictions made by the model.</p>
+<p><span class="math inline">\(Precision = \frac{TP}{TP + FP}\)</span></p>
+<p><strong>F1 Measure:</strong></p>
+<p>The F1 score is a metric commonly used in binary classification to provide a balance between precision and recall. It is the harmonic mean of precision and recall, combining both measures into a single value. The F1 score is particularly useful when there is an uneven class distribution or when both false positives and false negatives are important considerations.</p>
+<p>The F1 score is useful in situations where achieving a balance between precision and recall is important, as it penalizes models that have a significant imbalance between these two metrics.</p>
+<p><span class="math inline">\(F1 score = 2 \times \frac{Precision \times Recall}{Precision + Recall}\)</span></p>
+<div id="in-marketing" class="section level4 hasAnchor" number="6.1.2.1">
+<h4><span class="header-section-number">6.1.2.1</span> In Marketing<a href="model-evaluation.html#in-marketing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p><strong>Precision:</strong></p>
+<p>In marketing, precision is valuable when the cost or impact associated with false positives (incorrectly identifying a non-lookalike as a lookalike) is high. For example, if targeting a non-lookalike with a marketing campaign has significant costs, you want to minimize false positives.</p>
+<p><strong>Recall:</strong></p>
+<p>In marketing, recall is important when you want to ensure that you are not missing potential opportunities (actual lookalikes). If missing a true lookalike has a high cost or lost opportunity, you want to maximize recall.</p>
+
+</div>
+</div>
+<div id="bootstrapping" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Bootstrapping<a href="model-evaluation.html#bootstrapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="jack-knife" class="section level4 hasAnchor" number="6.1.3.1">
+<h4><span class="header-section-number">6.1.3.1</span> Jack-knife<a href="model-evaluation.html#jack-knife" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>• The jackknife is a tool for estimating standard errors and the bias of estimators</p>
+<p>• As its name suggests, the jackknife is a small, handy tool; in contrast to the
+bootstrap, which is then the moral equivalent of a giant workshop full of tools</p>
+<p>• Both the jackknife and the bootstrap involve re-sampling data; that is, repeatedly creating new data sets from the original data</p>
+<p>The jackknife deletes each observation and calculates an estimate based on the remaining n − 1 of them</p>
+<p>• It uses this collection of estimates to do things like estimate the bias and the standard error</p>
+<p>• Note that estimating the bias and having a standard error are not needed for things like sample means, which we know are unbiased estimates of population means and what their standard errors are</p>
+<p>It has been shown that the jackknife is a linear approximation to the bootstrap</p>
+<p>• Generally do not use the jackknife for sample quantiles like the median; as it has been shown to have some poor properties</p>
+<p>The bootstrap</p>
+<p>• The bootstrap is a tremendously useful tool for constructing confidence intervals and calculating standard errors for difficult statistics
+• For example, how would one derive a confidence interval for the median? • The bootstrap procedure follows from the so called bootstrap principle</p>
+<p>Suppose that I have a statistic that estimates some population parameter, but I don’t know its sampling distribution
+• The bootstrap principle suggests using the distribution defined by the data to approximate its sampling distribution
+• In practice, the bootstrap principle is always carried out using simulation
+• The general procedure follows by first simulating complete data sets from the observed data with replacement
+• This is approximately drawing from the sampling distribution of that statistic, at least as far as the data is able to approximate the true population distribution
+• Calculate the statistic for each simulated data set
+• Use the simulated statistics to either define a confidence interval or take the standard deviation to calculate a standard error
+Example
+• Consider again, the data set of 630 measurements of gray matter volume for workers from a lead manufacturing plant
+• The median gray matter volume is around 589 cubic centimeters
+• We want a confidence interval for the median of these measurements
+• Bootstrap procedure for calculating for the median from a data set of n observations
+i. Sample n observations with replacement from the observed data resulting in one simulated complete data set
+ii. Take the median of the simulated data set
+iii. Repeat these two steps B times, resulting in B simulated medians
+iv. These medians are approximately draws from the sampling distribution of the
+median of n observations; therefore we can
+• Draw a histogram of them
+• Calculate their standard deviation to estimate the standard error of the median • Take the 2.5th and 97.5th percentiles as a confidence interval for the median</p>
+<p>Summary
+• The bootstrap is non-parametric
+• However, the theoretical arguments proving the validity of the bootstrap rely
+on large samples
+• Better percentile bootstrap confidence intervals correct for bias
+• There are lots of variations on bootstrap procedures; the book “An Introduction to the Bootstrap” by Efron and Tibshirani is a great place to start for both bootstrap and jackknife information</p>
+
+</div>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
+<a href="ml-modeling.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
-<a href="projects.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -222,7 +323,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/__Foundations/06_01_EVALUATION.Rmd",
 "text": "Edit"
 },
 "history": {

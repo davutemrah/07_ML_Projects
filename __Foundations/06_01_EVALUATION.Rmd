@@ -1,0 +1,89 @@
+# Model Evaluation
+
+
+## Classification Models: Evaluation
+
+[My medium story](https://medium.com/@demrahayan/evaluating-binary-classification-models-with-pyspark-2afc5ac7937f)
+
+[Google developers](https://developers.google.com/machine-learning/crash-course/classification/)
+
+### Thresholding
+
+Logistic regression returns a probability. You can use the returned probability "as is" (for example, the probability that the user will click on this ad is 0.00023) or convert the returned probability to a binary value (for example, this email is spam).
+
+A logistic regression model that returns 0.9995 for a particular email message is predicting that it is very likely to be spam. Conversely, another email message with a prediction score of 0.0003 on that same logistic regression model is very likely not spam.
+
+However, what about an email message with a prediction score of 0.6? In order to map a logistic regression value to a binary category, you must define a `classification threshold` (also called the `decision threshold`).
+
+A value above that threshold indicates "spam"; a value below indicates "not spam." It is tempting to assume that the classification threshold should always be 0.5, but thresholds are problem-dependent, and are therefore values that you must tune.
+
+Note: "Tuning" a threshold for logistic regression is different from tuning hyperparameters such as learning rate. Part of choosing a threshold is assessing how much you'll suffer for making a mistake. For example, mistakenly labeling a non-spam message as spam is very bad. However, mistakenly labeling a spam message as non-spam is unpleasant, but hardly the end of your job.
+
+### Confusion Matrix
+
+|                     | Predicted Positive | Predicted Negative |
+|---------------------|--------------------|--------------------|
+| **Actual Positive** | TP                 | FN                 |
+| **Actual Negative** | FP                 | TN                 |
+
+**True Positive:** Model predicted positive and it is true.
+
+**True negative:** Model predicted negative and it is true.
+
+**False positive (Type 1 Error):** Model predicted positive but it is false.
+
+**False negative (Type 2 Error):** Model predicted negative and it is true.
+
+
+
+**False Positive Rate (FPR):**
+
+The False Positive Rate is the ratio of false positive predictions to the total number of actual negatives. It measures the rate at which the model incorrectly predicts the positive class among the instances that are actually negative.
+
+$FPR = \frac{FP}{TN + FP}$
+
+
+**True Positive Rate (TPR), Sensitivity, or Recall:**
+
+The True Positive Rate is the ratio of true positive predictions to the total number of actual positives. It measures the ability of the model to correctly predict the positive class among instances that are actually positive.
+
+$Recall (TPR) = \frac{TP}{TP + FN}$
+
+
+**Accuracy:**
+
+It represents the ratio of correctly predicted instances to the total number of instances. The accuracy metric is suitable for balanced datasets where the classes are evenly distributed. It is calculated using the following formula:
+
+$Accuracy = \frac{TP + TN}{TP + TN + FP + FN}$
+
+Accuracy provides a general sense of how well a model is performing across all classes. It is easy to understand and interpret, making it a commonly used metric, especially when the classes are balanced.
+
+However, accuracy may not be an ideal metric in situations where the class distribution is imbalanced. In imbalanced datasets, where one class significantly outnumbers the other, a high accuracy might be achieved by simply predicting the majority class. In such cases, other metrics like precision, recall, F1 score, or area under the receiver operating characteristic (ROC-AUC) curve may be more informative.
+
+
+**Precision:** 
+
+Precision is the ratio of true positive predictions to the total number of positive predictions made by the model. It represents the accuracy of the positive predictions made by the model. 
+
+$Precision = \frac{TP}{TP + FP}$
+
+
+**F1 Measure:**
+
+The F1 score is a metric commonly used in binary classification to provide a balance between precision and recall. It is the harmonic mean of precision and recall, combining both measures into a single value. The F1 score is particularly useful when there is an uneven class distribution or when both false positives and false negatives are important considerations.
+
+The F1 score is useful in situations where achieving a balance between precision and recall is important, as it penalizes models that have a significant imbalance between these two metrics.
+
+$F1 score = 2 \times \frac{Precision \times Recall}{Precision + Recall}$
+
+
+
+#### In Marketing
+
+**Precision:**
+
+In marketing, precision is valuable when the cost or impact associated with false positives (incorrectly identifying a non-lookalike as a lookalike) is high. For example, if targeting a non-lookalike with a marketing campaign has significant costs, you want to minimize false positives.
+
+**Recall:**
+
+In marketing, recall is important when you want to ensure that you are not missing potential opportunities (actual lookalikes). If missing a true lookalike has a high cost or lost opportunity, you want to maximize recall.

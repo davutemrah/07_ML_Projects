@@ -1,0 +1,83 @@
+## Neural Networks: Key Concepts for Data Science Interviews
+
+### Basic Structure:
+
+   - **Neurons:** The building blocks of a neural network, inspired by biological neurons. Each neuron receives inputs, processes them, and passes the output to the next layer.
+
+   - **Layers:**
+
+     - **Input Layer:** The first layer that receives the input data.
+
+     - **Hidden Layers:** Intermediate layers where the actual computation happens. The depth (number of layers) and width (number of neurons in each layer) affect the network's capacity.
+
+     - **Output Layer:** The final layer that gives the prediction or output.
+
+
+### Activation Functions:
+
+   - **ReLU (Rectified Linear Unit):** The most common activation function in hidden layers, defined as `f(x) = max(0, x)`.
+
+   - **Sigmoid:** Often used in binary classification problems, squashes output to a range between 0 and 1.
+
+   - **Tanh (Hyperbolic Tangent):** Similar to sigmoid but outputs values between -1 and 1.
+
+   - **Softmax:** Used in the output layer for multi-class classification, providing probabilities for each class.
+
+### Forward and Backpropagation:
+
+   - **Forward Propagation:** The process of passing input data through the network layers to get an output.
+
+   - **Backpropagation:** The method for training neural networks, where the error (difference between predicted and actual output) is propagated back through the network to update the weights using gradient descent.
+
+### Loss Functions:
+
+   - **Mean Squared Error (MSE):** Used for regression tasks, calculates the average squared difference between predicted and actual values.
+
+   - **Cross-Entropy Loss:** Common in classification problems, measures the difference between two probability distributions.
+
+### Optimization Algorithms:
+
+   - **Gradient Descent:** An algorithm to minimize the loss function by updating the network's weights iteratively.
+
+   - **Variants:**
+     - **Stochastic Gradient Descent (SGD):** Updates weights using a single training example at a time.
+     - **Mini-batch Gradient Descent:** Updates weights using a small batch of training examples.
+     - **Adam:** Combines the advantages of AdaGrad and RMSProp, widely used for faster convergence.
+
+### Regularization Techniques:
+
+   - **L1 and L2 Regularization:** Adds a penalty to the loss function to prevent overfitting by constraining the weights.
+
+   - **Dropout:** Randomly drops neurons during training to prevent the network from becoming too reliant on certain pathways, reducing overfitting.
+
+### Common Architectures:
+
+   - **Fully Connected Networks (FCNs):** Basic neural network where each neuron is connected to every neuron in the previous and next layers.
+
+   - **Convolutional Neural Networks (CNNs):** Specialized for image data, using convolutional layers to detect spatial features.
+
+   - **Recurrent Neural Networks (RNNs):** Designed for sequence data, with connections that allow information to persist across time steps. Variants include LSTM and GRU.
+
+   - **Transformers:** Architecture designed for sequence data, often used in NLP tasks, leveraging self-attention mechanisms.
+
+### Overfitting and Underfitting:
+   - **Overfitting:** When the model performs well on training data but poorly on unseen data, often due to high model complexity.
+   - **Underfitting:** When the model is too simple to capture the underlying patterns in the data, resulting in poor performance on both training and test data.
+
+### What You Need to Know:
+
+- Understand the **basic structure** of neural networks and how different layers and neurons work.
+
+- Be familiar with **activation functions** and their use cases.
+
+- Know how **forward and backpropagation** work for training networks.
+
+- Understand different **loss functions** and when to use them.
+
+- Be aware of various **optimization algorithms** and their importance in training neural networks.
+
+- Learn about **regularization techniques** to avoid overfitting.
+
+- Be acquainted with **common architectures** like CNNs, RNNs, and Transformers.
+
+- Understand the concepts of **overfitting and underfitting** and how to address them.

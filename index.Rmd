@@ -1,5 +1,5 @@
 --- 
-title: "Projects Repository"
+title: "Machine Learning"
 author: "Davut Ayan"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

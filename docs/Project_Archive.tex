@@ -36,46 +36,6 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -127,7 +87,7 @@
 
 \title{Projects Repository}
 \author{Davut Ayan}
-\date{2024-01-23}
+\date{2024-07-19}
 
 \begin{document}
 \maketitle
@@ -155,1378 +115,1564 @@ Happy exploration!
 
 \href{https://datatab.net/tutorial/get-started}{DataTab Statistics Tutorials}
 
-\hypertarget{notes-on-visuals}{%
-\subsection{NOTES ON VISUALS}\label{notes-on-visuals}}
+\hypertarget{machine-learning-fundamentals}{%
+\chapter{Machine Learning Fundamentals}\label{machine-learning-fundamentals}}
+
+\hypertarget{definitions}{%
+\section{definitions}\label{definitions}}
+
+\hypertarget{data-science}{%
+\subsection{Data Science}\label{data-science}}
+
+\hypertarget{what-is-data-science}{%
+\subsubsection{What is data science?}\label{what-is-data-science}}
+
+At its core, data science is using data to answer questions. This is a pretty broad definition, and that's because it's a pretty broad field!
+
+Data science can involve:
+
+• Statistics, computer science, mathematics
+• Data cleaning and formatting
+• Data visualization
+An Economist Special Report sums up this mélange of skills well - they state that a data scientist is broadly defined as someone:
+``who combines the skills of software programmer, statistician and storyteller slash artist to extract the nuggets of gold hidden under mountains of data''
+And by the end of these courses, hopefully you will feel equipped to do just that!
+
+\hypertarget{why-do-we-need-data-science}{%
+\subsubsection{Why do we need data science?}\label{why-do-we-need-data-science}}
+
+One of the reasons for the rise of data science in recent years is the vast amount of data currently available and being generated. Not only are massive amounts of data being collected about many aspects of the world and our lives, but we simultaneously have the rise of inexpensive computing. This has created the perfect storm in which we have rich data and the tools to analyse it: Rising computer memory capabilities, better processors, more software and now, more data scientists with the skills to put this to use and answer questions using this data!
+There is a little anecdote that describes the truly exponential growth of data generation we are experiencing. In the third century BC, the Library of Alexandria was believed to house the sum of human knowledge. Today, there is enough information in the world to give every person alive 320 times as much of it as historians think was stored in Alexandria's entire collection.
+And that is still growing.
+
+\hypertarget{what-is-big-data}{%
+\subsubsection{What is big data?}\label{what-is-big-data}}
+
+It has been so integral to the rise of data science. There are a few qualities that characterize big data. The first is \texttt{volume.} As the name implies, big data involves large datasets - and these large datasets are becoming more and more routine. For example, say you had a question about online video - well, YouTube has approximately 300 hours of video uploaded every minute! You would definitely have a lot of data available to you to analyse, but you can see how this might be a difficult problem to wrangle all of that data!
+
+And this brings us to the second quality of big data: \texttt{velocity.} Data is being generated and collected faster than ever before. In our YouTube example, new data is coming at you every minute! In a completely different example, say you have a question about shipping times or routes. Well, most transport trucks have real time GPS data available - you could in real time analyse the trucks movements\ldots{} if you have the tools and skills to do so!
+
+The third quality of big data is \texttt{variety.} In the examples I've mentioned so far, you have different types of data available to you. In the YouTube example, you could be analysing video or audio, which is a very unstructured data set, or you could have a database of video lengths, views or comments, which is a much more structured dataset to analyse.
+
+\hypertarget{descriptive-analysis}{%
+\subsubsection{1. Descriptive analysis}\label{descriptive-analysis}}
+
+The goal of descriptive analysis is to describe or summarize a set of data. Whenever you get a new dataset to examine, this is usually the first kind of analysis you will perform. Descriptive analysis will generate simple summaries about the samples and their measurements. You may be familiar with common descriptive statistics: measures of central tendency (eg: mean, median, mode) or measures of variability (eg: range, standard deviations or variance).
+This type of analysis is aimed at summarizing your sample -- not for generalizing the results of the analysis to a larger population or trying to make conclusions. Description of data is separated from making interpretations; generalizations and interpretations require additional statistical steps.
+Some examples of purely descriptive analysis can be seen in censuses. Here, the government collects a series of measurements on all of the country's citizens, which can then be summarized. Here, you are being shown the age distribution in the US, stratified by sex.
+
+\hypertarget{exploratory-analysis}{%
+\subsubsection{2. Exploratory analysis}\label{exploratory-analysis}}
+
+The goal of exploratory analysis is to examine or explore the data and find relationships that weren't previously known. Exploratory analyses explore how different measures might be related to each other but do not confirm that relationship as causitive. You've probably heard the phrase ``Correlation does not imply causation'' and exploratory analyses lie at the root of this saying. Just because you observe a relationship between two variables during exploratory analysis, it does not mean that one necessarily causes the other.
+Because of this, exploratory analyses, while useful for discovering new connections, should not be the final say in answering a question! It can allow you to formulate hypotheses and drive the design of future studies and data collection, but exploratory analysis alone should never be used as the final say on why or how data might be related to each other.
+
+\hypertarget{inferential-analysis}{%
+\subsubsection{3. Inferential analysis}\label{inferential-analysis}}
+
+The goal of inferential analyses is to use a relatively small sample of data to infer or say something about the population at large. Inferential analysis is commonly the goal of statistical modelling, where you have a small amount of information to extrapolate and generalize that information to a larger group.
+
+Inferential analysis typically involves using the data you have to estimate that value in the population and then give a measure of your uncertainty about your estimate. Since you are moving from a small amount of data and trying to generalize to a larger population, your ability to accurately infer information about the larger population depends heavily on your sampling scheme - if the data you collect is not from a representative sample of the population, the generalizations you infer won't be accurate for the population.
+
+\hypertarget{predictive-analysis}{%
+\subsubsection{4. Predictive analysis}\label{predictive-analysis}}
+
+The goal of predictive analysis is to use current data to make predictions about future data. Essentially, you are using current and historical data to find patterns and predict the likelihood of future outcomes.
+Like in inferential analysis, your accuracy in predictions is dependent on measuring the right variables. If you aren't measuring the right variables to predict an outcome, your predictions aren't going to be accurate. Additionally, there are many ways to build up prediction models with some being better or worse for specific cases, but in general, having more data and a simple model generally performs well at predicting future outcomes.
+All this being said, much like in exploratory analysis, just because one variable may predict another, it does not mean that one causes the other; you are just capitalizing on this observed relationship to predict the second variable.
+A common saying is that prediction is hard, especially about the future. There aren't easy ways to gauge how well you are going to predict an event until that event has come to pass; so evaluating different approaches or models is a challenge.
+
+We spend a lot of time trying to predict things - the upcoming weather, the outcomes of sports events, and in the example we'll explore here, the outcomes of elections. We've previously mentioned Nate Silver of FiveThirtyEight, where they try and predict the outcomes of U.S. elections (and sports matches, too!). Using historical polling data and trends and current polling, FiveThirtyEight builds models to predict the outcomes in the next US Presidential vote - and has been fairly accurate at doing so! FiveThirtyEight's models accurately predicted the 2008 and 2012 elections and was widely considered an outlier in the 2016 US elections, as it was one of the few models to suggest Donald Trump at having a chance of winning.
+
+\hypertarget{causal-analysis}{%
+\subsubsection{Causal analysis}\label{causal-analysis}}
+
+The caveat to a lot of the analyses we've looked at so far is that we can only see correlations and can't get at the cause of the relationships we observe. Causal analysis fills that gap; the goal of causal analysis is to see what happens to one variable when we manipulate another variable - looking at the cause and effect of a relationship.
+Generally, causal analyses are fairly complicated to do with observed data alone; there will always be questions as to whether it is correlation driving your conclusions or that the assumptions underlying your analysis are valid. More often, causal analyses are applied to the results of randomized studies that were designed to identify causation. Causal analysis is often considered the gold standard in data analysis, and is seen frequently in scientific studies where scientists are trying to identify the cause of a phenomenon, but often getting appropriate data for doing a causal analysis is a challenge.
+One thing to note about causal analysis is that the data is usually analysed in aggregate and observed relationships are usually average effects; so, while on average giving a certain population a drug may alleviate the symptoms of a disease, this causal relationship may not hold true for every single affected individual.
+
+\hypertarget{experimental-design}{%
+\subsubsection{Experimental Design}\label{experimental-design}}
+
+Now that we've looked at the different types of data science questions, we are going to spend some time looking at experimental design concepts. As a data scientist, you are a scientist and as such, need to have the ability to design proper experiments to best answer your data science questions!
+What does experimental design mean?
+Experimental design is organizing an experiment so that you have the correct data (and enough of it!) to clearly and effectively answer your data science question. This process involves clearly formulating your question in advance of any data collection, designing the best set-up possible to gather the data to answer your question, identifying problems or sources of error in your design, and only then, collecting the appropriate data.
+Why should you care?
+
+\hypertarget{confounder}{%
+\subsubsection{Confounder:}\label{confounder}}
+
+An extraneous variable that may affect the relationship between the dependent and independent variables.
+In our example, since age affects foot size and literacy is affected by age, if we see any relationship between shoe size and literacy, the relationship may actually be due to age -- age is ``confounding'' our experimental design!
+To control for this, we can make sure we also measure the age of each individual so that we can take into account the effects of age on literacy, as well. Another way we could control for age's effect on literacy would be to fix the age of all participants. If everyone we study is the same age, then we have removed the possible effect of age on literacy.
+
+Age is confounding my experimental design! We need to control for this
+In other experimental design paradigms, a control group may be appropriate. This is when you have a group of experimental subjects that are not manipulated. So if you were studying the effect of a drug on survival, you would have a group that received the drug (treatment) and a group that did not (control). This way, you can compare the effects of the drug in the treatment versus control group.
+
+A control group is a group of subjects that do not receive the treatment, but still have their dependent variables measured
+In these study designs, there are other strategies we can use to control for confounding effects. One, we can blind the subjects to their assigned treatment group. Sometimes, when a subject knows that they are in the treatment group (eg: receiving the experimental drug), they can feel better, not from the drug itself, but from knowing they are receiving treatment. This is known as the placebo effect. To combat this, often participants are blinded to the treatment group they are in; this is usually achieved by giving the control group a mock treatment (eg: given a sugar pill they are told is the drug). In this way, if the placebo effect is causing a problem with your experiment, both groups should experience it equally.
+
+Blinding your study means that your subjects don't know what group they belong to - all participants receive a ``treatment''
+And this strategy is at the heart of many of these studies; spreading any possible confounding effects equally across the groups being compared. For example, if you think age is a possible confounding effect, making sure that both groups have similar ages and age ranges will help to mitigate any effect age may be having on your dependent variable - the effect of age is equal between your two groups.
+This ``balancing'' of confounders is often achieved by randomization. Generally, we don't know what will be a confounder beforehand; to help lessen the risk of accidentally biasing one group to be enriched for a confounder, you can randomly assign individuals to each of your groups. This means that any potential confounding variables should be distributed between each group roughly equally, to help eliminate/reduce systematic errors.
+
+Randomizing subjects to either the control or treatment group is a great strategy to reduce confounders' effects
+There is one final concept of experimental design that we need to cover in this lesson, and that is replication. Replication is pretty much what it sounds like, repeating an experiment with different experimental subjects. A single experiment's results may have occured by chance; a confounder was unevenly distributed across your groups, there was a systematic error in the data collection, there were some outliers, etc. However, if you can repeat the experiment and collect a whole new set of data and still come to the same conclusion, your study is much stronger. Also at the heart of replication is that it allows you to measure the variability of your data more accurately, which allows you to better assess whether any differences you see in your data are significant.
+
+\hypertarget{beware-p-hacking}{%
+\subsubsection{Beware p-hacking!}\label{beware-p-hacking}}
+
+One of the many things often reported in experiments is a value called the p-value. This is a value that tells you the probability that the results of your experiment were observed by chance. This is a very important concept in statistics that we won't be covering in depth here, if you want to know more, check out this video explaining more about p-values.
+What you need to look out for is when you manipulate p-values towards your own end. Often, when your p-value is less than 0.05 (in other words, there is a 5 percent chance that the differences you saw were observed by chance), a result is considered significant. But if you do 20 tests, by chance, you would expect one of the twenty (5\%) to be significant. In the age of big data, testing twenty hypotheses is a very easy proposition. And this is where the term p-hacking comes from: This is when you exhaustively search a data set to find patterns and correlations that appear statistically significant by virtue of the sheer number of tests you have performed. These spurious correlations can be reported as significant and if you perform enough tests, you can find a data set and analysis that will show you what you wanted to see.
+Check out this FiveThirtyEight activity where you can manipulate and filter data and perform a series of tests such that you can get the data to find whatever relationship you want!
+XKCD mocks this concept in a comic testing the link between jelly beans and acne - clearly there is no link there, but if you test enough jelly bean colours, eventually, one of them will be correlated with acne at p-value \textless{} 0.05!
+
+\hypertarget{data-types}{%
+\subsubsection{Data types}\label{data-types}}
 
 \begin{itemize}
 \item
-  pre attentive principles, colurs, shape, size etc.
+  \texttt{Continuous\ variables} are anything measured on a quantitative scale that could be any fractional number. An example would be something like weight measured in kg.
 \item
-  GESTALT principles
+  \texttt{Ordinal} data are data that have a fixed, small (\textless{} 100) number of levels but are ordered. This could be for example survey responses where the choices are: poor, fair, good.
 \item
-  why data visualization is needed with summary statistics. Data patterns may be different although means may be different
+  \texttt{Categorical} data are data where there are multiple categories, but they aren't ordered. One example would be sex: male or female. This coding is attractive because it is self-documenting.
 \item
-  exploratory graphs: may be good for people with some background. filtering and some control may be given to audience
+  \texttt{Missing} data are data that are unobserved and you don't know the mechanism. You should code missing values as NA.
 \item
-  explanatory graphs: may be good for people with no backgroung. made simple
+  \texttt{Censored} data are data where you know the missingness mechanism on some level. Common examples are a measurement being below a detection limit or a patient being lost to follow-up. They should also be coded as NA when you don't have the data. But you should also add a new column to your tidy data called, ``VariableNameCensored'' which should have values of TRUE if censored and FALSE if not.
 \end{itemize}
 
-\hypertarget{elastic-net-model}{%
-\section{Elastic Net Model}\label{elastic-net-model}}
+\hypertarget{data-scientists-in-marketing-science}{%
+\subsubsection{Data scientists in marketing science}\label{data-scientists-in-marketing-science}}
 
-Elastic Net is a regularization technique that combines both L1 (Lasso) and L2 (Ridge) regularization penalties in a linear regression model. This technique is commonly used in machine learning, especially when dealing with high-dimensional datasets or situations where some of the features are highly correlated.
+Data scientists in marketing science play a crucial role in leveraging data-driven insights to optimize marketing strategies and improve decision-making.
 
-In elastic net regularization, the objective function is a combination of the L1 and L2 regularization terms along with the linear regression loss. The regularization strength is controlled by two hyperparameters, often denoted as
-α
-α (alpha) and
-λ
-λ (lambda):
+Data scientists in marketing science contribute significantly to the development of targeted, efficient, and impactful marketing campaigns by harnessing the power of data and analytics. Their work helps organizations optimize their marketing spend, enhance customer experiences, and achieve measurable business outcomes.
 
-α
-α controls the mixing between L1 and L2 regularization. When
-α
-=
-0
-α=0, it is equivalent to Ridge regression, and when
-α
-=
-1
-α=1, it is equivalent to Lasso regression. Any value in between (0 and 1) allows for a mixture of both.
-λ
-λ controls the overall strength of the regularization.
-
-In R, you can fit an elastic net model using the glmnet package. Here's a brief example:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Install and load the glmnet package if not already installed}
-\CommentTok{\# install.packages("glmnet")}
-\FunctionTok{library}\NormalTok{(glmnet)}
-
-\CommentTok{\# Generate some example data}
-\FunctionTok{set.seed}\NormalTok{(}\DecValTok{42}\NormalTok{)}
-\NormalTok{n }\OtherTok{\textless{}{-}} \DecValTok{100}
-\NormalTok{p }\OtherTok{\textless{}{-}} \DecValTok{10}
-\NormalTok{X }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{(}\FunctionTok{rnorm}\NormalTok{(n }\SpecialCharTok{*}\NormalTok{ p), }\AttributeTok{nrow =}\NormalTok{ n, }\AttributeTok{ncol =}\NormalTok{ p)}
-\NormalTok{beta\_true }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{0}\NormalTok{, }\SpecialCharTok{{-}}\DecValTok{2}\NormalTok{, }\DecValTok{0}\NormalTok{)}
-\NormalTok{y }\OtherTok{\textless{}{-}}\NormalTok{ X }\SpecialCharTok{\%*\%}\NormalTok{ beta\_true }\SpecialCharTok{+} \FunctionTok{rnorm}\NormalTok{(n)}
-
-\CommentTok{\# Fit an elastic net model}
-\NormalTok{alpha }\OtherTok{\textless{}{-}} \FloatTok{0.5}  \CommentTok{\# You can adjust alpha to control the mixture of L1 and L2 regularization}
-\NormalTok{lambda }\OtherTok{\textless{}{-}} \FloatTok{0.1}  \CommentTok{\# You can adjust lambda to control the overall strength of regularization}
-
-\NormalTok{enet\_model }\OtherTok{\textless{}{-}} \FunctionTok{cv.glmnet}\NormalTok{(X, y, }\AttributeTok{alpha =}\NormalTok{ alpha, }\AttributeTok{lambda =}\NormalTok{ lambda)}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{survival-analysis}{%
-\section{Survival Analysis}\label{survival-analysis}}
-
-\hypertarget{references}{%
-\subsection{References}\label{references}}
-
-\textbf{Web Sources}
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  \href{https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html}{Emily C. Zabor: Survival Aanalysis in R}
-\item
-  \href{https://bookdown.org/sestelo/sa_financial/}{A short course on Survival Analysis applied to the Financial Industry}
-\item
-  \href{https://www.datacamp.com/tutorial/survival-analysis-R}{Survival Analysis in R For Beginners}
-\item
-  \href{https://rviews.rstudio.com/2017/09/25/survival-analysis-with-r/}{Survival Analysis with R}
-\item
-  \href{http://www.sthda.com/english/wiki/survival-analysis-basics}{Survival Analysis Basics}
-\item
-  \href{https://www.r-bloggers.com/2018/03/steps-to-perform-survival-analysis-in-r/}{Steps to perform Survival Analysis in R}
-\item
-  \href{http://tagteam.harvard.edu/hub_feeds/1981/feed_items/2286128}{Survival Analysis with R, Harvard}
-\item
-  \href{https://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_Survival/BS704_Survival_print.html}{Survival Analysis: Lisa Sullivan, PhD}
-\item
-  \href{https://www.nature.com/articles/6601118.pdf}{Survival Analysis Part I: Basic concepts and first analyses}
-\item
-  \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3932959/pdf/nihms549224.pdf}{Practical Guide Paper}
-\item
-  \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5045282/}{An Introduction to Survival Statistics: Kaplan-Meier Analysis}
-\item
-  \href{https://towardsdatascience.com/kaplan-meier-curves-c5768e349479}{Kaplan Meier curves: an introduction}
-\item
-  \href{https://stat.ethz.ch/R-manual/R-devel/library/survival/html/lung.html}{NCCTG Lung Cancer Data}
-\end{enumerate}
-
-\textbf{pdf references}
-
-\href{survival_pdf/survival_data_setup_alternative.pdf}{1. Data Setup Alternative}
-
-\href{survival_pdf/survival_Intro_Survival_Analysis_Practice.pdf}{2. Introduction to Survival Analysis in Practice}
-
-\href{survival_pdf/survival_lecture_note.pdf}{3. Chapter 7 - Survival Models}
-
-\href{survival_pdf/survival_notes_pat.pdf}{4. Notes from Pat}
-
-\href{survival_pdf/Survival_parametric.pdf}{5. Parametric Survival Models}
-
-\href{survival_pdf/survival_retain_customers.pdf}{6. Retain Customers by Churn model}
-
-\href{survival_pdf/survival_intro.pdf}{7. Intro to Survival Analysis}
-
-\hypertarget{time-to-event-analysis}{%
-\subsection{Time to event analysis}\label{time-to-event-analysis}}
-
-Time to event analysis has also been used widely in the social sciences where interest is on analyzing time to events such as job changes, marriage, birth of children and so forth.
-
-There are certain aspects of survival analysis data, such as censoring and non-normality, that generate great difficulty when trying to analyze the data using traditional statistical models such as multiple linear regression.
-
-The non-normality aspect of the data violates the normality assumption of most commonly used statistical model such as regression or ANOVA, etc.
-
-A censored observation is defined as an observation with incomplete information.
-When an observation is right censored it means that the information is incomplete because the subject did not have an event during the time that the subject was part of the study.
-
-The point of survival analysis is to follow subjects over time and observe at which point in time they experience the event of interest.
-
-It often happens that the study does not span enough time in order to observe the event for all the subjects in the study. This could be due to a number of reasons. Perhaps subjects drop out of the study for reasons unrelated to the study (i.e.~patients moving to another area and leaving no forwarding address).
-
-The common feature of all of these examples is that if the subject had been able to stay in the study then it would have been possible to observe the time of the event eventually.
-
-Type of censoring
-- Right truncation
-- Right censoring
-- Left truncation
-- Left censoring
-
-In survival analysis, censoring refers to situations where the event of interest (e.g., death, failure, or another outcome) is not observed for some subjects during the study period. There are two main types of censoring: right truncation and right censoring.
+Here are some key responsibilities and activities that data scientists in marketing science typically engage in:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  \textbf{Right Truncation:}
+  \textbf{Data Analysis:}
 
   \begin{itemize}
   \tightlist
   \item
-    \textbf{Definition:} Right truncation occurs when individuals enter the study at different times, and some individuals have already experienced the event of interest before the study begins.
+    Conducting extensive data analysis to understand customer behavior, market trends, and other relevant metrics.
   \item
-    \textbf{Example:} Consider a study on the time until a machine fails. If the study starts at a certain date, and some machines have already failed before that date, those machines are considered right-truncated because their failure times are not observed in the study.
+    Utilizing statistical methods and machine learning algorithms to extract meaningful patterns and insights from large datasets.
   \end{itemize}
 \item
-  \textbf{Right Censoring:}
+  Predictive Modeling:
 
   \begin{itemize}
   \tightlist
   \item
-    \textbf{Definition:} Right censoring occurs when individuals are followed for a certain period, but the event of interest does not occur for some of them by the end of the study.
+    Developing and deploying predictive models to forecast future trends, customer behavior, and campaign outcomes.
   \item
-    \textbf{Example:} In a clinical trial studying the time until disease recurrence, if a patient has not experienced recurrence by the end of the study period or is lost to follow-up, their survival time is right-censored. The exact time of recurrence is not known for these patients.
+    Using machine learning techniques, such as regression analysis, decision trees, and ensemble methods, to build predictive models.
+  \end{itemize}
+\item
+  Segmentation and Targeting:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Creating customer segments based on demographics, behavior, and other relevant factors.
+  \item
+    Optimizing marketing strategies by targeting specific segments with personalized and relevant content.
+  \end{itemize}
+\item
+  A/B Testing:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Designing and conducting A/B tests to evaluate the effectiveness of different marketing strategies, campaigns, or variations.
+  \item
+    Analyzing A/B test results to make data-driven recommendations for optimization.
+  \end{itemize}
+\item
+  \textbf{Causal Inference:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Applying advanced causal inference methods to understand the impact of marketing initiatives on customer behavior.
+  \item
+    Assessing the causal relationships between marketing activities and business outcomes.
+  \end{itemize}
+\item
+  \textbf{Data Visualization:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Creating clear and compelling data visualizations to communicate complex insights to non-technical stakeholders.
+  \item
+    Using tools like Tableau, Power BI, or custom scripts to visualize data in a meaningful way.
+  \end{itemize}
+\item
+  \textbf{Optimization Strategies:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Collaborating with marketing teams to develop and optimize marketing strategies based on data insights.
+  \item
+    Recommending adjustments to campaigns, targeting strategies, and budget allocations for better performance.
+  \end{itemize}
+\item
+  \textbf{Performance Measurement:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Developing key performance indicators (KPIs) and metrics to assess the success of marketing campaigns.
+  \item
+    Monitoring and evaluating marketing performance against established benchmarks.
+  \end{itemize}
+\item
+  \textbf{Data Management:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Ensuring the quality and integrity of marketing data by cleaning, preprocessing, and validating datasets.
+  \item
+    Collaborating with data engineers to design and implement data pipelines for efficient data processing.
+  \end{itemize}
+\item
+  \textbf{Communication and Collaboration:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Effectively communicating findings and insights to non-technical stakeholders, including marketing teams and executives.
+  \item
+    Collaborating with cross-functional teams to align data-driven strategies with overall business objectives.
   \end{itemize}
 \end{enumerate}
 
-In summary, right truncation involves incomplete observation due to some subjects entering the study late, whereas right censoring occurs when the event of interest has not occurred for some subjects by the end of the study. Both types of censoring are common in survival analysis and need to be appropriately accounted for in statistical models to obtain unbiased estimates of survival probabilities and hazard rates.
+\textbf{Overfitting:}
 
-\textbf{What is survival data?}
+\begin{itemize}
+\item
+  Statistical model is too complex
+\item
+  Too many parameters when compared to the total number of observations.
+\item
+  Poor Predictive Performance
+\item
+  Overfitted model overreacts to minor fluctuations in the training data
+\end{itemize}
 
-Time-to-event data that consist of a distinct start time and end time.
+\textbf{Underfitting:}
 
-Examples from cancer
-• Time from surgery to death
-• Time from start of treatment to progression
-• Time from response to recurrence
-
-Examples from other fields
-
-Time-to-event data are common in many fields including, but not limited to
-• Time from HIV infection to development of AIDS
-• Time to heart attack
-• Time to onset of substance abuse
-• Time to initiation of sexual activity
-• Time to machine malfunction
-
-Types of censoring
-
-A subject may be censored due to:
-• Loss to follow-up
-• Withdrawal from study
-• No event by end of fixed study period
-
-Specifically these are examples of right censoring.
-
-Left censoring and interval censoring are also possible, and methods exist to analyze this type of data.
-
-\hypertarget{kaplan-meier}{%
-\subsection{Kaplan-Meier}\label{kaplan-meier}}
-
-\href{https://datatab.net/tutorial/kaplan-meier-curve\#:~:text=The\%20Kaplan-Meier\%20curve\%20shows,therefore\%20a\%20better\%20survival\%20prognosis.}{Source}
-
-The Kaplan-Meier curve is commonly used to analyze time-to-event data, such as the time until death or the time until a specific event occurs. For this, the Kaplan Meier curve graphically represent the survival rate or survival function. Time is plotted on the x-axis and the survival rate is plotted on the y-axis.
-
-\hypertarget{survival-rate}{%
-\subsubsection{Survival rate}\label{survival-rate}}
-
-Suppose you're a dental technician and you want to study the ``survival time'' of a filling in a tooth.
-
-So your start time is the moment when a person goes to the dentist for a filling, and your end time, the event, is the moment when the filling breaks. The time between these two events is the focus of your study.
-
-\includegraphics{figs/survival2.png}
-
-For example, you may be interested in the probability that your filling will last longer than 5 years.
-
-To do this, you read off the value at 5 years on the graph, which is the survival rate.
-
-At 5 years, the Kaplan-Meier curve gives you a value of 0.7.
-
-\begin{verbatim}
-  So there is a 70% chance that your filling will last longer than 5 years.
-\end{verbatim}
-
-\hypertarget{interpreting-the-kaplan-meier-curve}{%
-\subsubsection{Interpreting the Kaplan-Meier curve}\label{interpreting-the-kaplan-meier-curve}}
-
-The Kaplan-Meier curve shows the cumulative survival probabilities.
-
-A steeper slope indicates a higher event rate (death rate) and therefore a worse survival prognosis. A flatter slope indicates a lower event rate and therefore a better survival prognosis. The curve may have plateaus or flat areas, indicating periods of relatively stable survival.
-
-If there are multiple curves representing different groups, you can compare their shapes and patterns. If the curves are parallel, it suggests that the groups have similar survival experiences. If the curves diverge or cross, it indicates differences in survival between the groups.
-
-At specific time points, you can estimate the survival probability by locating the time point on the horizontal axis and dropping a vertical line to the curve. Then, read the corresponding survival probability from the vertical axis.
-
-\hypertarget{calculating-the-kaplan-meier-curve}{%
-\subsubsection{Calculating the Kaplan-Meier curve}\label{calculating-the-kaplan-meier-curve}}
-
-Let's say the filling lasted 3 years for the first subject, 4 years for the second subject, 4 years for the third subject, and so on.
-
-\includegraphics{figs/km0.png}
-
-Let's assume that none of the cases are ``censored''. The data are already arranged so that the shortest survival time is at the top and the longest at the bottom.
-
-Now we create a second table that we can use to draw the Kaplan-Meier curve. To do this, we look at the time points in the left table and add the time zero. So we have the time points 0, then 3, 4, 6, 7, 8 11 and 13. In total we have 10 subjects.
-
-Now we look at how many fills break out at each time. We enter this in the column m. So at time 0, no fillings were broken out. After 3 years, there were one broken fillings, after 4 years there were two, after 6 years there was one. We now do the same for all the other times.
-
-Next, we look at the number of cases that have survived to the time plus the number of cases where the event occurs at the exact time. We enter this in column n.
-
-So n is the number of cases that survived to that point, plus the people who dropped out at that exact point.
-
-After zero years we still have all 10 people. After 3 years, we get 10 for n, 9 people still have their fill intact, and one person's fill broke out exactly after 3 years.
-
-The easiest way to get n is to take the previous n value and subtract the previous m value. So we get 10 - 1 equals 9. Then 9 minus 2 equals 7, 7 - 1 equals 6\ldots{} and so on and so forth.
-
-From column n we can now calculate the survival rates. To do this, we simply divide n by the total number, i.e.~10.
-
-So 10 divided by 10 is equal to 1, 9 divided by 10 is equal to 0.9, 7 divided by 10 is equal to 0.7. Now we do the same for all the others.
-
-\hypertarget{draw-kaplan-meier-curve}{%
-\subsubsection{Draw Kaplan Meier curve}\label{draw-kaplan-meier-curve}}
-
-We can now plot the Kaplan-Meier curve. At time 0 we have a value of 1, after 3 years we have a value of 0.9 or 90\%. After 4 years we get 0.7, after 6 years 0.6 and so on and so forth.
-
-\includegraphics{figs/km1.png}
-
-From the Kaplan-Meier curve, we can now see what percentage of the filling has not broken out after a certain time.
-
-\hypertarget{censored-data}{%
-\subsubsection{Censored data}\label{censored-data}}
-
-Censored data has been added to the example in these three places.
-
-\includegraphics{figs/km2.png}
-
-We now need to enter this data into our Kaplan-Meier curve table. We do this as follows: We create our m exactly as we did before, looking at how many cases failed at each time point.
-
-Now we add a column q, in which we enter how many cases were censored at each time.
-
-Note that the time at which each censored case occurred does not get its own row, but is assigned to the previous time.
-
-\includegraphics{figs/km3.png}
-
-Let's look at this case. The censoring took place at time 9. In this table, however, there is no event with nine years and we also don't add it. The person is added at time 8.
-
-We can now re-calculate the values for the survival curve. If we have censored data, this is a little more complex.
-
-For this, we write down the values in the first step. We get these values by calculating n-m/n.~In the third row, for example, we get the value 10/12 with 12-2 by 12.
-
-The calculation of the real value is iterative. To do this, we multiply the result from the previous row by the value we have just calculated.
-
-So, in the first row we get 1, now we calculate 12/13 times 1, which is equal to 0.923. In the next row we calculate 10/12 times 0.923 and get a value of 0.769. We take this value again for the next row.
-
-We do this for all the rows. We can then plot the Kaplan-Meier curve with this data in the same way as before.
-
-\hypertarget{comparing-different-groups}{%
-\subsubsection{Comparing different groups}\label{comparing-different-groups}}
-
-If you are comparing several groups or categories (e.g.~treatment groups), the Kaplan-Meier curve consists of several lines, each representing a different group. Each line shows the estimated survival rate for that particular group. To test whether there is a statistically significant difference between the groups, the log-rank test can be used.
-
-If you have several factors and you want to see if they have an effect on the curve, you can calculate a Log Rank Test or calculate a Cox Regression here on DATAtab.
-
-\hypertarget{kaplan-meier-curve-assumptions}{%
-\subsubsection{Kaplan-Meier curve assumptions}\label{kaplan-meier-curve-assumptions}}
-
-Random or Non-informative censoring: This assumption states that the occurrence of censoring is unrelated to the likelihood of experiencing the event of interest. In other words, censoring should be random and not influenced by factors that affect the event outcome. If censoring is not non-informative, the estimated survival probabilities may be biased.
-
-Independence of censoring: This assumption assumes that the censoring times of different individuals are independent of each other. This means that the occurrence or timing of censoring for one participant should not provide any information about the censoring times for other participants.
-
-Survival probabilities do not change over time: The Kaplan-Meier curve assumes that the survival probabilities estimated at each time point remain constant over time. This assumption may not be valid if there are time-varying factors or treatments that can influence survival probabilities.
-
-No competing risks: The Kaplan-Meier curve assumes that the event of interest is the only possible outcome and there are no other competing events that could prevent the occurrence of the event being studied. Competing events can include other causes of death or events that render the occurrence of the event of interest impossible.
-
-\hypertarget{the-basics-of-survival-analysis}{%
-\subsection{The basics of Survival Analysis}\label{the-basics-of-survival-analysis}}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(knitr)}
-\FunctionTok{library}\NormalTok{(dplyr)}
-\FunctionTok{library}\NormalTok{(survival)}
-\FunctionTok{library}\NormalTok{(ggplot2)}
-\FunctionTok{library}\NormalTok{(tibble)}
-
-\CommentTok{\# devtools::install\_github("zabore/ezfun")}
-\NormalTok{ezfun}\SpecialCharTok{::}\FunctionTok{set\_ccf\_palette}\NormalTok{(}\StringTok{"contrast"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## <environment: R_GlobalEnv>
-\end{verbatim}
-
-\href{https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html}{Original article}
-
-Survival data are time-to-event data that consist of a distinct start time and end time.
-
-Examples from cancer:
+\begin{itemize}
+\item
+  Statistical model is too primitive
+\item
+  Poor Predictive Performance in the training model
+\item
+  The underfit model under-reacts to even bigger fluctuations.
+\end{itemize}
+
+\textbf{Bias:}
+
+Bias is an error introduced in your model because of the oversimplification of a machine learning algorithm. It can lead to underfitting.
+
+In supervised learning, underfitting happens when a model unable to capture the underlying pattern of the data. These models usually have high bias and low variance. It happens when we have very less amount of data to build an accurate model or when we try to build a linear model with a nonlinear data.
+
+Also, these kinds of models are very simple to capture the complex patterns in data like Linear and logistic regression.
+
+In supervised learning, overfitting happens when our model captures the noise along with the underlying pattern in data.
+
+It happens when we train our model a lot over noisy dataset. These models have low bias and high variance. These models are very complex like Decision trees which are prone to overfitting.
+
+Bias is the difference between the average prediction of our model and the correct value which we are trying to predict. Model with high bias pays very little attention to the training data and oversimplifies the model. It always leads to high error on training and test data.
+
+\textbf{What is variance?}
+
+Variance is the variability of model prediction for a given data point or a value which tells us spread of our data. Model with high variance pays a lot of attention to training data and does not generalize on the data which it hasn't seen before. As a result, such models perform very well on training data but has high error rates on test data. (over-fitting issue)
+
+\textbf{Why is Bias - Variance Trade-off?}
+
+If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand, if our model has large number of parameters then it's going to have high variance and low bias. So, we need to find the right/good balance without overfitting and underfitting the data.
+
+\textbf{Name three types of biases that can occur during sampling}
+
+In the sampling process, there are three types of biases, which are:
+
+• Selection bias
+• Under coverage bias
+• Survivorship bias
+
+\textbf{Question:} What do you understand by the Selection Bias? What are its various types?
+
+\textbf{Answer:} Selection bias is typically associated with research that doesn't have a random selection of participants. It is a type of error that occurs when a researcher decides who is going to be studied. On some occasions, selection bias is also referred to as the selection effect.
+
+In other words, selection bias is a distortion of statistical analysis that results from the sample collecting method. When selection bias is not taken into account, some conclusions made by a research study might not be accurate. Following are the various types of selection bias:
+
+• Sampling Bias -- A systematic error resulting due to a non-random sample of a populace causing certain members of the same to be less likely included than others that results in a biased sample.
+
+• Time Interval -- A trial might be ended at an extreme value, usually due to ethical reasons, but the extreme value is most likely to be reached by the variable with the most variance, even though all variables have a similar mean.
+
+• Data -- Results when specific data subsets are selected for supporting a conclusion or rejection of bad data arbitrarily.
+
+• Attrition -- Caused due to attrition, i.e.~loss of participants, discounting trial subjects or tests that didn't run to completion.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\item
+  Discuss Decision Tree algorithm
+  A decision tree is a popular supervised machine learning algorithm. It is mainly used for Regression and Classification. It allows breaks down a dataset into smaller subsets. The decision tree can able to handle both categorical and numerical data.
+\item
+  What is Prior probability and likelihood?
+  Prior probability is the proportion of the dependent variable in the data set while the likelihood is the probability of classifying a given observant in the presence of some other variable.
+\item
+  Explain Recommender Systems?
+  It is a subclass of information filtering techniques. It helps you to predict the preferences or ratings which users likely to give to a product.
+\end{enumerate}
+
+Question: Please explain Recommender Systems along with an application.
+Answer: Recommender Systems is a subclass of information filtering systems, meant for predicting the preferences or ratings awarded by a user to some product.
+An application of a recommender system is the product recommendations section in Amazon. This section contains items based on the user's search history and past orders.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{6}
+\item
+  Name three disadvantages of using a linear model
+  Three disadvantages of the linear model are:
+  • The assumption of linearity of the errors.
+  • You can't use this model for binary or count outcomes
+  • There are plenty of overfitting problems that it can't solve
+\item
+  Why do you need to perform resampling?
+\end{enumerate}
+
+Resampling is done in below-given cases:
+• Estimating the accuracy of sample statistics by drawing randomly with replacement from a set of the data point or using as subsets of accessible data
+• Substituting labels on data points when performing necessary tests
+• Validating models by using random subsets
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{8}
+\tightlist
+\item
+  List out the libraries in Python used for Data Analysis and Scientific Computations.
+  SciPy, Pandas, Matplotlib, NumPy, SciKit, Seaborn
+\item
+  What is Power Analysis?
+  The power analysis is an integral part of the experimental design. It helps you to determine the sample size requires to find out the effect of a given size from a cause with a specific level of assurance. It also allows you to deploy a particular probability in a sample size constraint.
+\item
+  Explain Collaborative filtering
+  Collaborative filtering used to search for correct patterns by collaborating viewpoints, multiple data sources, and various agents.
+\item
+  Discuss `Naive' in a Naive Bayes algorithm?
+  The Naive Bayes Algorithm model is based on the Bayes Theorem. It describes the probability of an event. It is based on prior knowledge of conditions which might be related to that specific event.
+\item
+  What is a Linear Regression?
+  Linear regression is a statistical programming method where the score of a variable `A' is predicted from the score of a second variable `B'. B is referred to as the predictor variable and A as the criterion variable.
+\item
+  State the difference between the expected value and mean value
+  They are not many differences, but both of these terms are used in different contexts. Mean value is generally referred to when you are discussing a probability distribution whereas expected value is referred to in the context of a random variable.
+\item
+  What the aim of conducting A/B Testing?
+  AB testing used to conduct random experiments with two variables, A and B. The goal of this testing method is to find out changes to a web page to maximize or increase the outcome of a strategy.
+\item
+  What is Ensemble Learning?
+  The ensemble is a method of combining a diverse set of learners together to improvise on the stability and predictive power of the model. Two types of Ensemble learning methods are:
+\end{enumerate}
+
+\textbf{Bagging}
+Bagging method helps you to implement similar learners on small sample populations. It helps you to make nearer predictions.
+Boosting
+Boosting is an iterative method which allows you to adjust the weight of an observation depends upon the last classification. Boosting decreases the bias error and helps you to build strong predictive models.
+18. Explain Eigenvalue and Eigenvector
+Eigenvectors are for understanding linear transformations. Data scientist need to calculate the eigenvectors for a covariance matrix or correlation. Eigenvalues are the directions along using specific linear transformation acts by compressing, flipping, or stretching.
+Question: Please explain Eigenvectors and Eigenvalues.
+Answer: Eigenvectors help in understanding linear transformations. They are calculated typically for a correlation or covariance matrix in data analysis.
+In other words, eigenvectors are those directions along which some particular linear transformation acts by compressing, flipping, or stretching.
+Eigenvalues can be understood either as the strengths of the transformation in the direction of the eigenvectors or the factors by which the compressions happens.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{18}
+\item
+  Define the term cross-validation
+  Cross-validation is a validation technique for evaluating how the outcomes of statistical analysis will generalize for an Independent dataset. This method is used in backgrounds where the objective is forecast, and one needs to estimate how accurately a model will accomplish.
+  Question: Can you compare the validation set with the test set?
+  Answer: A validation set is part of the training set used for parameter selection as well as for avoiding overfitting of the machine learning model being developed. On the contrary, a test set is meant for evaluating or testing the performance of a trained machine learning model.
+\item
+  Explain the steps for a Data analytics project
+  The following are important steps involved in an analytics project:
+  • Understand the Business problem
+  • Explore the data and study it carefully.
+  • Prepare the data for modeling by finding missing values and transforming variables.
+  • Start running the model and analyze the Big data result.
+  • Validate the model with new data set.
+  • Implement the model and track the result to analyze the performance of the model for a specific period.
+\end{enumerate}
+
+Question: What do you mean by cluster sampling and systematic sampling?
+Answer: When studying the target population spread throughout a wide area becomes difficult and applying simple random sampling becomes ineffective, the technique of cluster sampling is used. A cluster sample is a probability sample, in which each of the sampling units is a collection or cluster of elements.
+Following the technique of systematic sampling, elements are chosen from an ordered sampling frame. The list is advanced in a circular fashion. This is done in such a way so that once the end of the list is reached, the same is progressed from the start, or top, again.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{22}
+\tightlist
+\item
+  What is a Random Forest?
+  Random forest is a machine learning method which helps you to perform all types of regression and classification tasks. It is also used for treating missing values and outlier values.
+\item
+  What is the importance of having a selection bias?
+  Selection Bias occurs when there is no specific randomization achieved while picking individuals or groups or data to be analyzed. It suggests that the given sample does not exactly represent the population which was intended to be analyzed.
+\item
+  What is the K-means clustering method?
+  K-means clustering is an important unsupervised learning method. It is the technique of classifying data using a certain set of clusters which is called K clusters. It is deployed for grouping to find out the similarity in the data.
+\item
+  Explain the difference between Data Science and Data Analytics
+  Data Scientists need to slice data to extract valuable insights that a data analyst can apply to real-world business scenarios. The main difference between the two is that the data scientists have more technical knowledge then business analyst. Moreover, they don't need an understanding of the business required for data visualization.
+\item
+  Explain p-value?
+  When you conduct a hypothesis test in statistics, a p-value allows you to determine the strength of your results. It is a numerical number between 0 and 1. Based on the value it will help you to denote the strength of the specific result.
+\item
+  Define the term deep learning
+  Deep Learning is a subtype of machine learning. It is concerned with algorithms inspired by the structure called artificial neural networks (ANN).
+\item
+  Explain the method to collect and analyze data to use social media to predict the weather condition.
+  You can collect social media data using Facebook, twitter, Instagram's API's. For example, for the tweeter, we can construct a feature from each tweet like tweeted date, retweets, list of follower, etc. Then you can use a multivariate time series model to predict the weather condition.
+\item
+  When do you need to update the algorithm in Data science?
+  You need to update an algorithm in the following situation:
+  • You want your data model to evolve as data streams using infrastructure
+  • The underlying data source is changing If it is non-stationarity
+\item
+  What is Normal Distribution
+  A normal distribution is a set of a continuous variable spread across a normal curve or in the shape of a bell curve. You can consider it as a continuous probability distribution which is useful in statistics. It is useful to analyze the variables and their relationships when we are using the normal distribution curve.
+\item
+  Which language is best for text analytics? R or Python?
+  Python will more suitable for text analytics as it consists of a rich library known as pandas. It allows you to use high-level data analysis tools and data structures, while R doesn't offer this feature.
+\item
+  Explain the benefits of using statistics by Data Scientists
+  Statistics help Data scientist to get a better idea of customer's expectation. Using the statistic method Data Scientists can get knowledge regarding consumer interest, behavior, engagement, retention, etc. It also helps you to build powerful data models to validate certain inferences and predictions.
+\item
+  Name various types of Deep Learning Frameworks
+  • Pytorch
+  • Microsoft Cognitive Toolkit
+  • TensorFlow
+  • Caffe
+  • Chainer
+  • Keras
+\item
+  Explain why Data Cleansing is essential and which method you use to maintain clean data
+  Dirty data often leads to the incorrect inside, which can damage the prospect of any organization. For example, if you want to run a targeted marketing campaign. However, our data incorrectly tell you that a specific product will be in-demand with your target audience; the campaign will fail.
+\item
+  What is skewed Distribution \& uniform distribution?
+  Skewed distribution occurs when if data is distributed on any one side of the plot whereas uniform distribution is identified when the data is spread is equal in the range.
+\item
+  When underfitting occurs in a static model?
+  Underfitting occurs when a statistical model or machine learning algorithm not able to capture the underlying trend of the data.
+\item
+  Name commonly used algorithms.
+  Four most commonly used algorithm by Data scientist are:
+  • Linear regression
+  • Logistic regression
+  • Random Forest
+  • KNN
+\item
+  What is precision?
+  Precision is the most commonly used error metric is n classification mechanism. Its range is from 0 to 1, where 1 represents 100\%
+\item
+  What is a univariate analysis?
+  An analysis which is applied to none attribute at a time is known as univariate analysis. Boxplot is widely used, univariate model.
+\item
+  How do you overcome challenges to your findings?
+  In order, to overcome challenges of my finding one need to encourage discussion, Demonstrate leadership and respecting different options.
+\item
+  Explain cluster sampling technique in Data science
+  A cluster sampling method is used when it is challenging to study the target population spread across, and simple random sampling can't be applied.
+\item
+  State the difference between a Validation Set and a Test Set
+  A Validation set mostly considered as a part of the training set as it is used for parameter selection which helps you to avoid overfitting of the model being built.
+  While a Test Set is used for testing or evaluating the performance of a trained machine learning model.
+\item
+  Explain the term Binomial Probability Formula?
+  ``The binomial distribution contains the probabilities of every possible success on N trials for independent events that have a probability of π of occurring.''
+\item
+  What is a recall?
+  A recall is a ratio of the true positive rate against the actual positive rate. It ranges from 0 to 1.
+\item
+  Discuss normal distribution
+  Normal distribution equally distributed as such the mean, median and mode are equal.
+\item
+  While working on a data set, how can you select important variables? Explain
+  Following methods of variable selection you can use:
+  • Remove the correlated variables before selecting important variables
+  • Use linear regression and select variables which depend on that p values.
+  • Use Backward, Forward Selection, and Stepwise Selection
+  • Use Xgboost, Random Forest, and plot variable importance chart.
+  • Measure information gain for the given set of features and select top n features accordingly.
+\item
+  Is it possible to capture the correlation between continuous and categorical variable?
+  Yes, we can use analysis of covariance technique to capture the association between continuous and categorical variables.
+\item
+  Treating a categorical variable as a continuous variable would result in a better predictive model?
+  Yes, the categorical value should be considered as a continuous variable only when the variable is ordinal in nature. So, it is a better predictive model.
+  Question:
+  Recall: What is the proportion of actual positives was identified correctly?
+  TP / (TP + FN)
+  Precision: What is the proportion of positive identifications was actually correct?
+  TP / (TP + FP)
+  Question:
+  A false positive is an incorrect identification of the absence of a condition when it is absent.
+  A false negative is an incorrect identification of the absence of a condition when it is actually present.
+  Question: Please explain the goal of A/B Testing.
+  Answer: A/B Testing is a statistical hypothesis testing meant for a randomized experiment with two variables, A and B. The goal of A/B Testing is to maximize the likelihood of an outcome of some interest by identifying any changes to a webpage.
+  A highly reliable method for finding out the best online marketing and promotional strategies for a business, A/B Testing can be employed for testing everything, ranging from sales emails to search ads and website copy.
+\end{enumerate}
+
+Question: Could you explain how to define the number of clusters in a clustering algorithm?
+Answer: The primary objective of clustering is to group together similar identities in such a way that while entities within a group are similar to each other, the groups remain different from one another.
+Generally, the Within Sum of Squares is used for explaining the homogeneity within a cluster. For defining the number of clusters in a clustering algorithm, WSS is plotted for a range pertaining to a number of clusters. The resultant graph is known as the Elbow Curve.
+The Elbow Curve graph contains a point that represents the point post in which there aren't any decrements in the WSS. This is known as the bending point and represents K in K--Means.
+Although the aforementioned is the widely-used approach, another important approach is the Hierarchical clustering. In this approach, dendrograms are created first and then distinct groups are identified from there.
+
+Question: Please explain Gradient Descent.
+Answer: The degree of change in the output of a function relating to the changes made to the inputs is known as a gradient. It measures the change in all weights with respect to the change in error. A gradient can also be comprehended as the slope of a function.
+Gradient Descent refers to escalating down to the bottom of a valley. Simply, consider this something as opposed to climbing up a hill. It is a minimization algorithm meant for minimizing a given activation function.
+
+Question: Please enumerate the various steps involved in an analytics project.
+Answer: Following are the numerous steps involved in an analytics project:
+• Understanding the business problem
+• Exploring the data and familiarizing with the same
+• Preparing the data for modeling by means of detecting outlier values, transforming variables, treating missing values, et cetera
+• Running the model and analyzing the result for making appropriate changes or modifications to the model (an iterative step that repeats until the best possible outcome is gained)
+• Validating the model using a new dataset
+• Implementing the model and tracking the result for analyzing the performance of the same
+
+Question: What are outlier values and how do you treat them?
+Answer: Outlier values, or simply outliers, are data points in statistics that don't belong to a certain population. An outlier value is an abnormal observation that is very much different from other values belonging to the set.
+Identification of outlier values can be done by using univariate or some other graphical analysis method. Few outlier values can be assessed individually but assessing a large set of outlier values require the substitution of the same with either the 99th or the 1st percentile values.
+There are two popular ways of treating outlier values:
+1. To change the value so that it can be brought within a range
+2. To simply remove the value
+Note: - Not all extreme values are outlier values.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{20}
+\item
+  Discuss Artificial Neural Networks
+  Artificial Neural networks (ANN) are a special set of algorithms that have revolutionized machine learning. It helps you to adapt according to changing input. So the network generates the best possible result without redesigning the output criteria.
+\item
+  What is Back Propagation?
+  Back-propagation is the essence of neural net training. It is the method of tuning the weights of a neural net depend upon the error rate obtained in the previous epoch. Proper tuning of the helps you to reduce error rates and to make the model reliable by increasing its generalization.
+\end{enumerate}
+
+\textbf{Explain Auto-Encoder}
+
+Autoencoders are learning networks. It helps you to transform inputs into outputs with fewer numbers of errors. This means that you will get output to be as close to input as possible.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{35}
+\item
+  Define Boltzmann Machine
+  Boltzmann machines is a simple learning algorithm. It helps you to discover those features that represent complex regularities in the training data. This algorithm allows you to optimize the weights and the quantity for the given problem.
+\item
+  What is reinforcement learning?
+  Reinforcement Learning is a learning mechanism about how to map situations to actions. The end result should help you to increase the binary reward signal. In this method, a learner is not told which action to take but instead must discover which action offers a maximum reward. As this method based on the reward/penalty mechanism.
+\end{enumerate}
+
+\textbf{Training-Validation-Test}
 
 \begin{itemize}
 \tightlist
 \item
-  Time from surgery to death
-\item
-  Time from start of treatment to progression
-\item
-  Time from response to recurrence
-\item
-  Time-to-event data are common in many other fields.
+  We typically train our model but get evaluation metrics on the test data.
 \end{itemize}
 
-Some other examples include:
+From ISLR:
+
+\begin{itemize}
+\item
+  In general, we do not really care how well the method works on the training data. Rather, we are interested in the accuracy of the predictions that we obtain when we apply our method to previously unseen data. Why is this what we care about? Suppose that we are interested in developing an algorithm to predict a stock's price based on previous stock returns. We can train the method using stock returns from the past 6 months. But we don't really care how well our method predicts last week's stock price. We instead care about how well it will predict tomorrow's price or next month's price.
+\item
+  We can use patients data to train a statistical learning method to predict risk of diabetes based on clinical measurements. In practice, we want this method to accurately predict diabetes risk for future patients based on their clinical measurements. We are not very interested in whether or not the method accurately predicts diabetes risk for patients used to train the model, since we already know which of those patients have diabetes.
+\item
+  We want to choose the method that gives the lowest test MSE, as opposed to the lowest training MSE.
+\item
+  The problem is that many statistical methods specifically estimate coefficients so as to minimize the training set MSE. For these methods, the training set MSE can be quite small, but the test MSE is often much larger.
+\end{itemize}
+
+\textbf{R-squared}
 
 \begin{itemize}
 \tightlist
 \item
-  Time from HIV infection to development of AIDS
-\item
-  Time to heart attack
-\item
-  Time to onset of substance abuse
-\item
-  Time to initiation of sexual activity
-\item
-  Time to machine malfunction
+  In simple linear regression \(r^2 = R^2\)
 \end{itemize}
 
-Because time-to-event data are common in many fields, it also goes by names besides survival analysis including:
+From ISLR:
+
+\begin{itemize}
+\item
+  A number near 0 indicates that the regression does not explain much of the variability in the response; this might occur because the linear model is wrong, or the error variance σ2 is high, or both.
+\item
+  It can still be challenging to determine what is a good R2 value, and in general, this will depend on the application.
+\item
+  In certain problems in physics, we may know that the data truly comes from a linear model with a small residual error. In this case, we would expect to see an R2 value that is extremely close to 1, and a substantially smaller R2 value might indicate a serious problem with the experiment in which the data were generated.
+\item
+  On the other hand, in typical applications in biology, psychology, marketing, and other domains, the linear model is at best an extremely rough approximation to the data, and residual errors due to other unmeasured factors are often very large. In this setting, we would expect only a very small proportion of the variance in the response to be explained by the predictor, and an \(R^2\) value well below 0.1 might be more realistic!
+\end{itemize}
+
+\textbf{F-Test}
+
+Testing whether all of the regression coefficients are zero, i.e.~
+\(H_0 :β_1 = β_2 =···=β_p = 0\)
+
+\(Ha :\) at least one \(β_j\) is non-zero.
+
+\hypertarget{bootstrapping}{%
+\subsection{Bootstrapping}\label{bootstrapping}}
+
+\hypertarget{jack-knife}{%
+\subsubsection{Jack-knife}\label{jack-knife}}
+
+• The jackknife is a tool for estimating standard errors and the bias of estimators
+
+• As its name suggests, the jackknife is a small, handy tool; in contrast to the
+bootstrap, which is then the moral equivalent of a giant workshop full of tools
+
+• Both the jackknife and the bootstrap involve re-sampling data; that is, repeatedly creating new data sets from the original data
+
+The jackknife deletes each observation and calculates an estimate based on the remaining n − 1 of them
+
+• It uses this collection of estimates to do things like estimate the bias and the standard error
+
+• Note that estimating the bias and having a standard error are not needed for things like sample means, which we know are unbiased estimates of population means and what their standard errors are
+
+It has been shown that the jackknife is a linear approximation to the bootstrap
+
+• Generally do not use the jackknife for sample quantiles like the median; as it has been shown to have some poor properties
+
+The bootstrap
+
+• The bootstrap is a tremendously useful tool for constructing confidence intervals and calculating standard errors for difficult statistics
+• For example, how would one derive a confidence interval for the median? • The bootstrap procedure follows from the so called bootstrap principle
+
+Suppose that I have a statistic that estimates some population parameter, but I don't know its sampling distribution
+• The bootstrap principle suggests using the distribution defined by the data to approximate its sampling distribution
+• In practice, the bootstrap principle is always carried out using simulation
+• The general procedure follows by first simulating complete data sets from the observed data with replacement
+• This is approximately drawing from the sampling distribution of that statistic, at least as far as the data is able to approximate the true population distribution
+• Calculate the statistic for each simulated data set
+• Use the simulated statistics to either define a confidence interval or take the standard deviation to calculate a standard error
+Example
+• Consider again, the data set of 630 measurements of gray matter volume for workers from a lead manufacturing plant
+• The median gray matter volume is around 589 cubic centimeters
+• We want a confidence interval for the median of these measurements
+• Bootstrap procedure for calculating for the median from a data set of n observations
+i. Sample n observations with replacement from the observed data resulting in one simulated complete data set
+ii. Take the median of the simulated data set
+iii. Repeat these two steps B times, resulting in B simulated medians
+iv. These medians are approximately draws from the sampling distribution of the
+median of n observations; therefore we can
+• Draw a histogram of them
+• Calculate their standard deviation to estimate the standard error of the median • Take the 2.5th and 97.5th percentiles as a confidence interval for the median
+
+Summary
+• The bootstrap is non-parametric
+• However, the theoretical arguments proving the validity of the bootstrap rely
+on large samples
+• Better percentile bootstrap confidence intervals correct for bias
+• There are lots of variations on bootstrap procedures; the book ``An Introduction to the Bootstrap'' by Efron and Tibshirani is a great place to start for both bootstrap and jackknife information
+
+\hypertarget{classification-models-evaluation}{%
+\subsection{Classification Models: Evaluation}\label{classification-models-evaluation}}
+
+\href{https://medium.com/@demrahayan/evaluating-binary-classification-models-with-pyspark-2afc5ac7937f}{My medium story}
+
+\href{https://developers.google.com/machine-learning/crash-course/classification/}{Google developers}
+
+\hypertarget{thresholding}{%
+\subsubsection{Thresholding}\label{thresholding}}
+
+Logistic regression returns a probability. You can use the returned probability ``as is'' (for example, the probability that the user will click on this ad is 0.00023) or convert the returned probability to a binary value (for example, this email is spam).
+
+A logistic regression model that returns 0.9995 for a particular email message is predicting that it is very likely to be spam. Conversely, another email message with a prediction score of 0.0003 on that same logistic regression model is very likely not spam.
+
+However, what about an email message with a prediction score of 0.6? In order to map a logistic regression value to a binary category, you must define a \texttt{classification\ threshold} (also called the \texttt{decision\ threshold}).
+
+A value above that threshold indicates ``spam''; a value below indicates ``not spam.'' It is tempting to assume that the classification threshold should always be 0.5, but thresholds are problem-dependent, and are therefore values that you must tune.
+
+Note: ``Tuning'' a threshold for logistic regression is different from tuning hyperparameters such as learning rate. Part of choosing a threshold is assessing how much you'll suffer for making a mistake. For example, mistakenly labeling a non-spam message as spam is very bad. However, mistakenly labeling a spam message as non-spam is unpleasant, but hardly the end of your job.
+
+\hypertarget{confusion-matrix}{%
+\subsubsection{Confusion Matrix}\label{confusion-matrix}}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+& Predicted Positive & Predicted Negative \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Actual Positive} & TP & FN \\
+\textbf{Actual Negative} & FP & TN \\
+\end{longtable}
+
+\textbf{True Positive:} Model predicted positive and it is true.
+
+\textbf{True negative:} Model predicted negative and it is true.
+
+\textbf{False positive (Type 1 Error):} Model predicted positive but it is false.
+
+\textbf{False negative (Type 2 Error):} Model predicted negative and it is true.
+
+\textbf{False Positive Rate (FPR):}
+
+The False Positive Rate is the ratio of false positive predictions to the total number of actual negatives. It measures the rate at which the model incorrectly predicts the positive class among the instances that are actually negative.
+
+\(FPR = \frac{FP}{TN + FP}\)
+
+\textbf{True Positive Rate (TPR), Sensitivity, or Recall:}
+
+The True Positive Rate is the ratio of true positive predictions to the total number of actual positives. It measures the ability of the model to correctly predict the positive class among instances that are actually positive.
+
+\(Recall (TPR) = \frac{TP}{TP + FN}\)
+
+\textbf{Accuracy:}
+
+It represents the ratio of correctly predicted instances to the total number of instances. The accuracy metric is suitable for balanced datasets where the classes are evenly distributed. It is calculated using the following formula:
+
+\(Accuracy = \frac{TP + TN}{TP + TN + FP + FN}\)
+
+Accuracy provides a general sense of how well a model is performing across all classes. It is easy to understand and interpret, making it a commonly used metric, especially when the classes are balanced.
+
+However, accuracy may not be an ideal metric in situations where the class distribution is imbalanced. In imbalanced datasets, where one class significantly outnumbers the other, a high accuracy might be achieved by simply predicting the majority class. In such cases, other metrics like precision, recall, F1 score, or area under the receiver operating characteristic (ROC-AUC) curve may be more informative.
+
+\textbf{Precision:}
+
+Precision is the ratio of true positive predictions to the total number of positive predictions made by the model. It represents the accuracy of the positive predictions made by the model.
+
+\(Precision = \frac{TP}{TP + FP}\)
+
+\textbf{F1 Measure:}
+
+The F1 score is a metric commonly used in binary classification to provide a balance between precision and recall. It is the harmonic mean of precision and recall, combining both measures into a single value. The F1 score is particularly useful when there is an uneven class distribution or when both false positives and false negatives are important considerations.
+
+The F1 score is useful in situations where achieving a balance between precision and recall is important, as it penalizes models that have a significant imbalance between these two metrics.
+
+\(F1 score = 2 \times \frac{Precision \times Recall}{Precision + Recall}\)
+
+\hypertarget{in-marketing}{%
+\subsubsection{In Marketing}\label{in-marketing}}
+
+\textbf{Precision:}
+
+In marketing, precision is valuable when the cost or impact associated with false positives (incorrectly identifying a non-lookalike as a lookalike) is high. For example, if targeting a non-lookalike with a marketing campaign has significant costs, you want to minimize false positives.
+
+\textbf{Recall:}
+
+In marketing, recall is important when you want to ensure that you are not missing potential opportunities (actual lookalikes). If missing a true lookalike has a high cost or lost opportunity, you want to maximize recall.
+
+\hypertarget{machine-learning}{%
+\chapter{Machine Learning}\label{machine-learning}}
+
+Different machine learning algorithms are suitable for various types of tasks, such as binary classification, multi-class classification, and predicting continuous outcomes. Here are some commonly used algorithms for each task:
+
+\hypertarget{ml-algorithms-intro}{%
+\section{ML Algorithms Intro}\label{ml-algorithms-intro}}
+
+\hypertarget{binary-classification}{%
+\subsection{Binary Classification:}\label{binary-classification}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Logistic Regression:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Logistic Regression is a simple and widely used algorithm for binary classification tasks. It models the probability that an instance belongs to a particular class.
+  \end{itemize}
+\item
+  \textbf{Support Vector Machines (SVM):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    SVM is effective for binary classification. It finds a hyperplane that best separates the data into two classes.
+  \end{itemize}
+\item
+  \textbf{Random Forest:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Forest is an ensemble learning algorithm that performs well for both binary and multi-class classification tasks. It builds multiple decision trees and combines their predictions.
+  \end{itemize}
+\item
+  \textbf{Gradient Boosting (e.g., XGBoost, LightGBM):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Gradient Boosting algorithms are powerful for binary classification tasks. They build trees sequentially, with each tree correcting the errors of the previous one.
+  \end{itemize}
+\item
+  \textbf{Neural Networks:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Neural networks, especially architectures like feedforward neural networks, can be used for binary classification tasks. They are particularly effective for complex, non-linear relationships.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{multi-class-classification}{%
+\subsection{Multi-Class Classification:}\label{multi-class-classification}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Logistic Regression (One-vs-All):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Logistic Regression can be extended to handle multi-class classification by training multiple binary classifiers (one for each class) in a one-vs-all fashion.
+  \end{itemize}
+\item
+  \textbf{Multinomial Naive Bayes:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Naive Bayes can be extended to handle multiple classes, and the multinomial variant is commonly used for text classification tasks.
+  \end{itemize}
+\item
+  \textbf{Random Forest:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Forest can handle multi-class classification naturally. It builds multiple decision trees, and the final prediction is based on voting across all classes.
+  \end{itemize}
+\item
+  \textbf{Gradient Boosting (e.g., XGBoost, LightGBM):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Gradient Boosting algorithms can handle multi-class classification tasks. They build a series of decision trees, each one correcting the errors of the ensemble.
+  \end{itemize}
+\item
+  \textbf{K-Nearest Neighbors (KNN):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    KNN can be used for multi-class classification by assigning the class label that is most common among the k nearest neighbors.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{continuous-outcome-regression}{%
+\subsection{Continuous Outcome (Regression):}\label{continuous-outcome-regression}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Linear Regression:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Linear Regression is a basic and widely used algorithm for predicting continuous outcomes. It models the relationship between the features and the target variable as a linear equation.
+  \end{itemize}
+\item
+  \textbf{Decision Trees for Regression:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Decision trees can be used for regression tasks by predicting the average value of the target variable in each leaf node.
+  \end{itemize}
+\item
+  \textbf{Random Forest for Regression:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Forest can be applied to regression tasks by aggregating the predictions of multiple decision trees.
+  \end{itemize}
+\item
+  \textbf{Gradient Boosting for Regression (e.g., XGBoost, LightGBM):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Gradient Boosting algorithms can be used for regression tasks. They build decision trees sequentially, each one correcting the errors of the ensemble.
+  \end{itemize}
+\item
+  \textbf{Support Vector Machines (SVR):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Support Vector Machines can be used for regression tasks by finding a hyperplane that best fits the data.
+  \end{itemize}
+\end{enumerate}
+
+These are just a few examples, and the choice of algorithm depends on factors such as the size and nature of the dataset, the relationship between features and target variables, and computational considerations. It's often a good practice to experiment with multiple algorithms and choose the one that performs best on a specific task.
+
+Several machine learning algorithms are popular and widely used in various applications. The popularity of an algorithm often depends on the nature of the problem and the characteristics of the data. Here are some popular machine learning algorithms:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Linear Regression:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Used for predicting a continuous outcome based on one or more predictor features. It's widely used in regression analysis.
+  \end{itemize}
+\item
+  \textbf{Logistic Regression:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Used for binary classification problems. It models the probability that a given instance belongs to a particular class.
+  \end{itemize}
+\item
+  \textbf{Decision Trees:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A tree-like model of decisions, where each node represents a test on an attribute, each branch represents the outcome of the test, and each leaf node represents a class label.
+  \end{itemize}
+\item
+  \textbf{Random Forest:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    An ensemble learning method that constructs a multitude of decision trees during training and outputs the mode of the classes for classification or the mean prediction for regression.
+  \end{itemize}
+\item
+  \textbf{Support Vector Machines (SVM):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A supervised machine learning algorithm that can be used for classification or regression tasks. It finds a hyperplane that best separates the data into classes.
+  \end{itemize}
+\item
+  \textbf{K-Nearest Neighbors (KNN):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A simple, instance-based learning algorithm where an object is classified by its neighbors. It assigns the class label based on the majority class of its k nearest neighbors.
+  \end{itemize}
+\item
+  \textbf{K-Means Clustering:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A clustering algorithm that partitions data into k clusters based on similarity. It's commonly used for unsupervised learning tasks.
+  \end{itemize}
+\item
+  \textbf{Naive Bayes:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A probabilistic algorithm based on Bayes' theorem that is particularly suited for classification tasks. It assumes that the features are conditionally independent given the class.
+  \end{itemize}
+\item
+  \textbf{Gradient Boosting (e.g., XGBoost, LightGBM):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    An ensemble learning technique where weak models (typically decision trees) are trained sequentially, and each new model corrects the errors of the previous ones.
+  \end{itemize}
+\item
+  \textbf{Neural Networks (Deep Learning):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Artificial neural networks inspired by the structure and function of the human brain. Deep learning models, such as feedforward neural networks, convolutional neural networks (CNNs), and recurrent neural networks (RNNs), have achieved remarkable success in various tasks.
+  \end{itemize}
+\end{enumerate}
+
+These algorithms cover a range of tasks, including regression, classification, clustering, and more. The choice of algorithm depends on the specific problem at hand and the characteristics of the data. Often, a combination of algorithms or ensemble methods is used to achieve better performance.
+
+\hypertarget{random-forest-vs-decision-trees}{%
+\subsection{Random Forest vs Decision Trees}\label{random-forest-vs-decision-trees}}
+
+Decision Trees and Random Forest are both machine learning algorithms, and Random Forest is an ensemble learning method that builds on Decision Trees. Here are the key differences between Decision Trees and Random Forest:
+
+\hypertarget{decision-trees}{%
+\subsubsection{Decision Trees:}\label{decision-trees}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Single Model:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A Decision Tree is a single model that recursively splits the dataset based on the most significant feature at each node.
+  \end{itemize}
+\item
+  \textbf{Vulnerability to Overfitting:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Decision Trees are prone to overfitting, especially when the tree is deep and captures noise in the training data.
+  \end{itemize}
+\item
+  \textbf{High Variance:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Due to their tendency to overfit, Decision Trees have high variance, meaning they can be sensitive to small changes in the training data.
+  \end{itemize}
+\item
+  \textbf{Bias-Variance Tradeoff:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Decision Trees are an example of a model with a high bias (when they are too simple) and high variance (when they are too complex). Finding the right level of complexity is crucial.
+  \end{itemize}
+\item
+  \textbf{Interpretability:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Decision Trees are generally more interpretable, and it's easier to understand the decision-making process at each node.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{random-forest}{%
+\subsubsection{Random Forest:}\label{random-forest}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Ensemble Method:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Forest is an ensemble method that builds multiple Decision Trees and combines their predictions. Each tree is trained on a random subset of the data and features.
+  \end{itemize}
+\item
+  \textbf{Reduced Overfitting:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    By aggregating predictions from multiple trees, Random Forest reduces overfitting compared to a single Decision Tree. It achieves a better balance between bias and variance.
+  \end{itemize}
+\item
+  \textbf{Improved Generalization:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Forest improves generalization performance by creating diverse trees that capture different aspects of the data. The final prediction is an average or a voting mechanism.
+  \end{itemize}
+\item
+  \textbf{Robustness:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Forest is more robust to outliers and noisy data compared to a single Decision Tree because the ensemble nature helps filter out noise.
+  \end{itemize}
+\item
+  \textbf{Automatic Feature Selection:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Forest provides a form of automatic feature selection by considering a random subset of features at each split in each tree.
+  \end{itemize}
+\item
+  \textbf{Higher Computational Cost:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Building multiple trees and combining their predictions increases the computational cost compared to a single Decision Tree.
+  \end{itemize}
+\end{enumerate}
+
+In summary, while Decision Trees are simple and interpretable, they are prone to overfitting. Random Forest addresses this limitation by constructing an ensemble of trees, leading to better generalization and robustness at the cost of increased computational complexity. Random Forest is a powerful and widely used algorithm, especially for tasks where high accuracy and robustness are important.
+
+\hypertarget{random-forest-vs-gradient-boosting}{%
+\subsection{Random Forest vs Gradient Boosting}\label{random-forest-vs-gradient-boosting}}
+
+Random Forest and Gradient Boosting are both ensemble learning techniques, but they have some key differences:
+
+\hypertarget{random-forest-1}{%
+\subsubsection{Random Forest:}\label{random-forest-1}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Ensemble Type:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Forest is an ensemble of decision trees. It builds multiple decision trees independently and combines their predictions through averaging (for regression) or voting (for classification).
+  \end{itemize}
+\item
+  \textbf{Parallel Training:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Trees in a Random Forest can be trained independently and in parallel, making it computationally efficient. This is because each tree is constructed based on a random subset of the data.
+  \end{itemize}
+\item
+  \textbf{Feature Subset at Each Split:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    For each split in a tree, a random subset of features is considered. This introduces an element of randomness, reducing the risk of overfitting and making the model more robust.
+  \end{itemize}
+\item
+  \textbf{Voting Mechanism:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In classification tasks, the final prediction is determined by a majority vote from all the individual trees. In regression tasks, the final prediction is the average of the predictions from all trees.
+  \end{itemize}
+\item
+  \textbf{Less Prone to Overfitting:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Forest is less prone to overfitting compared to individual decision trees, making it a more robust model.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{gradient-boosting}{%
+\subsubsection{Gradient Boosting:}\label{gradient-boosting}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Ensemble Type:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Gradient Boosting is also an ensemble of decision trees, but unlike Random Forest, it builds trees sequentially, with each tree correcting the errors of the previous one.
+  \end{itemize}
+\item
+  \textbf{Sequential Training:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Trees are trained sequentially, and each subsequent tree focuses on minimizing the errors made by the combined ensemble of the previous trees.
+  \end{itemize}
+\item
+  \textbf{Emphasis on Misclassifications:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Gradient Boosting places more emphasis on correcting the mistakes of the ensemble. Each tree is fitted to the residuals (errors) of the combined model.
+  \end{itemize}
+\item
+  \textbf{Weighted Voting:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    In each step, the predictions of all trees are combined with weights, where the weights are determined by the model's performance on the training data.
+  \end{itemize}
+\item
+  \textbf{Potential for Overfitting:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Gradient Boosting has the potential to overfit the training data, especially if the model is too complex or if the learning rate is too high.
+  \end{itemize}
+\item
+  \textbf{More Sensitive to Hyperparameters:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The performance of Gradient Boosting models is more sensitive to hyperparameter tuning compared to Random Forest.
+  \end{itemize}
+\end{enumerate}
+
+\hypertarget{overall-considerations}{%
+\subsection{Overall Considerations:}\label{overall-considerations}}
 
 \begin{itemize}
 \tightlist
 \item
-  Reliability analysis
+  \textbf{Parallelization:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Random Forest can be easily parallelized, making it suitable for distributed computing environments.
+  \item
+    Gradient Boosting, being a sequential process, is not as easily parallelized.
+  \end{itemize}
 \item
-  Duration analysis
+  \textbf{Hyperparameter Tuning:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Gradient Boosting typically requires more careful hyperparameter tuning than Random Forest.
+  \end{itemize}
 \item
-  Event history analysis
-\item
-  Time-to-event analysis
+  \textbf{Performance:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Both models are powerful and widely used, and their performance can vary depending on the characteristics of the dataset.
+  \end{itemize}
 \end{itemize}
 
-A key feature of survival data is censoring.
+In summary, while both Random Forest and Gradient Boosting are ensemble methods based on decision trees, they differ in their construction, training process, and emphasis on correcting errors. The choice between them depends on the specific characteristics of the data and the goals of the modeling task.
 
-Censoring occurs if a subject has not experienced the event of interest by the end of data collection.
+\hypertarget{ml-libraries-in-python}{%
+\section{ML Libraries in Python}\label{ml-libraries-in-python}}
 
-A subject may be censored due to:
+Several libraries are widely used for machine learning in addition to scikit-learn. Here are some popular ones:
 
-\begin{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Loss to follow-up
+  \textbf{TensorFlow:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Developed by Google Brain, TensorFlow is an open-source machine learning library widely used for deep learning applications. It provides a comprehensive set of tools and community support.
+  \end{itemize}
 \item
-  Withdrawal from study
+  \textbf{PyTorch:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    PyTorch, developed by Facebook's AI Research lab (FAIR), is another popular deep learning library. It is known for its dynamic computational graph, making it more flexible for research and experimentation.
+  \end{itemize}
 \item
-  No event by end of fixed study period
-\end{itemize}
+  \textbf{Keras:}
 
-Specifically these are examples of \textbf{right censoring.}
+  \begin{itemize}
+  \tightlist
+  \item
+    While Keras can be used as a high-level neural networks API with TensorFlow, it is now also integrated with TensorFlow as its official high-level API. It provides a simple and user-friendly interface for building neural networks.
+  \end{itemize}
+\item
+  \textbf{XGBoost:}
 
-\textbf{Left censoring} and \textbf{interval censoring} are also possible, and methods exist to analyze these types of data, but this tutorial will be focus on right censoring.
+  \begin{itemize}
+  \tightlist
+  \item
+    XGBoost is an efficient and scalable implementation of gradient boosting. It is widely used for structured/tabular data and is known for its high performance in Kaggle competitions.
+  \end{itemize}
+\item
+  \textbf{LightGBM:}
 
-To illustrate the impact of censoring, suppose we have the following data:
+  \begin{itemize}
+  \tightlist
+  \item
+    LightGBM is a gradient boosting framework developed by Microsoft. It is designed for distributed and efficient training of large-scale datasets and is particularly useful for categorical features.
+  \end{itemize}
+\item
+  \textbf{CatBoost:}
 
-\includegraphics{figs/survival1.png}
+  \begin{itemize}
+  \tightlist
+  \item
+    CatBoost is a gradient boosting library that is designed to handle categorical features efficiently. It is developed by Yandex and is known for its ease of use.
+  \end{itemize}
+\item
+  \textbf{Pandas:}
 
-How would we compute the proportion who are event-free at 10 years?
+  \begin{itemize}
+  \tightlist
+  \item
+    While Pandas is not specifically a machine learning library, it is an essential library for data manipulation and analysis. It is often used in the preprocessing phase of machine learning workflows.
+  \end{itemize}
+\item
+  \textbf{NumPy and SciPy:}
 
-\begin{itemize}
+  \begin{itemize}
+  \tightlist
+  \item
+    These libraries are fundamental for scientific computing in Python. NumPy provides support for large, multi-dimensional arrays and matrices, while SciPy builds on NumPy and provides additional functionality for optimization, signal processing, and more.
+  \end{itemize}
+\item
+  \textbf{NLTK and SpaCy:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Natural Language Toolkit (NLTK) and SpaCy are libraries used for natural language processing (NLP). They provide tools for tasks such as tokenization, part-of-speech tagging, and named entity recognition.
+  \end{itemize}
+\item
+  \textbf{Statsmodels:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Statsmodels is a library for estimating and testing statistical models. It is commonly used for statistical analysis and hypothesis testing.
+  \end{itemize}
+\end{enumerate}
+
+These libraries cover a broad range of machine learning tasks, from traditional machine learning algorithms to deep learning and specialized tools for tasks like natural language processing. The choice of library often depends on the specific requirements of your machine learning project.
+
+\hypertarget{big-data-solutions}{%
+\subsection{Big data solutions}\label{big-data-solutions}}
+
+When dealing with big data in machine learning, specialized libraries and frameworks that can handle distributed computing and parallel processing become essential. Here are some popular libraries and frameworks for big data machine learning:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Subjects 6 and 7 were event-free at 10 years.
+  \textbf{Apache Spark MLlib:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Spark MLlib is part of the Apache Spark ecosystem and provides scalable machine learning libraries for Spark. It includes algorithms for classification, regression, clustering, collaborative filtering, and more. Spark's distributed computing capabilities make it well-suited for big data processing.
+  \end{itemize}
 \item
-  Subjects 2, 9, and 10 had the event before 10 years.
+  \textbf{Dask-ML:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Dask is a parallel computing library in Python that integrates with popular libraries like NumPy, Pandas, and Scikit-Learn. Dask-ML extends Scikit-Learn to support larger-than-memory computations using parallel processing.
+  \end{itemize}
 \item
-  Subjects 1, 3, 4, 5, and 8 were censored before 10 years, so we don't know whether they had the event or not at 10 years. But we know something about them - that they were each followed for a certain amount of time without the event of interest prior to being censored.
-\end{itemize}
-
-Survival analysis techniques provide a way to appropriately account for censored patients in the analysis.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# install.packages(c("lubridate", "ggsurvfit", "gtsummary", "tidycmprsk"))}
-\FunctionTok{library}\NormalTok{(lubridate)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Attaching package: 'lubridate'
-\end{verbatim}
-
-\begin{verbatim}
-## The following objects are masked from 'package:base':
-## 
-##     date, intersect, setdiff, union
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(ggsurvfit)}
-\FunctionTok{library}\NormalTok{(gtsummary)}
-\FunctionTok{library}\NormalTok{(tidycmprsk)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Attaching package: 'tidycmprsk'
-\end{verbatim}
-
-\begin{verbatim}
-## The following object is masked from 'package:gtsummary':
-## 
-##     trial
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# devtools::install\_github("zabore/condsurv")}
-\FunctionTok{library}\NormalTok{(condsurv)}
-\end{Highlighting}
-\end{Shaded}
-
-\textbf{The lung dataset}
-
-Throughout this section, we will use the \texttt{lung} dataset from the \texttt{survival} package as example data. The data contain subjects with advanced lung cancer from the North Central Cancer Treatment Group. We will focus on the following variables throughout this tutorial:
-
-\begin{verbatim}
- **time:** Observed survival time in days
- **status:** censoring status 1=censored, 2=dead
- **sex:** 1=Male, 2=Female
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{head}\NormalTok{(lung[, }\FunctionTok{c}\NormalTok{(}\StringTok{"time"}\NormalTok{, }\StringTok{"status"}\NormalTok{, }\StringTok{"sex"}\NormalTok{)])}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##   time status sex
-## 1  306      2   1
-## 2  455      2   1
-## 3 1010      1   1
-## 4  210      2   1
-## 5  883      2   1
-## 6 1022      1   1
-\end{verbatim}
-
-Note that the status is coded in a non-standard way in this dataset. Typically you will see 1=event, 0=censored. Let's recode it to avoid confusion:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{lung1 }\OtherTok{\textless{}{-}} 
-\NormalTok{  lung }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{mutate}\NormalTok{(}
-    \AttributeTok{status =} \FunctionTok{recode}\NormalTok{(status, }\StringTok{\textquotesingle{}1\textquotesingle{}} \OtherTok{=} \DecValTok{0}\NormalTok{, }\StringTok{\textquotesingle{}2\textquotesingle{}} \OtherTok{=} \DecValTok{1}\NormalTok{)}
-\NormalTok{  )}
-
-\FunctionTok{head}\NormalTok{(lung[, }\FunctionTok{c}\NormalTok{(}\StringTok{"time"}\NormalTok{, }\StringTok{"status"}\NormalTok{, }\StringTok{"sex"}\NormalTok{)])}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##   time status sex
-## 1  306      2   1
-## 2  455      2   1
-## 3 1010      1   1
-## 4  210      2   1
-## 5  883      2   1
-## 6 1022      1   1
-\end{verbatim}
-
-Now we have:
-
-\begin{verbatim}
-time: Observed survival time in days
-status: censoring status 0=censored, 1=dead
-sex: 1=Male, 2=Female
-\end{verbatim}
-
-Note: the \texttt{Surv()} function in the \{\texttt{survival}\} package accepts by default TRUE/FALSE, where TRUE is event and FALSE is censored; 1/0 where 1 is event and 0 is censored; or 2/1 where 2 is event and 1 is censored. Please take care to ensure the event indicator is properly formatted.
-
-\textbf{Calculating survival times}
-
-Data will often come with start and end dates rather than pre-calculated survival times. The first step is to make sure these are formatted as dates in R.
-
-Let's create a small example dataset with variables \texttt{sx\_date} for surgery date and \texttt{last\_fup\_date} for the last follow-up date:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{date\_ex }\OtherTok{\textless{}{-}} 
-  \FunctionTok{tibble}\NormalTok{(}
-    \AttributeTok{sx\_date =} \FunctionTok{c}\NormalTok{(}\StringTok{"2007{-}06{-}22"}\NormalTok{, }\StringTok{"2004{-}02{-}13"}\NormalTok{, }\StringTok{"2010{-}10{-}27"}\NormalTok{), }
-    \AttributeTok{last\_fup\_date =} \FunctionTok{c}\NormalTok{(}\StringTok{"2017{-}04{-}15"}\NormalTok{, }\StringTok{"2018{-}07{-}04"}\NormalTok{, }\StringTok{"2016{-}10{-}31"}\NormalTok{)}
-\NormalTok{    )}
-
-\NormalTok{date\_ex}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## # A tibble: 3 x 2
-##   sx_date    last_fup_date
-##   <chr>      <chr>        
-## 1 2007-06-22 2017-04-15   
-## 2 2004-02-13 2018-07-04   
-## 3 2010-10-27 2016-10-31
-\end{verbatim}
-
-We see these are both \texttt{character} variables, but we need them to be formatted as \texttt{dates.}
-
-We will use the \{\texttt{lubridate}\} package to work with dates. In this case, we need to use the \texttt{ymd()} function to change the format, since the dates are currently in the character format where the year comes first, followed by the month, and followed by the day.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{date\_ex1 }\OtherTok{\textless{}{-}}
-\NormalTok{  date\_ex }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{mutate}\NormalTok{(}
-    \AttributeTok{sx\_date =} \FunctionTok{ymd}\NormalTok{(sx\_date), }
-    \AttributeTok{last\_fup\_date =} \FunctionTok{ymd}\NormalTok{(last\_fup\_date)}
-\NormalTok{    )}
-
-\NormalTok{date\_ex1}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## # A tibble: 3 x 2
-##   sx_date    last_fup_date
-##   <date>     <date>       
-## 1 2007-06-22 2017-04-15   
-## 2 2004-02-13 2018-07-04   
-## 3 2010-10-27 2016-10-31
-\end{verbatim}
-
-Now that the dates are formatted, we need to calculate the difference between start and end dates in some units, usually months or years. Using the \{\texttt{lubridate}\} package, the operator \texttt{\%-\/-\%} designates a time interval, which is then converted to the number of elapsed seconds using \texttt{as.duration()} and finally converted to years by dividing by \texttt{dyears(1)}, which gives the number of seconds in a year.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{date\_ex2 }\OtherTok{\textless{}{-}}
-\NormalTok{  date\_ex1 }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{mutate}\NormalTok{(}
-    \AttributeTok{observed\_yrs =} \FunctionTok{as.duration}\NormalTok{(sx\_date }\SpecialCharTok{\%{-}{-}\%}\NormalTok{ last\_fup\_date) }\SpecialCharTok{/} \FunctionTok{dyears}\NormalTok{(}\DecValTok{1}\NormalTok{)}
-\NormalTok{    )}
-
-\NormalTok{date\_ex2}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## # A tibble: 3 x 3
-##   sx_date    last_fup_date observed_yrs
-##   <date>     <date>               <dbl>
-## 1 2007-06-22 2017-04-15            9.82
-## 2 2004-02-13 2018-07-04           14.4 
-## 3 2010-10-27 2016-10-31            6.01
-\end{verbatim}
-
-\hypertarget{creating-survival-objects-and-curves}{%
-\subsubsection{Creating survival objects and curves}\label{creating-survival-objects-and-curves}}
-
-The Kaplan-Meier method is the most common way to estimate survival times and probabilities. It is a \texttt{non-parametric} approach that results in a step function, where there is a step down each time an event occurs.
-
-Lets see the data again:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{lung[, }\FunctionTok{c}\NormalTok{(}\StringTok{"time"}\NormalTok{, }\StringTok{"status"}\NormalTok{)][}\DecValTok{1}\SpecialCharTok{:}\DecValTok{5}\NormalTok{, ]}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##   time status
-## 1  306      2
-## 2  455      2
-## 3 1010      1
-## 4  210      2
-## 5  883      2
-\end{verbatim}
-
-The \texttt{Surv()} function from the \{\texttt{survival}\} package creates a survival object for use as the response in a model formula. There will be one entry for each subject that is the survival time, which is followed by a + if the subject was censored.
-
-Let's look at the first 10 observations:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{Surv}\NormalTok{(lung}\SpecialCharTok{$}\NormalTok{time, lung}\SpecialCharTok{$}\NormalTok{status)[}\DecValTok{1}\SpecialCharTok{:}\DecValTok{10}\NormalTok{]}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##  [1]  306   455  1010+  210   883  1022+  310   361   218   166
-\end{verbatim}
-
-We see that subject 1 had an event at time 306 days, subject 2 had an event at time 455 days, subject 3 was censored at time 1010 days, etc.
-
-The \texttt{survfit()} function creates survival curves using the Kaplan-Meier method based on a formula. Let's generate the overall survival curve for the entire cohort, assign it to object s1, and look at the structure using \texttt{str()}:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{s1 }\OtherTok{\textless{}{-}} \FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung)}
-\FunctionTok{str}\NormalTok{(s1)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## List of 16
-##  $ n        : int 228
-##  $ time     : num [1:186] 5 11 12 13 15 26 30 31 53 54 ...
-##  $ n.risk   : num [1:186] 228 227 224 223 221 220 219 218 217 215 ...
-##  $ n.event  : num [1:186] 1 3 1 2 1 1 1 1 2 1 ...
-##  $ n.censor : num [1:186] 0 0 0 0 0 0 0 0 0 0 ...
-##  $ surv     : num [1:186] 0.996 0.982 0.978 0.969 0.965 ...
-##  $ std.err  : num [1:186] 0.0044 0.00885 0.00992 0.01179 0.01263 ...
-##  $ cumhaz   : num [1:186] 0.00439 0.0176 0.02207 0.03103 0.03556 ...
-##  $ std.chaz : num [1:186] 0.00439 0.0088 0.00987 0.01173 0.01257 ...
-##  $ type     : chr "right"
-##  $ logse    : logi TRUE
-##  $ conf.int : num 0.95
-##  $ conf.type: chr "log"
-##  $ lower    : num [1:186] 0.987 0.966 0.959 0.947 0.941 ...
-##  $ upper    : num [1:186] 1 1 0.997 0.992 0.989 ...
-##  $ call     : language survfit(formula = Surv(time, status) ~ 1, data = lung)
-##  - attr(*, "class")= chr "survfit"
-\end{verbatim}
-
-\textbf{n:} There are 228 subjects in the data.
-
-\textbf{time:} Distinct time points.
-
-\textbf{n.risk:} Number of cases that have survived to the time plus the number of cases where the event occurs at the exact time.
-
-\textbf{n.event:} Number of event happened at the time.
-
-\hypertarget{kaplan-meier-plotscurves}{%
-\subsubsection{Kaplan-Meier plots/Curves}\label{kaplan-meier-plotscurves}}
-
-The Kaplan Meier curve graphically represent the survival rate or survival function.
-
-We will use the \{\texttt{ggsurvfit}\} package to generate Kaplan-Meier plots.
-
-This package aims to ease plotting of time-to-event endpoints using the power of the \{\texttt{ggplot2}\} package. See \url{http://www.danieldsjoberg.com/ggsurvfit/index.html} for details.
-
-Note: alternatively, survival plots can be created using base R or the \{\texttt{survminer}\} package.
-
-The \{\texttt{ggsurvfit}\} package works best if you create the \texttt{survfit} object using the included \texttt{ggsurvfit::survfit2()} function, which uses the same syntax to what we saw previously with \texttt{survival::survfit()}.
-
-The \texttt{ggsurvfit::survfit2()} tracks the environment from the function call, which allows the plot to have better default values for labeling and p-value reporting.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{survfit2}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{ggsurvfit}\NormalTok{() }\SpecialCharTok{+}
-  \FunctionTok{labs}\NormalTok{(}
-    \AttributeTok{x =} \StringTok{"Days"}\NormalTok{,}
-    \AttributeTok{y =} \StringTok{"Overall survival probability"}
-\NormalTok{  )}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{Project_Archive_files/figure-latex/unnamed-chunk-13-1.pdf}
-
-The default plot in \texttt{ggsurvfit()} shows the step function only.
-
-We can add the confidence interval using \texttt{add\_confidence\_interval()}:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{survfit2}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{ggsurvfit}\NormalTok{() }\SpecialCharTok{+}
-  \FunctionTok{labs}\NormalTok{(}
-    \AttributeTok{x =} \StringTok{"Days"}\NormalTok{,}
-    \AttributeTok{y =} \StringTok{"Overall survival probability"}
-\NormalTok{  ) }\SpecialCharTok{+} 
-  \FunctionTok{add\_confidence\_interval}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{Project_Archive_files/figure-latex/unnamed-chunk-14-1.pdf}
-
-Typically we will also want to see the numbers at risk in a table below the x-axis.
-
-We can add this using \texttt{add\_risktable()}:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{survfit2}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{ggsurvfit}\NormalTok{() }\SpecialCharTok{+}
-  \FunctionTok{labs}\NormalTok{(}
-    \AttributeTok{x =} \StringTok{"Days"}\NormalTok{,}
-    \AttributeTok{y =} \StringTok{"Overall survival probability"}
-\NormalTok{    ) }\SpecialCharTok{+} 
-  \FunctionTok{add\_confidence\_interval}\NormalTok{() }\SpecialCharTok{+}
-  \FunctionTok{add\_risktable}\NormalTok{()}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{Project_Archive_files/figure-latex/unnamed-chunk-15-1.pdf}
-
-Plots can be customized using many standard \{ggplot2\} options.
-
-\hypertarget{estimating-x-year-survival}{%
-\subsubsection{Estimating x-year survival}\label{estimating-x-year-survival}}
-
-One quantity often of interest in a survival analysis is the probability of surviving beyond a certain number of years, x.
-
-For example, to estimate the probability of surviving to 1 year, use summary with the times argument
-(Note: the time variable in the lung data is actually in days, so we need to use \texttt{times\ =\ 365.25})
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{summary}\NormalTok{(}\FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung), }\AttributeTok{times =} \FloatTok{365.25}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Call: survfit(formula = Surv(time, status) ~ 1, data = lung)
-## 
-##  time n.risk n.event survival std.err lower 95% CI upper 95% CI
-##   365     65     121    0.409  0.0358        0.345        0.486
-\end{verbatim}
-
-\begin{verbatim}
-We find that the 1-year probability of survival in this study is 41%.
-\end{verbatim}
-
-The associated lower and upper bounds of the 95\% confidence interval are also displayed.
-
-The 1-year survival probability is the point on the y-axis that corresponds to 1
-year on the x-axis for the survival curve.
-
-\includegraphics{figs/survival3.png}
-
-What happens if you use a ``naive'' estimate? Here ``naive'' means that the patients who were censored prior to 1-year are considered event-free and included in the denominator.
-
-121 of the 228 patients in the lung data died by 1 year so the ``naive'' estimate is calculated as:
-
-\[(1−\frac{121}{228})×100=47\%\]
-
-You get an incorrect estimate of the 1-year probability of survival when you ignore the fact that 42 patients were censored before 1-year.
-
-Recall the correct estimate of the 1-year probability of survival, accounting for censoring using the Kaplan-Meier method, was 41\%.
-
-Ignoring censoring leads to an overestimate of the overall survival probability.
-
-Imagine two studies, each with 228 subjects. There are 165 deaths in each study. Censoring is ignored in one (blue line), censoring is accounted for in the other (yellow line).
-
-The censored subjects only contribute information for a portion of the follow-up time, and then fall out of the risk set, thus pulling down the cumulative probability of survival. Ignoring censoring erroneously treats patients who are censored as part of the risk set for the entire follow-up period.
-
-\includegraphics{figs/survival4.png}
-
-We can produce nice tables of x-time survival probability estimates using the \texttt{tbl\_survfit()} function from the \{\texttt{gtsummary}\} package:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{tbl\_survfit}\NormalTok{(}
-    \AttributeTok{times =} \FloatTok{365.25}\NormalTok{,}
-    \AttributeTok{label\_header =} \StringTok{"**1{-}year survival (95\% CI)**"}
-\NormalTok{  )}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Table printed with `knitr::kable()`, not {gt}. Learn why at
-## https://www.danieldsjoberg.com/gtsummary/articles/rmarkdown.html
-## To suppress this message, include `message = FALSE` in code chunk header.
-\end{verbatim}
-
-\begin{tabular}{l|c}
-\hline
-**Characteristic** & **1-year survival (95\% CI)**\\
-\hline
-Overall & 41\% (34\%, 49\%)\\
-\hline
-\end{tabular}
-
-\hypertarget{estimating-median-survival-time}{%
-\subsubsection{Estimating median survival time}\label{estimating-median-survival-time}}
-
-Another quantity often of interest in a survival analysis is the average survival time, which we quantify using the median. Survival times are not expected to be normally distributed so the mean is not an appropriate summary.
-
-We can obtain the median survival directly from the \texttt{survfit} object:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Call: survfit(formula = Surv(time, status) ~ 1, data = lung)
-## 
-##        n events median 0.95LCL 0.95UCL
-## [1,] 228    165    310     285     363
-\end{verbatim}
-
-We see the median survival time is 310 days The lower and upper bounds of the 95\% confidence interval are also displayed.
-
-Median survival is the time corresponding to a survival probability of 0.5:
-
-\includegraphics{figs/survival5.png}
-
-What happens if you use a ``naive'' estimate? Here ``naive'' means that you exclude the censored patients from the calculation entirely to estimate median survival time among the patients who have had the event.
-
-Summarize the median survival time among the 165 patients who died:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{lung }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{filter}\NormalTok{(status }\SpecialCharTok{==} \DecValTok{1}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{summarize}\NormalTok{(}\AttributeTok{median\_surv =} \FunctionTok{median}\NormalTok{(time))}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-##   median_surv
-## 1         284
-\end{verbatim}
-
-You get an incorrect estimate of median survival time of 284 days when you ignore the fact that censored patients also contribute follow-up time.
-
-Recall the correct estimate of median survival time is 310 days.
-
-Ignoring censoring will lead to an underestimate of median survival time because the follow-up time that censored patients contribute is excluded (blue line). The true survival curve accounting for censoring in the lung data is shown in yellow for comparison.
-
-\includegraphics{figs/survival6.png}
-
-We can produce nice tables of median survival time estimates using the \texttt{tbl\_survfit()} function from the \{\texttt{gtsummary}\} package:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}} \DecValTok{1}\NormalTok{, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{tbl\_survfit}\NormalTok{(}
-    \AttributeTok{probs =} \FloatTok{0.5}\NormalTok{,}
-    \AttributeTok{label\_header =} \StringTok{"**Median survival (95\% CI)**"}
-\NormalTok{  )}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Table printed with `knitr::kable()`, not {gt}. Learn why at
-## https://www.danieldsjoberg.com/gtsummary/articles/rmarkdown.html
-## To suppress this message, include `message = FALSE` in code chunk header.
-\end{verbatim}
-
-\begin{tabular}{l|c}
-\hline
-**Characteristic** & **Median survival (95\% CI)**\\
-\hline
-Overall & 310 (285, 363)\\
-\hline
-\end{tabular}
-
-\hypertarget{comparing-survival-times-between-groups}{%
-\subsubsection{Comparing survival times between groups}\label{comparing-survival-times-between-groups}}
-
-We can conduct between-group significance tests using a \texttt{log-rank\ test}.
-
-The log-rank test equally weights observations over the entire follow-up time and is the most common way to compare survival times between groups. There are versions that more heavily weight the early or late follow-up that could be more appropriate depending on the research question (see \texttt{?survdiff} for different test options).
-
-We get the log-rank p-value using the \texttt{survdiff} function. For example, we can test whether there was a difference in survival time according to sex in the lung data:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{survdiff}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}}\NormalTok{ sex, }\AttributeTok{data =}\NormalTok{ lung)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Call:
-## survdiff(formula = Surv(time, status) ~ sex, data = lung)
-## 
-##         N Observed Expected (O-E)^2/E (O-E)^2/V
-## sex=1 138      112     91.6      4.55      10.3
-## sex=2  90       53     73.4      5.68      10.3
-## 
-##  Chisq= 10.3  on 1 degrees of freedom, p= 0.001
-\end{verbatim}
-
-We see that there was a significant difference in overall survival according to sex in the lung data, with a p-value of \texttt{p\ =\ 0.001}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{require}\NormalTok{(}\StringTok{"survival"}\NormalTok{)}
-\FunctionTok{library}\NormalTok{(}\StringTok{"survminer"}\NormalTok{)}
-
-\NormalTok{fit }\OtherTok{\textless{}{-}} \FunctionTok{survfit}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}}\NormalTok{ sex, }\AttributeTok{data =}\NormalTok{ lung)}
-
-\FunctionTok{ggsurvplot}\NormalTok{(fit, }\AttributeTok{data =}\NormalTok{ lung)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{Project_Archive_files/figure-latex/unnamed-chunk-22-1.pdf}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{ggsurvplot}\NormalTok{(}
-\NormalTok{  fit,}
-  \AttributeTok{data =}\NormalTok{ lung,}
-  \AttributeTok{size =} \DecValTok{1}\NormalTok{,                 }\CommentTok{\# change line size}
-  \AttributeTok{palette =}
-    \FunctionTok{c}\NormalTok{(}\StringTok{"\#E7B800"}\NormalTok{, }\StringTok{"\#2E9FDF"}\NormalTok{),}\CommentTok{\# custom color palettes}
-  \AttributeTok{conf.int =} \ConstantTok{TRUE}\NormalTok{,          }\CommentTok{\# Add confidence interval}
-  \AttributeTok{pval =} \ConstantTok{TRUE}\NormalTok{,              }\CommentTok{\# Add p{-}value}
-  \AttributeTok{risk.table =} \ConstantTok{TRUE}\NormalTok{,        }\CommentTok{\# Add risk table}
-  \AttributeTok{risk.table.col =} \StringTok{"strata"}\NormalTok{,}\CommentTok{\# Risk table color by groups}
-  \AttributeTok{legend.labs =}
-    \FunctionTok{c}\NormalTok{(}\StringTok{"Male"}\NormalTok{, }\StringTok{"Female"}\NormalTok{),    }\CommentTok{\# Change legend labels}
-  \AttributeTok{risk.table.height =} \FloatTok{0.25}\NormalTok{, }\CommentTok{\# Useful to change when you have multiple groups}
-  \AttributeTok{ggtheme =} \FunctionTok{theme\_bw}\NormalTok{()      }\CommentTok{\# Change ggplot2 theme}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\includegraphics{Project_Archive_files/figure-latex/unnamed-chunk-23-1.pdf}
-
-\hypertarget{the-cox-regression-model}{%
-\subsubsection{The Cox regression model}\label{the-cox-regression-model}}
-
-We may want to quantify an effect size for a single variable, or include more than one variable into a regression model to account for the effects of multiple variables.
-
-The Cox regression model is a semi-parametric model that can be used to fit univariable and multivariable regression models that have survival outcomes.
-
-\[h(t|Xi)=h0(t)exp(β1Xi1+⋯+βpXip)\]
-
-\begin{description}
+  \textbf{H2O.ai:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    H2O.ai offers an open-source machine learning platform that includes H2O-3, a distributed machine learning library. H2O-3 supports a variety of machine learning algorithms and is designed to scale horizontally.
+  \end{itemize}
+\item
+  \textbf{MLlib in Apache Flink:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Apache Flink is a stream processing framework, and MLlib is its machine learning library. It allows you to build machine learning pipelines in a streaming environment, making it suitable for real-time analytics on big data.
+  \end{itemize}
+\item
+  \textbf{PySpark (Python API for Apache Spark):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    PySpark is the Python API for Apache Spark. It enables Python developers to use Spark for distributed data processing and machine learning tasks. PySpark's MLlib is the machine learning library used within the PySpark ecosystem.
+  \end{itemize}
+\item
+  \textbf{Scikit-Spark (formerly known as BigML):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Scikit-Spark is an extension of Scikit-Learn that allows you to distribute machine learning computations across a cluster. It's built on top of Apache Spark and is designed to handle large datasets.
+  \end{itemize}
+\item
+  \textbf{TensorFlow Extended (TFX):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    TFX is an end-to-end platform for deploying production-ready machine learning models at scale. It is built by Google and includes components for data validation, transformation, training, and serving.
+  \end{itemize}
+\item
+  \textbf{Apache Mahout:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Apache Mahout is an open-source project that provides scalable machine learning algorithms. It is designed to work with distributed data processing frameworks like Apache Hadoop.
+  \end{itemize}
+\item
+  \textbf{KNIME Analytics Platform:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    KNIME is an open-source platform that allows data scientists to visually design, execute, and reuse machine learning workflows. It supports big data processing through integration with Apache Spark and Hadoop.
+  \end{itemize}
+\item
+  \textbf{Cerebro:}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Cerebro is a Python library for distributed machine learning on Apache Spark. It is designed to provide an interface similar to Scikit-Learn for distributed computing.
+  \end{itemize}
+\end{enumerate}
+
+When working with big data, the choice of library or framework depends on the specific requirements of your project, the characteristics of your data, and the infrastructure you have available. Apache Spark is a particularly popular choice due to its widespread adoption in the big data community.
+
+\hypertarget{databricks}{%
+\subsection{Databricks}\label{databricks}}
+
+Databricks is a cloud-based platform built on top of Apache Spark, and it provides a collaborative environment for big data analytics and machine learning. In Databricks, you have access to various machine learning libraries that integrate seamlessly with Apache Spark. Here are some key machine learning libraries commonly used in Databricks:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
-\item[\(h(t)\)]
-hazard, or the instantaneous rate at which events occur h0(t)
-
-underlying baseline hazard
-\end{description}
-
-Some key assumptions of the model:
-
-non-informative censoring
-proportional hazards
-
-\textbf{Note:} parametric regression models for survival outcomes are also available, but they won't be addressed here.
-
-We can fit regression models for survival data using the \texttt{coxph()} function from the \{\texttt{survival}\} package, which takes a \texttt{Surv()} object on the left hand side and has standard syntax for regression formulas in R on the right hand side.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{coxph}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}}\NormalTok{ sex, }\AttributeTok{data =}\NormalTok{ lung)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Call:
-## coxph(formula = Surv(time, status) ~ sex, data = lung)
-## 
-##        coef exp(coef) se(coef)      z       p
-## sex -0.5310    0.5880   0.1672 -3.176 0.00149
-## 
-## Likelihood ratio test=10.63  on 1 df, p=0.001111
-## n= 228, number of events= 165
-\end{verbatim}
-
-We can obtain tables of results using the \texttt{tbl\_regression()} function from the \{\texttt{gtsummary}\} package, with the option to \texttt{exponentiate} set to \texttt{TRUE} to return the hazard ratio rather than the log hazard ratio:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{coxph}\NormalTok{(}\FunctionTok{Surv}\NormalTok{(time, status) }\SpecialCharTok{\textasciitilde{}}\NormalTok{ sex, }\AttributeTok{data =}\NormalTok{ lung) }\SpecialCharTok{\%\textgreater{}\%} 
-  \FunctionTok{tbl\_regression}\NormalTok{(}\AttributeTok{exp =} \ConstantTok{TRUE}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Table printed with `knitr::kable()`, not {gt}. Learn why at
-## https://www.danieldsjoberg.com/gtsummary/articles/rmarkdown.html
-## To suppress this message, include `message = FALSE` in code chunk header.
-\end{verbatim}
-
-\begin{tabular}{l|c|c|c}
-\hline
-**Characteristic** & **HR** & **95\% CI** & **p-value**\\
-\hline
-sex & 0.59 & 0.42, 0.82 & 0.001\\
-\hline
-\end{tabular}
-
-The quantity of interest from a Cox regression model is a hazard ratio (HR). The HR represents the ratio of hazards between two groups at any particular point in time.
-
-The HR is interpreted as the instantaneous rate of occurrence of the event of interest in those who are still at risk for the event. It is not a risk, though it is commonly mis-interpreted as such. If you have a regression parameter β, then \(HR = exp(β)\)
-
-A HR \textless{} 1 indicates reduced hazard of death whereas a HR \textgreater{} 1 indicates an increased hazard of death.
-
-So the HR = 0.59 implies that 0.59 times as many females are dying as males, at any given time. Stated differently, females have a significantly lower hazard of death than males in these data.
-
-\hypertarget{prosper-loan-data}{%
-\subsection{Prosper Loan data}\label{prosper-loan-data}}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(data.table)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## 
-## Attaching package: 'data.table'
-\end{verbatim}
-
-\begin{verbatim}
-## The following objects are masked from 'package:lubridate':
-## 
-##     hour, isoweek, mday, minute, month, quarter, second, wday, week,
-##     yday, year
-\end{verbatim}
-
-\begin{verbatim}
-## The following objects are masked from 'package:dplyr':
-## 
-##     between, first, last
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# web \textless{}{-} "https://s3.amazonaws.com/udacity{-}hosted{-}downloads/ud651/prosperLoanData.csv"}
-\CommentTok{\# loan \textless{}{-} fread(web)}
-
-\CommentTok{\# head(loan)[, c(51, 65, 6, 7, 19, 18, 50)]}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{customer-churn}{%
-\subsection{Customer Churn}\label{customer-churn}}
-
-It usually costs more to acquire a customer than it does to retain a customer.
-
-Focusing on customer retention enables companies to maximize customer revenue over their lifetime.
-
-These models are seldom done optimally as they rely on binary classification flags (churn yes or no). Churn classification models do not tell WHEN a customer is likely to leave but only indicate that it's going to happen within a certain number of days or months.
-
-In the churn classification model, we don't usually account for the differences in time.
-
-It is probably a mistake to treat a customer that is at risk of leaving in 40 days the same as a customer that remains for over a 100 days. Traditional churn modeling does not make this differentiation.
-
-\includegraphics{figs/churn1.png}
-
-As it fails to account for time, we have no clear idea at what point a marketing intervention is needed and it causes preventable customer attrition.
-
-The only point in time here is the ``within 40 days'' threshold. As it fails to account for time, we have no clear idea at what point a marketing intervention is needed and it causes preventable customer attrition.
-
-\hypertarget{re-framing-the-problem-to-know-when}{%
-\subsubsection{Re-framing the Problem to Know When}\label{re-framing-the-problem-to-know-when}}
-
-Rather then use a binary classifier, we are going to re-frame the problem as time-dependent one. This enables us to intervene at the right time to stop customer attrition before it happens.
-
-No longer relying on thresholds, we now set churn as continuous time conditioned event. As the below graph shows, we now know the time that attrition risk is most likely to happen.
-
-\includegraphics{figs/churn2.png}
-
-No longer is time held constant, we now track risk over time to determine when a marketing intervention is needed to retain the customer.
-
-If we model for both the time and event, the right moment to intervene and prevent attrition is apparent. A modeling technique called \texttt{Survival\ Analysis} allows for us to do this and with the advent of modern Machine Learning, it's now a trivial task.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# \%reload\_ext autoreload}
-\CommentTok{\# \%autoreload 2}
-\CommentTok{\# \%matplotlib inline}
-
-\ImportTok{import}\NormalTok{ xgboost }\ImportTok{as}\NormalTok{ xgb}
-\ImportTok{import}\NormalTok{ shap}
-\ImportTok{import}\NormalTok{ sksurv.metrics }\ImportTok{as}\NormalTok{ surv\_metrics}
-\ImportTok{from}\NormalTok{ sksurv.datasets }\ImportTok{import}\NormalTok{ get\_x\_y}
-\ImportTok{from}\NormalTok{ lifelines }\ImportTok{import}\NormalTok{ KaplanMeierFitter}
-\ImportTok{from}\NormalTok{ lifelines.plotting }\ImportTok{import}\NormalTok{ plot\_lifetimes}
-\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
-\ImportTok{import}\NormalTok{ pandas }\ImportTok{as}\NormalTok{ pd}
-\ImportTok{import}\NormalTok{ seaborn }\ImportTok{as}\NormalTok{ sns}
-\ImportTok{from}\NormalTok{ matplotlib }\ImportTok{import}\NormalTok{ pyplot }\ImportTok{as}\NormalTok{ plt}
-\ImportTok{from}\NormalTok{ sklearn.compose }\ImportTok{import}\NormalTok{ ColumnTransformer}
-\ImportTok{from}\NormalTok{ sklearn.exceptions }\ImportTok{import}\NormalTok{ DataConversionWarning}
-\ImportTok{from}\NormalTok{ sklearn.impute }\ImportTok{import}\NormalTok{ SimpleImputer}
-\ImportTok{from}\NormalTok{ sklearn.model\_selection }\ImportTok{import}\NormalTok{ train\_test\_split}
-\ImportTok{from}\NormalTok{ sklearn.pipeline }\ImportTok{import}\NormalTok{ Pipeline}
-\ImportTok{from}\NormalTok{ sklearn.preprocessing }\ImportTok{import}\NormalTok{ OneHotEncoder, StandardScaler}
-
-
-
-\NormalTok{plt.rcParams[}\StringTok{\textquotesingle{}figure.figsize\textquotesingle{}}\NormalTok{] }\OperatorTok{=}\NormalTok{ [}\FloatTok{7.2}\NormalTok{, }\FloatTok{4.8}\NormalTok{]}
-\NormalTok{pd.set\_option(}\StringTok{"display.float\_format"}\NormalTok{, }\KeywordTok{lambda}\NormalTok{ x: }\StringTok{"}\SpecialCharTok{\%.4f}\StringTok{"} \OperatorTok{\%}\NormalTok{ x)}
-
-\NormalTok{sns.set\_style(}\StringTok{\textquotesingle{}darkgrid\textquotesingle{}}\NormalTok{)}
-
-\NormalTok{SEED }\OperatorTok{=} \DecValTok{123}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{df }\OperatorTok{=}\NormalTok{ pd.read\_csv(}\StringTok{"../../data/churn.txt"}\NormalTok{)}
-\CommentTok{\# denoting churn and duration}
-\NormalTok{df[}\StringTok{"event"}\NormalTok{] }\OperatorTok{=}\NormalTok{ np.where(df[}\StringTok{"churn?"}\NormalTok{] }\OperatorTok{==} \StringTok{"False."}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{) }
-\NormalTok{df }\OperatorTok{=}\NormalTok{ df.rename(columns}\OperatorTok{=}\NormalTok{\{}\StringTok{"account\_length"}\NormalTok{: }\StringTok{"duration"}\NormalTok{\})}
-\KeywordTok{del}\NormalTok{ df[}\StringTok{\textquotesingle{}churn?\textquotesingle{}}\NormalTok{]}
-\NormalTok{df }\OperatorTok{=}\NormalTok{ df.dropna()}
-\NormalTok{df }\OperatorTok{=}\NormalTok{ df.drop\_duplicates()}
-\NormalTok{df.head()}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\BuiltInTok{print}\NormalTok{(}\StringTok{"Total Records:"}\NormalTok{,df.shape[}\DecValTok{0}\NormalTok{],}\StringTok{"}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
-\BuiltInTok{print}\NormalTok{(}\StringTok{"Percent Churn Rate:"}\NormalTok{,df.event.mean())}
-\BuiltInTok{print}\NormalTok{(}\StringTok{""}\NormalTok{)}
-\BuiltInTok{print}\NormalTok{(}\StringTok{"Duration Intervals"}\NormalTok{)}
-\BuiltInTok{print}\NormalTok{(df[}\StringTok{\textquotesingle{}duration\textquotesingle{}}\NormalTok{].describe())}
-\end{Highlighting}
-\end{Shaded}
-
-For Survival models data is different from a traditional classification problem and requires:
-- A Censor --- For our purposes these are customers who've yet to churn. Read about right censoring here.
-
-\begin{itemize}
 \item
-  Duration --- The duration or time t of the customer's activity. In this case, it's Account Length in days.
+  \textbf{MLlib (Spark MLlib):}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Apache Spark MLlib is the native machine learning library for Spark. It provides a scalable set of machine learning algorithms and tools, making it a fundamental choice for machine learning tasks in Databricks.
+  \end{itemize}
 \item
-  Event --- The binary target, in this case if they terminated their phone plan marked by Churn? .
-\end{itemize}
+  \textbf{Scikit-learn:}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{ax }\OperatorTok{=}\NormalTok{ plot\_lifetimes(df.head(}\DecValTok{10}\NormalTok{)[}\StringTok{\textquotesingle{}duration\textquotesingle{}}\NormalTok{], df.head(}\DecValTok{10}\NormalTok{)[}\StringTok{\textquotesingle{}event\textquotesingle{}}\NormalTok{])}
-\NormalTok{\_}\OperatorTok{=}\NormalTok{ax.set\_xlabel(}\StringTok{"Duration: Account Length (days)"}\NormalTok{) \_}\OperatorTok{=}\NormalTok{ax.set\_ylabel(}\StringTok{"Customer Number"}\NormalTok{) \_}\OperatorTok{=}\NormalTok{ax.set\_title(}\StringTok{"Observed Customer Attrition"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+  \begin{itemize}
+  \tightlist
+  \item
+    Scikit-learn is a popular machine learning library in Python. While it's not native to Spark, you can use it in Databricks notebooks to perform machine learning tasks on smaller datasets that fit into memory.
+  \end{itemize}
+\item
+  \textbf{XGBoost and LightGBM:}
 
-\includegraphics{figs/churn3.png}
+  \begin{itemize}
+  \tightlist
+  \item
+    XGBoost and LightGBM are gradient boosting libraries that are widely used for machine learning tasks. They can be integrated with Databricks for boosting algorithms on large-scale datasets.
+  \end{itemize}
+\item
+  \textbf{TensorFlow and PyTorch:}
 
-In the above plot, the red lines indicates when a customer has left with the dots indicating the specific point in time.
+  \begin{itemize}
+  \tightlist
+  \item
+    TensorFlow and PyTorch are popular deep learning frameworks. Databricks provides support for these frameworks, allowing you to build and train deep learning models using distributed computing capabilities.
+  \end{itemize}
+\item
+  \textbf{Horovod:}
 
-Blue lines are customers that are still active up to the time measured on the x-axis in Duration.
+  \begin{itemize}
+  \tightlist
+  \item
+    Horovod is a distributed deep learning training framework that works with TensorFlow, PyTorch, and Apache MXNet. It allows you to scale deep learning training across multiple nodes in a Databricks cluster.
+  \end{itemize}
+\item
+  \textbf{Koalas:}
 
-Here we see that customer number 8 did not attrit until up to 195 days, with customer numbers 0 and 4 leaving in 163 and 146 days respectively. All other customers are still active.
+  \begin{itemize}
+  \tightlist
+  \item
+    Koalas is a Pandas API for Apache Spark, making it easier for data scientists familiar with Pandas to work with large-scale datasets using the Spark infrastructure. It's not a machine learning library itself but can be useful for data preprocessing and exploration.
+  \end{itemize}
+\item
+  \textbf{Delta Lake:}
 
-Notice how all customers are set on the same time scale because the data is analytically aligned. Each customer might have come in at different times but we've set the days as the same.
+  \begin{itemize}
+  \tightlist
+  \item
+    While not a machine learning library, Delta Lake is a storage layer that brings ACID transactions to Apache Spark and big data workloads. It can be used in conjunction with machine learning workflows to manage and version large datasets.
+  \end{itemize}
+\item
+  \textbf{MLflow:}
 
-This is what allowed us to right-censor the data on the churn event. Real world data needs both censoring and aligning before modeling can begin.
+  \begin{itemize}
+  \tightlist
+  \item
+    MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. It provides tools for tracking experiments, packaging code into reproducible runs, and sharing and deploying models. MLflow can be easily integrated into Databricks.
+  \end{itemize}
+\end{enumerate}
 
-\hypertarget{the-risk-of-churn}{%
-\subsubsection{The Risk of Churn}\label{the-risk-of-churn}}
+When working with Databricks, it's common to leverage MLlib for distributed machine learning tasks and use external libraries like Scikit-learn, TensorFlow, and PyTorch for specific algorithms or deep learning workloads. Additionally, Databricks integrates with MLflow to streamline the machine learning workflow.
 
-A more informative approach might be to estimate the Survival Function or the time in days a customer has until they attrit. For this purpose, we will use a Kaplan Meier Estimator to calculate how long until attrition occurs. The estimator is defined as:
+\hypertarget{naive-bayes}{%
+\section{Naive Bayes}\label{naive-bayes}}
 
-\includegraphics{figs/churn4.png}
+Naive Bayes models are a group of extremely fast and simple classification algorithms that are often suitable for very high-dimensional datasets. Because they are so fast and have so few tunable parameters, they end up being very useful as a quick-and-dirty baseline for a classification problem.
 
-Where \(𝑑_𝑖\) are the number of churn events at time \(𝑡\) and \(𝑛_𝑖\) is the number of customers at risk of churn just prior to time \(𝑡\).
+\hypertarget{bayesian-classification}{%
+\subsection{Bayesian Classification}\label{bayesian-classification}}
 
-We will use the great python package \texttt{lifelines} to plot the Survival Function as the function is a component of the final churn model.
+These rely on Bayes's theorem, which is an equation describing the relationship of conditional probabilities of statistical quantities. In Bayesian classification, we're interested in finding the probability of a label given some observed features
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{kmf }\OperatorTok{=}\NormalTok{ KaplanMeierFitter()}
-\NormalTok{kmf.fit(df[}\StringTok{\textquotesingle{}duration\textquotesingle{}}\NormalTok{], event\_observed}\OperatorTok{=}\NormalTok{df[}\StringTok{\textquotesingle{}event\textquotesingle{}}\NormalTok{])}
-\NormalTok{kmf.plot\_survival\_function()}
+\textbf{Gaussian Naive Bayes}
 
-\NormalTok{\_}\OperatorTok{=}\NormalTok{plt.title(}\StringTok{\textquotesingle{}Survival Function for Telco Churn\textquotesingle{}}\NormalTok{)}\OperatorTok{;}\NormalTok{ \_}\OperatorTok{=}\NormalTok{plt.xlabel(}\StringTok{"Duration: Account Length (days)"}\NormalTok{)}
-\NormalTok{\_}\OperatorTok{=}\NormalTok{plt.ylabel(}\StringTok{"Churn Risk (Percent Churned)"}\NormalTok{) }
-\NormalTok{\_}\OperatorTok{=}\NormalTok{plt.axvline(x}\OperatorTok{=}\NormalTok{kmf.median\_survival\_time\_, color}\OperatorTok{=}\StringTok{\textquotesingle{}r\textquotesingle{}}\NormalTok{,linestyle}\OperatorTok{=}\StringTok{\textquotesingle{}{-}{-}\textquotesingle{}}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+Perhaps the easiest naive Bayes classifier to understand is Gaussian naive Bayes. In this classifier, the assumption is that data from each label is drawn from a simple Gaussian distribution. Imagine that you have the following data:
 
-\includegraphics{figs/churn5.png}
+\textbf{When to Use Naive Bayes}
 
-Let's look at the \texttt{median} survival time. This is the point by which half of customers have churned out. According to this graph, where it's marked by the red dotted line, by about 152 days half of customers churn.
+Because naive Bayesian classifiers make such stringent assumptions about data, they will generally not perform as well as a more complicated model. That said, they have several advantages:
 
-This is helpful because it gives overall baseline when intervention is needed. However, for each individual customer this is uninformative.
-\textbf{What is missing is the point in time in which churn risk is highest for each customer.}
+• They are extremely fast for both training and prediction
+• They provide straightforward probabilistic prediction
+• They are often very easily interpretable
+• They have very few (if any) tunable parameters
 
-For that we will create a model using \texttt{Cox’s\ Proportional\ Hazard} which uses a log-risk function \(h(x)\). The Hazard function is conditioned on rate of a customers remaining until time t or later, this allows to estimate the risk of churn overtime.
+These advantages mean a naive Bayesian classifier is often a good choice as an initial baseline classification. If it performs suitably, then congratulations: you have a very fast, very interpretable classifier for your problem. If it does not perform well, then you can begin exploring more sophisticated models, with some baseline knowledge of how well they should perform.
 
-This will enable us to score each customer and anticipate when a marketing intervention is needed. However, before we proceed to that, we need to preprocess the data.
-
-\hypertarget{data-splitting-and-preprocessing}{%
-\subsubsection{Data Splitting and Preprocessing}\label{data-splitting-and-preprocessing}}
-
-First we will split the data into training and testing. We'll use the testing set as the validation for the example.
-
-\begin{verbatim}
-In practice, you want all three of these splits so that you don’t tune to the validation set.
-\end{verbatim}
-
-Next, we take the numeric features and categorical features and then preprocess them for downstream modeling.
-
-In the case of categories, we will first impute with the constant and then simply one-hot encode them. In the case of numerics, we will fill with the median then standardize them between values of 0 and 1. This is all wrapped into Sklearn's Pipeline and ColumnTransformer for simplicity's sake.
-As part of the Churn Pipeline all these steps are included with the final preprocessor saved for use at inference time.
-
-\hypertarget{deploying-a-scalable-end-to-end-customer-churn-prediction-solution-with-aws}{%
-\subsection{Deploying a Scalable End to End Customer Churn Prediction Solution with AWS}\label{deploying-a-scalable-end-to-end-customer-churn-prediction-solution-with-aws}}
-
-\href{https://towardsdatascience.com/deploying-a-scalable-end-to-end-customer-churn-prediction-solution-with-aws-cbf3536be996}{Source}
-
-Wouldn't it be great if you could hold onto customers longer, maximizing their lifetime revenue?
-
-In this blog post, you will deploy an End to End Customer Churn Prediction solution using AWS services.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\ImportTok{import}\NormalTok{ findspark}
-\NormalTok{findspark.init()}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\ImportTok{from}\NormalTok{ pyspark.sql }\ImportTok{import}\NormalTok{ SparkSession}
-\ImportTok{from}\NormalTok{ pyspark }\ImportTok{import}\NormalTok{ SparkFiles}
-\ImportTok{from}\NormalTok{ pyspark.ml.classification }\ImportTok{import}\NormalTok{ LogisticRegression}
-\ImportTok{from}\NormalTok{ pyspark.ml.evaluation }\ImportTok{import}\NormalTok{ BinaryClassificationEvaluator, MulticlassClassificationEvaluator}
-\ImportTok{from}\NormalTok{ pyspark.ml.tuning }\ImportTok{import}\NormalTok{ CrossValidator, ParamGridBuilder}
-\ImportTok{from}\NormalTok{ pyspark.ml.feature }\ImportTok{import}\NormalTok{ VectorAssembler}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{my\_appname }\OperatorTok{=} \StringTok{"LogisticRegression with PySpark MLlib"}
-\NormalTok{spark }\OperatorTok{=}\NormalTok{ SparkSession.builder.appName(my\_appname).getOrCreate()}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Load data}
-\NormalTok{url }\OperatorTok{=} \StringTok{"https://raw.githubusercontent.com/pkmklong/Breast{-}Cancer{-}Wisconsin{-}Diagnostic{-}DataSet/master/data.csv"}
-\NormalTok{spark.sparkContext.addFile(url)}
-
-\NormalTok{df }\OperatorTok{=}\NormalTok{ spark.read.csv(SparkFiles.get(}\StringTok{"data.csv"}\NormalTok{), header}\OperatorTok{=}\VariableTok{True}\NormalTok{, inferSchema}\OperatorTok{=}\VariableTok{True}\NormalTok{)}
-
-\CommentTok{\# df.show()}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Rename columns and map diagnosis to label}
-\NormalTok{columns }\OperatorTok{=}\NormalTok{ [}\StringTok{\textquotesingle{}id\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}diagnosis\textquotesingle{}}\NormalTok{] }\OperatorTok{+}\NormalTok{ [}\SpecialStringTok{f\textquotesingle{}feature\_}\SpecialCharTok{\{}\NormalTok{i}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}} \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{32}\NormalTok{)]}
-\NormalTok{data }\OperatorTok{=}\NormalTok{ df.toDF(}\OperatorTok{*}\NormalTok{columns)}
-\NormalTok{data }\OperatorTok{=}\NormalTok{ data.withColumn(}\StringTok{"label"}\NormalTok{, (data[}\StringTok{"diagnosis"}\NormalTok{] }\OperatorTok{==} \StringTok{"M"}\NormalTok{).cast(}\StringTok{"integer"}\NormalTok{)).drop(}\StringTok{"diagnosis"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Assemble features into a single vector}
-\NormalTok{feature\_columns }\OperatorTok{=}\NormalTok{ [}\SpecialStringTok{f\textquotesingle{}feature\_}\SpecialCharTok{\{}\NormalTok{i}\SpecialCharTok{\}}\SpecialStringTok{\textquotesingle{}} \ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{25}\NormalTok{)]}
-\NormalTok{assembler }\OperatorTok{=}\NormalTok{ VectorAssembler(inputCols}\OperatorTok{=}\NormalTok{feature\_columns, outputCol}\OperatorTok{=}\StringTok{"features"}\NormalTok{)}
-\NormalTok{data }\OperatorTok{=}\NormalTok{ assembler.transform(data)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Split data into training and test sets}
-\NormalTok{train\_data, test\_data }\OperatorTok{=}\NormalTok{ data.randomSplit([}\FloatTok{0.8}\NormalTok{, }\FloatTok{0.2}\NormalTok{], seed}\OperatorTok{=}\DecValTok{42}\NormalTok{)}
-
-\CommentTok{\# Build the Logistic Regression model}
-\NormalTok{logistic\_regression }\OperatorTok{=}\NormalTok{ LogisticRegression(featuresCol}\OperatorTok{=}\StringTok{"features"}\NormalTok{, labelCol}\OperatorTok{=}\StringTok{"label"}\NormalTok{)}
-\NormalTok{model }\OperatorTok{=}\NormalTok{ logistic\_regression.fit(train\_data)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Evaluate the model on test data}
-\NormalTok{predictions }\OperatorTok{=}\NormalTok{ model.transform(test\_data)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# AUC{-}ROC}
-\NormalTok{evaluator }\OperatorTok{=}\NormalTok{ BinaryClassificationEvaluator(rawPredictionCol}\OperatorTok{=}\StringTok{"rawPrediction"}\NormalTok{, labelCol}\OperatorTok{=}\StringTok{"label"}\NormalTok{)}
-\NormalTok{auc }\OperatorTok{=}\NormalTok{ evaluator.evaluate(predictions)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Accuracy, Precision, and Recall}
-\NormalTok{multi\_evaluator }\OperatorTok{=}\NormalTok{ MulticlassClassificationEvaluator(labelCol}\OperatorTok{=}\StringTok{"label"}\NormalTok{, predictionCol}\OperatorTok{=}\StringTok{"prediction"}\NormalTok{)}
-\NormalTok{accuracy }\OperatorTok{=}\NormalTok{ multi\_evaluator.evaluate(predictions, \{multi\_evaluator.metricName: }\StringTok{"accuracy"}\NormalTok{\})}
-\NormalTok{precision }\OperatorTok{=}\NormalTok{ multi\_evaluator.evaluate(predictions, \{multi\_evaluator.metricName: }\StringTok{"weightedPrecision"}\NormalTok{\})}
-\NormalTok{recall }\OperatorTok{=}\NormalTok{ multi\_evaluator.evaluate(predictions, \{multi\_evaluator.metricName: }\StringTok{"weightedRecall"}\NormalTok{\})}
-
-\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"AUC{-}ROC: }\SpecialCharTok{\{}\NormalTok{auc}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## AUC-ROC: 0.9989
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Accuracy: }\SpecialCharTok{\{}\NormalTok{accuracy}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Accuracy: 0.9651
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Precision: }\SpecialCharTok{\{}\NormalTok{precision}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Precision: 0.9653
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Recall: }\SpecialCharTok{\{}\NormalTok{recall}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## Recall: 0.9651
-\end{verbatim}
+Naive Bayes classifiers tend to perform especially well in one of the following situations:
+• When the naive assumptions actually match the data (very rare in practice)
+• For very well-separated categories, when model complexity is less important
+• For very high-dimensional data, when model complexity is less important
 
   \bibliography{book.bib,packages.bib}
 
