@@ -1,0 +1,55 @@
+# Interview Questions
+
+### tell me how do you train a model and evaluate it
+
+
+### tell me how you can use LLM in marketing/heathcare
+
+
+### objective function in logistic regression
+
+
+## Do you prefer R or python?
+
+I prefer Python because it has a wide range of libraries for data analysis, machine learning, and visualization, which makes it very versatile for different tasks. It's also easy to integrate with other tools and platforms. 
+
+However, I do use R when needed, especially for specific statistical analysis and visualization tasks, as it has strong packages for these areas. I believe both languages have their strengths, and I choose based on the specific project requirements.
+
+
+
+## What is your main domain?
+
+My main domain is data science with a strong focus on marketing analytics. I have experience across various areas, including predictive modeling, customer segmentation, and campaign evaluation. I enjoy working on projects that involve data-driven decision-making, whether optimizing marketing strategies, understanding consumer behavior, or any other area where data can provide valuable insights.
+
+
+## Is this work culture fast-paced? Do you deliver value quickly or what?
+
+Yes, I do thrive in fast-paced environments and am comfortable delivering value quickly. 
+
+I believe in balancing speed with quality to ensure that the work is both timely and impactful. 
+
+In my current role, I often work under tight deadlines, and I’ve developed efficient methods to analyze data and provide actionable insights promptly.
+
+
+## Are you involved in any efforts convincing business stakeholders to adept models or analysis that you do
+
+Yes, I am often involved in convincing business stakeholders to adopt models or analyses that I develop. 
+
+For example, in a recent project, I created a predictive model for customized user bids, which initially met some skepticism. 
+
+I presented clear A/B test results that showed a 15% increase in conversion rates and a 10% reduction in costs. By explaining the value in simple terms and showing how it directly impacts their goals, I was able to get support for the model.
+
+
+
+
+## Have you been in a situation where you feel like the model is the right way to go but either client or manager that you need to convince?
+
+Yes, I've faced situations where I strongly believed a model was the right approach, but I needed to convince either a client or a manager. 
+
+For instance, I once advocated for a customized bidding model based on predictive analytics. Despite initial skepticism, I presented data-driven insights and A/B test results that demonstrated significant improvements in conversion rates and cost efficiency.
+
+By clearly explaining the model's benefits and providing evidence of its effectiveness, I successfully gained their support and implemented the model.
+
+
+
+

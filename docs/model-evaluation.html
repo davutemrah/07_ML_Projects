@@ -23,7 +23,7 @@
 <meta name="author" content="Davut Ayan" />
 
 
-<meta name="date" content="2024-08-24" />
+<meta name="date" content="2024-08-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="ml-modeling.html"/>
-
+<link rel="next" href="interview-questions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,11 +136,26 @@
 </ul></li>
 <li class="chapter" data-level="5" data-path="ml-modeling.html"><a href="ml-modeling.html"><i class="fa fa-check"></i><b>5</b> ML Modeling</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="ml-modeling.html"><a href="ml-modeling.html#look-alike-modeling-project-overview"><i class="fa fa-check"></i><b>5.1</b> Look-Alike Modeling Project Overview</a>
+<li class="chapter" data-level="5.1" data-path="ml-modeling.html"><a href="ml-modeling.html#objective"><i class="fa fa-check"></i><b>5.1</b> Objective</a></li>
+<li class="chapter" data-level="5.2" data-path="ml-modeling.html"><a href="ml-modeling.html#data-processing"><i class="fa fa-check"></i><b>5.2</b> Data Processing</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="ml-modeling.html"><a href="ml-modeling.html#step-by-step-process"><i class="fa fa-check"></i><b>5.1.1</b> Step-by-Step Process</a></li>
-<li class="chapter" data-level="5.1.2" data-path="ml-modeling.html"><a href="ml-modeling.html#implementation-and-impact"><i class="fa fa-check"></i><b>5.1.2</b> Implementation and Impact</a></li>
-<li class="chapter" data-level="5.1.3" data-path="ml-modeling.html"><a href="ml-modeling.html#lessons-learned-and-future-work"><i class="fa fa-check"></i><b>5.1.3</b> Lessons Learned and Future Work</a></li>
+<li class="chapter" data-level="5.2.1" data-path="ml-modeling.html"><a href="ml-modeling.html#data-collection"><i class="fa fa-check"></i><b>5.2.1</b> Data collection</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ml-modeling.html"><a href="ml-modeling.html#data-cleaning"><i class="fa fa-check"></i><b>5.2.2</b> Data Cleaning</a></li>
+<li class="chapter" data-level="5.2.3" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-engineering"><i class="fa fa-check"></i><b>5.2.3</b> Feature Engineering</a></li>
+<li class="chapter" data-level="5.2.4" data-path="ml-modeling.html"><a href="ml-modeling.html#implementation-and-impact"><i class="fa fa-check"></i><b>5.2.4</b> Implementation and Impact</a></li>
+<li class="chapter" data-level="5.2.5" data-path="ml-modeling.html"><a href="ml-modeling.html#lessons-learned-and-future-work"><i class="fa fa-check"></i><b>5.2.5</b> Lessons Learned and Future Work</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-selection"><i class="fa fa-check"></i><b>5.3</b> Feature Selection</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="ml-modeling.html"><a href="ml-modeling.html#recursive-feature-elimination-rfe"><i class="fa fa-check"></i><b>5.3.1</b> Recursive Feature Elimination (RFE)</a></li>
+<li class="chapter" data-level="5.3.2" data-path="ml-modeling.html"><a href="ml-modeling.html#lasso-regularization"><i class="fa fa-check"></i><b>5.3.2</b> LASSO regularization</a></li>
+<li class="chapter" data-level="5.3.3" data-path="ml-modeling.html"><a href="ml-modeling.html#mutual-information"><i class="fa fa-check"></i><b>5.3.3</b> Mutual Information</a></li>
+<li class="chapter" data-level="5.3.4" data-path="ml-modeling.html"><a href="ml-modeling.html#mutual-information-vs-correlation-coefficient"><i class="fa fa-check"></i><b>5.3.4</b> Mutual information vs Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="ml-modeling.html"><a href="ml-modeling.html#fine-tuning-hyperparameters"><i class="fa fa-check"></i><b>5.4</b> Fine-tuning hyperparameters</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="ml-modeling.html"><a href="ml-modeling.html#key-hyperparameters-for-tree-based-models"><i class="fa fa-check"></i><b>5.4.1</b> Key Hyperparameters for Tree-Based Models</a></li>
+<li class="chapter" data-level="5.4.2" data-path="ml-modeling.html"><a href="ml-modeling.html#fine-tuning-strategy"><i class="fa fa-check"></i><b>5.4.2</b> Fine-Tuning Strategy</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="model-evaluation.html"><a href="model-evaluation.html"><i class="fa fa-check"></i><b>6</b> Model Evaluation</a>
@@ -149,8 +164,46 @@
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="model-evaluation.html"><a href="model-evaluation.html#thresholding"><i class="fa fa-check"></i><b>6.1.1</b> Thresholding</a></li>
 <li class="chapter" data-level="6.1.2" data-path="model-evaluation.html"><a href="model-evaluation.html#confusion-matrix"><i class="fa fa-check"></i><b>6.1.2</b> Confusion Matrix</a></li>
-<li class="chapter" data-level="6.1.3" data-path="model-evaluation.html"><a href="model-evaluation.html#bootstrapping"><i class="fa fa-check"></i><b>6.1.3</b> Bootstrapping</a></li>
 </ul></li>
+<li class="chapter" data-level="6.2" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve"><i class="fa fa-check"></i><b>6.2</b> ROC Curve</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="model-evaluation.html"><a href="model-evaluation.html#components-of-the-roc-curve"><i class="fa fa-check"></i><b>6.2.1</b> Components of the ROC Curve:</a></li>
+<li class="chapter" data-level="6.2.2" data-path="model-evaluation.html"><a href="model-evaluation.html#how-to-read-the-roc-curve"><i class="fa fa-check"></i><b>6.2.2</b> How to Read the ROC Curve:</a></li>
+<li class="chapter" data-level="6.2.3" data-path="model-evaluation.html"><a href="model-evaluation.html#area-under-the-roc-curve-auc"><i class="fa fa-check"></i><b>6.2.3</b> Area Under the ROC Curve (AUC):</a></li>
+<li class="chapter" data-level="6.2.4" data-path="model-evaluation.html"><a href="model-evaluation.html#applications-of-roc-curve"><i class="fa fa-check"></i><b>6.2.4</b> Applications of ROC Curve:</a></li>
+<li class="chapter" data-level="6.2.5" data-path="model-evaluation.html"><a href="model-evaluation.html#using-the-roc-curve-in-real-examples"><i class="fa fa-check"></i><b>6.2.5</b> Using the ROC Curve in Real Examples</a></li>
+<li class="chapter" data-level="6.2.6" data-path="model-evaluation.html"><a href="model-evaluation.html#selecting-the-probability-threshold"><i class="fa fa-check"></i><b>6.2.6</b> Selecting the Probability Threshold:</a></li>
+<li class="chapter" data-level="6.2.7" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve-example"><i class="fa fa-check"></i><b>6.2.7</b> ROC Curve Example:</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="model-evaluation.html"><a href="model-evaluation.html#overfitting"><i class="fa fa-check"></i><b>6.3</b> Overfitting</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="model-evaluation.html"><a href="model-evaluation.html#how-do-you-overcome-overfitting"><i class="fa fa-check"></i><b>6.3.1</b> How Do You Overcome Overfitting?</a></li>
+<li class="chapter" data-level="6.3.2" data-path="model-evaluation.html"><a href="model-evaluation.html#data-stratification-technique"><i class="fa fa-check"></i><b>6.3.2</b> Data Stratification Technique</a></li>
+<li class="chapter" data-level="6.3.3" data-path="model-evaluation.html"><a href="model-evaluation.html#any-other-way-to-simplify-the-model"><i class="fa fa-check"></i><b>6.3.3</b> Any Other Way to Simplify the Model?</a></li>
+<li class="chapter" data-level="6.3.4" data-path="model-evaluation.html"><a href="model-evaluation.html#are-you-using-cross-validation-method"><i class="fa fa-check"></i><b>6.3.4</b> 4. Are You Using Cross-Validation Method?</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="model-evaluation.html"><a href="model-evaluation.html#bias-variance-tradeoff"><i class="fa fa-check"></i><b>6.4</b> Bias-Variance Tradeoff</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="model-evaluation.html"><a href="model-evaluation.html#key-concepts-in-bias-variance-tradeoff"><i class="fa fa-check"></i><b>6.4.1</b> Key Concepts in Bias-Variance Tradeoff</a></li>
+<li class="chapter" data-level="6.4.2" data-path="model-evaluation.html"><a href="model-evaluation.html#error-decomposition-and-tradeoff"><i class="fa fa-check"></i><b>6.4.2</b> Error Decomposition and Tradeoff</a></li>
+<li class="chapter" data-level="6.4.3" data-path="model-evaluation.html"><a href="model-evaluation.html#managing-the-bias-variance-tradeoff"><i class="fa fa-check"></i><b>6.4.3</b> Managing the Bias-Variance Tradeoff</a></li>
+<li class="chapter" data-level="6.4.4" data-path="model-evaluation.html"><a href="model-evaluation.html#conclusion"><i class="fa fa-check"></i><b>6.4.4</b> Conclusion</a></li>
+<li class="chapter" data-level="6.4.5" data-path="model-evaluation.html"><a href="model-evaluation.html#lift-chart"><i class="fa fa-check"></i><b>6.4.5</b> Lift Chart</a></li>
+<li class="chapter" data-level="6.4.6" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve-receiver-operating-characteristic-curve"><i class="fa fa-check"></i><b>6.4.6</b> ROC Curve (Receiver Operating Characteristic Curve)</a></li>
+<li class="chapter" data-level="6.4.7" data-path="model-evaluation.html"><a href="model-evaluation.html#summary"><i class="fa fa-check"></i><b>6.4.7</b> Summary</a></li>
+<li class="chapter" data-level="6.4.8" data-path="model-evaluation.html"><a href="model-evaluation.html#bootstrapping"><i class="fa fa-check"></i><b>6.4.8</b> Bootstrapping</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="interview-questions.html"><a href="interview-questions.html"><i class="fa fa-check"></i><b>7</b> Interview Questions</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="interview-questions.html"><a href="interview-questions.html#tell-me-how-do-you-train-a-model-and-evaluate-it"><i class="fa fa-check"></i><b>7.0.1</b> tell me how do you train a model and evaluate it</a></li>
+<li class="chapter" data-level="7.0.2" data-path="interview-questions.html"><a href="interview-questions.html#tell-me-how-you-can-use-llm-in-marketingheathcare"><i class="fa fa-check"></i><b>7.0.2</b> tell me how you can use LLM in marketing/heathcare</a></li>
+<li class="chapter" data-level="7.0.3" data-path="interview-questions.html"><a href="interview-questions.html#objective-function-in-logistic-regression"><i class="fa fa-check"></i><b>7.0.3</b> objective function in logistic regression</a></li>
+<li class="chapter" data-level="7.1" data-path="interview-questions.html"><a href="interview-questions.html#do-you-prefer-r-or-python"><i class="fa fa-check"></i><b>7.1</b> Do you prefer R or python?</a></li>
+<li class="chapter" data-level="7.2" data-path="interview-questions.html"><a href="interview-questions.html#what-is-your-main-domain"><i class="fa fa-check"></i><b>7.2</b> What is your main domain?</a></li>
+<li class="chapter" data-level="7.3" data-path="interview-questions.html"><a href="interview-questions.html#is-this-work-culture-fast-paced-do-you-deliver-value-quickly-or-what"><i class="fa fa-check"></i><b>7.3</b> Is this work culture fast-paced? Do you deliver value quickly or what?</a></li>
+<li class="chapter" data-level="7.4" data-path="interview-questions.html"><a href="interview-questions.html#are-you-involved-in-any-efforts-convincing-business-stakeholders-to-adept-models-or-analysis-that-you-do"><i class="fa fa-check"></i><b>7.4</b> Are you involved in any efforts convincing business stakeholders to adept models or analysis that you do</a></li>
+<li class="chapter" data-level="7.5" data-path="interview-questions.html"><a href="interview-questions.html#have-you-been-in-a-situation-where-you-feel-like-the-model-is-the-right-way-to-go-but-either-client-or-manager-that-you-need-to-convince"><i class="fa fa-check"></i><b>7.5</b> Have you been in a situation where you feel like the model is the right way to go but either client or manager that you need to convince?</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://davutemrah.github.io/notebooks/" target="blank">Personal Repo Home</a></li>
@@ -213,37 +266,423 @@
 <p><strong>True negative:</strong> Model predicted negative and it is true.</p>
 <p><strong>False positive (Type 1 Error):</strong> Model predicted positive but it is false.</p>
 <p><strong>False negative (Type 2 Error):</strong> Model predicted negative and it is true.</p>
-<p><strong>False Positive Rate (FPR):</strong></p>
+<div id="false-positive-rate-fpr" class="section level4 hasAnchor" number="6.1.2.1">
+<h4><span class="header-section-number">6.1.2.1</span> False Positive Rate (FPR):<a href="model-evaluation.html#false-positive-rate-fpr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The False Positive Rate is the ratio of false positive predictions to the total number of actual negatives. It measures the rate at which the model incorrectly predicts the positive class among the instances that are actually negative.</p>
 <p><span class="math inline">\(FPR = \frac{FP}{TN + FP}\)</span></p>
-<p><strong>True Positive Rate (TPR), Sensitivity, or Recall:</strong></p>
+</div>
+<div id="true-positive-rate-tpr-sensitivity-or-recall" class="section level4 hasAnchor" number="6.1.2.2">
+<h4><span class="header-section-number">6.1.2.2</span> True Positive Rate (TPR), Sensitivity, or Recall:<a href="model-evaluation.html#true-positive-rate-tpr-sensitivity-or-recall" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The True Positive Rate is the ratio of true positive predictions to the total number of actual positives. It measures the ability of the model to correctly predict the positive class among instances that are actually positive.</p>
-<p><span class="math inline">\(Recall (TPR) = \frac{TP}{TP + FN}\)</span></p>
-<p><strong>Accuracy:</strong></p>
+<p>Recall (TPR) <span class="math inline">\(= \frac{TP}{TP + FN}\)</span></p>
+</div>
+<div id="accuracy" class="section level4 hasAnchor" number="6.1.2.3">
+<h4><span class="header-section-number">6.1.2.3</span> Accuracy:<a href="model-evaluation.html#accuracy" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>It represents the ratio of correctly predicted instances to the total number of instances. The accuracy metric is suitable for balanced datasets where the classes are evenly distributed. It is calculated using the following formula:</p>
-<p><span class="math inline">\(Accuracy = \frac{TP + TN}{TP + TN + FP + FN}\)</span></p>
+<p>Accuracy <span class="math inline">\(= \frac{TP + TN}{TP + TN + FP + FN}\)</span></p>
 <p>Accuracy provides a general sense of how well a model is performing across all classes. It is easy to understand and interpret, making it a commonly used metric, especially when the classes are balanced.</p>
 <p>However, accuracy may not be an ideal metric in situations where the class distribution is imbalanced. In imbalanced datasets, where one class significantly outnumbers the other, a high accuracy might be achieved by simply predicting the majority class. In such cases, other metrics like precision, recall, F1 score, or area under the receiver operating characteristic (ROC-AUC) curve may be more informative.</p>
-<p><strong>Precision:</strong></p>
+</div>
+<div id="precision" class="section level4 hasAnchor" number="6.1.2.4">
+<h4><span class="header-section-number">6.1.2.4</span> Precision:<a href="model-evaluation.html#precision" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Precision is the ratio of true positive predictions to the total number of positive predictions made by the model. It represents the accuracy of the positive predictions made by the model.</p>
 <p><span class="math inline">\(Precision = \frac{TP}{TP + FP}\)</span></p>
 <p><strong>F1 Measure:</strong></p>
 <p>The F1 score is a metric commonly used in binary classification to provide a balance between precision and recall. It is the harmonic mean of precision and recall, combining both measures into a single value. The F1 score is particularly useful when there is an uneven class distribution or when both false positives and false negatives are important considerations.</p>
 <p>The F1 score is useful in situations where achieving a balance between precision and recall is important, as it penalizes models that have a significant imbalance between these two metrics.</p>
 <p><span class="math inline">\(F1 score = 2 \times \frac{Precision \times Recall}{Precision + Recall}\)</span></p>
-<div id="in-marketing" class="section level4 hasAnchor" number="6.1.2.1">
-<h4><span class="header-section-number">6.1.2.1</span> In Marketing<a href="model-evaluation.html#in-marketing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="in-marketing" class="section level4 hasAnchor" number="6.1.2.5">
+<h4><span class="header-section-number">6.1.2.5</span> In Marketing<a href="model-evaluation.html#in-marketing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>In marketing, the choice between optimizing for <code>precision</code> or <code>recall</code> depends on the specific business objectives and the costs associated with false positives and false negatives:</p>
+<p>Precision is prioritized when the cost of targeting non-lookalikes is high, and we want to ensure that most of the targeted individuals are genuine lookalikes.</p>
+<p>Recall is prioritized when the cost of missing a potential lookalike (lost opportunity) is high, and we want to capture as many true lookalikes as possible, even if it means including some non-lookalikes.</p>
+<p>The decision on which metric to prioritize is driven by the campaign’s context and goals.”</p>
 <p><strong>Precision:</strong></p>
-<p>In marketing, precision is valuable when the cost or impact associated with false positives (incorrectly identifying a non-lookalike as a lookalike) is high. For example, if targeting a non-lookalike with a marketing campaign has significant costs, you want to minimize false positives.</p>
+<p>Precision is the ratio of correctly identified positives (true lookalikes) to all instances that were predicted as positives (both true and false lookalikes).</p>
+<p>In marketing, precision is valuable when the cost or impact associated with false positives (incorrectly identifying a non-lookalike as a lookalike) is high.</p>
+<p>Example: If targeting a non-lookalike with a marketing campaign incurs significant costs (e.g., sending out costly promotions or ads to uninterested users), you want to minimize false positives. High precision ensures that most of the people you target are actual lookalikes, thus reducing wasted marketing spend.</p>
 <p><strong>Recall:</strong></p>
-<p>In marketing, recall is important when you want to ensure that you are not missing potential opportunities (actual lookalikes). If missing a true lookalike has a high cost or lost opportunity, you want to maximize recall.</p>
+<p>Recall is the ratio of correctly identified positives (true lookalikes) to all actual positives (true lookalikes).</p>
+<p>In marketing, recall is important when you want to ensure that you are not missing potential opportunities (actual lookalikes).</p>
+<p>Example: If missing a true lookalike (a customer who is likely to respond positively to a campaign) results in a high cost or lost opportunity (e.g., missed revenue or engagement), you want to maximize recall. High recall ensures that most of the potential lookalikes are captured by the model, even if some non-lookalikes are incorrectly included.</p>
+</div>
+</div>
+</div>
+<div id="roc-curve" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> ROC Curve<a href="model-evaluation.html#roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>ROC (Receiver Operating Characteristic) curve</strong> is a graphical tool used to evaluate the performance of binary classification models. It helps in understanding how well a model distinguishes between two classes.</p>
+<p>The ROC curve helps visualize the trade-offs between true positive rate and false positive rate across different thresholds. By analyzing the ROC curve, considering business costs, and using metrics like Youden’s Index, you can select a probability threshold that balances performance according to your specific needs.</p>
+<div id="components-of-the-roc-curve" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Components of the ROC Curve:<a href="model-evaluation.html#components-of-the-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>True Positive Rate (TPR) / Sensitivity / Recall</strong>:</p></li>
+<li><p>Measures the proportion of actual positive cases that are correctly identified by the model.</p></li>
+<li><p>Formula:
+<span class="math display">\[
+     \text{TPR} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}
+     \]</span></p></li>
+<li><p><strong>False Positive Rate (FPR)</strong>:</p></li>
+<li><p>Measures the proportion of actual negative cases that are incorrectly classified as positive by the model.</p></li>
+<li><p>Formula:
+<span class="math display">\[
+     \text{FPR} = \frac{\text{False Positives}}{\text{False Positives} + \text{True Negatives}}
+     \]</span></p></li>
+</ul>
+</div>
+<div id="how-to-read-the-roc-curve" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> How to Read the ROC Curve:<a href="model-evaluation.html#how-to-read-the-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>X-axis</strong>: False Positive Rate (FPR) – The rate at which negative cases are incorrectly classified as positive.</p></li>
+<li><p><strong>Y-axis</strong>: True Positive Rate (TPR) – The rate at which positive cases are correctly identified.</p></li>
+<li><p>A <strong>perfect classifier</strong> would be represented by a point in the upper-left corner of the plot, indicating high TPR and low FPR.</p></li>
+<li><p>A <strong>random classifier</strong> would produce a diagonal line from the bottom-left to the top-right of the plot, indicating no discriminative power.</p></li>
+</ul>
+</div>
+<div id="area-under-the-roc-curve-auc" class="section level3 hasAnchor" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Area Under the ROC Curve (AUC):<a href="model-evaluation.html#area-under-the-roc-curve-auc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>AUC</strong> represents the probability that the model ranks a randomly chosen positive case higher than a randomly chosen negative case.</p></li>
+<li><p><strong>AUC Values</strong>:</p>
+<ul>
+<li><p><strong>AUC = 0.5</strong>: No discriminative power (model performs as well as random guessing).</p></li>
+<li><p><strong>0.7 &lt; AUC &lt; 0.8</strong>: Fair performance.</p></li>
+<li><p><strong>0.8 &lt; AUC &lt; 0.9</strong>: Good performance.</p></li>
+<li><p><strong>AUC &gt; 0.9</strong>: Excellent performance.</p></li>
+</ul></li>
+</ul>
+</div>
+<div id="applications-of-roc-curve" class="section level3 hasAnchor" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Applications of ROC Curve:<a href="model-evaluation.html#applications-of-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Model Evaluation</strong>: The ROC curve helps compare different models and choose the one with the best trade-off between true positive rate and false positive rate.</p></li>
+<li><p><strong>Threshold Selection</strong>: It aids in selecting the optimal probability threshold for classification, balancing the rate of true positives and false positives.</p></li>
+</ul>
+</div>
+<div id="using-the-roc-curve-in-real-examples" class="section level3 hasAnchor" number="6.2.5">
+<h3><span class="header-section-number">6.2.5</span> Using the ROC Curve in Real Examples<a href="model-evaluation.html#using-the-roc-curve-in-real-examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The ROC curve is a valuable tool for evaluating and selecting the optimal probability threshold in binary classification problems. Here’s how you can use the ROC curve in practice and select an appropriate threshold:</p>
+<div id="train-your-model" class="section level4 hasAnchor" number="6.2.5.1">
+<h4><span class="header-section-number">6.2.5.1</span> Train Your Model:<a href="model-evaluation.html#train-your-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Fit your binary classification model to the training data.</li>
+</ul>
+</div>
+<div id="predict-probabilities" class="section level4 hasAnchor" number="6.2.5.2">
+<h4><span class="header-section-number">6.2.5.2</span> Predict Probabilities:<a href="model-evaluation.html#predict-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Use the model to predict probabilities of the positive class for the test data. These probabilities are used to assess the performance of the model at various thresholds.</li>
+</ul>
+</div>
+<div id="compute-true-positive-rate-tpr-and-false-positive-rate-fpr" class="section level4 hasAnchor" number="6.2.5.3">
+<h4><span class="header-section-number">6.2.5.3</span> Compute True Positive Rate (TPR) and False Positive Rate (FPR):<a href="model-evaluation.html#compute-true-positive-rate-tpr-and-false-positive-rate-fpr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>For different threshold values (from 0 to 1), calculate the TPR and FPR. This involves varying the classification threshold and computing the confusion matrix for each threshold.</li>
+</ul>
+</div>
+<div id="plot-the-roc-curve" class="section level4 hasAnchor" number="6.2.5.4">
+<h4><span class="header-section-number">6.2.5.4</span> Plot the ROC Curve:<a href="model-evaluation.html#plot-the-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Plot the TPR (on the y-axis) against the FPR (on the x-axis) for each threshold value. This gives you the ROC curve.</li>
+</ul>
+</div>
+<div id="calculate-the-area-under-the-curve-auc" class="section level4 hasAnchor" number="6.2.5.5">
+<h4><span class="header-section-number">6.2.5.5</span> Calculate the Area Under the Curve (AUC):<a href="model-evaluation.html#calculate-the-area-under-the-curve-auc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>The AUC provides a summary measure of the model’s performance. A higher AUC indicates better model performance.</li>
+</ul>
+</div>
+</div>
+<div id="selecting-the-probability-threshold" class="section level3 hasAnchor" number="6.2.6">
+<h3><span class="header-section-number">6.2.6</span> Selecting the Probability Threshold:<a href="model-evaluation.html#selecting-the-probability-threshold" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Choosing the right probability threshold is crucial for optimizing your model’s performance based on your specific needs. Here’s how to select an appropriate threshold:</p>
+<div id="visual-inspection" class="section level4 hasAnchor" number="6.2.6.1">
+<h4><span class="header-section-number">6.2.6.1</span> Visual Inspection:<a href="model-evaluation.html#visual-inspection" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><strong>Look at the ROC Curve:</strong> Find the point on the ROC curve that is closest to the top-left corner (where TPR is high and FPR is low). This point represents a good trade-off between sensitivity and specificity.</li>
+</ul>
+</div>
+<div id="consider-the-business-context" class="section level4 hasAnchor" number="6.2.6.2">
+<h4><span class="header-section-number">6.2.6.2</span> Consider the Business Context:<a href="model-evaluation.html#consider-the-business-context" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p><strong>Cost-Benefit Analysis:</strong> If the cost of false positives is high (e.g., wasted marketing spend), you might prefer a threshold that minimizes FPR. Conversely, if missing true positives is costly (e.g., lost revenue), you might choose a lower threshold to increase TPR.</p></li>
+<li><p><strong>Decision-Making Criteria:</strong> Determine the acceptable levels of TPR and FPR based on business requirements. For example, in a medical diagnosis context, you might prefer higher recall (sensitivity) to ensure no patient with a condition is missed, even if it means higher false positives.</p></li>
+</ul>
+</div>
+<div id="optimization-metrics" class="section level4 hasAnchor" number="6.2.6.3">
+<h4><span class="header-section-number">6.2.6.3</span> Optimization Metrics:<a href="model-evaluation.html#optimization-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><strong>Youden’s Index:</strong> Calculate Youden’s Index (<span class="math inline">\(J\)</span>) which is defined as:
+<span class="math display">\[
+   J = \text{TPR} - \text{FPR}
+   \]</span>
+The threshold corresponding to the maximum value of <span class="math inline">\(J\)</span> can be chosen as it represents the best trade-off between TPR and FPR.</li>
+</ul>
+</div>
+<div id="confusion-matrix-analysis" class="section level4 hasAnchor" number="6.2.6.4">
+<h4><span class="header-section-number">6.2.6.4</span> Confusion Matrix Analysis:<a href="model-evaluation.html#confusion-matrix-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><strong>Evaluate Different Thresholds:</strong> For each threshold, compute the confusion matrix and analyze precision, recall, and F1-score. Choose the threshold that best aligns with your performance goals.</li>
+</ul>
+</div>
+<div id="cross-validation" class="section level4 hasAnchor" number="6.2.6.5">
+<h4><span class="header-section-number">6.2.6.5</span> Cross-Validation:<a href="model-evaluation.html#cross-validation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><strong>Cross-Validation:</strong> Use cross-validation to ensure that the chosen threshold performs well across different subsets of the data. This helps in generalizing the model’s performance and avoiding overfitting.</li>
+</ul>
+</div>
+</div>
+<div id="roc-curve-example" class="section level3 hasAnchor" number="6.2.7">
+<h3><span class="header-section-number">6.2.7</span> ROC Curve Example:<a href="model-evaluation.html#roc-curve-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s consider an example where you have a model predicting whether an email is spam or not:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Train the Model:</strong> You train a logistic regression model to classify emails as spam or not spam.</p></li>
+<li><p><strong>Predict Probabilities:</strong> The model outputs probabilities for each email being spam.</p></li>
+<li><p><strong>Compute TPR and FPR:</strong> Calculate TPR and FPR for various thresholds (e.g., 0.1, 0.2, …, 0.9).</p></li>
+<li><p><strong>Plot the ROC Curve:</strong> Plot TPR against FPR for each threshold value.</p></li>
+<li><p><strong>Select Threshold:</strong></p>
+<ul>
+<li><p><strong>Visual Inspection:</strong> Identify the threshold where the ROC curve is closest to the top-left corner.</p></li>
+<li><p><strong>Business Context:</strong> If false positives (non-spam emails marked as spam) lead to user dissatisfaction, you might prefer a higher threshold to reduce FPR.</p></li>
+<li><p><strong>Optimization:</strong> Calculate Youden’s Index and select the threshold with the highest value.</p></li>
+</ul></li>
+<li><p><strong>Implement and Monitor:</strong> Set the chosen threshold in your production system and monitor its performance. Adjust as needed based on real-world feedback and performance metrics.</p></li>
+</ol>
 
 </div>
 </div>
-<div id="bootstrapping" class="section level3 hasAnchor" number="6.1.3">
-<h3><span class="header-section-number">6.1.3</span> Bootstrapping<a href="model-evaluation.html#bootstrapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="jack-knife" class="section level4 hasAnchor" number="6.1.3.1">
-<h4><span class="header-section-number">6.1.3.1</span> Jack-knife<a href="model-evaluation.html#jack-knife" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="overfitting" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Overfitting<a href="model-evaluation.html#overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Overfitting occurs when a model learns the noise and details of the training data too well, resulting in poor generalization to new, unseen data.</p>
+<div id="how-do-you-overcome-overfitting" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> How Do You Overcome Overfitting?<a href="model-evaluation.html#how-do-you-overcome-overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To overcome overfitting:</p>
+<ul>
+<li><p><strong>Regularization:</strong> Apply techniques like L1 (Lasso) and L2 (Ridge) regularization to penalize large coefficients, which helps prevent the model from becoming overly complex.</p></li>
+<li><p><strong>Early Stopping:</strong> When training models like XGBoost or neural networks, use early stopping to halt training once the model’s performance on a validation set stops improving.</p></li>
+<li><p><strong>Reduce Model Complexity:</strong> For tree-based models, limit the depth of trees, reduce the number of features, or decrease the number of trees (estimators) to simplify the model.</p></li>
+<li><p><strong>Pruning:</strong> For decision trees, apply post-pruning or pre-pruning techniques to cut off parts of the tree that provide little to no predictive power.</p></li>
+<li><p><strong>Ensemble Methods with Bagging:</strong> Techniques like Random Forest use bagging to reduce variance by averaging multiple decision trees trained on different random subsets of data.</p></li>
+</ul>
+</div>
+<div id="data-stratification-technique" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Data Stratification Technique<a href="model-evaluation.html#data-stratification-technique" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Stratification is a technique used during data splitting to ensure that the training and test sets are representative of the overall distribution of the target variable. This is particularly important when the target variable is imbalanced.</p>
+<ul>
+<li><p><strong>Stratified Sampling:</strong></p>
+<ul>
+<li><p>When splitting data into training and testing sets, use <strong>stratified sampling</strong> to maintain the same proportion of each class in both sets as in the overall dataset. This ensures that both the training and test sets are representative of the overall population.</p></li>
+<li><p>Stratification can be done for classification problems where the target variable is categorical, ensuring that minority and majority classes are adequately represented in both sets.</p></li>
+</ul></li>
+<li><p><strong>K-Fold Stratified Cross-Validation:</strong></p>
+<ul>
+<li>Instead of regular k-fold cross-validation, use <strong>stratified k-fold cross-validation</strong> to ensure that each fold has approximately the same percentage of samples of each target class as the complete dataset. This helps in better generalization, especially with imbalanced data.</li>
+</ul></li>
+</ul>
+</div>
+<div id="any-other-way-to-simplify-the-model" class="section level3 hasAnchor" number="6.3.3">
+<h3><span class="header-section-number">6.3.3</span> Any Other Way to Simplify the Model?<a href="model-evaluation.html#any-other-way-to-simplify-the-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Simplifying the model can help prevent overfitting by reducing its capacity to learn overly complex patterns from the data. Some strategies include:</p>
+<ul>
+<li><p><strong>Feature Selection:</strong></p>
+<ul>
+<li>Remove irrelevant or redundant features to reduce model complexity. Techniques like Recursive Feature Elimination (RFE), LASSO regularization, and mutual information can help identify important features.</li>
+</ul></li>
+<li><p><strong>Dimensionality Reduction:</strong></p>
+<ul>
+<li>Apply techniques like Principal Component Analysis (PCA) or t-Distributed Stochastic Neighbor Embedding (t-SNE) to reduce the dimensionality of the data. This helps in simplifying the model and reducing the risk of overfitting.</li>
+</ul></li>
+<li><p><strong>Parameter Tuning:</strong></p>
+<ul>
+<li>For models like Decision Trees and XGBoost, tuning parameters such as <code>max_depth</code>, <code>min_child_weight</code>, <code>gamma</code>, and <code>subsample</code> can help simplify the model by controlling how much it learns from the data.</li>
+</ul></li>
+</ul>
+</div>
+<div id="are-you-using-cross-validation-method" class="section level3 hasAnchor" number="6.3.4">
+<h3><span class="header-section-number">6.3.4</span> 4. Are You Using Cross-Validation Method?<a href="model-evaluation.html#are-you-using-cross-validation-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Yes, cross-validation is a critical method to evaluate and improve model performance, especially for preventing overfitting:</p>
+<ul>
+<li><strong>K-Fold Cross-Validation:</strong>
+<ul>
+<li>The dataset is divided into <code>k</code> subsets (folds). The model is trained on <code>k-1</code> folds and tested on the remaining fold. This process is repeated <code>k</code> times, with each fold used as the test set once. The performance metrics are then averaged across all <code>k</code> iterations to get a more reliable estimate of model performance.</li>
+<li>Common values for <code>k</code> are 5 or 10, but they can be adjusted based on the dataset size.</li>
+</ul></li>
+<li><strong>Stratified K-Fold Cross-Validation:</strong>
+<ul>
+<li>As mentioned earlier, it ensures that each fold is representative of the class distribution, making it particularly useful for imbalanced datasets.</li>
+</ul></li>
+<li><strong>Leave-One-Out Cross-Validation (LOOCV):</strong>
+<ul>
+<li>This is a special case of k-fold cross-validation where <code>k</code> equals the number of samples in the dataset. It is more computationally expensive but provides a nearly unbiased estimate of the model’s performance.</li>
+</ul></li>
+</ul>
+<p>By combining these techniques—regularization, stratification, feature selection, dimensionality reduction, and cross-validation—you can significantly reduce the risk of overfitting and build more robust machine learning models.</p>
+<p>Would you like more details on any of these points?</p>
+
+</div>
+</div>
+<div id="bias-variance-tradeoff" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Bias-Variance Tradeoff<a href="model-evaluation.html#bias-variance-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>error-variance tradeoff</strong> refers to the balance between two sources of error that affect the performance of a machine learning model: <strong>bias</strong> and <strong>variance</strong>.</p>
+<p>Understanding this tradeoff is key to building models that generalize well to new data.</p>
+<p>In machine learning, the total error (or loss) of a model can be decomposed into three parts:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Bias</strong>: Error due to overly simplistic assumptions in the model.</p></li>
+<li><p><strong>Variance</strong>: Error due to excessive sensitivity to small fluctuations in the training data.</p></li>
+<li><p><strong>Irreducible Error</strong>: Error that cannot be reduced regardless of the model. This is typically noise in the data.</p></li>
+</ol>
+<p>The goal of machine learning is to minimize both bias and variance to achieve good generalization on unseen data.</p>
+<div id="key-concepts-in-bias-variance-tradeoff" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Key Concepts in Bias-Variance Tradeoff<a href="model-evaluation.html#key-concepts-in-bias-variance-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p><strong>Bias</strong>:</p>
+<ul>
+<li><p>Bias represents the error due to simplifying assumptions made by the model to make the target function easier to learn.</p></li>
+<li><p><strong>High Bias</strong> occurs when a model is too simple, underfitting the training data. For example, using a linear model to fit data that has a nonlinear pattern results in high bias because the model cannot capture the complexity of the data.</p></li>
+<li><p><strong>Characteristics of High Bias Models</strong>:</p>
+<ul>
+<li><p>Poor performance on training data.</p></li>
+<li><p>Poor performance on validation/test data.</p></li>
+<li><p>Example Models: Linear Regression, Logistic Regression with limited features.</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Variance</strong>:</p>
+<ul>
+<li><p>Variance represents the model’s sensitivity to fluctuations in the training data. A model with high variance pays too much attention to the noise in the training data.</p></li>
+<li><p><strong>High Variance</strong> occurs when a model is too complex, overfitting the training data. The model captures the noise in the training data, making it perform well on training data but poorly on new data.</p></li>
+<li><p><strong>Characteristics of High Variance Models</strong>:</p>
+<ul>
+<li><p>Excellent performance on training data.</p></li>
+<li><p>Poor performance on validation/test data.</p></li>
+<li><p>Example Models: Decision Trees without pruning, High-degree polynomial regression.</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Irreducible Error</strong>:</p>
+<ul>
+<li>This is the inherent error in the problem itself, such as random noise in the data that cannot be explained by any model. It represents the lowest possible error that can be achieved.</li>
+</ul></li>
+</ol>
+</div>
+<div id="error-decomposition-and-tradeoff" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Error Decomposition and Tradeoff<a href="model-evaluation.html#error-decomposition-and-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <strong>expected error</strong> of a model can be broken down as follows:</p>
+<p><span class="math display">\[
+\text{Expected Error} = (\text{Bias})^2 + \text{Variance} + \text{Irreducible Error}
+\]</span></p>
+<ul>
+<li><p><strong>Low Bias and High Variance</strong>: A model like a deep decision tree may have low bias (fits training data well) but high variance (poor generalization to new data).</p></li>
+<li><p><strong>High Bias and Low Variance</strong>: A model like linear regression may have high bias (oversimplifies the data) but low variance (less sensitivity to small changes in data).</p></li>
+</ul>
+</div>
+<div id="managing-the-bias-variance-tradeoff" class="section level3 hasAnchor" number="6.4.3">
+<h3><span class="header-section-number">6.4.3</span> Managing the Bias-Variance Tradeoff<a href="model-evaluation.html#managing-the-bias-variance-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To achieve a good balance between bias and variance:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Regularization</strong>:
+<ul>
+<li>Techniques like Ridge (L2) and Lasso (L1) regularization add a penalty term to the model loss function to prevent overfitting, reducing variance at the cost of slightly increasing bias.</li>
+</ul></li>
+<li><strong>Model Complexity</strong>:
+<ul>
+<li>Select an appropriate model complexity that balances bias and variance. For example, in polynomial regression, choose a degree that isn’t too low (high bias) or too high (high variance).</li>
+</ul></li>
+<li><strong>Cross-Validation</strong>:
+<ul>
+<li>Use k-fold cross-validation to evaluate model performance and detect high variance or high bias. This provides a more reliable estimate of the model’s generalization error.</li>
+</ul></li>
+<li><strong>Ensemble Methods</strong>:
+<ul>
+<li>Techniques like Bagging (e.g., Random Forest) reduce variance by averaging predictions from multiple models. Boosting methods like XGBoost focus on reducing bias by sequentially learning from mistakes.</li>
+</ul></li>
+<li><strong>Feature Selection</strong>:
+<ul>
+<li>Simplify the model by removing irrelevant or redundant features to prevent overfitting, reducing variance.</li>
+</ul></li>
+</ol>
+</div>
+<div id="conclusion" class="section level3 hasAnchor" number="6.4.4">
+<h3><span class="header-section-number">6.4.4</span> Conclusion<a href="model-evaluation.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>High Bias, Low Variance</strong>: Simple models that do not learn the complexity of the data well. Risk: Underfitting.</p></li>
+<li><p><strong>Low Bias, High Variance</strong>: Complex models that learn the training data too well, including noise. Risk: Overfitting.</p></li>
+</ul>
+<p>The <strong>bias-variance tradeoff</strong> involves finding the right balance between these two to minimize the total error. The ideal model will have a good balance of bias and variance, leading to the lowest possible error on unseen data.</p>
+
+</div>
+<div id="lift-chart" class="section level3 hasAnchor" number="6.4.5">
+<h3><span class="header-section-number">6.4.5</span> Lift Chart<a href="model-evaluation.html#lift-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <strong>Lift Chart</strong> is a visual tool used in predictive modeling, particularly for evaluating the effectiveness of classification models in binary outcomes (e.g., customer purchase vs. non-purchase).</p>
+<ul>
+<li><p><strong>Definition</strong>:</p>
+<ul>
+<li>A lift chart shows the improvement (or “lift”) of a model’s predictions compared to a random baseline. It helps to understand how much better the model is at identifying positive outcomes than a random guess.</li>
+</ul></li>
+<li><p><strong>Components</strong>:</p>
+<ul>
+<li><p><strong>X-axis</strong>: Percentage of data points (e.g., customers) sorted by predicted probability of being positive.</p></li>
+<li><p><strong>Y-axis</strong>: Cumulative number or percentage of true positives.</p></li>
+</ul></li>
+<li><p><strong>How to Interpret</strong>:</p>
+<ul>
+<li><p>A perfect model would capture all positives in the first few data points, resulting in a steep curve.</p></li>
+<li><p>A random model will produce a diagonal line (45-degree), where the percentage of positives equals the percentage of the population.</p></li>
+<li><p><strong>Lift</strong> is calculated as the ratio of the cumulative positives identified by the model to the cumulative positives identified by a random model at any given point.</p></li>
+</ul></li>
+<li><p><strong>Use Case</strong>:</p>
+<ul>
+<li>Lift charts are commonly used in marketing to identify customers most likely to respond to a campaign. A lift of 3, for instance, would mean the model is three times better than random guessing at identifying potential respondents.</li>
+</ul></li>
+</ul>
+</div>
+<div id="roc-curve-receiver-operating-characteristic-curve" class="section level3 hasAnchor" number="6.4.6">
+<h3><span class="header-section-number">6.4.6</span> ROC Curve (Receiver Operating Characteristic Curve)<a href="model-evaluation.html#roc-curve-receiver-operating-characteristic-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An <strong>ROC Curve</strong> is a graphical representation used to evaluate the performance of binary classifiers. It shows the trade-off between the <strong>True Positive Rate (TPR)</strong> and the <strong>False Positive Rate (FPR)</strong> at different threshold settings.</p>
+<ul>
+<li><strong>Definition</strong>:
+<ul>
+<li><strong>True Positive Rate (TPR) / Sensitivity</strong>: The proportion of actual positives correctly identified by the model.
+<span class="math display">\[
+\text{TPR} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}
+\]</span></li>
+<li><strong>False Positive Rate (FPR)</strong>: The proportion of actual negatives incorrectly classified as positives.
+<span class="math display">\[
+\text{FPR} = \frac{\text{False Positives}}{\text{False Positives} + \text{True Negatives}}
+\]</span></li>
+</ul></li>
+<li><strong>How to Read the ROC Curve</strong>:
+<ul>
+<li><strong>X-axis</strong>: False Positive Rate (FPR).</li>
+<li><strong>Y-axis</strong>: True Positive Rate (TPR).</li>
+<li>A point in the upper left corner represents a perfect classifier (100% TPR and 0% FPR).</li>
+<li>A diagonal line from (0,0) to (1,1) represents a random classifier.</li>
+</ul></li>
+<li><strong>Area Under the ROC Curve (AUC)</strong>:
+<ul>
+<li>The <strong>AUC</strong> is a single scalar value between 0 and 1 that represents the model’s ability to discriminate between positive and negative classes.</li>
+<li><strong>AUC = 0.5</strong>: The model is no better than random guessing.</li>
+<li><strong>AUC = 1</strong>: The model is perfect.</li>
+<li><strong>Higher AUC</strong>: Better model performance.</li>
+</ul></li>
+<li><strong>Use Case</strong>:
+<ul>
+<li>ROC curves and AUC are widely used in fields like medical diagnosis, fraud detection, and any domain where distinguishing between two classes is important.</li>
+</ul></li>
+</ul>
+</div>
+<div id="summary" class="section level3 hasAnchor" number="6.4.7">
+<h3><span class="header-section-number">6.4.7</span> Summary<a href="model-evaluation.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Mutual Information</strong> helps in feature selection by quantifying the dependency between variables.</li>
+<li><strong>Lift Chart</strong> evaluates the effectiveness of classification models, showing the improvement over a random guess.</li>
+<li><strong>ROC Curve</strong> and <strong>AUC</strong> provide insight into the model’s ability to distinguish between classes, with a focus on sensitivity and specificity.</li>
+</ul>
+<p>Would you like more details or examples on any of these concepts?</p>
+
+</div>
+<div id="bootstrapping" class="section level3 hasAnchor" number="6.4.8">
+<h3><span class="header-section-number">6.4.8</span> Bootstrapping<a href="model-evaluation.html#bootstrapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="jack-knife" class="section level4 hasAnchor" number="6.4.8.1">
+<h4><span class="header-section-number">6.4.8.1</span> Jack-knife<a href="model-evaluation.html#jack-knife" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>• The jackknife is a tool for estimating standard errors and the bias of estimators</p>
 <p>• As its name suggests, the jackknife is a small, handy tool; in contrast to the
 bootstrap, which is then the moral equivalent of a giant workshop full of tools</p>
@@ -291,8 +730,8 @@ on large samples
           </div>
         </div>
       </div>
-<a href="ml-modeling.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="ml-modeling.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="interview-questions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

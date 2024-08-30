@@ -1,22 +1,42 @@
 # ML Modeling
 
-- **Introduction**: Start by explaining your general experience with machine learning. Mention that you've used various models and techniques for different business problems, such as customer segmentation, predictive modeling, and look-alike modeling.
 
-- **Techniques and Tools**: Highlight the machine learning techniques you're familiar with (e.g., regression models, decision trees, ensemble methods) and the tools you use (e.g., Python, R, scikit-learn, TensorFlow).
+## Objective
 
-## Look-Alike Modeling Project Overview
+**Business Problem**: Describe the business need for the look-alike modeling project. For example, "The goal was to identify potential new customers who resemble our best-performing customers to optimize marketing campaigns and drive higher ROI."
 
-- **Business Problem**: Describe the business need for the look-alike modeling project. For example, "The goal was to identify potential new customers who resemble our best-performing customers to optimize marketing campaigns and drive higher ROI."
 
-- **Data**: Outline the data you used, such as customer demographics, purchase history, behavioral data, or online engagement metrics. Mention the size and complexity of the dataset if relevant.
+
+
+## Data Processing
+
+### Data collection
+
+ - We started with two datasets: one for the high-value customers (labeled dataset) and another for the potential customers (scoring dataset).
+
+ - The labeled dataset included demographic data, browsing behavior, engagement data, and other personal financial and interest attributes.
+
+ - The scoring dataset contained the same types of features but did not include the target variable.
+
+### Data Cleaning
+
+#### Missing values
+
+#### Outliers
+
+### Feature Engineering
+
+#### Correlated features
+
+
+I used techniques like one-hot encoding for categorical variables and normalization for continuous variables to prepare the data for modeling.
+
+
+- **Data**: 
   
-### Step-by-Step Process
-
-- **Data Preparation**:
-
   - Explain how you cleaned and preprocessed the data. Mention any techniques used to handle missing values, outliers, or feature engineering.
 
-  - For example, "I used techniques like one-hot encoding for categorical variables and normalization for continuous variables to prepare the data for modeling."
+  - For example, ""
   
 - **Feature Selection**:
 

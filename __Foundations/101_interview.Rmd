@@ -1,0 +1,63 @@
+# Interview Prep
+
+## Look alike Model walk thru
+
+
+### Situation
+
+I worked on a look-alike modeling project where the goal was to predict new high-value customers for a marketing campaign. The challenge was to build a model that could identify potential customers who are likely to be similar to the existing high-value customers, using available demographic and behavioral data.
+
+### Task
+
+The task was to train a machine learning model that scores potential customers based on their likelihood of being high-value customers, defined by our client. The output would be used to optimize user acquisition strategies.
+
+### Action
+
+1. **Data Preparation:**
+
+   - We started with two datasets: one for the high-value customers (labeled dataset) and another for the potential customers (scoring dataset).
+
+   - The labeled dataset included demographic data, browsing behavior, engagement data, and other personal financial and interest attributes.
+
+   - The scoring dataset contained the same types of features but did not include the target variable.
+
+2. **Feature Engineering:**
+ 
+   - Conducted exploratory data analysis (EDA) to identify significant features. 
+ 
+   - Generated new features using domain knowledge and interacting age and gender with other features.
+ 
+   - Standardized and normalized continuous variables to ensure they had the same scale, which helps with model convergence.
+
+3. **Model Selection and Training:**
+
+   - Tried a range of machine learning algorithms: Logistic Regression, Random Forest, XGBoost, and CatBoost. Logistic Regression served as a baseline due to its interpretability.
+
+   - Emphasized tree-based algorithms (Random Forest, XGBoost, CatBoost) because they handle high-dimensional, sparse data well, and can capture complex interactions between features.
+
+   - Used a grid search with cross-validation to fine-tune hyperparameters such as the number of trees, learning rate, max depth, and minimum child weight for tree-based models.
+
+4. **Handling Class Imbalance:**
+
+   - Since the proportion of high-value customers was small, I applied techniques to handle class imbalance:
+
+     - Used **SMOTE (Synthetic Minority Over-sampling Technique)** to create synthetic samples for the minority class.
+
+     - Experimented with **class weighting** in algorithms to penalize incorrect predictions on the minority class more than the majority class.
+
+5. **Model Evaluation:**
+   - The models were evaluated using metrics such as **Precision, Recall, F1-Score**, and **ROC-AUC** to balance between identifying true high-value customers and minimizing false positives.
+   - Conducted feature importance analysis, particularly for tree-based models, to identify which features contributed most to the prediction, helping in feature selection and further model refinement.
+
+6. **Model Scoring:**
+ 
+   - Once the model was finalized, we applied it to the scoring dataset. Since the scoring universe had no transactional or purchase behavior data, we relied purely on the engineered features based on available non-transactional attributes.
+ 
+   - The model output provided a probability score for each potential customer indicating their likelihood of being a high-value customer.
+
+### Result
+
+The final model, which was a tuned XGBoost, achieved a high ROC-AUC and F1-score, indicating strong performance in distinguishing high-value potential customers. This model was then used to rank and score potential customers for targeted marketing efforts, significantly improving customer acquisition efficiency.
+
+This approach ensured a robust and scalable solution, adaptable to different datasets without relying on specific purchase or transactional data.
+

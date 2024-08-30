@@ -1,0 +1,55 @@
+
+## Feature Selection
+
+  - Remove irrelevant or redundant features to reduce model complexity. Techniques like Recursive Feature Elimination (RFE), LASSO regularization, and mutual information can help identify important features.
+  
+  
+### Recursive Feature Elimination (RFE)
+
+
+### LASSO regularization
+
+
+### Mutual Information
+
+**Mutual Information (MI)** measures the amount of information obtained about one random variable through another random variable. In the context of feature selection in machine learning, it quantifies how much knowing the value of one feature reduces uncertainty about the target variable.
+
+- **Definition**:
+  - Mathematically, for two random variables \(X\) and \(Y\), the mutual information \(I(X; Y)\) is defined as:
+  
+  \[
+  I(X; Y) = \sum_{x \in X} \sum_{y \in Y} P(x, y) \log \left( \frac{P(x, y)}{P(x) P(y)} \right)
+  \]
+  
+  Where:
+  - \(P(x, y)\) is the joint probability distribution of \(X\) and \(Y\).
+  - \(P(x)\) and \(P(y)\) are the marginal probability distributions of \(X\) and \(Y\), respectively.
+
+- **Interpretation**:
+  
+  - **MI = 0**: The two variables are independent; knowing one gives no information about the other.
+  
+  - **Higher MI**: The two variables share more information. If MI is high, knowing one variable gives more information about the other.
+
+- **Applications in Feature Selection**:
+  
+  - In machine learning, mutual information can be used to assess the relevance of a feature to the target variable. Features with high mutual information with the target are often more informative and can be prioritized in feature selection.
+  
+   This is a measure of `non-linear` relationships between variables and does not assume any specific type of dependency (linear or non-linear). `MI` is always non-negative and has no upper bound (though it can be normalized to fall between 0 and 1).
+
+### Mutual information vs Correlation Coefficient
+
+MI and the correlation coefficient are related but measure different aspects of the dependency between two variables.
+
+MI is more general, capturing both linear and non-linear dependencies, while the correlation coefficient is limited to linear relationships.
+
+   
+If two variables are linearly related, the `mutual information` is closely related to the `correlation coefficient`. For normally distributed variables, `mutual information` can be directly calculated from the `correlation coefficient`.
+
+`Correlation` measures only linear dependency. It can miss non-linear relationships entirely. For example, a correlation of 0 does not mean there is no relationship; there might be a non-linear dependency.
+
+`Mutual Information` captures both linear and non-linear dependencies. Even if the correlation coefficient is 0, mutual information may still be high, indicating a non-linear relationship.
+
+`Correlation Coefficient` is simpler and computationally cheaper, widely used when linear relationships are expected or assumed, such as in linear regression or PCA.
+
+`Mutual Information` is more general and flexible, useful in scenarios like feature selection in machine learning, where both linear and non-linear relationships may be important.

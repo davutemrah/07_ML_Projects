@@ -23,7 +23,7 @@
 <meta name="author" content="Davut Ayan" />
 
 
-<meta name="date" content="2024-08-24" />
+<meta name="date" content="2024-08-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -136,11 +136,26 @@
 </ul></li>
 <li class="chapter" data-level="5" data-path="ml-modeling.html"><a href="ml-modeling.html"><i class="fa fa-check"></i><b>5</b> ML Modeling</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="ml-modeling.html"><a href="ml-modeling.html#look-alike-modeling-project-overview"><i class="fa fa-check"></i><b>5.1</b> Look-Alike Modeling Project Overview</a>
+<li class="chapter" data-level="5.1" data-path="ml-modeling.html"><a href="ml-modeling.html#objective"><i class="fa fa-check"></i><b>5.1</b> Objective</a></li>
+<li class="chapter" data-level="5.2" data-path="ml-modeling.html"><a href="ml-modeling.html#data-processing"><i class="fa fa-check"></i><b>5.2</b> Data Processing</a>
 <ul>
-<li class="chapter" data-level="5.1.1" data-path="ml-modeling.html"><a href="ml-modeling.html#step-by-step-process"><i class="fa fa-check"></i><b>5.1.1</b> Step-by-Step Process</a></li>
-<li class="chapter" data-level="5.1.2" data-path="ml-modeling.html"><a href="ml-modeling.html#implementation-and-impact"><i class="fa fa-check"></i><b>5.1.2</b> Implementation and Impact</a></li>
-<li class="chapter" data-level="5.1.3" data-path="ml-modeling.html"><a href="ml-modeling.html#lessons-learned-and-future-work"><i class="fa fa-check"></i><b>5.1.3</b> Lessons Learned and Future Work</a></li>
+<li class="chapter" data-level="5.2.1" data-path="ml-modeling.html"><a href="ml-modeling.html#data-collection"><i class="fa fa-check"></i><b>5.2.1</b> Data collection</a></li>
+<li class="chapter" data-level="5.2.2" data-path="ml-modeling.html"><a href="ml-modeling.html#data-cleaning"><i class="fa fa-check"></i><b>5.2.2</b> Data Cleaning</a></li>
+<li class="chapter" data-level="5.2.3" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-engineering"><i class="fa fa-check"></i><b>5.2.3</b> Feature Engineering</a></li>
+<li class="chapter" data-level="5.2.4" data-path="ml-modeling.html"><a href="ml-modeling.html#implementation-and-impact"><i class="fa fa-check"></i><b>5.2.4</b> Implementation and Impact</a></li>
+<li class="chapter" data-level="5.2.5" data-path="ml-modeling.html"><a href="ml-modeling.html#lessons-learned-and-future-work"><i class="fa fa-check"></i><b>5.2.5</b> Lessons Learned and Future Work</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-selection"><i class="fa fa-check"></i><b>5.3</b> Feature Selection</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="ml-modeling.html"><a href="ml-modeling.html#recursive-feature-elimination-rfe"><i class="fa fa-check"></i><b>5.3.1</b> Recursive Feature Elimination (RFE)</a></li>
+<li class="chapter" data-level="5.3.2" data-path="ml-modeling.html"><a href="ml-modeling.html#lasso-regularization"><i class="fa fa-check"></i><b>5.3.2</b> LASSO regularization</a></li>
+<li class="chapter" data-level="5.3.3" data-path="ml-modeling.html"><a href="ml-modeling.html#mutual-information"><i class="fa fa-check"></i><b>5.3.3</b> Mutual Information</a></li>
+<li class="chapter" data-level="5.3.4" data-path="ml-modeling.html"><a href="ml-modeling.html#mutual-information-vs-correlation-coefficient"><i class="fa fa-check"></i><b>5.3.4</b> Mutual information vs Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="ml-modeling.html"><a href="ml-modeling.html#fine-tuning-hyperparameters"><i class="fa fa-check"></i><b>5.4</b> Fine-tuning hyperparameters</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="ml-modeling.html"><a href="ml-modeling.html#key-hyperparameters-for-tree-based-models"><i class="fa fa-check"></i><b>5.4.1</b> Key Hyperparameters for Tree-Based Models</a></li>
+<li class="chapter" data-level="5.4.2" data-path="ml-modeling.html"><a href="ml-modeling.html#fine-tuning-strategy"><i class="fa fa-check"></i><b>5.4.2</b> Fine-Tuning Strategy</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="model-evaluation.html"><a href="model-evaluation.html"><i class="fa fa-check"></i><b>6</b> Model Evaluation</a>
@@ -149,8 +164,46 @@
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="model-evaluation.html"><a href="model-evaluation.html#thresholding"><i class="fa fa-check"></i><b>6.1.1</b> Thresholding</a></li>
 <li class="chapter" data-level="6.1.2" data-path="model-evaluation.html"><a href="model-evaluation.html#confusion-matrix"><i class="fa fa-check"></i><b>6.1.2</b> Confusion Matrix</a></li>
-<li class="chapter" data-level="6.1.3" data-path="model-evaluation.html"><a href="model-evaluation.html#bootstrapping"><i class="fa fa-check"></i><b>6.1.3</b> Bootstrapping</a></li>
 </ul></li>
+<li class="chapter" data-level="6.2" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve"><i class="fa fa-check"></i><b>6.2</b> ROC Curve</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="model-evaluation.html"><a href="model-evaluation.html#components-of-the-roc-curve"><i class="fa fa-check"></i><b>6.2.1</b> Components of the ROC Curve:</a></li>
+<li class="chapter" data-level="6.2.2" data-path="model-evaluation.html"><a href="model-evaluation.html#how-to-read-the-roc-curve"><i class="fa fa-check"></i><b>6.2.2</b> How to Read the ROC Curve:</a></li>
+<li class="chapter" data-level="6.2.3" data-path="model-evaluation.html"><a href="model-evaluation.html#area-under-the-roc-curve-auc"><i class="fa fa-check"></i><b>6.2.3</b> Area Under the ROC Curve (AUC):</a></li>
+<li class="chapter" data-level="6.2.4" data-path="model-evaluation.html"><a href="model-evaluation.html#applications-of-roc-curve"><i class="fa fa-check"></i><b>6.2.4</b> Applications of ROC Curve:</a></li>
+<li class="chapter" data-level="6.2.5" data-path="model-evaluation.html"><a href="model-evaluation.html#using-the-roc-curve-in-real-examples"><i class="fa fa-check"></i><b>6.2.5</b> Using the ROC Curve in Real Examples</a></li>
+<li class="chapter" data-level="6.2.6" data-path="model-evaluation.html"><a href="model-evaluation.html#selecting-the-probability-threshold"><i class="fa fa-check"></i><b>6.2.6</b> Selecting the Probability Threshold:</a></li>
+<li class="chapter" data-level="6.2.7" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve-example"><i class="fa fa-check"></i><b>6.2.7</b> ROC Curve Example:</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="model-evaluation.html"><a href="model-evaluation.html#overfitting"><i class="fa fa-check"></i><b>6.3</b> Overfitting</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="model-evaluation.html"><a href="model-evaluation.html#how-do-you-overcome-overfitting"><i class="fa fa-check"></i><b>6.3.1</b> How Do You Overcome Overfitting?</a></li>
+<li class="chapter" data-level="6.3.2" data-path="model-evaluation.html"><a href="model-evaluation.html#data-stratification-technique"><i class="fa fa-check"></i><b>6.3.2</b> Data Stratification Technique</a></li>
+<li class="chapter" data-level="6.3.3" data-path="model-evaluation.html"><a href="model-evaluation.html#any-other-way-to-simplify-the-model"><i class="fa fa-check"></i><b>6.3.3</b> Any Other Way to Simplify the Model?</a></li>
+<li class="chapter" data-level="6.3.4" data-path="model-evaluation.html"><a href="model-evaluation.html#are-you-using-cross-validation-method"><i class="fa fa-check"></i><b>6.3.4</b> 4. Are You Using Cross-Validation Method?</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="model-evaluation.html"><a href="model-evaluation.html#bias-variance-tradeoff"><i class="fa fa-check"></i><b>6.4</b> Bias-Variance Tradeoff</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="model-evaluation.html"><a href="model-evaluation.html#key-concepts-in-bias-variance-tradeoff"><i class="fa fa-check"></i><b>6.4.1</b> Key Concepts in Bias-Variance Tradeoff</a></li>
+<li class="chapter" data-level="6.4.2" data-path="model-evaluation.html"><a href="model-evaluation.html#error-decomposition-and-tradeoff"><i class="fa fa-check"></i><b>6.4.2</b> Error Decomposition and Tradeoff</a></li>
+<li class="chapter" data-level="6.4.3" data-path="model-evaluation.html"><a href="model-evaluation.html#managing-the-bias-variance-tradeoff"><i class="fa fa-check"></i><b>6.4.3</b> Managing the Bias-Variance Tradeoff</a></li>
+<li class="chapter" data-level="6.4.4" data-path="model-evaluation.html"><a href="model-evaluation.html#conclusion"><i class="fa fa-check"></i><b>6.4.4</b> Conclusion</a></li>
+<li class="chapter" data-level="6.4.5" data-path="model-evaluation.html"><a href="model-evaluation.html#lift-chart"><i class="fa fa-check"></i><b>6.4.5</b> Lift Chart</a></li>
+<li class="chapter" data-level="6.4.6" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve-receiver-operating-characteristic-curve"><i class="fa fa-check"></i><b>6.4.6</b> ROC Curve (Receiver Operating Characteristic Curve)</a></li>
+<li class="chapter" data-level="6.4.7" data-path="model-evaluation.html"><a href="model-evaluation.html#summary"><i class="fa fa-check"></i><b>6.4.7</b> Summary</a></li>
+<li class="chapter" data-level="6.4.8" data-path="model-evaluation.html"><a href="model-evaluation.html#bootstrapping"><i class="fa fa-check"></i><b>6.4.8</b> Bootstrapping</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="interview-questions.html"><a href="interview-questions.html"><i class="fa fa-check"></i><b>7</b> Interview Questions</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="interview-questions.html"><a href="interview-questions.html#tell-me-how-do-you-train-a-model-and-evaluate-it"><i class="fa fa-check"></i><b>7.0.1</b> tell me how do you train a model and evaluate it</a></li>
+<li class="chapter" data-level="7.0.2" data-path="interview-questions.html"><a href="interview-questions.html#tell-me-how-you-can-use-llm-in-marketingheathcare"><i class="fa fa-check"></i><b>7.0.2</b> tell me how you can use LLM in marketing/heathcare</a></li>
+<li class="chapter" data-level="7.0.3" data-path="interview-questions.html"><a href="interview-questions.html#objective-function-in-logistic-regression"><i class="fa fa-check"></i><b>7.0.3</b> objective function in logistic regression</a></li>
+<li class="chapter" data-level="7.1" data-path="interview-questions.html"><a href="interview-questions.html#do-you-prefer-r-or-python"><i class="fa fa-check"></i><b>7.1</b> Do you prefer R or python?</a></li>
+<li class="chapter" data-level="7.2" data-path="interview-questions.html"><a href="interview-questions.html#what-is-your-main-domain"><i class="fa fa-check"></i><b>7.2</b> What is your main domain?</a></li>
+<li class="chapter" data-level="7.3" data-path="interview-questions.html"><a href="interview-questions.html#is-this-work-culture-fast-paced-do-you-deliver-value-quickly-or-what"><i class="fa fa-check"></i><b>7.3</b> Is this work culture fast-paced? Do you deliver value quickly or what?</a></li>
+<li class="chapter" data-level="7.4" data-path="interview-questions.html"><a href="interview-questions.html#are-you-involved-in-any-efforts-convincing-business-stakeholders-to-adept-models-or-analysis-that-you-do"><i class="fa fa-check"></i><b>7.4</b> Are you involved in any efforts convincing business stakeholders to adept models or analysis that you do</a></li>
+<li class="chapter" data-level="7.5" data-path="interview-questions.html"><a href="interview-questions.html#have-you-been-in-a-situation-where-you-feel-like-the-model-is-the-right-way-to-go-but-either-client-or-manager-that-you-need-to-convince"><i class="fa fa-check"></i><b>7.5</b> Have you been in a situation where you feel like the model is the right way to go but either client or manager that you need to convince?</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://davutemrah.github.io/notebooks/" target="blank">Personal Repo Home</a></li>
@@ -174,23 +227,39 @@
             <section class="normal" id="section-">
 <div id="ml-modeling" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> ML Modeling<a href="ml-modeling.html#ml-modeling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="objective" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Objective<a href="ml-modeling.html#objective" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Business Problem</strong>: Describe the business need for the look-alike modeling project. For example, “The goal was to identify potential new customers who resemble our best-performing customers to optimize marketing campaigns and drive higher ROI.”</p>
+</div>
+<div id="data-processing" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Data Processing<a href="ml-modeling.html#data-processing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="data-collection" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Data collection<a href="ml-modeling.html#data-collection" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
-<li><p><strong>Introduction</strong>: Start by explaining your general experience with machine learning. Mention that you’ve used various models and techniques for different business problems, such as customer segmentation, predictive modeling, and look-alike modeling.</p></li>
-<li><p><strong>Techniques and Tools</strong>: Highlight the machine learning techniques you’re familiar with (e.g., regression models, decision trees, ensemble methods) and the tools you use (e.g., Python, R, scikit-learn, TensorFlow).</p></li>
+<li><p>We started with two datasets: one for the high-value customers (labeled dataset) and another for the potential customers (scoring dataset).</p></li>
+<li><p>The labeled dataset included demographic data, browsing behavior, engagement data, and other personal financial and interest attributes.</p></li>
+<li><p>The scoring dataset contained the same types of features but did not include the target variable.</p></li>
 </ul>
-<div id="look-alike-modeling-project-overview" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Look-Alike Modeling Project Overview<a href="ml-modeling.html#look-alike-modeling-project-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="data-cleaning" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Data Cleaning<a href="ml-modeling.html#data-cleaning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="missing-values" class="section level4 hasAnchor" number="5.2.2.1">
+<h4><span class="header-section-number">5.2.2.1</span> Missing values<a href="ml-modeling.html#missing-values" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+<div id="outliers" class="section level4 hasAnchor" number="5.2.2.2">
+<h4><span class="header-section-number">5.2.2.2</span> Outliers<a href="ml-modeling.html#outliers" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+</div>
+<div id="feature-engineering" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Feature Engineering<a href="ml-modeling.html#feature-engineering" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="correlated-features" class="section level4 hasAnchor" number="5.2.3.1">
+<h4><span class="header-section-number">5.2.3.1</span> Correlated features<a href="ml-modeling.html#correlated-features" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>I used techniques like one-hot encoding for categorical variables and normalization for continuous variables to prepare the data for modeling.</p>
 <ul>
-<li><p><strong>Business Problem</strong>: Describe the business need for the look-alike modeling project. For example, “The goal was to identify potential new customers who resemble our best-performing customers to optimize marketing campaigns and drive higher ROI.”</p></li>
-<li><p><strong>Data</strong>: Outline the data you used, such as customer demographics, purchase history, behavioral data, or online engagement metrics. Mention the size and complexity of the dataset if relevant.</p></li>
-</ul>
-<div id="step-by-step-process" class="section level3 hasAnchor" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Step-by-Step Process<a href="ml-modeling.html#step-by-step-process" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><p><strong>Data Preparation</strong>:</p>
+<li><p><strong>Data</strong>:</p>
 <ul>
 <li><p>Explain how you cleaned and preprocessed the data. Mention any techniques used to handle missing values, outliers, or feature engineering.</p></li>
-<li><p>For example, “I used techniques like one-hot encoding for categorical variables and normalization for continuous variables to prepare the data for modeling.”</p></li>
+<li><p>For example, “”</p></li>
 </ul></li>
 <li><p><strong>Feature Selection</strong>:</p>
 <ul>
@@ -208,8 +277,9 @@
 </ul></li>
 </ul>
 </div>
-<div id="implementation-and-impact" class="section level3 hasAnchor" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> Implementation and Impact<a href="ml-modeling.html#implementation-and-impact" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="implementation-and-impact" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Implementation and Impact<a href="ml-modeling.html#implementation-and-impact" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><strong>Deployment</strong>:
 <ul>
@@ -222,8 +292,8 @@
 </ul></li>
 </ul>
 </div>
-<div id="lessons-learned-and-future-work" class="section level3 hasAnchor" number="5.1.3">
-<h3><span class="header-section-number">5.1.3</span> Lessons Learned and Future Work<a href="ml-modeling.html#lessons-learned-and-future-work" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="lessons-learned-and-future-work" class="section level3 hasAnchor" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> Lessons Learned and Future Work<a href="ml-modeling.html#lessons-learned-and-future-work" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p><strong>Challenges</strong>:</p>
 <ul>
@@ -234,6 +304,115 @@
 <li>Mention any improvements or next steps, like using more advanced models (e.g., gradient boosting machines), incorporating additional data sources, or refining the model based on new data.</li>
 </ul></li>
 </ul>
+
+</div>
+</div>
+<div id="feature-selection" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Feature Selection<a href="ml-modeling.html#feature-selection" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Remove irrelevant or redundant features to reduce model complexity. Techniques like Recursive Feature Elimination (RFE), LASSO regularization, and mutual information can help identify important features.</li>
+</ul>
+<div id="recursive-feature-elimination-rfe" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Recursive Feature Elimination (RFE)<a href="ml-modeling.html#recursive-feature-elimination-rfe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="lasso-regularization" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> LASSO regularization<a href="ml-modeling.html#lasso-regularization" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="mutual-information" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> Mutual Information<a href="ml-modeling.html#mutual-information" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Mutual Information (MI)</strong> measures the amount of information obtained about one random variable through another random variable. In the context of feature selection in machine learning, it quantifies how much knowing the value of one feature reduces uncertainty about the target variable.</p>
+<ul>
+<li><p><strong>Definition</strong>:</p>
+<ul>
+<li>Mathematically, for two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, the mutual information <span class="math inline">\(I(X; Y)\)</span> is defined as:</li>
+</ul>
+<p><span class="math display">\[
+I(X; Y) = \sum_{x \in X} \sum_{y \in Y} P(x, y) \log \left( \frac{P(x, y)}{P(x) P(y)} \right)
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(P(x, y)\)</span> is the joint probability distribution of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</li>
+<li><span class="math inline">\(P(x)\)</span> and <span class="math inline">\(P(y)\)</span> are the marginal probability distributions of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, respectively.</li>
+</ul></li>
+<li><p><strong>Interpretation</strong>:</p>
+<ul>
+<li><p><strong>MI = 0</strong>: The two variables are independent; knowing one gives no information about the other.</p></li>
+<li><p><strong>Higher MI</strong>: The two variables share more information. If MI is high, knowing one variable gives more information about the other.</p></li>
+</ul></li>
+<li><p><strong>Applications in Feature Selection</strong>:</p>
+<ul>
+<li>In machine learning, mutual information can be used to assess the relevance of a feature to the target variable. Features with high mutual information with the target are often more informative and can be prioritized in feature selection.</li>
+</ul>
+<p>This is a measure of <code>non-linear</code> relationships between variables and does not assume any specific type of dependency (linear or non-linear). <code>MI</code> is always non-negative and has no upper bound (though it can be normalized to fall between 0 and 1).</p></li>
+</ul>
+</div>
+<div id="mutual-information-vs-correlation-coefficient" class="section level3 hasAnchor" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> Mutual information vs Correlation Coefficient<a href="ml-modeling.html#mutual-information-vs-correlation-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>MI and the correlation coefficient are related but measure different aspects of the dependency between two variables.</p>
+<p>MI is more general, capturing both linear and non-linear dependencies, while the correlation coefficient is limited to linear relationships.</p>
+<p>If two variables are linearly related, the <code>mutual information</code> is closely related to the <code>correlation coefficient</code>. For normally distributed variables, <code>mutual information</code> can be directly calculated from the <code>correlation coefficient</code>.</p>
+<p><code>Correlation</code> measures only linear dependency. It can miss non-linear relationships entirely. For example, a correlation of 0 does not mean there is no relationship; there might be a non-linear dependency.</p>
+<p><code>Mutual Information</code> captures both linear and non-linear dependencies. Even if the correlation coefficient is 0, mutual information may still be high, indicating a non-linear relationship.</p>
+<p><code>Correlation Coefficient</code> is simpler and computationally cheaper, widely used when linear relationships are expected or assumed, such as in linear regression or PCA.</p>
+<p><code>Mutual Information</code> is more general and flexible, useful in scenarios like feature selection in machine learning, where both linear and non-linear relationships may be important.</p>
+
+</div>
+</div>
+<div id="fine-tuning-hyperparameters" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Fine-tuning hyperparameters<a href="ml-modeling.html#fine-tuning-hyperparameters" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Fine-tuning hyperparameters is a crucial step in optimizing the performance of tree-based models like XGBoost, Random Forest, and CatBoost. Each hyperparameter controls a different aspect of the model’s behavior, and adjusting them properly can lead to better generalization on unseen data. Here’s a more detailed explanation of each hyperparameter and how it affects the model:</p>
+<div id="key-hyperparameters-for-tree-based-models" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Key Hyperparameters for Tree-Based Models<a href="ml-modeling.html#key-hyperparameters-for-tree-based-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><strong>Number of Trees (n_estimators):</strong>
+<ul>
+<li><strong>Definition:</strong> This parameter determines the number of trees to be built in the ensemble. In Random Forest and XGBoost, each tree is built sequentially, and the results are aggregated.</li>
+<li><strong>Impact:</strong> More trees generally lead to better model performance because they capture more patterns. However, too many trees can lead to overfitting, where the model becomes too tailored to the training data and loses its ability to generalize to new data.</li>
+<li><strong>Tuning Strategy:</strong> Start with a moderate number of trees (e.g., 100) and gradually increase until the performance plateaus on validation data.</li>
+</ul></li>
+<li><strong>Learning Rate (eta in XGBoost, learning_rate in other models):</strong>
+<ul>
+<li><strong>Definition:</strong> The learning rate controls the contribution of each tree to the final prediction. A lower learning rate means that the model makes smaller updates and takes more trees to converge.</li>
+<li><strong>Impact:</strong> A lower learning rate usually improves model performance because it allows for more fine-tuned adjustments. However, this comes at the cost of longer training times.</li>
+<li><strong>Tuning Strategy:</strong> Common practice is to start with a low learning rate (e.g., 0.1) and, if the model underfits, increase it slightly. Alternatively, you can use a lower learning rate and compensate by increasing the number of trees.</li>
+</ul></li>
+<li><strong>Maximum Depth (max_depth):</strong>
+<ul>
+<li><strong>Definition:</strong> This parameter defines the maximum depth of each tree. A deeper tree can capture more complex patterns but is more likely to overfit the training data.</li>
+<li><strong>Impact:</strong> Higher depth increases the model complexity, allowing it to capture more interactions between features. However, deeper trees can also lead to overfitting, especially with noisy data.</li>
+<li><strong>Tuning Strategy:</strong> Start with a relatively shallow tree (e.g., max_depth of 3-6) and increase gradually. Monitor the validation performance to avoid overfitting.</li>
+</ul></li>
+<li><strong>Minimum Child Weight (min_child_weight):</strong>
+<ul>
+<li><strong>Definition:</strong> This parameter specifies the minimum sum of instance weights (hessian) needed in a child. It is a regularization parameter in XGBoost that prevents the algorithm from creating children that don’t have enough samples.</li>
+<li><strong>Impact:</strong> Higher values prevent the algorithm from learning overly specific relations that can cause overfitting. It forces the tree to consider splitting only when a minimum number of observations exist in the child node.</li>
+<li><strong>Tuning Strategy:</strong> Start with a lower value (e.g., 1) and gradually increase it to see if the model’s performance improves on validation data.</li>
+</ul></li>
+</ol>
+</div>
+<div id="fine-tuning-strategy" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Fine-Tuning Strategy<a href="ml-modeling.html#fine-tuning-strategy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><strong>Grid Search or Random Search:</strong>
+<ul>
+<li>Perform a <strong>grid search</strong> or <strong>random search</strong> over a defined range of hyperparameters. For example, grid search can test combinations like <code>n_estimators = [100, 200, 300]</code>, <code>learning_rate = [0.01, 0.05, 0.1]</code>, <code>max_depth = [3, 5, 7]</code>, and <code>min_child_weight = [1, 3, 5]</code>.</li>
+<li><strong>Random search</strong> can be more efficient, especially when the parameter space is large, by randomly selecting combinations within the defined ranges.</li>
+</ul></li>
+<li><strong>Cross-Validation:</strong>
+<ul>
+<li>Use <strong>k-fold cross-validation</strong> to evaluate model performance during hyperparameter tuning. This approach splits the data into <code>k</code> subsets and trains the model <code>k</code> times, each time using a different subset as the validation set and the remaining as training data.</li>
+</ul></li>
+<li><strong>Early Stopping:</strong>
+<ul>
+<li>Implement <strong>early stopping</strong> during training to prevent overfitting. It stops training when the performance on the validation set no longer improves after a certain number of rounds, which is particularly useful when fine-tuning <code>n_estimators</code> and <code>learning_rate</code>.</li>
+</ul></li>
+<li><strong>Iterative Approach:</strong>
+<ul>
+<li>Start by tuning the most impactful hyperparameters like <code>learning_rate</code> and <code>n_estimators</code>. Once they are reasonably tuned, focus on regularization parameters like <code>max_depth</code> and <code>min_child_weight</code>.</li>
+</ul></li>
+</ol>
+<p>By fine-tuning these hyperparameters systematically, we can improve the model’s accuracy and generalization, ensuring it performs well on unseen data without overfitting.</p>
+<p>Would you like more details on any specific aspect?</p>
 
 </div>
 </div>
@@ -275,7 +454,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/__Foundations/05_ml_modeling.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/__Foundations/05_00_ml_modeling.Rmd",
 "text": "Edit"
 },
 "history": {
