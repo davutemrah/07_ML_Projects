@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Model Evaluation | Machine Learning</title>
+  <title>Chapter 7 Model Evaluation | Machine Learning</title>
   <meta name="description" content="This is a collection of notes to my self" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Model Evaluation | Machine Learning" />
+  <meta property="og:title" content="Chapter 7 Model Evaluation | Machine Learning" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a collection of notes to my self" />
   <meta name="github-repo" content="davutemrah/davutemrah.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Model Evaluation | Machine Learning" />
+  <meta name="twitter:title" content="Chapter 7 Model Evaluation | Machine Learning" />
   
   <meta name="twitter:description" content="This is a collection of notes to my self" />
   
@@ -23,7 +23,7 @@
 <meta name="author" content="Davut Ayan" />
 
 
-<meta name="date" content="2024-08-29" />
+<meta name="date" content="2024-09-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -85,125 +85,176 @@
 <li class="chapter" data-level="2.1.1" data-path="machine-learning-fundamentals.html"><a href="machine-learning-fundamentals.html#data-science"><i class="fa fa-check"></i><b>2.1.1</b> Data Science</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>3</b> Machine Learning</a>
+<li class="chapter" data-level="3" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html"><i class="fa fa-check"></i><b>3</b> Machine Learning Fundementals</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="machine-learning.html"><a href="machine-learning.html#ml-algorithms-intro"><i class="fa fa-check"></i><b>3.1</b> ML Algorithms Intro</a>
+<li class="chapter" data-level="3.1" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#overfitting"><i class="fa fa-check"></i><b>3.1</b> Overfitting</a></li>
+<li class="chapter" data-level="3.2" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#underfitting"><i class="fa fa-check"></i><b>3.2</b> Underfitting</a></li>
+<li class="chapter" data-level="3.3" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#bias-variance-trade-off"><i class="fa fa-check"></i><b>3.3</b> Bias-Variance Trade-off</a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="machine-learning.html"><a href="machine-learning.html#binary-classification"><i class="fa fa-check"></i><b>3.1.1</b> Binary Classification:</a></li>
-<li class="chapter" data-level="3.1.2" data-path="machine-learning.html"><a href="machine-learning.html#multi-class-classification"><i class="fa fa-check"></i><b>3.1.2</b> Multi-Class Classification:</a></li>
-<li class="chapter" data-level="3.1.3" data-path="machine-learning.html"><a href="machine-learning.html#continuous-outcome-regression"><i class="fa fa-check"></i><b>3.1.3</b> Continuous Outcome (Regression):</a></li>
-<li class="chapter" data-level="3.1.4" data-path="machine-learning.html"><a href="machine-learning.html#random-forest-vs-decision-trees"><i class="fa fa-check"></i><b>3.1.4</b> Random Forest vs Decision Trees</a></li>
-<li class="chapter" data-level="3.1.5" data-path="machine-learning.html"><a href="machine-learning.html#random-forest-vs-gradient-boosting"><i class="fa fa-check"></i><b>3.1.5</b> Random Forest vs Gradient Boosting</a></li>
-<li class="chapter" data-level="3.1.6" data-path="machine-learning.html"><a href="machine-learning.html#overall-considerations"><i class="fa fa-check"></i><b>3.1.6</b> Overall Considerations:</a></li>
-</ul></li>
-<li class="chapter" data-level="3.2" data-path="machine-learning.html"><a href="machine-learning.html#ml-libraries-in-python"><i class="fa fa-check"></i><b>3.2</b> ML Libraries in Python</a>
-<ul>
-<li class="chapter" data-level="3.2.1" data-path="machine-learning.html"><a href="machine-learning.html#tensorflow"><i class="fa fa-check"></i><b>3.2.1</b> TensorFlow</a></li>
-<li class="chapter" data-level="3.2.2" data-path="machine-learning.html"><a href="machine-learning.html#pytorch"><i class="fa fa-check"></i><b>3.2.2</b> PyTorch</a></li>
-<li class="chapter" data-level="3.2.3" data-path="machine-learning.html"><a href="machine-learning.html#big-data-solutions"><i class="fa fa-check"></i><b>3.2.3</b> Big data solutions</a></li>
-<li class="chapter" data-level="3.2.4" data-path="machine-learning.html"><a href="machine-learning.html#databricks"><i class="fa fa-check"></i><b>3.2.4</b> Databricks</a></li>
-<li class="chapter" data-level="3.2.5" data-path="machine-learning.html"><a href="machine-learning.html#tensorflow-1"><i class="fa fa-check"></i><b>3.2.5</b> TensorFlow</a></li>
-<li class="chapter" data-level="3.2.6" data-path="machine-learning.html"><a href="machine-learning.html#pytorch-1"><i class="fa fa-check"></i><b>3.2.6</b> PyTorch</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="machine-learning.html"><a href="machine-learning.html#logistic-regression-key-concepts-for-data-science-interviews"><i class="fa fa-check"></i><b>3.3</b> Logistic Regression: Key Concepts for Data Science Interviews</a>
-<ul>
-<li class="chapter" data-level="3.3.1" data-path="machine-learning.html"><a href="machine-learning.html#what-you-need-to-know"><i class="fa fa-check"></i><b>3.3.1</b> What You Need to Know:</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="machine-learning.html"><a href="machine-learning.html#xgboost-key-concepts-for-data-science-interviews"><i class="fa fa-check"></i><b>3.4</b> XGBoost: Key Concepts for Data Science Interviews</a>
-<ul>
-<li class="chapter" data-level="3.4.1" data-path="machine-learning.html"><a href="machine-learning.html#what-you-need-to-know-1"><i class="fa fa-check"></i><b>3.4.1</b> What You Need to Know:</a></li>
-</ul></li>
-<li class="chapter" data-level="3.5" data-path="machine-learning.html"><a href="machine-learning.html#neural-networks-key-concepts-for-data-science-interviews"><i class="fa fa-check"></i><b>3.5</b> Neural Networks: Key Concepts for Data Science Interviews</a>
-<ul>
-<li class="chapter" data-level="3.5.1" data-path="machine-learning.html"><a href="machine-learning.html#basic-structure"><i class="fa fa-check"></i><b>3.5.1</b> Basic Structure:</a></li>
-<li class="chapter" data-level="3.5.2" data-path="machine-learning.html"><a href="machine-learning.html#activation-functions"><i class="fa fa-check"></i><b>3.5.2</b> Activation Functions:</a></li>
-<li class="chapter" data-level="3.5.3" data-path="machine-learning.html"><a href="machine-learning.html#forward-and-backpropagation"><i class="fa fa-check"></i><b>3.5.3</b> Forward and Backpropagation:</a></li>
-<li class="chapter" data-level="3.5.4" data-path="machine-learning.html"><a href="machine-learning.html#loss-functions"><i class="fa fa-check"></i><b>3.5.4</b> Loss Functions:</a></li>
-<li class="chapter" data-level="3.5.5" data-path="machine-learning.html"><a href="machine-learning.html#optimization-algorithms"><i class="fa fa-check"></i><b>3.5.5</b> Optimization Algorithms:</a></li>
-<li class="chapter" data-level="3.5.6" data-path="machine-learning.html"><a href="machine-learning.html#regularization-techniques"><i class="fa fa-check"></i><b>3.5.6</b> Regularization Techniques:</a></li>
-<li class="chapter" data-level="3.5.7" data-path="machine-learning.html"><a href="machine-learning.html#common-architectures"><i class="fa fa-check"></i><b>3.5.7</b> Common Architectures:</a></li>
-<li class="chapter" data-level="3.5.8" data-path="machine-learning.html"><a href="machine-learning.html#overfitting-and-underfitting"><i class="fa fa-check"></i><b>3.5.8</b> Overfitting and Underfitting:</a></li>
-<li class="chapter" data-level="3.5.9" data-path="machine-learning.html"><a href="machine-learning.html#what-you-need-to-know-2"><i class="fa fa-check"></i><b>3.5.9</b> What You Need to Know:</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="machine-learning.html"><a href="machine-learning.html#naive-bayes"><i class="fa fa-check"></i><b>3.6</b> Naive Bayes</a>
-<ul>
-<li class="chapter" data-level="3.6.1" data-path="machine-learning.html"><a href="machine-learning.html#bayesian-classification"><i class="fa fa-check"></i><b>3.6.1</b> Bayesian Classification</a></li>
+<li class="chapter" data-level="3.3.1" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#bias"><i class="fa fa-check"></i><b>3.3.1</b> Bias</a></li>
+<li class="chapter" data-level="3.3.2" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#variance"><i class="fa fa-check"></i><b>3.3.2</b> Variance</a></li>
+<li class="chapter" data-level="3.3.3" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#bias-vs.-variance-trade-off"><i class="fa fa-check"></i><b>3.3.3</b> Bias vs. Variance Trade-Off:</a></li>
+<li class="chapter" data-level="3.3.4" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#bias-vs.-variance-trade-off-1"><i class="fa fa-check"></i><b>3.3.4</b> Bias vs. Variance Trade-Off:</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="extract-transform-loading.html"><a href="extract-transform-loading.html"><i class="fa fa-check"></i><b>4</b> Extract-Transform-Loading</a>
+<li class="chapter" data-level="4" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>4</b> Machine Learning</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="extract-transform-loading.html"><a href="extract-transform-loading.html#outlier-detection"><i class="fa fa-check"></i><b>4.1</b> Outlier Detection</a></li>
+<li class="chapter" data-level="4.1" data-path="machine-learning.html"><a href="machine-learning.html#ml-algorithms-intro"><i class="fa fa-check"></i><b>4.1</b> ML Algorithms Intro</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="machine-learning.html"><a href="machine-learning.html#binary-classification"><i class="fa fa-check"></i><b>4.1.1</b> Binary Classification:</a></li>
+<li class="chapter" data-level="4.1.2" data-path="machine-learning.html"><a href="machine-learning.html#multi-class-classification"><i class="fa fa-check"></i><b>4.1.2</b> Multi-Class Classification:</a></li>
+<li class="chapter" data-level="4.1.3" data-path="machine-learning.html"><a href="machine-learning.html#continuous-outcome-regression"><i class="fa fa-check"></i><b>4.1.3</b> Continuous Outcome (Regression):</a></li>
+<li class="chapter" data-level="4.1.4" data-path="machine-learning.html"><a href="machine-learning.html#random-forest-vs-decision-trees"><i class="fa fa-check"></i><b>4.1.4</b> Random Forest vs Decision Trees</a></li>
+<li class="chapter" data-level="4.1.5" data-path="machine-learning.html"><a href="machine-learning.html#random-forest-vs-gradient-boosting"><i class="fa fa-check"></i><b>4.1.5</b> Random Forest vs Gradient Boosting</a></li>
+<li class="chapter" data-level="4.1.6" data-path="machine-learning.html"><a href="machine-learning.html#overall-considerations"><i class="fa fa-check"></i><b>4.1.6</b> Overall Considerations:</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="ml-modeling.html"><a href="ml-modeling.html"><i class="fa fa-check"></i><b>5</b> ML Modeling</a>
+<li class="chapter" data-level="4.2" data-path="machine-learning.html"><a href="machine-learning.html#ml-libraries-in-python"><i class="fa fa-check"></i><b>4.2</b> ML Libraries in Python</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="ml-modeling.html"><a href="ml-modeling.html#objective"><i class="fa fa-check"></i><b>5.1</b> Objective</a></li>
-<li class="chapter" data-level="5.2" data-path="ml-modeling.html"><a href="ml-modeling.html#data-processing"><i class="fa fa-check"></i><b>5.2</b> Data Processing</a>
-<ul>
-<li class="chapter" data-level="5.2.1" data-path="ml-modeling.html"><a href="ml-modeling.html#data-collection"><i class="fa fa-check"></i><b>5.2.1</b> Data collection</a></li>
-<li class="chapter" data-level="5.2.2" data-path="ml-modeling.html"><a href="ml-modeling.html#data-cleaning"><i class="fa fa-check"></i><b>5.2.2</b> Data Cleaning</a></li>
-<li class="chapter" data-level="5.2.3" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-engineering"><i class="fa fa-check"></i><b>5.2.3</b> Feature Engineering</a></li>
-<li class="chapter" data-level="5.2.4" data-path="ml-modeling.html"><a href="ml-modeling.html#implementation-and-impact"><i class="fa fa-check"></i><b>5.2.4</b> Implementation and Impact</a></li>
-<li class="chapter" data-level="5.2.5" data-path="ml-modeling.html"><a href="ml-modeling.html#lessons-learned-and-future-work"><i class="fa fa-check"></i><b>5.2.5</b> Lessons Learned and Future Work</a></li>
+<li class="chapter" data-level="4.2.1" data-path="machine-learning.html"><a href="machine-learning.html#tensorflow"><i class="fa fa-check"></i><b>4.2.1</b> TensorFlow</a></li>
+<li class="chapter" data-level="4.2.2" data-path="machine-learning.html"><a href="machine-learning.html#pytorch"><i class="fa fa-check"></i><b>4.2.2</b> PyTorch</a></li>
+<li class="chapter" data-level="4.2.3" data-path="machine-learning.html"><a href="machine-learning.html#big-data-solutions"><i class="fa fa-check"></i><b>4.2.3</b> Big data solutions</a></li>
+<li class="chapter" data-level="4.2.4" data-path="machine-learning.html"><a href="machine-learning.html#databricks"><i class="fa fa-check"></i><b>4.2.4</b> Databricks</a></li>
+<li class="chapter" data-level="4.2.5" data-path="machine-learning.html"><a href="machine-learning.html#tensorflow-1"><i class="fa fa-check"></i><b>4.2.5</b> TensorFlow</a></li>
+<li class="chapter" data-level="4.2.6" data-path="machine-learning.html"><a href="machine-learning.html#pytorch-1"><i class="fa fa-check"></i><b>4.2.6</b> PyTorch</a></li>
+<li class="chapter" data-level="4.2.7" data-path="machine-learning.html"><a href="machine-learning.html#ensemble-learning-in-machine-learning"><i class="fa fa-check"></i><b>4.2.7</b> <strong>Ensemble Learning in Machine Learning</strong></a></li>
+<li class="chapter" data-level="4.2.8" data-path="machine-learning.html"><a href="machine-learning.html#key-concepts-of-ensemble-learning"><i class="fa fa-check"></i><b>4.2.8</b> <strong>Key Concepts of Ensemble Learning:</strong></a></li>
+<li class="chapter" data-level="4.2.9" data-path="machine-learning.html"><a href="machine-learning.html#bagging-bootstrap-aggregating"><i class="fa fa-check"></i><b>4.2.9</b> <strong>1. Bagging (Bootstrap Aggregating):</strong></a></li>
+<li class="chapter" data-level="4.2.10" data-path="machine-learning.html"><a href="machine-learning.html#boosting"><i class="fa fa-check"></i><b>4.2.10</b> <strong>2. Boosting:</strong></a></li>
+<li class="chapter" data-level="4.2.11" data-path="machine-learning.html"><a href="machine-learning.html#stacking-stacked-generalization"><i class="fa fa-check"></i><b>4.2.11</b> <strong>3. Stacking (Stacked Generalization):</strong></a></li>
+<li class="chapter" data-level="4.2.12" data-path="machine-learning.html"><a href="machine-learning.html#other-ensemble-methods"><i class="fa fa-check"></i><b>4.2.12</b> <strong>Other Ensemble Methods:</strong></a></li>
+<li class="chapter" data-level="4.2.13" data-path="machine-learning.html"><a href="machine-learning.html#advantages-of-ensemble-learning"><i class="fa fa-check"></i><b>4.2.13</b> <strong>Advantages of Ensemble Learning:</strong></a></li>
+<li class="chapter" data-level="4.2.14" data-path="machine-learning.html"><a href="machine-learning.html#disadvantages-of-ensemble-learning"><i class="fa fa-check"></i><b>4.2.14</b> <strong>Disadvantages of Ensemble Learning:</strong></a></li>
+<li class="chapter" data-level="4.2.15" data-path="machine-learning.html"><a href="machine-learning.html#summary"><i class="fa fa-check"></i><b>4.2.15</b> <strong>Summary:</strong></a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-selection"><i class="fa fa-check"></i><b>5.3</b> Feature Selection</a>
+<li class="chapter" data-level="4.3" data-path="machine-learning.html"><a href="machine-learning.html#regularization"><i class="fa fa-check"></i><b>4.3</b> Regularization</a>
 <ul>
-<li class="chapter" data-level="5.3.1" data-path="ml-modeling.html"><a href="ml-modeling.html#recursive-feature-elimination-rfe"><i class="fa fa-check"></i><b>5.3.1</b> Recursive Feature Elimination (RFE)</a></li>
-<li class="chapter" data-level="5.3.2" data-path="ml-modeling.html"><a href="ml-modeling.html#lasso-regularization"><i class="fa fa-check"></i><b>5.3.2</b> LASSO regularization</a></li>
-<li class="chapter" data-level="5.3.3" data-path="ml-modeling.html"><a href="ml-modeling.html#mutual-information"><i class="fa fa-check"></i><b>5.3.3</b> Mutual Information</a></li>
-<li class="chapter" data-level="5.3.4" data-path="ml-modeling.html"><a href="ml-modeling.html#mutual-information-vs-correlation-coefficient"><i class="fa fa-check"></i><b>5.3.4</b> Mutual information vs Correlation Coefficient</a></li>
+<li class="chapter" data-level="4.3.1" data-path="machine-learning.html"><a href="machine-learning.html#lasso-regression"><i class="fa fa-check"></i><b>4.3.1</b> Lasso Regression</a></li>
+<li class="chapter" data-level="4.3.2" data-path="machine-learning.html"><a href="machine-learning.html#bayesian-models"><i class="fa fa-check"></i><b>4.3.2</b> Bayesian Models</a></li>
+<li class="chapter" data-level="4.3.3" data-path="machine-learning.html"><a href="machine-learning.html#correlation-between-lasso-and-bayesian-models"><i class="fa fa-check"></i><b>4.3.3</b> Correlation Between Lasso and Bayesian Models</a></li>
+<li class="chapter" data-level="4.3.4" data-path="machine-learning.html"><a href="machine-learning.html#summary-1"><i class="fa fa-check"></i><b>4.3.4</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="ml-modeling.html"><a href="ml-modeling.html#fine-tuning-hyperparameters"><i class="fa fa-check"></i><b>5.4</b> Fine-tuning hyperparameters</a>
+<li class="chapter" data-level="4.4" data-path="machine-learning.html"><a href="machine-learning.html#logistic-regression-key-concepts-for-data-science-interviews"><i class="fa fa-check"></i><b>4.4</b> Logistic Regression: Key Concepts for Data Science Interviews</a>
 <ul>
-<li class="chapter" data-level="5.4.1" data-path="ml-modeling.html"><a href="ml-modeling.html#key-hyperparameters-for-tree-based-models"><i class="fa fa-check"></i><b>5.4.1</b> Key Hyperparameters for Tree-Based Models</a></li>
-<li class="chapter" data-level="5.4.2" data-path="ml-modeling.html"><a href="ml-modeling.html#fine-tuning-strategy"><i class="fa fa-check"></i><b>5.4.2</b> Fine-Tuning Strategy</a></li>
+<li class="chapter" data-level="4.4.1" data-path="machine-learning.html"><a href="machine-learning.html#what-you-need-to-know"><i class="fa fa-check"></i><b>4.4.1</b> What You Need to Know:</a></li>
 </ul></li>
+<li class="chapter" data-level="4.5" data-path="machine-learning.html"><a href="machine-learning.html#gradient-boosting-trees-gbt"><i class="fa fa-check"></i><b>4.5</b> Gradient Boosting Trees (GBT)</a></li>
+<li class="chapter" data-level="4.6" data-path="machine-learning.html"><a href="machine-learning.html#random-forest-2"><i class="fa fa-check"></i><b>4.6</b> Random Forest</a></li>
+<li class="chapter" data-level="4.7" data-path="machine-learning.html"><a href="machine-learning.html#xgboost-key-concepts-for-data-science-interviews"><i class="fa fa-check"></i><b>4.7</b> XGBoost: Key Concepts for Data Science Interviews</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="machine-learning.html"><a href="machine-learning.html#what-you-need-to-know-1"><i class="fa fa-check"></i><b>4.7.1</b> What You Need to Know:</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="model-evaluation.html"><a href="model-evaluation.html"><i class="fa fa-check"></i><b>6</b> Model Evaluation</a>
+<li class="chapter" data-level="4.8" data-path="machine-learning.html"><a href="machine-learning.html#neural-networks-key-concepts-for-data-science-interviews"><i class="fa fa-check"></i><b>4.8</b> Neural Networks: Key Concepts for Data Science Interviews</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="model-evaluation.html"><a href="model-evaluation.html#classification-models-evaluation"><i class="fa fa-check"></i><b>6.1</b> Classification Models: Evaluation</a>
-<ul>
-<li class="chapter" data-level="6.1.1" data-path="model-evaluation.html"><a href="model-evaluation.html#thresholding"><i class="fa fa-check"></i><b>6.1.1</b> Thresholding</a></li>
-<li class="chapter" data-level="6.1.2" data-path="model-evaluation.html"><a href="model-evaluation.html#confusion-matrix"><i class="fa fa-check"></i><b>6.1.2</b> Confusion Matrix</a></li>
+<li class="chapter" data-level="4.8.1" data-path="machine-learning.html"><a href="machine-learning.html#basic-structure"><i class="fa fa-check"></i><b>4.8.1</b> Basic Structure:</a></li>
+<li class="chapter" data-level="4.8.2" data-path="machine-learning.html"><a href="machine-learning.html#activation-functions"><i class="fa fa-check"></i><b>4.8.2</b> Activation Functions:</a></li>
+<li class="chapter" data-level="4.8.3" data-path="machine-learning.html"><a href="machine-learning.html#forward-and-backpropagation"><i class="fa fa-check"></i><b>4.8.3</b> Forward and Backpropagation:</a></li>
+<li class="chapter" data-level="4.8.4" data-path="machine-learning.html"><a href="machine-learning.html#loss-functions"><i class="fa fa-check"></i><b>4.8.4</b> Loss Functions:</a></li>
+<li class="chapter" data-level="4.8.5" data-path="machine-learning.html"><a href="machine-learning.html#optimization-algorithms"><i class="fa fa-check"></i><b>4.8.5</b> Optimization Algorithms:</a></li>
+<li class="chapter" data-level="4.8.6" data-path="machine-learning.html"><a href="machine-learning.html#regularization-techniques"><i class="fa fa-check"></i><b>4.8.6</b> Regularization Techniques:</a></li>
+<li class="chapter" data-level="4.8.7" data-path="machine-learning.html"><a href="machine-learning.html#common-architectures"><i class="fa fa-check"></i><b>4.8.7</b> Common Architectures:</a></li>
+<li class="chapter" data-level="4.8.8" data-path="machine-learning.html"><a href="machine-learning.html#overfitting-and-underfitting"><i class="fa fa-check"></i><b>4.8.8</b> Overfitting and Underfitting:</a></li>
+<li class="chapter" data-level="4.8.9" data-path="machine-learning.html"><a href="machine-learning.html#what-you-need-to-know-2"><i class="fa fa-check"></i><b>4.8.9</b> What You Need to Know:</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve"><i class="fa fa-check"></i><b>6.2</b> ROC Curve</a>
+<li class="chapter" data-level="4.9" data-path="machine-learning.html"><a href="machine-learning.html#naive-bayes"><i class="fa fa-check"></i><b>4.9</b> Naive Bayes</a>
 <ul>
-<li class="chapter" data-level="6.2.1" data-path="model-evaluation.html"><a href="model-evaluation.html#components-of-the-roc-curve"><i class="fa fa-check"></i><b>6.2.1</b> Components of the ROC Curve:</a></li>
-<li class="chapter" data-level="6.2.2" data-path="model-evaluation.html"><a href="model-evaluation.html#how-to-read-the-roc-curve"><i class="fa fa-check"></i><b>6.2.2</b> How to Read the ROC Curve:</a></li>
-<li class="chapter" data-level="6.2.3" data-path="model-evaluation.html"><a href="model-evaluation.html#area-under-the-roc-curve-auc"><i class="fa fa-check"></i><b>6.2.3</b> Area Under the ROC Curve (AUC):</a></li>
-<li class="chapter" data-level="6.2.4" data-path="model-evaluation.html"><a href="model-evaluation.html#applications-of-roc-curve"><i class="fa fa-check"></i><b>6.2.4</b> Applications of ROC Curve:</a></li>
-<li class="chapter" data-level="6.2.5" data-path="model-evaluation.html"><a href="model-evaluation.html#using-the-roc-curve-in-real-examples"><i class="fa fa-check"></i><b>6.2.5</b> Using the ROC Curve in Real Examples</a></li>
-<li class="chapter" data-level="6.2.6" data-path="model-evaluation.html"><a href="model-evaluation.html#selecting-the-probability-threshold"><i class="fa fa-check"></i><b>6.2.6</b> Selecting the Probability Threshold:</a></li>
-<li class="chapter" data-level="6.2.7" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve-example"><i class="fa fa-check"></i><b>6.2.7</b> ROC Curve Example:</a></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="model-evaluation.html"><a href="model-evaluation.html#overfitting"><i class="fa fa-check"></i><b>6.3</b> Overfitting</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="model-evaluation.html"><a href="model-evaluation.html#how-do-you-overcome-overfitting"><i class="fa fa-check"></i><b>6.3.1</b> How Do You Overcome Overfitting?</a></li>
-<li class="chapter" data-level="6.3.2" data-path="model-evaluation.html"><a href="model-evaluation.html#data-stratification-technique"><i class="fa fa-check"></i><b>6.3.2</b> Data Stratification Technique</a></li>
-<li class="chapter" data-level="6.3.3" data-path="model-evaluation.html"><a href="model-evaluation.html#any-other-way-to-simplify-the-model"><i class="fa fa-check"></i><b>6.3.3</b> Any Other Way to Simplify the Model?</a></li>
-<li class="chapter" data-level="6.3.4" data-path="model-evaluation.html"><a href="model-evaluation.html#are-you-using-cross-validation-method"><i class="fa fa-check"></i><b>6.3.4</b> 4. Are You Using Cross-Validation Method?</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="model-evaluation.html"><a href="model-evaluation.html#bias-variance-tradeoff"><i class="fa fa-check"></i><b>6.4</b> Bias-Variance Tradeoff</a>
-<ul>
-<li class="chapter" data-level="6.4.1" data-path="model-evaluation.html"><a href="model-evaluation.html#key-concepts-in-bias-variance-tradeoff"><i class="fa fa-check"></i><b>6.4.1</b> Key Concepts in Bias-Variance Tradeoff</a></li>
-<li class="chapter" data-level="6.4.2" data-path="model-evaluation.html"><a href="model-evaluation.html#error-decomposition-and-tradeoff"><i class="fa fa-check"></i><b>6.4.2</b> Error Decomposition and Tradeoff</a></li>
-<li class="chapter" data-level="6.4.3" data-path="model-evaluation.html"><a href="model-evaluation.html#managing-the-bias-variance-tradeoff"><i class="fa fa-check"></i><b>6.4.3</b> Managing the Bias-Variance Tradeoff</a></li>
-<li class="chapter" data-level="6.4.4" data-path="model-evaluation.html"><a href="model-evaluation.html#conclusion"><i class="fa fa-check"></i><b>6.4.4</b> Conclusion</a></li>
-<li class="chapter" data-level="6.4.5" data-path="model-evaluation.html"><a href="model-evaluation.html#lift-chart"><i class="fa fa-check"></i><b>6.4.5</b> Lift Chart</a></li>
-<li class="chapter" data-level="6.4.6" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve-receiver-operating-characteristic-curve"><i class="fa fa-check"></i><b>6.4.6</b> ROC Curve (Receiver Operating Characteristic Curve)</a></li>
-<li class="chapter" data-level="6.4.7" data-path="model-evaluation.html"><a href="model-evaluation.html#summary"><i class="fa fa-check"></i><b>6.4.7</b> Summary</a></li>
-<li class="chapter" data-level="6.4.8" data-path="model-evaluation.html"><a href="model-evaluation.html#bootstrapping"><i class="fa fa-check"></i><b>6.4.8</b> Bootstrapping</a></li>
+<li class="chapter" data-level="4.9.1" data-path="machine-learning.html"><a href="machine-learning.html#bayesian-classification"><i class="fa fa-check"></i><b>4.9.1</b> Bayesian Classification</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="interview-questions.html"><a href="interview-questions.html"><i class="fa fa-check"></i><b>7</b> Interview Questions</a>
+<li class="chapter" data-level="5" data-path="extract-transform-loading.html"><a href="extract-transform-loading.html"><i class="fa fa-check"></i><b>5</b> Extract-Transform-Loading</a>
 <ul>
-<li class="chapter" data-level="7.0.1" data-path="interview-questions.html"><a href="interview-questions.html#tell-me-how-do-you-train-a-model-and-evaluate-it"><i class="fa fa-check"></i><b>7.0.1</b> tell me how do you train a model and evaluate it</a></li>
-<li class="chapter" data-level="7.0.2" data-path="interview-questions.html"><a href="interview-questions.html#tell-me-how-you-can-use-llm-in-marketingheathcare"><i class="fa fa-check"></i><b>7.0.2</b> tell me how you can use LLM in marketing/heathcare</a></li>
-<li class="chapter" data-level="7.0.3" data-path="interview-questions.html"><a href="interview-questions.html#objective-function-in-logistic-regression"><i class="fa fa-check"></i><b>7.0.3</b> objective function in logistic regression</a></li>
-<li class="chapter" data-level="7.1" data-path="interview-questions.html"><a href="interview-questions.html#do-you-prefer-r-or-python"><i class="fa fa-check"></i><b>7.1</b> Do you prefer R or python?</a></li>
-<li class="chapter" data-level="7.2" data-path="interview-questions.html"><a href="interview-questions.html#what-is-your-main-domain"><i class="fa fa-check"></i><b>7.2</b> What is your main domain?</a></li>
-<li class="chapter" data-level="7.3" data-path="interview-questions.html"><a href="interview-questions.html#is-this-work-culture-fast-paced-do-you-deliver-value-quickly-or-what"><i class="fa fa-check"></i><b>7.3</b> Is this work culture fast-paced? Do you deliver value quickly or what?</a></li>
-<li class="chapter" data-level="7.4" data-path="interview-questions.html"><a href="interview-questions.html#are-you-involved-in-any-efforts-convincing-business-stakeholders-to-adept-models-or-analysis-that-you-do"><i class="fa fa-check"></i><b>7.4</b> Are you involved in any efforts convincing business stakeholders to adept models or analysis that you do</a></li>
-<li class="chapter" data-level="7.5" data-path="interview-questions.html"><a href="interview-questions.html#have-you-been-in-a-situation-where-you-feel-like-the-model-is-the-right-way-to-go-but-either-client-or-manager-that-you-need-to-convince"><i class="fa fa-check"></i><b>7.5</b> Have you been in a situation where you feel like the model is the right way to go but either client or manager that you need to convince?</a></li>
+<li class="chapter" data-level="5.1" data-path="extract-transform-loading.html"><a href="extract-transform-loading.html#outlier-detection"><i class="fa fa-check"></i><b>5.1</b> Outlier Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ml-modeling.html"><a href="ml-modeling.html"><i class="fa fa-check"></i><b>6</b> ML Modeling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ml-modeling.html"><a href="ml-modeling.html#objective"><i class="fa fa-check"></i><b>6.1</b> Objective</a></li>
+<li class="chapter" data-level="6.2" data-path="ml-modeling.html"><a href="ml-modeling.html#data-processing"><i class="fa fa-check"></i><b>6.2</b> Data Processing</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="ml-modeling.html"><a href="ml-modeling.html#data-collection"><i class="fa fa-check"></i><b>6.2.1</b> Data collection</a></li>
+<li class="chapter" data-level="6.2.2" data-path="ml-modeling.html"><a href="ml-modeling.html#data-cleaning"><i class="fa fa-check"></i><b>6.2.2</b> Data Cleaning</a></li>
+<li class="chapter" data-level="6.2.3" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-engineering"><i class="fa fa-check"></i><b>6.2.3</b> Feature Engineering</a></li>
+<li class="chapter" data-level="6.2.4" data-path="ml-modeling.html"><a href="ml-modeling.html#implementation-and-impact"><i class="fa fa-check"></i><b>6.2.4</b> Implementation and Impact</a></li>
+<li class="chapter" data-level="6.2.5" data-path="ml-modeling.html"><a href="ml-modeling.html#lessons-learned-and-future-work"><i class="fa fa-check"></i><b>6.2.5</b> Lessons Learned and Future Work</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-selection"><i class="fa fa-check"></i><b>6.3</b> Feature Selection</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="ml-modeling.html"><a href="ml-modeling.html#recursive-feature-elimination-rfe"><i class="fa fa-check"></i><b>6.3.1</b> Recursive Feature Elimination (RFE)</a></li>
+<li class="chapter" data-level="6.3.2" data-path="ml-modeling.html"><a href="ml-modeling.html#lasso-regularization"><i class="fa fa-check"></i><b>6.3.2</b> LASSO regularization</a></li>
+<li class="chapter" data-level="6.3.3" data-path="ml-modeling.html"><a href="ml-modeling.html#mutual-information"><i class="fa fa-check"></i><b>6.3.3</b> Mutual Information</a></li>
+<li class="chapter" data-level="6.3.4" data-path="ml-modeling.html"><a href="ml-modeling.html#mutual-information-vs-correlation-coefficient"><i class="fa fa-check"></i><b>6.3.4</b> Mutual information vs Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="ml-modeling.html"><a href="ml-modeling.html#important-features"><i class="fa fa-check"></i><b>6.4</b> Important Features</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-importance-in-random-forest"><i class="fa fa-check"></i><b>6.4.1</b> Feature Importance in Random Forest</a></li>
+<li class="chapter" data-level="6.4.2" data-path="ml-modeling.html"><a href="ml-modeling.html#using-feature-importance-for-selection"><i class="fa fa-check"></i><b>6.4.2</b> <strong>Using Feature Importance for Selection</strong></a></li>
+<li class="chapter" data-level="6.4.3" data-path="ml-modeling.html"><a href="ml-modeling.html#advantages-of-using-random-forest-for-feature-selection"><i class="fa fa-check"></i><b>6.4.3</b> <strong>Advantages of Using Random Forest for Feature Selection</strong></a></li>
+<li class="chapter" data-level="6.4.4" data-path="ml-modeling.html"><a href="ml-modeling.html#summary-4"><i class="fa fa-check"></i><b>6.4.4</b> <strong>Summary</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="ml-modeling.html"><a href="ml-modeling.html#fine-tuning-hyperparameters"><i class="fa fa-check"></i><b>6.5</b> Fine-tuning hyperparameters</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="ml-modeling.html"><a href="ml-modeling.html#key-hyperparameters-for-tree-based-models"><i class="fa fa-check"></i><b>6.5.1</b> Key Hyperparameters for Tree-Based Models</a></li>
+<li class="chapter" data-level="6.5.2" data-path="ml-modeling.html"><a href="ml-modeling.html#fine-tuning-strategy"><i class="fa fa-check"></i><b>6.5.2</b> Fine-Tuning Strategy</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="ml-modeling.html"><a href="ml-modeling.html#cross-validation"><i class="fa fa-check"></i><b>6.6</b> Cross Validation</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="ml-modeling.html"><a href="ml-modeling.html#how-cross-validation-works"><i class="fa fa-check"></i><b>6.6.1</b> How Cross-Validation Works</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="model-evaluation.html"><a href="model-evaluation.html"><i class="fa fa-check"></i><b>7</b> Model Evaluation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="model-evaluation.html"><a href="model-evaluation.html#classification-models-evaluation"><i class="fa fa-check"></i><b>7.1</b> Classification Models: Evaluation</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="model-evaluation.html"><a href="model-evaluation.html#thresholding"><i class="fa fa-check"></i><b>7.1.1</b> Thresholding</a></li>
+<li class="chapter" data-level="7.1.2" data-path="model-evaluation.html"><a href="model-evaluation.html#confusion-matrix"><i class="fa fa-check"></i><b>7.1.2</b> Confusion Matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve"><i class="fa fa-check"></i><b>7.2</b> ROC Curve</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="model-evaluation.html"><a href="model-evaluation.html#components-of-the-roc-curve"><i class="fa fa-check"></i><b>7.2.1</b> Components of the ROC Curve:</a></li>
+<li class="chapter" data-level="7.2.2" data-path="model-evaluation.html"><a href="model-evaluation.html#how-to-read-the-roc-curve"><i class="fa fa-check"></i><b>7.2.2</b> How to Read the ROC Curve:</a></li>
+<li class="chapter" data-level="7.2.3" data-path="model-evaluation.html"><a href="model-evaluation.html#area-under-the-roc-curve-auc"><i class="fa fa-check"></i><b>7.2.3</b> Area Under the ROC Curve (AUC):</a></li>
+<li class="chapter" data-level="7.2.4" data-path="model-evaluation.html"><a href="model-evaluation.html#applications-of-roc-curve"><i class="fa fa-check"></i><b>7.2.4</b> Applications of ROC Curve:</a></li>
+<li class="chapter" data-level="7.2.5" data-path="model-evaluation.html"><a href="model-evaluation.html#using-the-roc-curve-in-real-examples"><i class="fa fa-check"></i><b>7.2.5</b> Using the ROC Curve in Real Examples</a></li>
+<li class="chapter" data-level="7.2.6" data-path="model-evaluation.html"><a href="model-evaluation.html#selecting-the-probability-threshold"><i class="fa fa-check"></i><b>7.2.6</b> Selecting the Probability Threshold:</a></li>
+<li class="chapter" data-level="7.2.7" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve-example"><i class="fa fa-check"></i><b>7.2.7</b> ROC Curve Example:</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="model-evaluation.html"><a href="model-evaluation.html#overfitting-1"><i class="fa fa-check"></i><b>7.3</b> Overfitting</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="model-evaluation.html"><a href="model-evaluation.html#how-do-you-overcome-overfitting"><i class="fa fa-check"></i><b>7.3.1</b> How Do You Overcome Overfitting?</a></li>
+<li class="chapter" data-level="7.3.2" data-path="model-evaluation.html"><a href="model-evaluation.html#data-stratification-technique"><i class="fa fa-check"></i><b>7.3.2</b> Data Stratification Technique</a></li>
+<li class="chapter" data-level="7.3.3" data-path="model-evaluation.html"><a href="model-evaluation.html#any-other-way-to-simplify-the-model"><i class="fa fa-check"></i><b>7.3.3</b> Any Other Way to Simplify the Model?</a></li>
+<li class="chapter" data-level="7.3.4" data-path="model-evaluation.html"><a href="model-evaluation.html#are-you-using-cross-validation-method"><i class="fa fa-check"></i><b>7.3.4</b> 4. Are You Using Cross-Validation Method?</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="model-evaluation.html"><a href="model-evaluation.html#bias-variance-tradeoff"><i class="fa fa-check"></i><b>7.4</b> Bias-Variance Tradeoff</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="model-evaluation.html"><a href="model-evaluation.html#key-concepts-in-bias-variance-tradeoff"><i class="fa fa-check"></i><b>7.4.1</b> Key Concepts in Bias-Variance Tradeoff</a></li>
+<li class="chapter" data-level="7.4.2" data-path="model-evaluation.html"><a href="model-evaluation.html#error-decomposition-and-tradeoff"><i class="fa fa-check"></i><b>7.4.2</b> Error Decomposition and Tradeoff</a></li>
+<li class="chapter" data-level="7.4.3" data-path="model-evaluation.html"><a href="model-evaluation.html#managing-the-bias-variance-tradeoff"><i class="fa fa-check"></i><b>7.4.3</b> Managing the Bias-Variance Tradeoff</a></li>
+<li class="chapter" data-level="7.4.4" data-path="model-evaluation.html"><a href="model-evaluation.html#conclusion"><i class="fa fa-check"></i><b>7.4.4</b> Conclusion</a></li>
+<li class="chapter" data-level="7.4.5" data-path="model-evaluation.html"><a href="model-evaluation.html#lift-chart"><i class="fa fa-check"></i><b>7.4.5</b> Lift Chart</a></li>
+<li class="chapter" data-level="7.4.6" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve-receiver-operating-characteristic-curve"><i class="fa fa-check"></i><b>7.4.6</b> ROC Curve (Receiver Operating Characteristic Curve)</a></li>
+<li class="chapter" data-level="7.4.7" data-path="model-evaluation.html"><a href="model-evaluation.html#summary-5"><i class="fa fa-check"></i><b>7.4.7</b> Summary</a></li>
+<li class="chapter" data-level="7.4.8" data-path="model-evaluation.html"><a href="model-evaluation.html#bootstrapping"><i class="fa fa-check"></i><b>7.4.8</b> Bootstrapping</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="interview-questions.html"><a href="interview-questions.html"><i class="fa fa-check"></i><b>8</b> Interview Questions</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="interview-questions.html"><a href="interview-questions.html#tell-me-how-do-you-train-a-model-and-evaluate-it"><i class="fa fa-check"></i><b>8.0.1</b> tell me how do you train a model and evaluate it</a></li>
+<li class="chapter" data-level="8.0.2" data-path="interview-questions.html"><a href="interview-questions.html#tell-me-how-you-can-use-llm-in-marketingheathcare"><i class="fa fa-check"></i><b>8.0.2</b> tell me how you can use LLM in marketing/heathcare</a></li>
+<li class="chapter" data-level="8.0.3" data-path="interview-questions.html"><a href="interview-questions.html#objective-function-in-logistic-regression"><i class="fa fa-check"></i><b>8.0.3</b> objective function in logistic regression</a></li>
+<li class="chapter" data-level="8.1" data-path="interview-questions.html"><a href="interview-questions.html#do-you-prefer-r-or-python"><i class="fa fa-check"></i><b>8.1</b> Do you prefer R or python?</a></li>
+<li class="chapter" data-level="8.2" data-path="interview-questions.html"><a href="interview-questions.html#what-is-your-main-domain"><i class="fa fa-check"></i><b>8.2</b> What is your main domain?</a></li>
+<li class="chapter" data-level="8.3" data-path="interview-questions.html"><a href="interview-questions.html#is-this-work-culture-fast-paced-do-you-deliver-value-quickly-or-what"><i class="fa fa-check"></i><b>8.3</b> Is this work culture fast-paced? Do you deliver value quickly or what?</a></li>
+<li class="chapter" data-level="8.4" data-path="interview-questions.html"><a href="interview-questions.html#are-you-involved-in-any-efforts-convincing-business-stakeholders-to-adept-models-or-analysis-that-you-do"><i class="fa fa-check"></i><b>8.4</b> Are you involved in any efforts convincing business stakeholders to adept models or analysis that you do</a></li>
+<li class="chapter" data-level="8.5" data-path="interview-questions.html"><a href="interview-questions.html#have-you-been-in-a-situation-where-you-feel-like-the-model-is-the-right-way-to-go-but-either-client-or-manager-that-you-need-to-convince"><i class="fa fa-check"></i><b>8.5</b> Have you been in a situation where you feel like the model is the right way to go but either client or manager that you need to convince?</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="interview-prep.html"><a href="interview-prep.html"><i class="fa fa-check"></i><b>9</b> Interview Prep</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="interview-prep.html"><a href="interview-prep.html#look-alike-model-walk-thru"><i class="fa fa-check"></i><b>9.1</b> Look alike Model walk thru</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="interview-prep.html"><a href="interview-prep.html#situation"><i class="fa fa-check"></i><b>9.1.1</b> Situation</a></li>
+<li class="chapter" data-level="9.1.2" data-path="interview-prep.html"><a href="interview-prep.html#task"><i class="fa fa-check"></i><b>9.1.2</b> Task</a></li>
+<li class="chapter" data-level="9.1.3" data-path="interview-prep.html"><a href="interview-prep.html#action"><i class="fa fa-check"></i><b>9.1.3</b> Action</a></li>
+<li class="chapter" data-level="9.1.4" data-path="interview-prep.html"><a href="interview-prep.html#result"><i class="fa fa-check"></i><b>9.1.4</b> Result</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://davutemrah.github.io/notebooks/" target="blank">Personal Repo Home</a></li>
@@ -225,22 +276,22 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="model-evaluation" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Model Evaluation<a href="model-evaluation.html#model-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="classification-models-evaluation" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Classification Models: Evaluation<a href="model-evaluation.html#classification-models-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="model-evaluation" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Model Evaluation<a href="model-evaluation.html#model-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="classification-models-evaluation" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Classification Models: Evaluation<a href="model-evaluation.html#classification-models-evaluation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="https://medium.com/@demrahayan/evaluating-binary-classification-models-with-pyspark-2afc5ac7937f">My medium story</a></p>
 <p><a href="https://developers.google.com/machine-learning/crash-course/classification/">Google developers</a></p>
-<div id="thresholding" class="section level3 hasAnchor" number="6.1.1">
-<h3><span class="header-section-number">6.1.1</span> Thresholding<a href="model-evaluation.html#thresholding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="thresholding" class="section level3 hasAnchor" number="7.1.1">
+<h3><span class="header-section-number">7.1.1</span> Thresholding<a href="model-evaluation.html#thresholding" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Logistic regression returns a probability. You can use the returned probability “as is” (for example, the probability that the user will click on this ad is 0.00023) or convert the returned probability to a binary value (for example, this email is spam).</p>
 <p>A logistic regression model that returns 0.9995 for a particular email message is predicting that it is very likely to be spam. Conversely, another email message with a prediction score of 0.0003 on that same logistic regression model is very likely not spam.</p>
 <p>However, what about an email message with a prediction score of 0.6? In order to map a logistic regression value to a binary category, you must define a <code>classification threshold</code> (also called the <code>decision threshold</code>).</p>
 <p>A value above that threshold indicates “spam”; a value below indicates “not spam.” It is tempting to assume that the classification threshold should always be 0.5, but thresholds are problem-dependent, and are therefore values that you must tune.</p>
 <p>Note: “Tuning” a threshold for logistic regression is different from tuning hyperparameters such as learning rate. Part of choosing a threshold is assessing how much you’ll suffer for making a mistake. For example, mistakenly labeling a non-spam message as spam is very bad. However, mistakenly labeling a spam message as non-spam is unpleasant, but hardly the end of your job.</p>
 </div>
-<div id="confusion-matrix" class="section level3 hasAnchor" number="6.1.2">
-<h3><span class="header-section-number">6.1.2</span> Confusion Matrix<a href="model-evaluation.html#confusion-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="confusion-matrix" class="section level3 hasAnchor" number="7.1.2">
+<h3><span class="header-section-number">7.1.2</span> Confusion Matrix<a href="model-evaluation.html#confusion-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <table>
 <thead>
 <tr class="header">
@@ -266,25 +317,25 @@
 <p><strong>True negative:</strong> Model predicted negative and it is true.</p>
 <p><strong>False positive (Type 1 Error):</strong> Model predicted positive but it is false.</p>
 <p><strong>False negative (Type 2 Error):</strong> Model predicted negative and it is true.</p>
-<div id="false-positive-rate-fpr" class="section level4 hasAnchor" number="6.1.2.1">
-<h4><span class="header-section-number">6.1.2.1</span> False Positive Rate (FPR):<a href="model-evaluation.html#false-positive-rate-fpr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="false-positive-rate-fpr" class="section level4 hasAnchor" number="7.1.2.1">
+<h4><span class="header-section-number">7.1.2.1</span> False Positive Rate (FPR):<a href="model-evaluation.html#false-positive-rate-fpr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The False Positive Rate is the ratio of false positive predictions to the total number of actual negatives. It measures the rate at which the model incorrectly predicts the positive class among the instances that are actually negative.</p>
 <p><span class="math inline">\(FPR = \frac{FP}{TN + FP}\)</span></p>
 </div>
-<div id="true-positive-rate-tpr-sensitivity-or-recall" class="section level4 hasAnchor" number="6.1.2.2">
-<h4><span class="header-section-number">6.1.2.2</span> True Positive Rate (TPR), Sensitivity, or Recall:<a href="model-evaluation.html#true-positive-rate-tpr-sensitivity-or-recall" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="true-positive-rate-tpr-sensitivity-or-recall" class="section level4 hasAnchor" number="7.1.2.2">
+<h4><span class="header-section-number">7.1.2.2</span> True Positive Rate (TPR), Sensitivity, or Recall:<a href="model-evaluation.html#true-positive-rate-tpr-sensitivity-or-recall" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The True Positive Rate is the ratio of true positive predictions to the total number of actual positives. It measures the ability of the model to correctly predict the positive class among instances that are actually positive.</p>
 <p>Recall (TPR) <span class="math inline">\(= \frac{TP}{TP + FN}\)</span></p>
 </div>
-<div id="accuracy" class="section level4 hasAnchor" number="6.1.2.3">
-<h4><span class="header-section-number">6.1.2.3</span> Accuracy:<a href="model-evaluation.html#accuracy" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="accuracy" class="section level4 hasAnchor" number="7.1.2.3">
+<h4><span class="header-section-number">7.1.2.3</span> Accuracy:<a href="model-evaluation.html#accuracy" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>It represents the ratio of correctly predicted instances to the total number of instances. The accuracy metric is suitable for balanced datasets where the classes are evenly distributed. It is calculated using the following formula:</p>
 <p>Accuracy <span class="math inline">\(= \frac{TP + TN}{TP + TN + FP + FN}\)</span></p>
 <p>Accuracy provides a general sense of how well a model is performing across all classes. It is easy to understand and interpret, making it a commonly used metric, especially when the classes are balanced.</p>
 <p>However, accuracy may not be an ideal metric in situations where the class distribution is imbalanced. In imbalanced datasets, where one class significantly outnumbers the other, a high accuracy might be achieved by simply predicting the majority class. In such cases, other metrics like precision, recall, F1 score, or area under the receiver operating characteristic (ROC-AUC) curve may be more informative.</p>
 </div>
-<div id="precision" class="section level4 hasAnchor" number="6.1.2.4">
-<h4><span class="header-section-number">6.1.2.4</span> Precision:<a href="model-evaluation.html#precision" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="precision" class="section level4 hasAnchor" number="7.1.2.4">
+<h4><span class="header-section-number">7.1.2.4</span> Precision:<a href="model-evaluation.html#precision" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Precision is the ratio of true positive predictions to the total number of positive predictions made by the model. It represents the accuracy of the positive predictions made by the model.</p>
 <p><span class="math inline">\(Precision = \frac{TP}{TP + FP}\)</span></p>
 <p><strong>F1 Measure:</strong></p>
@@ -292,8 +343,8 @@
 <p>The F1 score is useful in situations where achieving a balance between precision and recall is important, as it penalizes models that have a significant imbalance between these two metrics.</p>
 <p><span class="math inline">\(F1 score = 2 \times \frac{Precision \times Recall}{Precision + Recall}\)</span></p>
 </div>
-<div id="in-marketing" class="section level4 hasAnchor" number="6.1.2.5">
-<h4><span class="header-section-number">6.1.2.5</span> In Marketing<a href="model-evaluation.html#in-marketing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="in-marketing" class="section level4 hasAnchor" number="7.1.2.5">
+<h4><span class="header-section-number">7.1.2.5</span> In Marketing<a href="model-evaluation.html#in-marketing" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>In marketing, the choice between optimizing for <code>precision</code> or <code>recall</code> depends on the specific business objectives and the costs associated with false positives and false negatives:</p>
 <p>Precision is prioritized when the cost of targeting non-lookalikes is high, and we want to ensure that most of the targeted individuals are genuine lookalikes.</p>
 <p>Recall is prioritized when the cost of missing a potential lookalike (lost opportunity) is high, and we want to capture as many true lookalikes as possible, even if it means including some non-lookalikes.</p>
@@ -309,12 +360,12 @@
 </div>
 </div>
 </div>
-<div id="roc-curve" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> ROC Curve<a href="model-evaluation.html#roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="roc-curve" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> ROC Curve<a href="model-evaluation.html#roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <strong>ROC (Receiver Operating Characteristic) curve</strong> is a graphical tool used to evaluate the performance of binary classification models. It helps in understanding how well a model distinguishes between two classes.</p>
 <p>The ROC curve helps visualize the trade-offs between true positive rate and false positive rate across different thresholds. By analyzing the ROC curve, considering business costs, and using metrics like Youden’s Index, you can select a probability threshold that balances performance according to your specific needs.</p>
-<div id="components-of-the-roc-curve" class="section level3 hasAnchor" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> Components of the ROC Curve:<a href="model-evaluation.html#components-of-the-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="components-of-the-roc-curve" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Components of the ROC Curve:<a href="model-evaluation.html#components-of-the-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p><strong>True Positive Rate (TPR) / Sensitivity / Recall</strong>:</p></li>
 <li><p>Measures the proportion of actual positive cases that are correctly identified by the model.</p></li>
@@ -330,8 +381,8 @@
      \]</span></p></li>
 </ul>
 </div>
-<div id="how-to-read-the-roc-curve" class="section level3 hasAnchor" number="6.2.2">
-<h3><span class="header-section-number">6.2.2</span> How to Read the ROC Curve:<a href="model-evaluation.html#how-to-read-the-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="how-to-read-the-roc-curve" class="section level3 hasAnchor" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> How to Read the ROC Curve:<a href="model-evaluation.html#how-to-read-the-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p><strong>X-axis</strong>: False Positive Rate (FPR) – The rate at which negative cases are incorrectly classified as positive.</p></li>
 <li><p><strong>Y-axis</strong>: True Positive Rate (TPR) – The rate at which positive cases are correctly identified.</p></li>
@@ -339,8 +390,8 @@
 <li><p>A <strong>random classifier</strong> would produce a diagonal line from the bottom-left to the top-right of the plot, indicating no discriminative power.</p></li>
 </ul>
 </div>
-<div id="area-under-the-roc-curve-auc" class="section level3 hasAnchor" number="6.2.3">
-<h3><span class="header-section-number">6.2.3</span> Area Under the ROC Curve (AUC):<a href="model-evaluation.html#area-under-the-roc-curve-auc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="area-under-the-roc-curve-auc" class="section level3 hasAnchor" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> Area Under the ROC Curve (AUC):<a href="model-evaluation.html#area-under-the-roc-curve-auc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p><strong>AUC</strong> represents the probability that the model ranks a randomly chosen positive case higher than a randomly chosen negative case.</p></li>
 <li><p><strong>AUC Values</strong>:</p>
@@ -352,65 +403,65 @@
 </ul></li>
 </ul>
 </div>
-<div id="applications-of-roc-curve" class="section level3 hasAnchor" number="6.2.4">
-<h3><span class="header-section-number">6.2.4</span> Applications of ROC Curve:<a href="model-evaluation.html#applications-of-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="applications-of-roc-curve" class="section level3 hasAnchor" number="7.2.4">
+<h3><span class="header-section-number">7.2.4</span> Applications of ROC Curve:<a href="model-evaluation.html#applications-of-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p><strong>Model Evaluation</strong>: The ROC curve helps compare different models and choose the one with the best trade-off between true positive rate and false positive rate.</p></li>
 <li><p><strong>Threshold Selection</strong>: It aids in selecting the optimal probability threshold for classification, balancing the rate of true positives and false positives.</p></li>
 </ul>
 </div>
-<div id="using-the-roc-curve-in-real-examples" class="section level3 hasAnchor" number="6.2.5">
-<h3><span class="header-section-number">6.2.5</span> Using the ROC Curve in Real Examples<a href="model-evaluation.html#using-the-roc-curve-in-real-examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="using-the-roc-curve-in-real-examples" class="section level3 hasAnchor" number="7.2.5">
+<h3><span class="header-section-number">7.2.5</span> Using the ROC Curve in Real Examples<a href="model-evaluation.html#using-the-roc-curve-in-real-examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The ROC curve is a valuable tool for evaluating and selecting the optimal probability threshold in binary classification problems. Here’s how you can use the ROC curve in practice and select an appropriate threshold:</p>
-<div id="train-your-model" class="section level4 hasAnchor" number="6.2.5.1">
-<h4><span class="header-section-number">6.2.5.1</span> Train Your Model:<a href="model-evaluation.html#train-your-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="train-your-model" class="section level4 hasAnchor" number="7.2.5.1">
+<h4><span class="header-section-number">7.2.5.1</span> Train Your Model:<a href="model-evaluation.html#train-your-model" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>Fit your binary classification model to the training data.</li>
 </ul>
 </div>
-<div id="predict-probabilities" class="section level4 hasAnchor" number="6.2.5.2">
-<h4><span class="header-section-number">6.2.5.2</span> Predict Probabilities:<a href="model-evaluation.html#predict-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="predict-probabilities" class="section level4 hasAnchor" number="7.2.5.2">
+<h4><span class="header-section-number">7.2.5.2</span> Predict Probabilities:<a href="model-evaluation.html#predict-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>Use the model to predict probabilities of the positive class for the test data. These probabilities are used to assess the performance of the model at various thresholds.</li>
 </ul>
 </div>
-<div id="compute-true-positive-rate-tpr-and-false-positive-rate-fpr" class="section level4 hasAnchor" number="6.2.5.3">
-<h4><span class="header-section-number">6.2.5.3</span> Compute True Positive Rate (TPR) and False Positive Rate (FPR):<a href="model-evaluation.html#compute-true-positive-rate-tpr-and-false-positive-rate-fpr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="compute-true-positive-rate-tpr-and-false-positive-rate-fpr" class="section level4 hasAnchor" number="7.2.5.3">
+<h4><span class="header-section-number">7.2.5.3</span> Compute True Positive Rate (TPR) and False Positive Rate (FPR):<a href="model-evaluation.html#compute-true-positive-rate-tpr-and-false-positive-rate-fpr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>For different threshold values (from 0 to 1), calculate the TPR and FPR. This involves varying the classification threshold and computing the confusion matrix for each threshold.</li>
 </ul>
 </div>
-<div id="plot-the-roc-curve" class="section level4 hasAnchor" number="6.2.5.4">
-<h4><span class="header-section-number">6.2.5.4</span> Plot the ROC Curve:<a href="model-evaluation.html#plot-the-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="plot-the-roc-curve" class="section level4 hasAnchor" number="7.2.5.4">
+<h4><span class="header-section-number">7.2.5.4</span> Plot the ROC Curve:<a href="model-evaluation.html#plot-the-roc-curve" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>Plot the TPR (on the y-axis) against the FPR (on the x-axis) for each threshold value. This gives you the ROC curve.</li>
 </ul>
 </div>
-<div id="calculate-the-area-under-the-curve-auc" class="section level4 hasAnchor" number="6.2.5.5">
-<h4><span class="header-section-number">6.2.5.5</span> Calculate the Area Under the Curve (AUC):<a href="model-evaluation.html#calculate-the-area-under-the-curve-auc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="calculate-the-area-under-the-curve-auc" class="section level4 hasAnchor" number="7.2.5.5">
+<h4><span class="header-section-number">7.2.5.5</span> Calculate the Area Under the Curve (AUC):<a href="model-evaluation.html#calculate-the-area-under-the-curve-auc" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li>The AUC provides a summary measure of the model’s performance. A higher AUC indicates better model performance.</li>
 </ul>
 </div>
 </div>
-<div id="selecting-the-probability-threshold" class="section level3 hasAnchor" number="6.2.6">
-<h3><span class="header-section-number">6.2.6</span> Selecting the Probability Threshold:<a href="model-evaluation.html#selecting-the-probability-threshold" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="selecting-the-probability-threshold" class="section level3 hasAnchor" number="7.2.6">
+<h3><span class="header-section-number">7.2.6</span> Selecting the Probability Threshold:<a href="model-evaluation.html#selecting-the-probability-threshold" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Choosing the right probability threshold is crucial for optimizing your model’s performance based on your specific needs. Here’s how to select an appropriate threshold:</p>
-<div id="visual-inspection" class="section level4 hasAnchor" number="6.2.6.1">
-<h4><span class="header-section-number">6.2.6.1</span> Visual Inspection:<a href="model-evaluation.html#visual-inspection" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="visual-inspection" class="section level4 hasAnchor" number="7.2.6.1">
+<h4><span class="header-section-number">7.2.6.1</span> Visual Inspection:<a href="model-evaluation.html#visual-inspection" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><strong>Look at the ROC Curve:</strong> Find the point on the ROC curve that is closest to the top-left corner (where TPR is high and FPR is low). This point represents a good trade-off between sensitivity and specificity.</li>
 </ul>
 </div>
-<div id="consider-the-business-context" class="section level4 hasAnchor" number="6.2.6.2">
-<h4><span class="header-section-number">6.2.6.2</span> Consider the Business Context:<a href="model-evaluation.html#consider-the-business-context" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="consider-the-business-context" class="section level4 hasAnchor" number="7.2.6.2">
+<h4><span class="header-section-number">7.2.6.2</span> Consider the Business Context:<a href="model-evaluation.html#consider-the-business-context" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><p><strong>Cost-Benefit Analysis:</strong> If the cost of false positives is high (e.g., wasted marketing spend), you might prefer a threshold that minimizes FPR. Conversely, if missing true positives is costly (e.g., lost revenue), you might choose a lower threshold to increase TPR.</p></li>
 <li><p><strong>Decision-Making Criteria:</strong> Determine the acceptable levels of TPR and FPR based on business requirements. For example, in a medical diagnosis context, you might prefer higher recall (sensitivity) to ensure no patient with a condition is missed, even if it means higher false positives.</p></li>
 </ul>
 </div>
-<div id="optimization-metrics" class="section level4 hasAnchor" number="6.2.6.3">
-<h4><span class="header-section-number">6.2.6.3</span> Optimization Metrics:<a href="model-evaluation.html#optimization-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="optimization-metrics" class="section level4 hasAnchor" number="7.2.6.3">
+<h4><span class="header-section-number">7.2.6.3</span> Optimization Metrics:<a href="model-evaluation.html#optimization-metrics" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><strong>Youden’s Index:</strong> Calculate Youden’s Index (<span class="math inline">\(J\)</span>) which is defined as:
 <span class="math display">\[
@@ -419,21 +470,21 @@
 The threshold corresponding to the maximum value of <span class="math inline">\(J\)</span> can be chosen as it represents the best trade-off between TPR and FPR.</li>
 </ul>
 </div>
-<div id="confusion-matrix-analysis" class="section level4 hasAnchor" number="6.2.6.4">
-<h4><span class="header-section-number">6.2.6.4</span> Confusion Matrix Analysis:<a href="model-evaluation.html#confusion-matrix-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="confusion-matrix-analysis" class="section level4 hasAnchor" number="7.2.6.4">
+<h4><span class="header-section-number">7.2.6.4</span> Confusion Matrix Analysis:<a href="model-evaluation.html#confusion-matrix-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><strong>Evaluate Different Thresholds:</strong> For each threshold, compute the confusion matrix and analyze precision, recall, and F1-score. Choose the threshold that best aligns with your performance goals.</li>
 </ul>
 </div>
-<div id="cross-validation" class="section level4 hasAnchor" number="6.2.6.5">
-<h4><span class="header-section-number">6.2.6.5</span> Cross-Validation:<a href="model-evaluation.html#cross-validation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="cross-validation-1" class="section level4 hasAnchor" number="7.2.6.5">
+<h4><span class="header-section-number">7.2.6.5</span> Cross-Validation:<a href="model-evaluation.html#cross-validation-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>
 <li><strong>Cross-Validation:</strong> Use cross-validation to ensure that the chosen threshold performs well across different subsets of the data. This helps in generalizing the model’s performance and avoiding overfitting.</li>
 </ul>
 </div>
 </div>
-<div id="roc-curve-example" class="section level3 hasAnchor" number="6.2.7">
-<h3><span class="header-section-number">6.2.7</span> ROC Curve Example:<a href="model-evaluation.html#roc-curve-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="roc-curve-example" class="section level3 hasAnchor" number="7.2.7">
+<h3><span class="header-section-number">7.2.7</span> ROC Curve Example:<a href="model-evaluation.html#roc-curve-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let’s consider an example where you have a model predicting whether an email is spam or not:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Train the Model:</strong> You train a logistic regression model to classify emails as spam or not spam.</p></li>
@@ -451,11 +502,11 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 
 </div>
 </div>
-<div id="overfitting" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Overfitting<a href="model-evaluation.html#overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="overfitting-1" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Overfitting<a href="model-evaluation.html#overfitting-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Overfitting occurs when a model learns the noise and details of the training data too well, resulting in poor generalization to new, unseen data.</p>
-<div id="how-do-you-overcome-overfitting" class="section level3 hasAnchor" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> How Do You Overcome Overfitting?<a href="model-evaluation.html#how-do-you-overcome-overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="how-do-you-overcome-overfitting" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> How Do You Overcome Overfitting?<a href="model-evaluation.html#how-do-you-overcome-overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To overcome overfitting:</p>
 <ul>
 <li><p><strong>Regularization:</strong> Apply techniques like L1 (Lasso) and L2 (Ridge) regularization to penalize large coefficients, which helps prevent the model from becoming overly complex.</p></li>
@@ -465,8 +516,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 <li><p><strong>Ensemble Methods with Bagging:</strong> Techniques like Random Forest use bagging to reduce variance by averaging multiple decision trees trained on different random subsets of data.</p></li>
 </ul>
 </div>
-<div id="data-stratification-technique" class="section level3 hasAnchor" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> Data Stratification Technique<a href="model-evaluation.html#data-stratification-technique" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="data-stratification-technique" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Data Stratification Technique<a href="model-evaluation.html#data-stratification-technique" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Stratification is a technique used during data splitting to ensure that the training and test sets are representative of the overall distribution of the target variable. This is particularly important when the target variable is imbalanced.</p>
 <ul>
 <li><p><strong>Stratified Sampling:</strong></p>
@@ -480,8 +531,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 </ul></li>
 </ul>
 </div>
-<div id="any-other-way-to-simplify-the-model" class="section level3 hasAnchor" number="6.3.3">
-<h3><span class="header-section-number">6.3.3</span> Any Other Way to Simplify the Model?<a href="model-evaluation.html#any-other-way-to-simplify-the-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="any-other-way-to-simplify-the-model" class="section level3 hasAnchor" number="7.3.3">
+<h3><span class="header-section-number">7.3.3</span> Any Other Way to Simplify the Model?<a href="model-evaluation.html#any-other-way-to-simplify-the-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Simplifying the model can help prevent overfitting by reducing its capacity to learn overly complex patterns from the data. Some strategies include:</p>
 <ul>
 <li><p><strong>Feature Selection:</strong></p>
@@ -498,8 +549,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 </ul></li>
 </ul>
 </div>
-<div id="are-you-using-cross-validation-method" class="section level3 hasAnchor" number="6.3.4">
-<h3><span class="header-section-number">6.3.4</span> 4. Are You Using Cross-Validation Method?<a href="model-evaluation.html#are-you-using-cross-validation-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="are-you-using-cross-validation-method" class="section level3 hasAnchor" number="7.3.4">
+<h3><span class="header-section-number">7.3.4</span> 4. Are You Using Cross-Validation Method?<a href="model-evaluation.html#are-you-using-cross-validation-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Yes, cross-validation is a critical method to evaluate and improve model performance, especially for preventing overfitting:</p>
 <ul>
 <li><strong>K-Fold Cross-Validation:</strong>
@@ -521,8 +572,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 
 </div>
 </div>
-<div id="bias-variance-tradeoff" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Bias-Variance Tradeoff<a href="model-evaluation.html#bias-variance-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bias-variance-tradeoff" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Bias-Variance Tradeoff<a href="model-evaluation.html#bias-variance-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <strong>error-variance tradeoff</strong> refers to the balance between two sources of error that affect the performance of a machine learning model: <strong>bias</strong> and <strong>variance</strong>.</p>
 <p>Understanding this tradeoff is key to building models that generalize well to new data.</p>
 <p>In machine learning, the total error (or loss) of a model can be decomposed into three parts:</p>
@@ -532,8 +583,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 <li><p><strong>Irreducible Error</strong>: Error that cannot be reduced regardless of the model. This is typically noise in the data.</p></li>
 </ol>
 <p>The goal of machine learning is to minimize both bias and variance to achieve good generalization on unseen data.</p>
-<div id="key-concepts-in-bias-variance-tradeoff" class="section level3 hasAnchor" number="6.4.1">
-<h3><span class="header-section-number">6.4.1</span> Key Concepts in Bias-Variance Tradeoff<a href="model-evaluation.html#key-concepts-in-bias-variance-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="key-concepts-in-bias-variance-tradeoff" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Key Concepts in Bias-Variance Tradeoff<a href="model-evaluation.html#key-concepts-in-bias-variance-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p><strong>Bias</strong>:</p>
 <ul>
@@ -563,8 +614,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 </ul></li>
 </ol>
 </div>
-<div id="error-decomposition-and-tradeoff" class="section level3 hasAnchor" number="6.4.2">
-<h3><span class="header-section-number">6.4.2</span> Error Decomposition and Tradeoff<a href="model-evaluation.html#error-decomposition-and-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="error-decomposition-and-tradeoff" class="section level3 hasAnchor" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> Error Decomposition and Tradeoff<a href="model-evaluation.html#error-decomposition-and-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <strong>expected error</strong> of a model can be broken down as follows:</p>
 <p><span class="math display">\[
 \text{Expected Error} = (\text{Bias})^2 + \text{Variance} + \text{Irreducible Error}
@@ -574,8 +625,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 <li><p><strong>High Bias and Low Variance</strong>: A model like linear regression may have high bias (oversimplifies the data) but low variance (less sensitivity to small changes in data).</p></li>
 </ul>
 </div>
-<div id="managing-the-bias-variance-tradeoff" class="section level3 hasAnchor" number="6.4.3">
-<h3><span class="header-section-number">6.4.3</span> Managing the Bias-Variance Tradeoff<a href="model-evaluation.html#managing-the-bias-variance-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="managing-the-bias-variance-tradeoff" class="section level3 hasAnchor" number="7.4.3">
+<h3><span class="header-section-number">7.4.3</span> Managing the Bias-Variance Tradeoff<a href="model-evaluation.html#managing-the-bias-variance-tradeoff" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To achieve a good balance between bias and variance:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Regularization</strong>:
@@ -600,8 +651,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 </ul></li>
 </ol>
 </div>
-<div id="conclusion" class="section level3 hasAnchor" number="6.4.4">
-<h3><span class="header-section-number">6.4.4</span> Conclusion<a href="model-evaluation.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="conclusion" class="section level3 hasAnchor" number="7.4.4">
+<h3><span class="header-section-number">7.4.4</span> Conclusion<a href="model-evaluation.html#conclusion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p><strong>High Bias, Low Variance</strong>: Simple models that do not learn the complexity of the data well. Risk: Underfitting.</p></li>
 <li><p><strong>Low Bias, High Variance</strong>: Complex models that learn the training data too well, including noise. Risk: Overfitting.</p></li>
@@ -609,8 +660,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 <p>The <strong>bias-variance tradeoff</strong> involves finding the right balance between these two to minimize the total error. The ideal model will have a good balance of bias and variance, leading to the lowest possible error on unseen data.</p>
 
 </div>
-<div id="lift-chart" class="section level3 hasAnchor" number="6.4.5">
-<h3><span class="header-section-number">6.4.5</span> Lift Chart<a href="model-evaluation.html#lift-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="lift-chart" class="section level3 hasAnchor" number="7.4.5">
+<h3><span class="header-section-number">7.4.5</span> Lift Chart<a href="model-evaluation.html#lift-chart" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A <strong>Lift Chart</strong> is a visual tool used in predictive modeling, particularly for evaluating the effectiveness of classification models in binary outcomes (e.g., customer purchase vs. non-purchase).</p>
 <ul>
 <li><p><strong>Definition</strong>:</p>
@@ -634,8 +685,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 </ul></li>
 </ul>
 </div>
-<div id="roc-curve-receiver-operating-characteristic-curve" class="section level3 hasAnchor" number="6.4.6">
-<h3><span class="header-section-number">6.4.6</span> ROC Curve (Receiver Operating Characteristic Curve)<a href="model-evaluation.html#roc-curve-receiver-operating-characteristic-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="roc-curve-receiver-operating-characteristic-curve" class="section level3 hasAnchor" number="7.4.6">
+<h3><span class="header-section-number">7.4.6</span> ROC Curve (Receiver Operating Characteristic Curve)<a href="model-evaluation.html#roc-curve-receiver-operating-characteristic-curve" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>An <strong>ROC Curve</strong> is a graphical representation used to evaluate the performance of binary classifiers. It shows the trade-off between the <strong>True Positive Rate (TPR)</strong> and the <strong>False Positive Rate (FPR)</strong> at different threshold settings.</p>
 <ul>
 <li><strong>Definition</strong>:
@@ -669,8 +720,8 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 </ul></li>
 </ul>
 </div>
-<div id="summary" class="section level3 hasAnchor" number="6.4.7">
-<h3><span class="header-section-number">6.4.7</span> Summary<a href="model-evaluation.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="summary-5" class="section level3 hasAnchor" number="7.4.7">
+<h3><span class="header-section-number">7.4.7</span> Summary<a href="model-evaluation.html#summary-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><strong>Mutual Information</strong> helps in feature selection by quantifying the dependency between variables.</li>
 <li><strong>Lift Chart</strong> evaluates the effectiveness of classification models, showing the improvement over a random guess.</li>
@@ -679,10 +730,10 @@ The threshold corresponding to the maximum value of <span class="math inline">\(
 <p>Would you like more details or examples on any of these concepts?</p>
 
 </div>
-<div id="bootstrapping" class="section level3 hasAnchor" number="6.4.8">
-<h3><span class="header-section-number">6.4.8</span> Bootstrapping<a href="model-evaluation.html#bootstrapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="jack-knife" class="section level4 hasAnchor" number="6.4.8.1">
-<h4><span class="header-section-number">6.4.8.1</span> Jack-knife<a href="model-evaluation.html#jack-knife" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="bootstrapping" class="section level3 hasAnchor" number="7.4.8">
+<h3><span class="header-section-number">7.4.8</span> Bootstrapping<a href="model-evaluation.html#bootstrapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="jack-knife" class="section level4 hasAnchor" number="7.4.8.1">
+<h4><span class="header-section-number">7.4.8.1</span> Jack-knife<a href="model-evaluation.html#jack-knife" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>• The jackknife is a tool for estimating standard errors and the bias of estimators</p>
 <p>• As its name suggests, the jackknife is a small, handy tool; in contrast to the
 bootstrap, which is then the moral equivalent of a giant workshop full of tools</p>

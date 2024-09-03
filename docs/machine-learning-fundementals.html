@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Machine Learning Fundementals | Machine Learning</title>
+  <meta name="description" content="This is a collection of notes to my self" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Machine Learning Fundementals | Machine Learning" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is a collection of notes to my self" />
+  <meta name="github-repo" content="davutemrah/davutemrah.github.io" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Machine Learning Fundementals | Machine Learning" />
+  
+  <meta name="twitter:description" content="This is a collection of notes to my self" />
+  
+
+<meta name="author" content="Davut Ayan" />
+
+
+<meta name="date" content="2024-09-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="machine-learning-fundamentals.html"/>
+<link rel="next" href="machine-learning.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Machine Learning</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="projects.html"><a href="projects.html"><i class="fa fa-check"></i><b>1</b> Projects</a></li>
+<li class="chapter" data-level="2" data-path="machine-learning-fundamentals.html"><a href="machine-learning-fundamentals.html"><i class="fa fa-check"></i><b>2</b> Machine Learning Fundamentals</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="machine-learning-fundamentals.html"><a href="machine-learning-fundamentals.html#definitions"><i class="fa fa-check"></i><b>2.1</b> definitions</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="machine-learning-fundamentals.html"><a href="machine-learning-fundamentals.html#data-science"><i class="fa fa-check"></i><b>2.1.1</b> Data Science</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html"><i class="fa fa-check"></i><b>3</b> Machine Learning Fundementals</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#overfitting"><i class="fa fa-check"></i><b>3.1</b> Overfitting</a></li>
+<li class="chapter" data-level="3.2" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#underfitting"><i class="fa fa-check"></i><b>3.2</b> Underfitting</a></li>
+<li class="chapter" data-level="3.3" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#bias-variance-trade-off"><i class="fa fa-check"></i><b>3.3</b> Bias-Variance Trade-off</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#bias"><i class="fa fa-check"></i><b>3.3.1</b> Bias</a></li>
+<li class="chapter" data-level="3.3.2" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#variance"><i class="fa fa-check"></i><b>3.3.2</b> Variance</a></li>
+<li class="chapter" data-level="3.3.3" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#bias-vs.-variance-trade-off"><i class="fa fa-check"></i><b>3.3.3</b> Bias vs. Variance Trade-Off:</a></li>
+<li class="chapter" data-level="3.3.4" data-path="machine-learning-fundementals.html"><a href="machine-learning-fundementals.html#bias-vs.-variance-trade-off-1"><i class="fa fa-check"></i><b>3.3.4</b> Bias vs. Variance Trade-Off:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="machine-learning.html"><a href="machine-learning.html"><i class="fa fa-check"></i><b>4</b> Machine Learning</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="machine-learning.html"><a href="machine-learning.html#ml-algorithms-intro"><i class="fa fa-check"></i><b>4.1</b> ML Algorithms Intro</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="machine-learning.html"><a href="machine-learning.html#binary-classification"><i class="fa fa-check"></i><b>4.1.1</b> Binary Classification:</a></li>
+<li class="chapter" data-level="4.1.2" data-path="machine-learning.html"><a href="machine-learning.html#multi-class-classification"><i class="fa fa-check"></i><b>4.1.2</b> Multi-Class Classification:</a></li>
+<li class="chapter" data-level="4.1.3" data-path="machine-learning.html"><a href="machine-learning.html#continuous-outcome-regression"><i class="fa fa-check"></i><b>4.1.3</b> Continuous Outcome (Regression):</a></li>
+<li class="chapter" data-level="4.1.4" data-path="machine-learning.html"><a href="machine-learning.html#random-forest-vs-decision-trees"><i class="fa fa-check"></i><b>4.1.4</b> Random Forest vs Decision Trees</a></li>
+<li class="chapter" data-level="4.1.5" data-path="machine-learning.html"><a href="machine-learning.html#random-forest-vs-gradient-boosting"><i class="fa fa-check"></i><b>4.1.5</b> Random Forest vs Gradient Boosting</a></li>
+<li class="chapter" data-level="4.1.6" data-path="machine-learning.html"><a href="machine-learning.html#overall-considerations"><i class="fa fa-check"></i><b>4.1.6</b> Overall Considerations:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="machine-learning.html"><a href="machine-learning.html#ml-libraries-in-python"><i class="fa fa-check"></i><b>4.2</b> ML Libraries in Python</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="machine-learning.html"><a href="machine-learning.html#tensorflow"><i class="fa fa-check"></i><b>4.2.1</b> TensorFlow</a></li>
+<li class="chapter" data-level="4.2.2" data-path="machine-learning.html"><a href="machine-learning.html#pytorch"><i class="fa fa-check"></i><b>4.2.2</b> PyTorch</a></li>
+<li class="chapter" data-level="4.2.3" data-path="machine-learning.html"><a href="machine-learning.html#big-data-solutions"><i class="fa fa-check"></i><b>4.2.3</b> Big data solutions</a></li>
+<li class="chapter" data-level="4.2.4" data-path="machine-learning.html"><a href="machine-learning.html#databricks"><i class="fa fa-check"></i><b>4.2.4</b> Databricks</a></li>
+<li class="chapter" data-level="4.2.5" data-path="machine-learning.html"><a href="machine-learning.html#tensorflow-1"><i class="fa fa-check"></i><b>4.2.5</b> TensorFlow</a></li>
+<li class="chapter" data-level="4.2.6" data-path="machine-learning.html"><a href="machine-learning.html#pytorch-1"><i class="fa fa-check"></i><b>4.2.6</b> PyTorch</a></li>
+<li class="chapter" data-level="4.2.7" data-path="machine-learning.html"><a href="machine-learning.html#ensemble-learning-in-machine-learning"><i class="fa fa-check"></i><b>4.2.7</b> <strong>Ensemble Learning in Machine Learning</strong></a></li>
+<li class="chapter" data-level="4.2.8" data-path="machine-learning.html"><a href="machine-learning.html#key-concepts-of-ensemble-learning"><i class="fa fa-check"></i><b>4.2.8</b> <strong>Key Concepts of Ensemble Learning:</strong></a></li>
+<li class="chapter" data-level="4.2.9" data-path="machine-learning.html"><a href="machine-learning.html#bagging-bootstrap-aggregating"><i class="fa fa-check"></i><b>4.2.9</b> <strong>1. Bagging (Bootstrap Aggregating):</strong></a></li>
+<li class="chapter" data-level="4.2.10" data-path="machine-learning.html"><a href="machine-learning.html#boosting"><i class="fa fa-check"></i><b>4.2.10</b> <strong>2. Boosting:</strong></a></li>
+<li class="chapter" data-level="4.2.11" data-path="machine-learning.html"><a href="machine-learning.html#stacking-stacked-generalization"><i class="fa fa-check"></i><b>4.2.11</b> <strong>3. Stacking (Stacked Generalization):</strong></a></li>
+<li class="chapter" data-level="4.2.12" data-path="machine-learning.html"><a href="machine-learning.html#other-ensemble-methods"><i class="fa fa-check"></i><b>4.2.12</b> <strong>Other Ensemble Methods:</strong></a></li>
+<li class="chapter" data-level="4.2.13" data-path="machine-learning.html"><a href="machine-learning.html#advantages-of-ensemble-learning"><i class="fa fa-check"></i><b>4.2.13</b> <strong>Advantages of Ensemble Learning:</strong></a></li>
+<li class="chapter" data-level="4.2.14" data-path="machine-learning.html"><a href="machine-learning.html#disadvantages-of-ensemble-learning"><i class="fa fa-check"></i><b>4.2.14</b> <strong>Disadvantages of Ensemble Learning:</strong></a></li>
+<li class="chapter" data-level="4.2.15" data-path="machine-learning.html"><a href="machine-learning.html#summary"><i class="fa fa-check"></i><b>4.2.15</b> <strong>Summary:</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="machine-learning.html"><a href="machine-learning.html#regularization"><i class="fa fa-check"></i><b>4.3</b> Regularization</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="machine-learning.html"><a href="machine-learning.html#lasso-regression"><i class="fa fa-check"></i><b>4.3.1</b> Lasso Regression</a></li>
+<li class="chapter" data-level="4.3.2" data-path="machine-learning.html"><a href="machine-learning.html#bayesian-models"><i class="fa fa-check"></i><b>4.3.2</b> Bayesian Models</a></li>
+<li class="chapter" data-level="4.3.3" data-path="machine-learning.html"><a href="machine-learning.html#correlation-between-lasso-and-bayesian-models"><i class="fa fa-check"></i><b>4.3.3</b> Correlation Between Lasso and Bayesian Models</a></li>
+<li class="chapter" data-level="4.3.4" data-path="machine-learning.html"><a href="machine-learning.html#summary-1"><i class="fa fa-check"></i><b>4.3.4</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="machine-learning.html"><a href="machine-learning.html#logistic-regression-key-concepts-for-data-science-interviews"><i class="fa fa-check"></i><b>4.4</b> Logistic Regression: Key Concepts for Data Science Interviews</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="machine-learning.html"><a href="machine-learning.html#what-you-need-to-know"><i class="fa fa-check"></i><b>4.4.1</b> What You Need to Know:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="machine-learning.html"><a href="machine-learning.html#gradient-boosting-trees-gbt"><i class="fa fa-check"></i><b>4.5</b> Gradient Boosting Trees (GBT)</a></li>
+<li class="chapter" data-level="4.6" data-path="machine-learning.html"><a href="machine-learning.html#random-forest-2"><i class="fa fa-check"></i><b>4.6</b> Random Forest</a></li>
+<li class="chapter" data-level="4.7" data-path="machine-learning.html"><a href="machine-learning.html#xgboost-key-concepts-for-data-science-interviews"><i class="fa fa-check"></i><b>4.7</b> XGBoost: Key Concepts for Data Science Interviews</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="machine-learning.html"><a href="machine-learning.html#what-you-need-to-know-1"><i class="fa fa-check"></i><b>4.7.1</b> What You Need to Know:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="machine-learning.html"><a href="machine-learning.html#neural-networks-key-concepts-for-data-science-interviews"><i class="fa fa-check"></i><b>4.8</b> Neural Networks: Key Concepts for Data Science Interviews</a>
+<ul>
+<li class="chapter" data-level="4.8.1" data-path="machine-learning.html"><a href="machine-learning.html#basic-structure"><i class="fa fa-check"></i><b>4.8.1</b> Basic Structure:</a></li>
+<li class="chapter" data-level="4.8.2" data-path="machine-learning.html"><a href="machine-learning.html#activation-functions"><i class="fa fa-check"></i><b>4.8.2</b> Activation Functions:</a></li>
+<li class="chapter" data-level="4.8.3" data-path="machine-learning.html"><a href="machine-learning.html#forward-and-backpropagation"><i class="fa fa-check"></i><b>4.8.3</b> Forward and Backpropagation:</a></li>
+<li class="chapter" data-level="4.8.4" data-path="machine-learning.html"><a href="machine-learning.html#loss-functions"><i class="fa fa-check"></i><b>4.8.4</b> Loss Functions:</a></li>
+<li class="chapter" data-level="4.8.5" data-path="machine-learning.html"><a href="machine-learning.html#optimization-algorithms"><i class="fa fa-check"></i><b>4.8.5</b> Optimization Algorithms:</a></li>
+<li class="chapter" data-level="4.8.6" data-path="machine-learning.html"><a href="machine-learning.html#regularization-techniques"><i class="fa fa-check"></i><b>4.8.6</b> Regularization Techniques:</a></li>
+<li class="chapter" data-level="4.8.7" data-path="machine-learning.html"><a href="machine-learning.html#common-architectures"><i class="fa fa-check"></i><b>4.8.7</b> Common Architectures:</a></li>
+<li class="chapter" data-level="4.8.8" data-path="machine-learning.html"><a href="machine-learning.html#overfitting-and-underfitting"><i class="fa fa-check"></i><b>4.8.8</b> Overfitting and Underfitting:</a></li>
+<li class="chapter" data-level="4.8.9" data-path="machine-learning.html"><a href="machine-learning.html#what-you-need-to-know-2"><i class="fa fa-check"></i><b>4.8.9</b> What You Need to Know:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.9" data-path="machine-learning.html"><a href="machine-learning.html#naive-bayes"><i class="fa fa-check"></i><b>4.9</b> Naive Bayes</a>
+<ul>
+<li class="chapter" data-level="4.9.1" data-path="machine-learning.html"><a href="machine-learning.html#bayesian-classification"><i class="fa fa-check"></i><b>4.9.1</b> Bayesian Classification</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="extract-transform-loading.html"><a href="extract-transform-loading.html"><i class="fa fa-check"></i><b>5</b> Extract-Transform-Loading</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="extract-transform-loading.html"><a href="extract-transform-loading.html#outlier-detection"><i class="fa fa-check"></i><b>5.1</b> Outlier Detection</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="ml-modeling.html"><a href="ml-modeling.html"><i class="fa fa-check"></i><b>6</b> ML Modeling</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ml-modeling.html"><a href="ml-modeling.html#objective"><i class="fa fa-check"></i><b>6.1</b> Objective</a></li>
+<li class="chapter" data-level="6.2" data-path="ml-modeling.html"><a href="ml-modeling.html#data-processing"><i class="fa fa-check"></i><b>6.2</b> Data Processing</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="ml-modeling.html"><a href="ml-modeling.html#data-collection"><i class="fa fa-check"></i><b>6.2.1</b> Data collection</a></li>
+<li class="chapter" data-level="6.2.2" data-path="ml-modeling.html"><a href="ml-modeling.html#data-cleaning"><i class="fa fa-check"></i><b>6.2.2</b> Data Cleaning</a></li>
+<li class="chapter" data-level="6.2.3" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-engineering"><i class="fa fa-check"></i><b>6.2.3</b> Feature Engineering</a></li>
+<li class="chapter" data-level="6.2.4" data-path="ml-modeling.html"><a href="ml-modeling.html#implementation-and-impact"><i class="fa fa-check"></i><b>6.2.4</b> Implementation and Impact</a></li>
+<li class="chapter" data-level="6.2.5" data-path="ml-modeling.html"><a href="ml-modeling.html#lessons-learned-and-future-work"><i class="fa fa-check"></i><b>6.2.5</b> Lessons Learned and Future Work</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-selection"><i class="fa fa-check"></i><b>6.3</b> Feature Selection</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="ml-modeling.html"><a href="ml-modeling.html#recursive-feature-elimination-rfe"><i class="fa fa-check"></i><b>6.3.1</b> Recursive Feature Elimination (RFE)</a></li>
+<li class="chapter" data-level="6.3.2" data-path="ml-modeling.html"><a href="ml-modeling.html#lasso-regularization"><i class="fa fa-check"></i><b>6.3.2</b> LASSO regularization</a></li>
+<li class="chapter" data-level="6.3.3" data-path="ml-modeling.html"><a href="ml-modeling.html#mutual-information"><i class="fa fa-check"></i><b>6.3.3</b> Mutual Information</a></li>
+<li class="chapter" data-level="6.3.4" data-path="ml-modeling.html"><a href="ml-modeling.html#mutual-information-vs-correlation-coefficient"><i class="fa fa-check"></i><b>6.3.4</b> Mutual information vs Correlation Coefficient</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="ml-modeling.html"><a href="ml-modeling.html#important-features"><i class="fa fa-check"></i><b>6.4</b> Important Features</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="ml-modeling.html"><a href="ml-modeling.html#feature-importance-in-random-forest"><i class="fa fa-check"></i><b>6.4.1</b> Feature Importance in Random Forest</a></li>
+<li class="chapter" data-level="6.4.2" data-path="ml-modeling.html"><a href="ml-modeling.html#using-feature-importance-for-selection"><i class="fa fa-check"></i><b>6.4.2</b> <strong>Using Feature Importance for Selection</strong></a></li>
+<li class="chapter" data-level="6.4.3" data-path="ml-modeling.html"><a href="ml-modeling.html#advantages-of-using-random-forest-for-feature-selection"><i class="fa fa-check"></i><b>6.4.3</b> <strong>Advantages of Using Random Forest for Feature Selection</strong></a></li>
+<li class="chapter" data-level="6.4.4" data-path="ml-modeling.html"><a href="ml-modeling.html#summary-4"><i class="fa fa-check"></i><b>6.4.4</b> <strong>Summary</strong></a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="ml-modeling.html"><a href="ml-modeling.html#fine-tuning-hyperparameters"><i class="fa fa-check"></i><b>6.5</b> Fine-tuning hyperparameters</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="ml-modeling.html"><a href="ml-modeling.html#key-hyperparameters-for-tree-based-models"><i class="fa fa-check"></i><b>6.5.1</b> Key Hyperparameters for Tree-Based Models</a></li>
+<li class="chapter" data-level="6.5.2" data-path="ml-modeling.html"><a href="ml-modeling.html#fine-tuning-strategy"><i class="fa fa-check"></i><b>6.5.2</b> Fine-Tuning Strategy</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="ml-modeling.html"><a href="ml-modeling.html#cross-validation"><i class="fa fa-check"></i><b>6.6</b> Cross Validation</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="ml-modeling.html"><a href="ml-modeling.html#how-cross-validation-works"><i class="fa fa-check"></i><b>6.6.1</b> How Cross-Validation Works</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="model-evaluation.html"><a href="model-evaluation.html"><i class="fa fa-check"></i><b>7</b> Model Evaluation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="model-evaluation.html"><a href="model-evaluation.html#classification-models-evaluation"><i class="fa fa-check"></i><b>7.1</b> Classification Models: Evaluation</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="model-evaluation.html"><a href="model-evaluation.html#thresholding"><i class="fa fa-check"></i><b>7.1.1</b> Thresholding</a></li>
+<li class="chapter" data-level="7.1.2" data-path="model-evaluation.html"><a href="model-evaluation.html#confusion-matrix"><i class="fa fa-check"></i><b>7.1.2</b> Confusion Matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve"><i class="fa fa-check"></i><b>7.2</b> ROC Curve</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="model-evaluation.html"><a href="model-evaluation.html#components-of-the-roc-curve"><i class="fa fa-check"></i><b>7.2.1</b> Components of the ROC Curve:</a></li>
+<li class="chapter" data-level="7.2.2" data-path="model-evaluation.html"><a href="model-evaluation.html#how-to-read-the-roc-curve"><i class="fa fa-check"></i><b>7.2.2</b> How to Read the ROC Curve:</a></li>
+<li class="chapter" data-level="7.2.3" data-path="model-evaluation.html"><a href="model-evaluation.html#area-under-the-roc-curve-auc"><i class="fa fa-check"></i><b>7.2.3</b> Area Under the ROC Curve (AUC):</a></li>
+<li class="chapter" data-level="7.2.4" data-path="model-evaluation.html"><a href="model-evaluation.html#applications-of-roc-curve"><i class="fa fa-check"></i><b>7.2.4</b> Applications of ROC Curve:</a></li>
+<li class="chapter" data-level="7.2.5" data-path="model-evaluation.html"><a href="model-evaluation.html#using-the-roc-curve-in-real-examples"><i class="fa fa-check"></i><b>7.2.5</b> Using the ROC Curve in Real Examples</a></li>
+<li class="chapter" data-level="7.2.6" data-path="model-evaluation.html"><a href="model-evaluation.html#selecting-the-probability-threshold"><i class="fa fa-check"></i><b>7.2.6</b> Selecting the Probability Threshold:</a></li>
+<li class="chapter" data-level="7.2.7" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve-example"><i class="fa fa-check"></i><b>7.2.7</b> ROC Curve Example:</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="model-evaluation.html"><a href="model-evaluation.html#overfitting-1"><i class="fa fa-check"></i><b>7.3</b> Overfitting</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="model-evaluation.html"><a href="model-evaluation.html#how-do-you-overcome-overfitting"><i class="fa fa-check"></i><b>7.3.1</b> How Do You Overcome Overfitting?</a></li>
+<li class="chapter" data-level="7.3.2" data-path="model-evaluation.html"><a href="model-evaluation.html#data-stratification-technique"><i class="fa fa-check"></i><b>7.3.2</b> Data Stratification Technique</a></li>
+<li class="chapter" data-level="7.3.3" data-path="model-evaluation.html"><a href="model-evaluation.html#any-other-way-to-simplify-the-model"><i class="fa fa-check"></i><b>7.3.3</b> Any Other Way to Simplify the Model?</a></li>
+<li class="chapter" data-level="7.3.4" data-path="model-evaluation.html"><a href="model-evaluation.html#are-you-using-cross-validation-method"><i class="fa fa-check"></i><b>7.3.4</b> 4. Are You Using Cross-Validation Method?</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="model-evaluation.html"><a href="model-evaluation.html#bias-variance-tradeoff"><i class="fa fa-check"></i><b>7.4</b> Bias-Variance Tradeoff</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="model-evaluation.html"><a href="model-evaluation.html#key-concepts-in-bias-variance-tradeoff"><i class="fa fa-check"></i><b>7.4.1</b> Key Concepts in Bias-Variance Tradeoff</a></li>
+<li class="chapter" data-level="7.4.2" data-path="model-evaluation.html"><a href="model-evaluation.html#error-decomposition-and-tradeoff"><i class="fa fa-check"></i><b>7.4.2</b> Error Decomposition and Tradeoff</a></li>
+<li class="chapter" data-level="7.4.3" data-path="model-evaluation.html"><a href="model-evaluation.html#managing-the-bias-variance-tradeoff"><i class="fa fa-check"></i><b>7.4.3</b> Managing the Bias-Variance Tradeoff</a></li>
+<li class="chapter" data-level="7.4.4" data-path="model-evaluation.html"><a href="model-evaluation.html#conclusion"><i class="fa fa-check"></i><b>7.4.4</b> Conclusion</a></li>
+<li class="chapter" data-level="7.4.5" data-path="model-evaluation.html"><a href="model-evaluation.html#lift-chart"><i class="fa fa-check"></i><b>7.4.5</b> Lift Chart</a></li>
+<li class="chapter" data-level="7.4.6" data-path="model-evaluation.html"><a href="model-evaluation.html#roc-curve-receiver-operating-characteristic-curve"><i class="fa fa-check"></i><b>7.4.6</b> ROC Curve (Receiver Operating Characteristic Curve)</a></li>
+<li class="chapter" data-level="7.4.7" data-path="model-evaluation.html"><a href="model-evaluation.html#summary-5"><i class="fa fa-check"></i><b>7.4.7</b> Summary</a></li>
+<li class="chapter" data-level="7.4.8" data-path="model-evaluation.html"><a href="model-evaluation.html#bootstrapping"><i class="fa fa-check"></i><b>7.4.8</b> Bootstrapping</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="interview-questions.html"><a href="interview-questions.html"><i class="fa fa-check"></i><b>8</b> Interview Questions</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="interview-questions.html"><a href="interview-questions.html#tell-me-how-do-you-train-a-model-and-evaluate-it"><i class="fa fa-check"></i><b>8.0.1</b> tell me how do you train a model and evaluate it</a></li>
+<li class="chapter" data-level="8.0.2" data-path="interview-questions.html"><a href="interview-questions.html#tell-me-how-you-can-use-llm-in-marketingheathcare"><i class="fa fa-check"></i><b>8.0.2</b> tell me how you can use LLM in marketing/heathcare</a></li>
+<li class="chapter" data-level="8.0.3" data-path="interview-questions.html"><a href="interview-questions.html#objective-function-in-logistic-regression"><i class="fa fa-check"></i><b>8.0.3</b> objective function in logistic regression</a></li>
+<li class="chapter" data-level="8.1" data-path="interview-questions.html"><a href="interview-questions.html#do-you-prefer-r-or-python"><i class="fa fa-check"></i><b>8.1</b> Do you prefer R or python?</a></li>
+<li class="chapter" data-level="8.2" data-path="interview-questions.html"><a href="interview-questions.html#what-is-your-main-domain"><i class="fa fa-check"></i><b>8.2</b> What is your main domain?</a></li>
+<li class="chapter" data-level="8.3" data-path="interview-questions.html"><a href="interview-questions.html#is-this-work-culture-fast-paced-do-you-deliver-value-quickly-or-what"><i class="fa fa-check"></i><b>8.3</b> Is this work culture fast-paced? Do you deliver value quickly or what?</a></li>
+<li class="chapter" data-level="8.4" data-path="interview-questions.html"><a href="interview-questions.html#are-you-involved-in-any-efforts-convincing-business-stakeholders-to-adept-models-or-analysis-that-you-do"><i class="fa fa-check"></i><b>8.4</b> Are you involved in any efforts convincing business stakeholders to adept models or analysis that you do</a></li>
+<li class="chapter" data-level="8.5" data-path="interview-questions.html"><a href="interview-questions.html#have-you-been-in-a-situation-where-you-feel-like-the-model-is-the-right-way-to-go-but-either-client-or-manager-that-you-need-to-convince"><i class="fa fa-check"></i><b>8.5</b> Have you been in a situation where you feel like the model is the right way to go but either client or manager that you need to convince?</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="interview-prep.html"><a href="interview-prep.html"><i class="fa fa-check"></i><b>9</b> Interview Prep</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="interview-prep.html"><a href="interview-prep.html#look-alike-model-walk-thru"><i class="fa fa-check"></i><b>9.1</b> Look alike Model walk thru</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="interview-prep.html"><a href="interview-prep.html#situation"><i class="fa fa-check"></i><b>9.1.1</b> Situation</a></li>
+<li class="chapter" data-level="9.1.2" data-path="interview-prep.html"><a href="interview-prep.html#task"><i class="fa fa-check"></i><b>9.1.2</b> Task</a></li>
+<li class="chapter" data-level="9.1.3" data-path="interview-prep.html"><a href="interview-prep.html#action"><i class="fa fa-check"></i><b>9.1.3</b> Action</a></li>
+<li class="chapter" data-level="9.1.4" data-path="interview-prep.html"><a href="interview-prep.html#result"><i class="fa fa-check"></i><b>9.1.4</b> Result</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://davutemrah.github.io/notebooks/" target="blank">Personal Repo Home</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Machine Learning</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="machine-learning-fundementals" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Machine Learning Fundementals<a href="machine-learning-fundementals.html#machine-learning-fundementals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="overfitting" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Overfitting<a href="machine-learning-fundementals.html#overfitting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Overfitting occurs when a model learns the training data too well, capturing noise and fluctuations rather than the underlying pattern. This leads to several issues:</p>
+<ul>
+<li><p><strong>Poor Generalization:</strong> The model performs exceptionally well on training data but poorly on unseen test data, indicating it fails to generalize to new data.</p></li>
+<li><p><strong>Excessive Complexity:</strong> The model is overly complex, often due to an excessive number of parameters relative to the number of observations.</p></li>
+<li><p><strong>Poor Predictive Performance:</strong> An overfitted model has low predictive power on new data, resulting in unreliable predictions.</p></li>
+<li><p><strong>Sensitivity to Noise:</strong> The model becomes overly sensitive to minor variations in the training data, which can result in unstable and inaccurate predictions on new data.</p></li>
+</ul>
+<p><strong>To avoid overfitting, it is important to simplify the model, use regularization techniques, or apply cross-validation to ensure better generalization.</strong></p>
+</div>
+<div id="underfitting" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Underfitting<a href="machine-learning-fundementals.html#underfitting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Underfitting occurs when a model is too simple to capture the underlying patterns in the data, leading to several problems:</p>
+<ul>
+<li><p><strong>Overly Simple Model:</strong> The model lacks the complexity needed to learn from the data effectively.</p></li>
+<li><p><strong>Poor Predictive Performance:</strong> The model performs poorly not only on test data but also on training data, indicating it has not captured the data’s structure well.</p></li>
+<li><p><strong>Insensitive to Patterns:</strong> The model fails to respond even to significant trends or patterns in the data, resulting in inaccurate and unreliable predictions.</p></li>
+</ul>
+<p><strong>To prevent underfitting, consider using a more complex model, adding relevant features, or reducing regularization.</strong></p>
+</div>
+<div id="bias-variance-trade-off" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Bias-Variance Trade-off<a href="machine-learning-fundementals.html#bias-variance-trade-off" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bias" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Bias<a href="machine-learning-fundementals.html#bias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Bias is an error and can be defined as the difference between the average prediction of the model and the actual value we aim to predict. High bias occurs due to the oversimplification of the machine learning algorithm, leading to inaccurate predictions.</p>
+<p>High-bias models result in <strong>underfitting</strong> and generally perform poorly on both the training and test data due to their inability to learn the underlying patterns in the data properly.</p>
+<p><strong>Causes of High Bias:</strong></p>
+<ul>
+<li><p>High bias is often caused by using overly simplistic models for complex data,</p></li>
+<li><p>or when there is insufficient data to build a robust model.</p></li>
+</ul>
+<p><strong>Effect on Model Performance:</strong></p>
+<p>Models with high bias do not learn well from training data and therefore have high errors on both the training and test data.</p>
+</div>
+<div id="variance" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Variance<a href="machine-learning-fundementals.html#variance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Variance is the variability of model predictions for a given data point or a value which tells us spread of our data.</p>
+<p>Models with high variance typically are too complex models and capture all the variation in the outcome including the noise. These models are generally performs very well in the training data but performs poorly on the test data with high error rates. (over-fitting issue)</p>
+</div>
+<div id="bias-vs.-variance-trade-off" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Bias vs. Variance Trade-Off:<a href="machine-learning-fundementals.html#bias-vs.-variance-trade-off" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Your notes provide a good starting point for explaining the <strong>bias-variance trade-off</strong> during an interview, but they could be expanded with more detail to demonstrate a deeper understanding of the concept. Here’s a more comprehensive version that you could use in an interview setting:</p>
+</div>
+<div id="bias-vs.-variance-trade-off-1" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> Bias vs. Variance Trade-Off:<a href="machine-learning-fundementals.html#bias-vs.-variance-trade-off-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>High Bias Models:</strong></p>
+<p>Models with high bias make strong assumptions about the data, leading to oversimplification. These models, like linear regression with few features, often underfit the data, meaning they fail to capture important patterns and relationships.</p>
+<p>This results in both high training error and high test error. Such models are characterized by <strong>high bias and low variance</strong>—they perform consistently but poorly on different datasets because they are not flexible enough to model the true underlying structure of the data.</p>
+<p><strong>High Variance Models:</strong></p>
+<p>On the other end, models with low bias but high variance (such as decision trees without pruning) are highly flexible and can learn intricate details of the training data. However, they tend to <strong>overfit</strong>, meaning they capture noise and random fluctuations in the training data rather than the general pattern. These models have <strong>low bias but high variance</strong>, leading to good performance on training data but poor generalization to unseen data.</p>
+<p><strong>Finding the Balance:</strong></p>
+<p>The key challenge in machine learning is finding the right balance between bias and variance to minimize the <strong>overall error</strong> (which is the sum of bias error, variance error, and irreducible error).</p>
+<p>This is often done through techniques like cross-validation, regularization (e.g., Ridge or Lasso for linear models), or by using ensemble methods like Random Forests and Gradient Boosting, which combine multiple models to reduce variance without significantly increasing bias.</p>
+<p><strong>Mitigation Techniques:</strong></p>
+<p>Discuss techniques like cross-validation, regularization (L1/L2), pruning for decision trees, or using ensemble methods like bagging and boosting, which are commonly used to manage the trade-off.</p>
+<p><strong>Visual Representation:</strong></p>
+<p>If possible, describe or draw the bias-variance trade-off curve, showing how training and test errors change with model complexity.</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Discuss Decision Tree algorithm
+A decision tree is a popular supervised machine learning algorithm. It is mainly used for Regression and Classification. It allows breaks down a dataset into smaller subsets. The decision tree can able to handle both categorical and numerical data.</p></li>
+<li><p>What is Prior probability and likelihood?
+Prior probability is the proportion of the dependent variable in the data set while the likelihood is the probability of classifying a given observant in the presence of some other variable.</p></li>
+<li><p>Explain Recommender Systems?
+It is a subclass of information filtering techniques. It helps you to predict the preferences or ratings which users likely to give to a product.</p></li>
+</ol>
+<p>Question: Please explain Recommender Systems along with an application.
+Answer: Recommender Systems is a subclass of information filtering systems, meant for predicting the preferences or ratings awarded by a user to some product.
+An application of a recommender system is the product recommendations section in Amazon. This section contains items based on the user’s search history and past orders.</p>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Name three disadvantages of using a linear model
+Three disadvantages of the linear model are:
+• The assumption of linearity of the errors.
+• You can’t use this model for binary or count outcomes
+• There are plenty of overfitting problems that it can’t solve</p></li>
+<li><p>Why do you need to perform resampling?</p></li>
+</ol>
+<p>Resampling is done in below-given cases:
+• Estimating the accuracy of sample statistics by drawing randomly with replacement from a set of the data point or using as subsets of accessible data
+• Substituting labels on data points when performing necessary tests
+• Validating models by using random subsets</p>
+<ol start="9" style="list-style-type: decimal">
+<li>List out the libraries in Python used for Data Analysis and Scientific Computations.
+SciPy, Pandas, Matplotlib, NumPy, SciKit, Seaborn</li>
+<li>What is Power Analysis?
+The power analysis is an integral part of the experimental design. It helps you to determine the sample size requires to find out the effect of a given size from a cause with a specific level of assurance. It also allows you to deploy a particular probability in a sample size constraint.</li>
+<li>Explain Collaborative filtering
+Collaborative filtering used to search for correct patterns by collaborating viewpoints, multiple data sources, and various agents.</li>
+<li>Discuss ‘Naive’ in a Naive Bayes algorithm?
+The Naive Bayes Algorithm model is based on the Bayes Theorem. It describes the probability of an event. It is based on prior knowledge of conditions which might be related to that specific event.</li>
+<li>What is a Linear Regression?
+Linear regression is a statistical programming method where the score of a variable ‘A’ is predicted from the score of a second variable ‘B’. B is referred to as the predictor variable and A as the criterion variable.</li>
+<li>State the difference between the expected value and mean value
+They are not many differences, but both of these terms are used in different contexts. Mean value is generally referred to when you are discussing a probability distribution whereas expected value is referred to in the context of a random variable.</li>
+<li>What the aim of conducting A/B Testing?
+AB testing used to conduct random experiments with two variables, A and B. The goal of this testing method is to find out changes to a web page to maximize or increase the outcome of a strategy.</li>
+<li>What is Ensemble Learning?
+The ensemble is a method of combining a diverse set of learners together to improvise on the stability and predictive power of the model. Two types of Ensemble learning methods are:</li>
+</ol>
+<p><strong>Bagging</strong>
+Bagging method helps you to implement similar learners on small sample populations. It helps you to make nearer predictions.
+Boosting
+Boosting is an iterative method which allows you to adjust the weight of an observation depends upon the last classification. Boosting decreases the bias error and helps you to build strong predictive models.
+18. Explain Eigenvalue and Eigenvector
+Eigenvectors are for understanding linear transformations. Data scientist need to calculate the eigenvectors for a covariance matrix or correlation. Eigenvalues are the directions along using specific linear transformation acts by compressing, flipping, or stretching.
+Question: Please explain Eigenvectors and Eigenvalues.
+Answer: Eigenvectors help in understanding linear transformations. They are calculated typically for a correlation or covariance matrix in data analysis.
+In other words, eigenvectors are those directions along which some particular linear transformation acts by compressing, flipping, or stretching.
+Eigenvalues can be understood either as the strengths of the transformation in the direction of the eigenvectors or the factors by which the compressions happens.</p>
+<ol start="19" style="list-style-type: decimal">
+<li><p>Define the term cross-validation
+Cross-validation is a validation technique for evaluating how the outcomes of statistical analysis will generalize for an Independent dataset. This method is used in backgrounds where the objective is forecast, and one needs to estimate how accurately a model will accomplish.
+Question: Can you compare the validation set with the test set?
+Answer: A validation set is part of the training set used for parameter selection as well as for avoiding overfitting of the machine learning model being developed. On the contrary, a test set is meant for evaluating or testing the performance of a trained machine learning model.</p></li>
+<li><p>Explain the steps for a Data analytics project
+The following are important steps involved in an analytics project:
+• Understand the Business problem
+• Explore the data and study it carefully.
+• Prepare the data for modeling by finding missing values and transforming variables.
+• Start running the model and analyze the Big data result.
+• Validate the model with new data set.
+• Implement the model and track the result to analyze the performance of the model for a specific period.</p></li>
+</ol>
+<p>Question: What do you mean by cluster sampling and systematic sampling?
+Answer: When studying the target population spread throughout a wide area becomes difficult and applying simple random sampling becomes ineffective, the technique of cluster sampling is used. A cluster sample is a probability sample, in which each of the sampling units is a collection or cluster of elements.
+Following the technique of systematic sampling, elements are chosen from an ordered sampling frame. The list is advanced in a circular fashion. This is done in such a way so that once the end of the list is reached, the same is progressed from the start, or top, again.</p>
+<ol start="23" style="list-style-type: decimal">
+<li>What is a Random Forest?
+Random forest is a machine learning method which helps you to perform all types of regression and classification tasks. It is also used for treating missing values and outlier values.</li>
+<li>What is the importance of having a selection bias?
+Selection Bias occurs when there is no specific randomization achieved while picking individuals or groups or data to be analyzed. It suggests that the given sample does not exactly represent the population which was intended to be analyzed.</li>
+<li>What is the K-means clustering method?
+K-means clustering is an important unsupervised learning method. It is the technique of classifying data using a certain set of clusters which is called K clusters. It is deployed for grouping to find out the similarity in the data.</li>
+<li>Explain the difference between Data Science and Data Analytics
+Data Scientists need to slice data to extract valuable insights that a data analyst can apply to real-world business scenarios. The main difference between the two is that the data scientists have more technical knowledge then business analyst. Moreover, they don’t need an understanding of the business required for data visualization.</li>
+<li>Explain p-value?
+When you conduct a hypothesis test in statistics, a p-value allows you to determine the strength of your results. It is a numerical number between 0 and 1. Based on the value it will help you to denote the strength of the specific result.</li>
+<li>Define the term deep learning
+Deep Learning is a subtype of machine learning. It is concerned with algorithms inspired by the structure called artificial neural networks (ANN).</li>
+<li>Explain the method to collect and analyze data to use social media to predict the weather condition.
+You can collect social media data using Facebook, twitter, Instagram’s API’s. For example, for the tweeter, we can construct a feature from each tweet like tweeted date, retweets, list of follower, etc. Then you can use a multivariate time series model to predict the weather condition.</li>
+<li>When do you need to update the algorithm in Data science?
+You need to update an algorithm in the following situation:
+• You want your data model to evolve as data streams using infrastructure
+• The underlying data source is changing If it is non-stationarity</li>
+<li>What is Normal Distribution
+A normal distribution is a set of a continuous variable spread across a normal curve or in the shape of a bell curve. You can consider it as a continuous probability distribution which is useful in statistics. It is useful to analyze the variables and their relationships when we are using the normal distribution curve.</li>
+<li>Which language is best for text analytics? R or Python?
+Python will more suitable for text analytics as it consists of a rich library known as pandas. It allows you to use high-level data analysis tools and data structures, while R doesn’t offer this feature.</li>
+<li>Explain the benefits of using statistics by Data Scientists
+Statistics help Data scientist to get a better idea of customer’s expectation. Using the statistic method Data Scientists can get knowledge regarding consumer interest, behavior, engagement, retention, etc. It also helps you to build powerful data models to validate certain inferences and predictions.</li>
+<li>Name various types of Deep Learning Frameworks
+• Pytorch
+• Microsoft Cognitive Toolkit
+• TensorFlow
+• Caffe
+• Chainer
+• Keras</li>
+<li>Explain why Data Cleansing is essential and which method you use to maintain clean data
+Dirty data often leads to the incorrect inside, which can damage the prospect of any organization. For example, if you want to run a targeted marketing campaign. However, our data incorrectly tell you that a specific product will be in-demand with your target audience; the campaign will fail.</li>
+<li>What is skewed Distribution &amp; uniform distribution?
+Skewed distribution occurs when if data is distributed on any one side of the plot whereas uniform distribution is identified when the data is spread is equal in the range.</li>
+<li>When underfitting occurs in a static model?
+Underfitting occurs when a statistical model or machine learning algorithm not able to capture the underlying trend of the data.</li>
+<li>Name commonly used algorithms.
+Four most commonly used algorithm by Data scientist are:
+• Linear regression
+• Logistic regression
+• Random Forest
+• KNN</li>
+<li>What is precision?
+Precision is the most commonly used error metric is n classification mechanism. Its range is from 0 to 1, where 1 represents 100%</li>
+<li>What is a univariate analysis?
+An analysis which is applied to none attribute at a time is known as univariate analysis. Boxplot is widely used, univariate model.</li>
+<li>How do you overcome challenges to your findings?
+In order, to overcome challenges of my finding one need to encourage discussion, Demonstrate leadership and respecting different options.</li>
+<li>Explain cluster sampling technique in Data science
+A cluster sampling method is used when it is challenging to study the target population spread across, and simple random sampling can’t be applied.</li>
+<li>State the difference between a Validation Set and a Test Set
+A Validation set mostly considered as a part of the training set as it is used for parameter selection which helps you to avoid overfitting of the model being built.
+While a Test Set is used for testing or evaluating the performance of a trained machine learning model.</li>
+<li>Explain the term Binomial Probability Formula?
+“The binomial distribution contains the probabilities of every possible success on N trials for independent events that have a probability of π of occurring.”</li>
+<li>What is a recall?
+A recall is a ratio of the true positive rate against the actual positive rate. It ranges from 0 to 1.</li>
+<li>Discuss normal distribution
+Normal distribution equally distributed as such the mean, median and mode are equal.</li>
+<li>While working on a data set, how can you select important variables? Explain
+Following methods of variable selection you can use:
+• Remove the correlated variables before selecting important variables
+• Use linear regression and select variables which depend on that p values.
+• Use Backward, Forward Selection, and Stepwise Selection
+• Use Xgboost, Random Forest, and plot variable importance chart.
+• Measure information gain for the given set of features and select top n features accordingly.</li>
+<li>Is it possible to capture the correlation between continuous and categorical variable?
+Yes, we can use analysis of covariance technique to capture the association between continuous and categorical variables.</li>
+<li>Treating a categorical variable as a continuous variable would result in a better predictive model?
+Yes, the categorical value should be considered as a continuous variable only when the variable is ordinal in nature. So, it is a better predictive model.
+Question:
+Recall: What is the proportion of actual positives was identified correctly?
+TP / (TP + FN)
+Precision: What is the proportion of positive identifications was actually correct?
+TP / (TP + FP)
+Question:
+A false positive is an incorrect identification of the absence of a condition when it is absent.
+A false negative is an incorrect identification of the absence of a condition when it is actually present.
+Question: Please explain the goal of A/B Testing.
+Answer: A/B Testing is a statistical hypothesis testing meant for a randomized experiment with two variables, A and B. The goal of A/B Testing is to maximize the likelihood of an outcome of some interest by identifying any changes to a webpage.
+A highly reliable method for finding out the best online marketing and promotional strategies for a business, A/B Testing can be employed for testing everything, ranging from sales emails to search ads and website copy.</li>
+</ol>
+<p>Question: Could you explain how to define the number of clusters in a clustering algorithm?
+Answer: The primary objective of clustering is to group together similar identities in such a way that while entities within a group are similar to each other, the groups remain different from one another.
+Generally, the Within Sum of Squares is used for explaining the homogeneity within a cluster. For defining the number of clusters in a clustering algorithm, WSS is plotted for a range pertaining to a number of clusters. The resultant graph is known as the Elbow Curve.
+The Elbow Curve graph contains a point that represents the point post in which there aren’t any decrements in the WSS. This is known as the bending point and represents K in K–Means.
+Although the aforementioned is the widely-used approach, another important approach is the Hierarchical clustering. In this approach, dendrograms are created first and then distinct groups are identified from there.</p>
+<p>Question: Please explain Gradient Descent.
+Answer: The degree of change in the output of a function relating to the changes made to the inputs is known as a gradient. It measures the change in all weights with respect to the change in error. A gradient can also be comprehended as the slope of a function.
+Gradient Descent refers to escalating down to the bottom of a valley. Simply, consider this something as opposed to climbing up a hill. It is a minimization algorithm meant for minimizing a given activation function.</p>
+<p>Question: Please enumerate the various steps involved in an analytics project.
+Answer: Following are the numerous steps involved in an analytics project:
+• Understanding the business problem
+• Exploring the data and familiarizing with the same
+• Preparing the data for modeling by means of detecting outlier values, transforming variables, treating missing values, et cetera
+• Running the model and analyzing the result for making appropriate changes or modifications to the model (an iterative step that repeats until the best possible outcome is gained)
+• Validating the model using a new dataset
+• Implementing the model and tracking the result for analyzing the performance of the same</p>
+<p>Question: What are outlier values and how do you treat them?
+Answer: Outlier values, or simply outliers, are data points in statistics that don’t belong to a certain population. An outlier value is an abnormal observation that is very much different from other values belonging to the set.
+Identification of outlier values can be done by using univariate or some other graphical analysis method. Few outlier values can be assessed individually but assessing a large set of outlier values require the substitution of the same with either the 99th or the 1st percentile values.
+There are two popular ways of treating outlier values:
+1. To change the value so that it can be brought within a range
+2. To simply remove the value
+Note: - Not all extreme values are outlier values.</p>
+<ol start="21" style="list-style-type: decimal">
+<li><p>Discuss Artificial Neural Networks
+Artificial Neural networks (ANN) are a special set of algorithms that have revolutionized machine learning. It helps you to adapt according to changing input. So the network generates the best possible result without redesigning the output criteria.</p></li>
+<li><p>What is Back Propagation?
+Back-propagation is the essence of neural net training. It is the method of tuning the weights of a neural net depend upon the error rate obtained in the previous epoch. Proper tuning of the helps you to reduce error rates and to make the model reliable by increasing its generalization.</p></li>
+</ol>
+<p><strong>Explain Auto-Encoder</strong></p>
+<p>Autoencoders are learning networks. It helps you to transform inputs into outputs with fewer numbers of errors. This means that you will get output to be as close to input as possible.</p>
+<ol start="36" style="list-style-type: decimal">
+<li><p>Define Boltzmann Machine
+Boltzmann machines is a simple learning algorithm. It helps you to discover those features that represent complex regularities in the training data. This algorithm allows you to optimize the weights and the quantity for the given problem.</p></li>
+<li><p>What is reinforcement learning?
+Reinforcement Learning is a learning mechanism about how to map situations to actions. The end result should help you to increase the binary reward signal. In this method, a learner is not told which action to take but instead must discover which action offers a maximum reward. As this method based on the reward/penalty mechanism.</p></li>
+</ol>
+<p><strong>Training-Validation-Test</strong></p>
+<ul>
+<li>We typically train our model but get evaluation metrics on the test data.</li>
+</ul>
+<p>From ISLR:</p>
+<ul>
+<li><p>In general, we do not really care how well the method works on the training data. Rather, we are interested in the accuracy of the predictions that we obtain when we apply our method to previously unseen data. Why is this what we care about? Suppose that we are interested in developing an algorithm to predict a stock’s price based on previous stock returns. We can train the method using stock returns from the past 6 months. But we don’t really care how well our method predicts last week’s stock price. We instead care about how well it will predict tomorrow’s price or next month’s price.</p></li>
+<li><p>We can use patients data to train a statistical learning method to predict risk of diabetes based on clinical measurements. In practice, we want this method to accurately predict diabetes risk for future patients based on their clinical measurements. We are not very interested in whether or not the method accurately predicts diabetes risk for patients used to train the model, since we already know which of those patients have diabetes.</p></li>
+<li><p>We want to choose the method that gives the lowest test MSE, as opposed to the lowest training MSE.</p></li>
+<li><p>The problem is that many statistical methods specifically estimate coefficients so as to minimize the training set MSE. For these methods, the training set MSE can be quite small, but the test MSE is often much larger.</p></li>
+</ul>
+<p><strong>R-squared</strong></p>
+<ul>
+<li>In simple linear regression <span class="math inline">\(r^2 = R^2\)</span></li>
+</ul>
+<p>From ISLR:</p>
+<ul>
+<li><p>A number near 0 indicates that the regression does not explain much of the variability in the response; this might occur because the linear model is wrong, or the error variance σ2 is high, or both.</p></li>
+<li><p>It can still be challenging to determine what is a good R2 value, and in general, this will depend on the application.</p></li>
+<li><p>In certain problems in physics, we may know that the data truly comes from a linear model with a small residual error. In this case, we would expect to see an R2 value that is extremely close to 1, and a substantially smaller R2 value might indicate a serious problem with the experiment in which the data were generated.</p></li>
+<li><p>On the other hand, in typical applications in biology, psychology, marketing, and other domains, the linear model is at best an extremely rough approximation to the data, and residual errors due to other unmeasured factors are often very large. In this setting, we would expect only a very small proportion of the variance in the response to be explained by the predictor, and an <span class="math inline">\(R^2\)</span> value well below 0.1 might be more realistic!</p></li>
+</ul>
+<p><strong>F-Test</strong></p>
+<p>Testing whether all of the regression coefficients are zero, i.e. 
+<span class="math inline">\(H_0 :β_1 = β_2 =···=β_p = 0\)</span></p>
+<p><span class="math inline">\(Ha :\)</span> at least one <span class="math inline">\(β_j\)</span> is non-zero.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="machine-learning-fundamentals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="machine-learning.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/__Foundations/00_01_ML_fundemantals.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Project_Archive.pdf", "Project_Archive.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

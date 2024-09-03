@@ -1,69 +1,101 @@
-
-**Overfitting:**
-
-- Statistical model is too complex
-
-- Too many parameters when compared to the total number of observations.
-
-- Poor Predictive Performance
-
-- Overfitted model overreacts to minor fluctuations in the training data
-
-**Underfitting:**
-
-- Statistical model is too primitive
-
-- Poor Predictive Performance in the training model
+# Machine Learning Fundementals
 
 
-- The underfit model under-reacts to even bigger fluctuations.
+## Overfitting
+
+Overfitting occurs when a model learns the training data too well, capturing noise and fluctuations rather than the underlying pattern. This leads to several issues:
+
+- **Poor Generalization:** The model performs exceptionally well on training data but poorly on unseen test data, indicating it fails to generalize to new data.
+
+- **Excessive Complexity:** The model is overly complex, often due to an excessive number of parameters relative to the number of observations.
+
+- **Poor Predictive Performance:** An overfitted model has low predictive power on new data, resulting in unreliable predictions.
+
+- **Sensitivity to Noise:** The model becomes overly sensitive to minor variations in the training data, which can result in unstable and inaccurate predictions on new data.
 
 
-**Bias:** 
-
-Bias is an error introduced in your model because of the oversimplification of a machine learning algorithm. It can lead to underfitting. 
-
-In supervised learning, underfitting happens when a model unable to capture the underlying pattern of the data. These models usually have high bias and low variance. It happens when we have very less amount of data to build an accurate model or when we try to build a linear model with a nonlinear data.
-
-Also, these kinds of models are very simple to capture the complex patterns in data like Linear and logistic regression. 
-
-In supervised learning, overfitting happens when our model captures the noise along with the underlying pattern in data. 
-
-It happens when we train our model a lot over noisy dataset. These models have low bias and high variance. These models are very complex like Decision trees which are prone to overfitting. 
-
-Bias is the difference between the average prediction of our model and the correct value which we are trying to predict. Model with high bias pays very little attention to the training data and oversimplifies the model. It always leads to high error on training and test data. 
+**To avoid overfitting, it is important to simplify the model, use regularization techniques, or apply cross-validation to ensure better generalization.**
 
 
-**What is variance?**
-
-Variance is the variability of model prediction for a given data point or a value which tells us spread of our data. Model with high variance pays a lot of attention to training data and does not generalize on the data which it hasn’t seen before. As a result, such models perform very well on training data but has high error rates on test data. (over-fitting issue)
-
-**Why is Bias - Variance Trade-off?** 
-
-If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand, if our model has large number of parameters then it’s going to have high variance and low bias. So, we need to find the right/good balance without overfitting and underfitting the data. 
 
 
-**Name three types of biases that can occur during sampling**
+## Underfitting
 
-In the sampling process, there are three types of biases, which are:
+Underfitting occurs when a model is too simple to capture the underlying patterns in the data, leading to several problems:
 
-•	Selection bias
-•	Under coverage bias
-•	Survivorship bias
+- **Overly Simple Model:** The model lacks the complexity needed to learn from the data effectively.
 
-**Question:** What do you understand by the Selection Bias? What are its various types?
+- **Poor Predictive Performance:** The model performs poorly not only on test data but also on training data, indicating it has not captured the data's structure well.
 
-**Answer:** Selection bias is typically associated with research that doesn’t have a random selection of participants. It is a type of error that occurs when a researcher decides who is going to be studied. On some occasions, selection bias is also referred to as the selection effect.
+- **Insensitive to Patterns:** The model fails to respond even to significant trends or patterns in the data, resulting in inaccurate and unreliable predictions.
 
-In other words, selection bias is a distortion of statistical analysis that results from the sample collecting method. When selection bias is not taken into account, some conclusions made by a research study might not be accurate. Following are the various types of selection bias:
 
-•	Sampling Bias – A systematic error resulting due to a non-random sample of a populace causing certain members of the same to be less likely included than others that results in a biased sample.
+**To prevent underfitting, consider using a more complex model, adding relevant features, or reducing regularization.**
 
-•	Time Interval – A trial might be ended at an extreme value, usually due to ethical reasons, but the extreme value is most likely to be reached by the variable with the most variance, even though all variables have a similar mean.
 
-•	Data – Results when specific data subsets are selected for supporting a conclusion or rejection of bad data arbitrarily.
 
-•	Attrition – Caused due to attrition, i.e. loss of participants, discounting trial subjects or tests that didn’t run to completion.
+## Bias-Variance Trade-off 
+
+
+### Bias
+
+Bias is an error and can be defined as the difference between the average prediction of the model and the actual value we aim to predict. High bias occurs due to the oversimplification of the machine learning algorithm, leading to inaccurate predictions.
+
+High-bias models result in **underfitting** and generally perform poorly on both the training and test data due to their inability to learn the underlying patterns in the data properly. 
+
+**Causes of High Bias:** 
+
+- High bias is often caused by using overly simplistic models for complex data, 
+
+- or when there is insufficient data to build a robust model.
+
+
+**Effect on Model Performance:** 
+
+Models with high bias do not learn well from training data and therefore have high errors on both the training and test data.
+
+
+### Variance
+
+Variance is the variability of model predictions for a given data point or a value which tells us spread of our data. 
+
+Models with high variance typically are too complex models and capture all the variation in the outcome including the noise. These models are generally performs very well in the training data but performs poorly on the test data with high error rates. (over-fitting issue)
+
+
+### Bias vs. Variance Trade-Off:
+
+Your notes provide a good starting point for explaining the **bias-variance trade-off** during an interview, but they could be expanded with more detail to demonstrate a deeper understanding of the concept. Here’s a more comprehensive version that you could use in an interview setting:
+
+### Bias vs. Variance Trade-Off:
+
+**High Bias Models:** 
+
+Models with high bias make strong assumptions about the data, leading to oversimplification. These models, like linear regression with few features, often underfit the data, meaning they fail to capture important patterns and relationships. 
+
+This results in both high training error and high test error. Such models are characterized by **high bias and low variance**—they perform consistently but poorly on different datasets because they are not flexible enough to model the true underlying structure of the data.
+
+
+**High Variance Models:** 
+
+On the other end, models with low bias but high variance (such as decision trees without pruning) are highly flexible and can learn intricate details of the training data. However, they tend to **overfit**, meaning they capture noise and random fluctuations in the training data rather than the general pattern. These models have **low bias but high variance**, leading to good performance on training data but poor generalization to unseen data.
+
+**Finding the Balance:** 
+
+The key challenge in machine learning is finding the right balance between bias and variance to minimize the **overall error** (which is the sum of bias error, variance error, and irreducible error). 
+
+This is often done through techniques like cross-validation, regularization (e.g., Ridge or Lasso for linear models), or by using ensemble methods like Random Forests and Gradient Boosting, which combine multiple models to reduce variance without significantly increasing bias.
+
+
+**Mitigation Techniques:** 
+
+Discuss techniques like cross-validation, regularization (L1/L2), pruning for decision trees, or using ensemble methods like bagging and boosting, which are commonly used to manage the trade-off.
+
+**Visual Representation:** 
+
+If possible, describe or draw the bias-variance trade-off curve, showing how training and test errors change with model complexity.
+
+
+
 
 
 

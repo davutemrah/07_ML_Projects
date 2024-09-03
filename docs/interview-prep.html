@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 1 Projects | Machine Learning</title>
+  <title>Chapter 9 Interview Prep | Machine Learning</title>
   <meta name="description" content="This is a collection of notes to my self" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 1 Projects | Machine Learning" />
+  <meta property="og:title" content="Chapter 9 Interview Prep | Machine Learning" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a collection of notes to my self" />
   <meta name="github-repo" content="davutemrah/davutemrah.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 1 Projects | Machine Learning" />
+  <meta name="twitter:title" content="Chapter 9 Interview Prep | Machine Learning" />
   
   <meta name="twitter:description" content="This is a collection of notes to my self" />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="machine-learning-fundamentals.html"/>
+<link rel="prev" href="interview-questions.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -276,18 +276,74 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="projects" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Projects<a href="projects.html#projects" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p><a href="https://datatab.net/tutorial/get-started">DataTab Statistics Tutorials</a></p>
+<div id="interview-prep" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Interview Prep<a href="interview-prep.html#interview-prep" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="look-alike-model-walk-thru" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Look alike Model walk thru<a href="interview-prep.html#look-alike-model-walk-thru" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="situation" class="section level3 hasAnchor" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> Situation<a href="interview-prep.html#situation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>I worked on a look-alike modeling project where the goal was to predict new high-value customers for a marketing campaign. The challenge was to build a model that could identify potential customers who are likely to be similar to the existing high-value customers, using available demographic and behavioral data.</p>
+</div>
+<div id="task" class="section level3 hasAnchor" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Task<a href="interview-prep.html#task" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The task was to train a machine learning model that scores potential customers based on their likelihood of being high-value customers, defined by our client. The output would be used to optimize user acquisition strategies.</p>
+</div>
+<div id="action" class="section level3 hasAnchor" number="9.1.3">
+<h3><span class="header-section-number">9.1.3</span> Action<a href="interview-prep.html#action" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p><strong>Data Preparation:</strong></p>
+<ul>
+<li><p>We started with two datasets: one for the high-value customers (labeled dataset) and another for the potential customers (scoring dataset).</p></li>
+<li><p>The labeled dataset included demographic data, browsing behavior, engagement data, and other personal financial and interest attributes.</p></li>
+<li><p>The scoring dataset contained the same types of features but did not include the target variable.</p></li>
+</ul></li>
+<li><p><strong>Feature Engineering:</strong></p>
+<ul>
+<li><p>Conducted exploratory data analysis (EDA) to identify significant features.</p></li>
+<li><p>Generated new features using domain knowledge and interacting age and gender with other features.</p></li>
+<li><p>Standardized and normalized continuous variables to ensure they had the same scale, which helps with model convergence.</p></li>
+</ul></li>
+<li><p><strong>Model Selection and Training:</strong></p>
+<ul>
+<li><p>Tried a range of machine learning algorithms: Logistic Regression, Random Forest, XGBoost, and CatBoost. Logistic Regression served as a baseline due to its interpretability.</p></li>
+<li><p>Emphasized tree-based algorithms (Random Forest, XGBoost, CatBoost) because they handle high-dimensional, sparse data well, and can capture complex interactions between features.</p></li>
+<li><p>Used a grid search with cross-validation to fine-tune hyperparameters such as the number of trees, learning rate, max depth, and minimum child weight for tree-based models.</p></li>
+</ul></li>
+<li><p><strong>Handling Class Imbalance:</strong></p>
+<ul>
+<li><p>Since the proportion of high-value customers was small, I applied techniques to handle class imbalance:</p>
+<ul>
+<li><p>Used <strong>SMOTE (Synthetic Minority Over-sampling Technique)</strong> to create synthetic samples for the minority class.</p></li>
+<li><p>Experimented with <strong>class weighting</strong> in algorithms to penalize incorrect predictions on the minority class more than the majority class.</p></li>
+</ul></li>
+</ul></li>
+<li><p><strong>Model Evaluation:</strong></p>
+<ul>
+<li>The models were evaluated using metrics such as <strong>Precision, Recall, F1-Score</strong>, and <strong>ROC-AUC</strong> to balance between identifying true high-value customers and minimizing false positives.</li>
+<li>Conducted feature importance analysis, particularly for tree-based models, to identify which features contributed most to the prediction, helping in feature selection and further model refinement.</li>
+</ul></li>
+<li><p><strong>Model Scoring:</strong></p>
+<ul>
+<li><p>Once the model was finalized, we applied it to the scoring dataset. Since the scoring universe had no transactional or purchase behavior data, we relied purely on the engineered features based on available non-transactional attributes.</p></li>
+<li><p>The model output provided a probability score for each potential customer indicating their likelihood of being a high-value customer.</p></li>
+</ul></li>
+</ol>
+</div>
+<div id="result" class="section level3 hasAnchor" number="9.1.4">
+<h3><span class="header-section-number">9.1.4</span> Result<a href="interview-prep.html#result" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The final model, which was a tuned XGBoost, achieved a high ROC-AUC and F1-score, indicating strong performance in distinguishing high-value potential customers. This model was then used to rank and score potential customers for targeted marketing efforts, significantly improving customer acquisition efficiency.</p>
+<p>This approach ensured a robust and scalable solution, adaptable to different datasets without relying on specific purchase or transactional data.</p>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="machine-learning-fundamentals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="interview-questions.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -318,7 +374,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/__Foundations/101_interview.Rmd",
 "text": "Edit"
 },
 "history": {

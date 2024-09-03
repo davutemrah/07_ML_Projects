@@ -37,9 +37,6 @@ Simplifying the model can help prevent overfitting by reducing its capacity to l
 - **Feature Selection:**
 
   - Remove irrelevant or redundant features to reduce model complexity. Techniques like Recursive Feature Elimination (RFE), LASSO regularization, and mutual information can help identify important features.
-  
-  
-  
 
 - **Dimensionality Reduction:**
   - Apply techniques like Principal Component Analysis (PCA) or t-Distributed Stochastic Neighbor Embedding (t-SNE) to reduce the dimensionality of the data. This helps in simplifying the model and reducing the risk of overfitting.
