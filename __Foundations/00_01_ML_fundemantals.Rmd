@@ -64,10 +64,6 @@ Models with high variance typically are too complex models and capture all the v
 
 ### Bias vs. Variance Trade-Off:
 
-Your notes provide a good starting point for explaining the **bias-variance trade-off** during an interview, but they could be expanded with more detail to demonstrate a deeper understanding of the concept. Here’s a more comprehensive version that you could use in an interview setting:
-
-### Bias vs. Variance Trade-Off:
-
 **High Bias Models:** 
 
 Models with high bias make strong assumptions about the data, leading to oversimplification. These models, like linear regression with few features, often underfit the data, meaning they fail to capture important patterns and relationships. 

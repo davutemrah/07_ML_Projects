@@ -116,6 +116,16 @@ feature-engineering
 correlated-features
 implementation-and-impact
 lessons-learned-and-future-work
+model-selection
+understand-the-problem-type
+understand-the-data
+select-models-based-on-interpretability-vs.-performance-trade-off
+evaluate-model-complexity-and-training-time
+experiment-and-cross-validation
+consider-domain-knowledge-and-business-constraints
+model-ensembling
+evaluate-and-iterate
+deployment-considerations
 feature-selection
 recursive-feature-elimination-rfe
 lasso-regularization
@@ -133,6 +143,10 @@ cross-validation
 how-cross-validation-works
 impact-on-overfitting
 best-model
+k-fold-cross-validation
+advantages-of-k-fold-cross-validation
+choosing-the-value-of-k
+alternative-methods
 model-evaluation
 classification-models-evaluation
 thresholding

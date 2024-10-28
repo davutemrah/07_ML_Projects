@@ -13,26 +13,37 @@ Random Forest is an `ensemble learning technique` used for both classification a
    - Reduces the risk of overfitting compared to a single decision tree.
 
 2. **Decision Trees:**
+   
    - A decision tree splits the data into subsets based on feature values to make predictions.
+   
    - Random Forest aggregates multiple decision trees to make a final prediction.
 
 3. **Bootstrap Aggregating (Bagging):**
+   
    - Random Forest uses bagging to create multiple subsets of the training data by sampling with replacement.
+   
    - Each decision tree is trained on a different subset, which helps to reduce variance and improve generalization.
 
 4. **Feature Randomness:**
+   
    - At each split in a tree, a random subset of features is considered.
+   
    - This helps to ensure that trees are diverse and reduces correlation between them.
 
-#### **How It Works:**
+#### How It Works:
 
 1. **Training:**
+   
    - **Step 1:** Generate multiple bootstrap samples from the training dataset.
+   
    - **Step 2:** For each sample, train a decision tree. During training, each node split considers a random subset of features.
+   
    - **Step 3:** Repeat the process to build a forest of trees.
 
 2. **Prediction:**
+   
    - **Classification:** Each tree votes for a class label. The class with the majority vote is chosen as the final prediction.
+   
    - **Regression:** Each tree predicts a continuous value. The average of all tree predictions is used as the final output.
 
 #### **Advantages:**
@@ -45,6 +56,7 @@ Random Forest is an `ensemble learning technique` used for both classification a
 #### **Disadvantages:**
 
 - **Model Complexity:** Can be computationally expensive and require significant memory, especially with a large number of trees.
+
 - **Less Interpretable:** Difficult to interpret compared to a single decision tree due to the complexity of aggregating multiple trees.
 
 #### **Feature Importance:**
