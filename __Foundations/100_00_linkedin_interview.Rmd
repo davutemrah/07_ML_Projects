@@ -1,0 +1,204 @@
+# Interview Questions
+
+I will share real interview questions with their answers.
+
+
+## LINKEDIN STAFF, ADVANCED ANALYTICS
+
+
+### Interpreting the Regression Output
+
+#### Given Information:
+
+- **Variable:** Region B
+
+- **Coefficient:** -30
+
+- **P-value:** 0.02 (significant at the 5% level)
+
+- **R²:** 0.65
+
+- **Outcome:** Average Price Sale
+
+- **Data Level:** Account level
+
+#### Interpretation:
+
+- The coefficient for **Region B (-30)** implies that, holding all other variables constant, the average price sale for accounts in Region B is $30 less than in the baseline/reference region.
+
+- Since the **p-value is 0.02**, this effect is statistically significant at the 5% level, meaning there is strong evidence that the relationship between Region B and average price sale is not due to random chance.
+
+- An **R² of 0.65** indicates that 65% of the variation in the average price sale is explained by the variables in the regression model, which suggests a reasonably good model fit.
+
+### How to Improve the Model
+
+To improve the regression model, consider these actions:
+
+#### a) **Include Additional Predictors:**
+
+   - **Customer-specific factors**: Total purchases, loyalty program participation, or average purchase frequency.
+
+   - **Product-specific factors**: Product categories, seasonal trends, or promotions impacting pricing.
+
+   - **Region-specific factors**: Economic indicators, market size, or competition.
+
+#### b) **Data Transformations or Features:**
+
+   - **Interaction terms**: For example, interactions between Region B and payment types or account type.
+
+   - **Nonlinear relationships**: Use polynomial or spline terms for predictors where relationships aren’t linear.
+
+   - **Categorical encoding**: Ensure that regions are encoded appropriately as dummy variables.
+
+   - **Scaling variables**: Standardize or normalize numerical predictors for better comparability.
+
+#### c) **Account for Temporal or Hierarchical Effects:**
+
+   - Use **time series models** or **mixed effects models** to capture account-specific random effects or seasonality.
+
+#### d) **Diagnostic Checks:**
+
+   - Examine **multicollinearity** using Variance Inflation Factor (VIF).
+
+   - Test for **heteroskedasticity** and consider robust standard errors if needed.
+
+
+### Identifying Top Spenders in September 2023**
+
+#### Problem:
+
+From the provided order data (`Order ID`, `Customer ID`, `Order Date`, `Order Status`, `Type of Payment`), find customers ranked in the top 5 based on spending during September 2023.
+
+#### Query:
+If you're using SQL, here’s how you could write the query:
+
+```sql
+SELECT 
+    customer_id,
+    RANK() OVER (ORDER BY SUM(spending) DESC) AS rank,
+    SUM(spending) AS total_spent
+FROM orders
+WHERE 
+    order_status = 'Shipped'
+    AND order_date >= '2023-09-01'
+    AND order_date <= '2023-09-30'
+GROUP BY customer_id
+ORDER BY total_spent DESC
+LIMIT 5;
+```
+
+**ALTERNATIVE SOLUTION**
+
+```sql
+WITH DATA AS (
+    SELECT 
+        customer_id, 
+        SUM(spending) AS total_spent, 
+        ROW_NUMBER() OVER (ORDER BY SUM(spending) DESC) AS rank
+    FROM orders
+    WHERE YEAR(order_date) = 2023 
+      AND MONTH(order_date) = 9
+    GROUP BY customer_id
+)
+SELECT customer_id, rank, total_spent 
+FROM DATA 
+WHERE rank <= 5;
+```
+
+
+### tell me about your most ambitious project
+
+
+#### Project Title: Developing Balancing Weights to Address Data Bias 
+
+**Background:**  
+
+In our organization, we work with several datasets, including transactional purchase data, web traffic data, and TV viewership data. These datasets, while valuable, are collected from samples that are not necessarily representative of the U.S. population. For instance, certain demographics, such as the 18–24 age group, tend to be underrepresented, leading to skewed insights and biased conclusions.  
+
+**Problem:**  
+
+The lack of demographic balance across datasets posed challenges for deriving actionable and unbiased insights. Relying on external data providers for balancing weights was costly and inflexible, and existing library-dependent approaches, like iterative proportional fitting, were slow for our high-volume data processing needs.  
+
+**Solution:**  
+
+I developed an in-house solution using SQL to generate balancing weights for these datasets. My approach ensures that demographic distributions align with the target population benchmarks. It leverages iterative proportional fitting principles but optimizes execution for speed and scalability in a SQL environment.  
+
+**Impact:**  
+
+- **Efficiency:** The SQL-based approach is significantly faster than traditional methods, making it suitable for large datasets processed frequently.  
+
+- **Cost Savings:** The company reduced dependency on external data providers, leading to substantial savings.  
+
+- **Adoption Across Departments:** Other teams began adopting this approach after my presentations in cross-departmental info sessions.  
+
+- **Scalability:** The methodology can be applied to various datasets, from media analysis to transactional insights, ensuring consistency across analytics.  
+
+**My Role:**  
+
+I designed the SQL-based methodology, tested it across multiple datasets, and validated the outputs against benchmarks to ensure accuracy. Beyond implementation, I initiated and conducted educational sessions for internal teams to encourage adoption and build internal capacity.
+
+**Reflection:**  
+
+This project stands out to me not only for its technical challenges but also for its impact on improving the organization’s analytical rigor while reducing costs. It represents how innovative problem-solving can combine technical skills with business strategy to deliver meaningful results.  
+
+
+
+#### Project Title: Customized User Bids
+
+
+
+
+
+### tell me how do you train a model and evaluate it
+
+
+### tell me how you can use LLM in marketing/heathcare
+
+
+### objective function in logistic regression
+
+
+## Do you prefer R or python?
+
+I prefer Python because it has a wide range of libraries for data analysis, machine learning, and visualization, which makes it very versatile for different tasks. It's also easy to integrate with other tools and platforms. 
+
+However, I do use R when needed, especially for specific statistical analysis and visualization tasks, as it has strong packages for these areas. I believe both languages have their strengths, and I choose based on the specific project requirements.
+
+
+
+## What is your main domain?
+
+My main domain is data science with a strong focus on marketing analytics. I have experience across various areas, including predictive modeling, customer segmentation, and campaign evaluation. I enjoy working on projects that involve data-driven decision-making, whether optimizing marketing strategies, understanding consumer behavior, or any other area where data can provide valuable insights.
+
+
+## Is this work culture fast-paced? Do you deliver value quickly or what?
+
+Yes, I do thrive in fast-paced environments and am comfortable delivering value quickly. 
+
+I believe in balancing speed with quality to ensure that the work is both timely and impactful. 
+
+In my current role, I often work under tight deadlines, and I’ve developed efficient methods to analyze data and provide actionable insights promptly.
+
+
+## Are you involved in any efforts convincing business stakeholders to adept models or analysis that you do
+
+Yes, I am often involved in convincing business stakeholders to adopt models or analyses that I develop. 
+
+For example, in a recent project, I created a predictive model for customized user bids, which initially met some skepticism. 
+
+I presented clear A/B test results that showed a 15% increase in conversion rates and a 10% reduction in costs. By explaining the value in simple terms and showing how it directly impacts their goals, I was able to get support for the model.
+
+
+
+
+## Have you been in a situation where you feel like the model is the right way to go but either client or manager that you need to convince?
+
+Yes, I've faced situations where I strongly believed a model was the right approach, but I needed to convince either a client or a manager. 
+
+For instance, I once advocated for a customized bidding model based on predictive analytics. Despite initial skepticism, I presented data-driven insights and A/B test results that demonstrated significant improvements in conversion rates and cost efficiency.
+
+By clearly explaining the model's benefits and providing evidence of its effectiveness, I successfully gained their support and implemented the model.
+
+
+
+

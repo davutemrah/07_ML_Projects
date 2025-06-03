@@ -1,12 +1,11 @@
-# Interview Questions
 
-### tell me how do you train a model and evaluate it
-
-
-### tell me how you can use LLM in marketing/heathcare
+## tell me how do you train a model and evaluate it
 
 
-### objective function in logistic regression
+## tell me how you can use LLM in marketing/heathcare
+
+
+## objective function in logistic regression
 
 
 ## Do you prefer R or python?
